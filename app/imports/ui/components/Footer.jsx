@@ -15,7 +15,7 @@ const Footer = () => (
           <Form className="form">
             <FormControl type="email" placeholder="name@example.com" />
           </Form>
-          <Button variant="light">Join</Button>
+          <Button>Join</Button>
         </Container>
       </Col>
     </Container>
@@ -26,6 +26,8 @@ const Footer = () => (
         {' '}
         <br />
         University of Hawaii
+        <br />
+        Last Updated: 4/5/2023
         <br />
         <a href="https://taste-technologists.github.io/">
           Project Documentation
