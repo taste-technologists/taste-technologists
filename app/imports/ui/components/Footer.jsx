@@ -1,21 +1,34 @@
 import React from 'react';
-import { Col, Container } from 'react-bootstrap';
+import { Col, Container, Form, FormControl, Button } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const Footer = () => (
   <footer className="mt-auto py-3 bg-light">
     <Container>
+      <Col className="text-center ">
+        <h5>Sign Up For Ingredient Price Drop Updates!</h5>
+        <hr />
+        <div>
+          Be notified via email when there is a sale (coming soon)
+        </div>
+        <Container className="d-inline-flex align-items-center">
+          <Form className="form">
+            <FormControl type="email" placeholder="name@example.com" />
+          </Form>
+          <Button variant="light">Join</Button>
+        </Container>
+      </Col>
+    </Container>
+
+    <Container>
       <Col className="text-center">
-        Department of Information and Computer Sciences
+        Taste Technologists
         {' '}
         <br />
         University of Hawaii
         <br />
-        Honolulu, HI 96822
-        {' '}
-        <br />
-        <a href="http://ics-software-engineering.github.io/meteor-application-template-react">
-          Template Home
+        <a href="https://taste-technologists.github.io/">
+          Project Documentation
           Page
         </a>
       </Col>
