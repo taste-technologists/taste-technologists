@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
+import { Recipes } from '../../api/recipes/Recipes';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -12,11 +13,30 @@ Meteor.publish(Stuffs.userPublicationName, function () {
   return this.ready();
 });
 
+// User-level publication.
+// If logged in, then publish recipes owned by this user. Otherwise publish nothing.
+Meteor.publish(Recipes.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Recipes.collection.find({ owner: username });
+  }
+  return this.ready();
+});
+
 // Admin-level publication.
 // If logged in and with admin role, then publish all documents from all users. Otherwise publish nothing.
 Meteor.publish(Stuffs.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Stuffs.collection.find();
+  }
+  return this.ready();
+});
+
+// Admin-level publication.
+// If logged in and with admin role, then publish all recipes from all users. Otherwise publish nothing.
+Meteor.publish(Recipes.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Recipes.collection.find();
   }
   return this.ready();
 });

@@ -14,7 +14,7 @@
 
   "defaultRecipes": [
     {
-      "email": "john@foo.com",
+      "owner": "john@foo.com",
       "name": "Feta-Spinach Puff Pastry Bites",
       "description": "This easy appetizer recipe is great for entertaining. The feta cheese adds a light bite to the rich, creamy spinach and cheese-filled cups that will make them unforgettable.",
       "time": "35 minutes",
@@ -22,7 +22,23 @@
       "tags": [
         "Snack",
         "Cheese"
-      ]
+      ],
+      "ingredients": ["cheese", "puff pastry"],
+      "instructions": ["do something", "do another thing"],
+      "servings": 2
+    },
+    {
+      "owner": "admin@foo.com",
+      "name": "Parmesan Thyme Crisps",
+      "description": "Super simple but can be spiced up if you like with cayenne or other spices. Store in an airtight container, layered between waxed paper.",
+      "time": "30 minutes",
+      "picture": "https://www.allrecipes.com/thmb/XLpy3coYLg-RZqlKoQFgt4M7woE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3540204-b5bad438711a4afb84c98f230bc4e712.jpg",
+      "tags": [
+        "Snack"
+      ],
+      "ingredients": ["8 ounces freshly grated Parmesan cheese", "4 teaspoons fresh thyme leaves"],
+      "instructions": ["Preheat oven to 300 degrees F (150 degrees C). Line 2 baking sheets with parchment paper. ", "Combine Parmesan cheese and thyme leaves in a bowl. Drop heaping teaspoonfuls of the mixture onto the lined baking sheets, spacing them 2 inches apart. Lightly press with your fingers to flatten them into circles 2 inches in diameter. ","Bake in the preheated oven until slightly browned and crisp, 8 to 10 minutes. Cool slightly on the baking sheets, about 2 minutes. Loosen edges with a spatula and lift off the parchment paper. Transfer to wire racks and let cool completely until firm, about 10 minutes.  "],
+      "servings": 15
     }
   ]
 }
