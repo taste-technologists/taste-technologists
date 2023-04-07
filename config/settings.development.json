@@ -10,5 +10,19 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultRecipes": [
+    {
+      "email": "john@foo.com",
+      "name": "Feta-Spinach Puff Pastry Bites",
+      "description": "This easy appetizer recipe is great for entertaining. The feta cheese adds a light bite to the rich, creamy spinach and cheese-filled cups that will make them unforgettable.",
+      "time": "35 minutes",
+      "picture": "https://www.allrecipes.com/thmb/XQMSfxRQojpv7WGMHruq-F0IMng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Feta-Spinach-Puff-Pastry-Bites-fabeveryday-9aa534d8ba2a48f5aa36570dcc2c63b5.jpg",
+      "tags": [
+        "Snack",
+        "Cheese"
+      ]
+    }
   ]
 }
