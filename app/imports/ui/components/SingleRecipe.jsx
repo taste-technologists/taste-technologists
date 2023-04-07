@@ -6,7 +6,11 @@ import React from 'react';
 const SingleRecipeCard = ({ recipe }) => (
   <Container>
     <Row className="flex-row justify-content-center">
+      <h2 className="text-center">{recipe.name}</h2>
       {recipe.description}
+    </Row>
+    <Row className="my-2 pe-2">
+      || Cook Time: {recipe.time} || Number of Servings: {recipe.servings} || Estimated Cost: $20 ||
     </Row>
     <Row>
       <Col className="text-center"><Image src={recipe.picture} width={400} /></Col>
@@ -34,6 +38,7 @@ SingleRecipeCard.propTypes = {
     time: PropTypes.string,
     description: PropTypes.string,
     ingredients: PropTypes.string,
+    servings: PropTypes.number,
     instructions: PropTypes.arrayOf(PropTypes.string),
     tags: PropTypes.arrayOf(PropTypes.string),
     _id: PropTypes.string,
