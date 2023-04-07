@@ -17,6 +17,7 @@ class RecipeCollection {
       time: String,
       description: String,
       servings: Number,
+      owner: String,
       tags: {
         type: Array,
         optional: true,
