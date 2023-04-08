@@ -43,7 +43,7 @@ const RecipeView = () => {
   // console.log('ViewRecipe', doc, ready);
   // On successful submit, insert the data.
   return (
-    <Container>
+    <Container className="py-4">
       <SingleRecipe key={recipe._id} recipe={recipe} />
     </Container>
   );
