@@ -3,13 +3,14 @@ import { Badge, Card, Col, Image } from 'react-bootstrap';
 import { HeartFill } from 'react-bootstrap-icons';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RecipeCard = ({ recipe }) => (
   <Col>
     <Card className="h-100">
       <Card.Header>
         <Image src={recipe.picture} width={200} />
-        <Card.Title>{recipe.name}</Card.Title>
+        <Card.Title><Link to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
         <Card.Subtitle>{recipe.time}</Card.Subtitle>
         <HeartFill />
       </Card.Header>
