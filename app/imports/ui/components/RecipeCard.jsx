@@ -1,5 +1,6 @@
 /* Component for layout out a Profile Card. */
 import { Badge, Card, Col, Image } from 'react-bootstrap';
+import { HeartFill } from 'react-bootstrap-icons';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -10,6 +11,7 @@ const RecipeCard = ({ recipe }) => (
         <Image src={recipe.picture} width={200} />
         <Card.Title>{recipe.name}</Card.Title>
         <Card.Subtitle>{recipe.time}</Card.Subtitle>
+        <HeartFill />
       </Card.Header>
       <Card.Body>
         <Card.Text>
