@@ -34,7 +34,7 @@ const NavBar = () => {
               <Nav.Link id="inventory-vendor-nav" as={NavLink} to="/inventory" key="vendor">Inventory</Nav.Link>
             ) : ''}
             {currentUser ? ([
-              <Nav.Link id="profile-nav" as={NavLink} to="/profile" key="profile">Profile</Nav.Link>,
+              <Nav.Link id="profile-nav" as={NavLink} to="/favorites" key="profile">Profile</Nav.Link>,
             ]) : ''}
           </Nav>
           <Nav className="justify-content-end">
