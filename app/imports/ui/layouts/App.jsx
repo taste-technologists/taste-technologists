@@ -43,7 +43,7 @@ const App = () => {
           <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
           <Route path="/list" element={<ProtectedRoute><ListRecipes /></ProtectedRoute>} />
           <Route path="/favorites" element={<ProtectedRoute><ListFavorites /></ProtectedRoute>} />
-          <Route path="/my-recipes" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
+          <Route path="/add" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
           <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
           <Route path="/recipes/:_id" element={<ProtectedRoute><RecipeView /></ProtectedRoute>} />
