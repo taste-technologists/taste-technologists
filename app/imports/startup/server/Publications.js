@@ -23,6 +23,15 @@ Meteor.publish(Recipes.userPublicationName, function () {
   return this.ready();
 });
 
+// General publication.
+// If logged in, then publish all recipes.
+Meteor.publish(Recipes.generalPublicationName, function () {
+  if (this.userId) {
+    return Recipes.collection.find();
+  }
+  return this.ready();
+});
+
 // Admin-level publication.
 // If logged in and with admin role, then publish all documents from all users. Otherwise publish nothing.
 Meteor.publish(Stuffs.adminPublicationName, function () {
