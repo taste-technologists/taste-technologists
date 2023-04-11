@@ -10,6 +10,7 @@ const SingleRecipeCard = ({ recipe }) => (
       {recipe.description}
     </Row>
     <Row className="my-2 pe-2">
+      {/* Will need to implement a cost function related to vendors and inventory here */}
       || Cook Time: {recipe.time} || Number of Servings: {recipe.servings} || Estimated Cost: $20 ||
     </Row>
     <Row>
