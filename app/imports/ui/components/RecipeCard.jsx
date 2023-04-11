@@ -3,22 +3,21 @@ import { Badge, Card, Col, Image } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const RecipeCard = () => (
+const RecipeCard = ({ recipe }) => (
   <Col>
     <Card className="h-100">
       <Card.Header>
-        <Image src="https://www.allrecipes.com/thmb/XQMSfxRQojpv7WGMHruq-F0IMng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Feta-Spinach-Puff-Pastry-Bites-fabeveryday-9aa534d8ba2a48f5aa36570dcc2c63b5.jpg" width={200} />
-        <Card.Title>Feta-Spinach Puff Pastry Bites</Card.Title>
-        <Card.Subtitle>35 minutes</Card.Subtitle>
+        <Image src={recipe.picture} width={200} />
+        <Card.Title>{recipe.name}</Card.Title>
+        <Card.Subtitle>{recipe.time}</Card.Subtitle>
       </Card.Header>
       <Card.Body>
         <Card.Text>
-          This easy appetizer recipe is great for entertaining. The feta cheese adds a light bite to the rich, creamy spinach and cheese-filled cups that will make them unforgettable.
+          {recipe.description}
         </Card.Text>
         <h6>Tags</h6>
         <Card.Text>
-          <Badge bg="secondary">Snack</Badge>
-          <Badge bg="secondary">Cheese</Badge>
+          {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
         </Card.Text>
       </Card.Body>
     </Card>
@@ -32,6 +31,7 @@ RecipeCard.propTypes = {
     time: PropTypes.string,
     description: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
+    _id: PropTypes.string,
   }).isRequired,
 };
 
