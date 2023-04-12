@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import { HeartFill, Shop, Search } from 'react-bootstrap-icons';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -13,7 +14,18 @@ const Landing = () => (
         <h1>Welcome!</h1>
         <h2>Sign up now for easy and cheap recipes perfect for the everyday college student!</h2>
       </Col>
-
+      <Col>
+        <HeartFill className="landingIcons" /> <h3>Favorites</h3>
+        <h4>Favorite recipes that you enjoy or frequently use </h4>
+      </Col>
+      <Col>
+        <Shop className="landingIcons" /> <h3>Vendors</h3>
+        <h4>Find vendors near campus that sell ingredients </h4>
+      </Col>
+      <Col>
+        <Search className="landingIcons" /> <h3>Search</h3>
+        <h4>Search and filter various college student friendly recipes! </h4>
+      </Col>
     </Row>
   </Container>
 );

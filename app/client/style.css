@@ -32,3 +32,8 @@ body {
   margin-left: 250px;
   position: relative;
 }
+
+.landingIcons {
+  height: 50px;
+  width: 50px;
+}
