@@ -12,6 +12,10 @@ export const AdminProfilePublications = {
 class AdminProfileCollection extends BaseProfileCollection {
   constructor() {
     super('AdminProfile', new SimpleSchema({}));
+    this.collection.attachSchema(this.schema);
+    this.userPublicationName = `${this.name}.publication.user`;
+    this.adminPublicationName = `${this.name}.publication.admin`;
+    this.generalPublicationName = `${this.name}.publication.general`;
   }
 
   /**

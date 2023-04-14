@@ -8,7 +8,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 /* Renders a table containing all of the Stuff documents. Use <StuffItemAdmin> to render each row. */
 const AdminDashboard = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { stuffs, ready } = useTracker(() => {
+  const { userAccount, ready } = useTracker(() => {
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe(Stuffs.adminPublicationName);
     // Determine if the subscription is ready

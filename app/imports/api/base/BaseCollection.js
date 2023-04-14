@@ -13,11 +13,11 @@ class BaseCollection {
    * @param {SimpleSchema} schema The schema for validating fields on insertion to the DB.
    */
   constructor(type, schema) {
-    this._type = type;
-    this._collectionName = `${this._type}Collection`;
-    this._collection = new Mongo.Collection(this._collectionName);
-    this._schema = schema;
-    this._collection.attachSchema(this._schema);
+    this.type = type;
+    this.collectionName = `${this.type}Collection`;
+    this.collection = new Mongo.Collection(this.collectionName);
+    this.schema = schema;
+    this.collection.attachSchema(this.schema);
   }
 
   /**
@@ -25,7 +25,7 @@ class BaseCollection {
    * @returns { Number } The number of elements in this collection.
    */
   count() {
-    return this._collection.find().count();
+    return this.collection.find().count();
   }
 
   /**
