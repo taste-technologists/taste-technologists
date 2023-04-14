@@ -18,6 +18,7 @@ import ListRecipes from '../pages/ListRecipes';
 import ListFavorites from '../pages/ListFavorites';
 import RecipeView from '../pages/RecipeView';
 import AddRecipe from '../pages/AddRecipe';
+import AdminDashboard from '../pages/AdminDashboard';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -42,7 +43,7 @@ const App = () => {
           <Route path="/favorites" element={<ProtectedRoute><ListFavorites /></ProtectedRoute>} />
           <Route path="/add" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
           <Route path="/recipes/:_id" element={<ProtectedRoute><RecipeView /></ProtectedRoute>} />
-          <Route path="/admin" element={<AdminProtectedRoute ready={ready}><Landing /></AdminProtectedRoute>} />
+          <Route path="/admin" element={<AdminProtectedRoute ready={ready}><AdminDashboard /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
