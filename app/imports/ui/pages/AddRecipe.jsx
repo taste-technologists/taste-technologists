@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { AutoForm, ErrorsField, LongTextField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, ListField, ListItemField, LongTextField, NestField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
+import { Plus, TrashFill } from 'react-bootstrap-icons';
 import { Recipes } from '../../api/recipes/Recipes';
 
 // Create a schema to specify the structure of the data to appear in the form.
@@ -23,8 +24,15 @@ const formSchema = new SimpleSchema({
   'tags.$': String,
   ingredients: {
     type: Array,
+    optional: false,
   },
-  'ingredients.$': String,
+  'ingredients.$': Object,
+  'ingredients.$.name': String,
+  'ingredients.$.quantity': {
+    type: Number,
+    defaultValue: 0,
+  },
+  'ingredients.$.unit': String,
   instructions: {
     type: Array,
   },
@@ -72,9 +80,19 @@ const AddStuff = () => {
                   <Col><NumField name="servings" decimal={null} min="0" /></Col>
                 </Row>
                 <LongTextField name="description" placeholder="Describe the recipe here" />
-                <LongTextField name="ingredients" placeholder="Describe the recipe ingredients here" />
-                <LongTextField name="instructions" placeholder="Describe the recipe instructions here" />
-                <SelectField name="tags" allowedValues={['Vegan', 'Quick', 'Dairy', 'Snack', 'Breakfast', 'Lunch', 'Dinner']} checkboxes inline />
+                <ListField name="ingredients" initialCount={1} addIcon={<Plus className="text-black" size={30} />} removeIcon={<TrashFill className="text-black" size={15} />}>
+                  <ListItemField name="$">
+                    <NestField>
+                      <Row>
+                        <Col><NumField name="quantity" min="0" /></Col>
+                        <Col><SelectField name="unit" allowedValues={['lb', 'cup', 'tsp', 'tbsp', 'oz']} placeholder="Select a unit" /></Col>
+                      </Row>
+                      <Row><TextField name="name" showInlineError placeholder="Ingredient name" /></Row>
+                    </NestField>
+                  </ListItemField>
+                </ListField>
+                <ListField name="instructions" initialCount={1} addIcon={<Plus className="text-black" size={30} />} removeIcon={<TrashFill className="text-black" size={15} />} />
+                <SelectField name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
                 <SubmitField value="Submit" />
                 <ErrorsField />
               </Card.Body>
