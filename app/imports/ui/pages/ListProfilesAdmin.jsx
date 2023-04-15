@@ -9,26 +9,25 @@ import Profiles from '../components/Profiles';
 /* Renders a table containing all of the Stuff documents. Use <StuffItemAdmin> to render each row. */
 const ListProfilesAdmin = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { stuffs, ready } = useTracker(() => {
+  const { profile, ready } = useTracker(() => {
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe('userData');
     // Determine if the subscription is ready
     const rdy = subscription.ready();
-    // Get the Stuff documents
-    const items = Meteor.users.find({}).fetch();
+    // Get the Users and Roles
+    const users = Meteor.users.find({}).fetch();
     const roles = Meteor.roleAssignment.find().fetch();
 
-    const result = _.each(roles, function (obj) {
-      const user = _.findWhere(items, { _id: obj.user._id });
+    // Add the roles to each user.
+    _.each(roles, function (obj) {
+      const user = _.findWhere(users, { _id: obj.user._id });
       if (user) {
         user.role = obj.role._id;
       }
     });
 
-    console.log(result);
-
     return {
-      stuffs: items,
+      profile: users,
       ready: rdy,
     };
   }, []);
@@ -41,12 +40,12 @@ const ListProfilesAdmin = () => {
             <thead>
               <tr>
                 <th>Name</th>
-                <th>roles</th>
-                <th>edit</th>
+                <th>Roles</th>
+                <th>Edit</th>
               </tr>
             </thead>
             <tbody>
-              {stuffs.map((stuff) => <Profiles key={stuff._id} stuff={stuff} />)}
+              {profile.map((prof) => <Profiles key={prof._id} prof={prof} />)}
             </tbody>
           </Table>
         </Col>

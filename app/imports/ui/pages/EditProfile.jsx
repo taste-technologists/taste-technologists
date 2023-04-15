@@ -13,7 +13,7 @@ import { setRoleMethod } from '../../startup/both/Methods';
 const userSchema = new SimpleSchema({
   username: String,
   _id: String,
-  role: String,
+  role: { type: String, allowedValues: ['user', 'vendor', 'admin'] },
 });
 
 const bridge = new SimpleSchema2Bridge(userSchema);
@@ -25,7 +25,7 @@ const EditProfiles = () => {
   // console.log('EditProfile', _id);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { doc, ready } = useTracker(() => {
-    // Get access to Stuff documents.
+    // Get access to userData documents.
     const subscription = Meteor.subscribe('userData');
     // Determine if the subscription is ready
     const rdy = subscription.ready();
@@ -59,7 +59,7 @@ const EditProfiles = () => {
             <Card>
               <Card.Body>
                 <TextField name="username" disabled />
-                <SelectField name="role" allowedValues={['user', 'vendor', 'admin']} />
+                <SelectField name="role" />
                 <SubmitField value="Submit" />
                 <ErrorsField />
               </Card.Body>
