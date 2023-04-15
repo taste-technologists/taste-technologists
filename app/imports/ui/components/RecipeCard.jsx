@@ -22,6 +22,7 @@ const RecipeCard = ({ recipe }) => (
         <Card.Text>
           {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
         </Card.Text>
+        <Link to={`/edit/${recipe._id}`}>Edit</Link>
       </Card.Body>
     </Card>
   </Col>
