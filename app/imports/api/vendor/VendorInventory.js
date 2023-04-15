@@ -15,7 +15,6 @@ class VendorInventoryCollection {
       vendor: String,
       item: String,
       price: Number,
-      description: String,
       size: String,
     });
 

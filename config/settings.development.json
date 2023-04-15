@@ -17,6 +17,24 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
 
+  "defaultItem": [
+    { "vendor": "Nijiya",
+      "item": "Shredded Cheese",
+      "price": 2,
+      "size": "7 oz"
+    },
+    { "vendor": "Safeway",
+      "item": "Shredded Cheese",
+      "price": 3.50,
+      "size": "7 oz"
+    },
+    { "vendor": "Safeway",
+      "item": "Rotisserie Chicken",
+      "price": 9.50,
+      "size": "2 lbs"
+    }
+  ],
+
   "defaultRecipes": [
     {
       "owner": "john@foo.com",
