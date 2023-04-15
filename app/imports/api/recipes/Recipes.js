@@ -27,7 +27,10 @@ class RecipeCollection {
         type: Array,
         optional: false,
       },
-      'ingredients.$': String,
+      'ingredients.$': Object,
+      'ingredients.$.name': String,
+      'ingredients.$.quantity': Number,
+      'ingredients.$.unit': String,
       instructions: {
         type: Array,
         optional: false,
