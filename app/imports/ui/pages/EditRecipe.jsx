@@ -49,8 +49,8 @@ const EditRecipe = () => {
                 <TextField name="name" />
                 <TextField name="picture" />
                 <TextField name="time" />
-                <TextField value="description" />
-                <TextField value="servings" />
+                <TextField name="description" />
+                <TextField name="servings" />
                 <ErrorsField />
                 <HiddenField name="owner" />
               </Card.Body>
