@@ -13,7 +13,7 @@ const RecipesPage = () => {
   const { ready, recipes } = useTracker(() => {
 
     // Get access to Recipe documents.
-    const subscription = Meteor.subscribe(Recipes.userPublicationName);
+    const subscription = Meteor.subscribe(Recipes.generalPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Recipes
