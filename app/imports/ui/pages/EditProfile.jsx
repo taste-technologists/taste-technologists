@@ -40,7 +40,7 @@ const EditProfiles = () => {
   // On successful submit, insert the data.
   const submit = (data) => {
     const { role } = data;
-    console.log(role);
+    // console.log(role);
     Meteor.call(setRoleMethod, { _id, role }, (error) => {
       if (error) {
         swal('Error', error.message, 'error');
@@ -54,11 +54,11 @@ const EditProfiles = () => {
     <Container className="py-3">
       <Row className="justify-content-center">
         <Col xs={5}>
-          <Col className="text-center"><h2>Edit Stuff</h2></Col>
+          <Col className="text-center"><h2>Edit Role</h2></Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
             <Card>
               <Card.Body>
-                <TextField name="username" />
+                <TextField name="username" disabled />
                 <SelectField name="role" allowedValues={['user', 'vendor', 'admin']} />
                 <SubmitField value="Submit" />
                 <ErrorsField />
