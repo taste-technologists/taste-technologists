@@ -91,18 +91,13 @@ Meteor.publish('userData', function () {
   if (Roles.userIsInRole(this.userId, 'admin')) {
     return [Meteor.users.find({}, { fields: {
       _id: 1,
-      createdAt: 1,
       username: 1,
       emails: 1,
       profile: 1,
-      lastAccess: 1,
       roles: 1,
     } }),
     Meteor.roleAssignment.find(),
     ];
   }
   return null;
-});
-Meteor.publish('allUserData', function () {
-  return Meteor.users.find({}, { fields: { 'nested.things': 1 } });
 });
