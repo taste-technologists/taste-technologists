@@ -25,7 +25,7 @@ const SingleRecipeCard = ({ recipe }) => (
     <Row>
       <h2>Instructions:</h2>
       <ol>
-        {recipe.instructions.map((ing) => <li>{ing}</li>)}
+        {recipe.instructions.map((ing) => <li>{ing.step}</li>)}
       </ol>
 
     </Row>
@@ -40,7 +40,7 @@ SingleRecipeCard.propTypes = {
     description: PropTypes.string,
     ingredients: PropTypes.objectOf(PropTypes.string, PropTypes.number, PropTypes.string),
     servings: PropTypes.number,
-    instructions: PropTypes.arrayOf(PropTypes.string),
+    instructions: PropTypes.objectOf(PropTypes.string),
     tags: PropTypes.arrayOf(PropTypes.string),
     _id: PropTypes.string,
   }).isRequired,

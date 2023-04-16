@@ -35,8 +35,14 @@ const formSchema = new SimpleSchema({
   'ingredients.$.unit': String,
   instructions: {
     type: Array,
+    optional: false,
   },
-  'instructions.$': String,
+  'instructions.$': Object,
+  'instructions.$.step': String,
+  'instructions.$.num': {
+    type: Number,
+    defaultValue: 0,
+  },
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -91,7 +97,16 @@ const AddStuff = () => {
                     </NestField>
                   </ListItemField>
                 </ListField>
-                <ListField name="instructions" initialCount={1} addIcon={<Plus className="text-black" size={30} />} removeIcon={<TrashFill className="text-black" size={15} />} />
+                <ListField name="instructions" initialCount={1} addIcon={<Plus className="text-black" size={30} />} removeIcon={<TrashFill className="text-black" size={15} />}>
+                  <ListItemField name="$" label="">
+                    <NestField>
+                      <Row><TextField name="step" label="" showInlineError placeholder="Add step" /></Row>
+                    </NestField>
+                  </ListItemField>
+                </ListField>
+
+
+
                 <SelectField name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
                 <SubmitField value="Submit" />
                 <ErrorsField />

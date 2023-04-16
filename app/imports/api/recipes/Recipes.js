@@ -35,7 +35,8 @@ class RecipeCollection {
         type: Array,
         optional: false,
       },
-      'instructions.$': String,
+      'instructions.$': Object,
+      'instructions.$.step': String,
     });
 
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
