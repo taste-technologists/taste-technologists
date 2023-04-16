@@ -105,8 +105,6 @@ const AddStuff = () => {
                   </ListItemField>
                 </ListField>
 
-
-
                 <SelectField name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
                 <SubmitField value="Submit" />
                 <ErrorsField />
