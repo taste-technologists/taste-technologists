@@ -21,6 +21,7 @@ import AddRecipe from '../pages/AddRecipe';
 import EditRecipe from '../pages/EditRecipe';
 import EditProfile from '../pages/EditProfile';
 import ListProfilesAdmin from '../pages/ListProfilesAdmin';
+import InventoryView from '../pages/InventoryView';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/add" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditRecipe /></ProtectedRoute>} />
           <Route path="/recipes/:_id" element={<ProtectedRoute><RecipeView /></ProtectedRoute>} />
+          <Route path="/inventory/:_id" element={<ProtectedRoute><InventoryView /></ProtectedRoute>} />
           <Route path="/profile-edit/:_id" element={<AdminProtectedRoute ready={ready}><EditProfile /></AdminProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListProfilesAdmin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
