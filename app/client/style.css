@@ -37,3 +37,19 @@ body {
   height: 50px;
   width: 50px;
 }
+
+tr:nth-child(1) {
+  background-color: #CEB180;
+}
+
+tr:nth-child(2n+1) {
+  background-color: #FFE5B4;
+}
+
+tr:nth-child(2n) {
+  background-color: #FFE5B4;
+}
+
+th {
+  background-color: #FFE5B4;
+}

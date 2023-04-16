@@ -79,8 +79,8 @@ const ListProfilesAdmin = () => {
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Roles</th>
+                <th>Email</th>
+                <th>Role</th>
                 <th>Edit</th>
               </tr>
             </thead>
