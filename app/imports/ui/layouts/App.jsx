@@ -80,7 +80,7 @@ const AdminProtectedRoute = ({ ready, children }) => {
   if (!ready) {
     return <LoadingSpinner />;
   }
-  const isAdmin = Roles.userIsInRole(Meteor.userId(), 'admin');
+  const isAdmin = Roles.userIsInRole(Meteor.userId(), ['admin', 'superadmin']);
   return (isLogged && isAdmin) ? children : <Navigate to="/notauthorized" />;
 };
 

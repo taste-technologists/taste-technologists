@@ -88,13 +88,12 @@ Meteor.publish(null, function () {
 });
 
 Meteor.publish('userData', function () {
-  if (Roles.userIsInRole(this.userId, 'admin')) {
+  const isAdmin = Roles.userIsInRole(this.userId, ['admin', 'superadmin']);
+  if (isAdmin) {
     return [Meteor.users.find({}, { fields: {
       _id: 1,
       username: 1,
       emails: 1,
-      profile: 1,
-      roles: 1,
     } }),
     Meteor.roleAssignment.find(),
     ];

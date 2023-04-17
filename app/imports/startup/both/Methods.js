@@ -10,6 +10,7 @@ const setRoleMethod = 'Profiles.role';
  */
 Meteor.methods({
   'Profiles.role'({ _id, role }) {
+    Roles.createRole(role, { unlessExists: true });
     Roles.setUserRoles(_id, role);
   },
 });
