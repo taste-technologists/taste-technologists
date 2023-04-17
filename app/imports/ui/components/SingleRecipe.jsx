@@ -19,13 +19,13 @@ const SingleRecipeCard = ({ recipe }) => (
     <Row>
       <h2>Ingredients</h2>
       <ul>
-        {recipe.ingredients.map((ing) => <li>{ing.quantity} {ing.unit} {ing.name}</li>)}
+        {recipe.ingredients.map((ing) => <li key={`${recipe._id}${ing.name}`}>{ing.quantity} {ing.unit} {ing.name}</li>)}
       </ul>
     </Row>
     <Row>
       <h2>Instructions:</h2>
       <ol>
-        {recipe.instructions.map((ing) => <li>{ing.step}</li>)}
+        {recipe.instructions.map((ins, idx) => <li key={`${recipe._id}${idx}`}>{ins.step}</li>)}
       </ol>
 
     </Row>
@@ -38,9 +38,14 @@ SingleRecipeCard.propTypes = {
     name: PropTypes.string,
     time: PropTypes.string,
     description: PropTypes.string,
-    ingredients: PropTypes.objectOf(PropTypes.string, PropTypes.number, PropTypes.string),
+    ingredients: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      quantity: PropTypes.number,
+      unit: PropTypes.string })),
     servings: PropTypes.number,
-    instructions: PropTypes.objectOf(PropTypes.string),
+    instructions: PropTypes.arrayOf(PropTypes.shape({
+      step: PropTypes.string,
+    })),
     tags: PropTypes.arrayOf(PropTypes.string),
     _id: PropTypes.string,
   }).isRequired,
