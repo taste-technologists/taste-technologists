@@ -67,6 +67,8 @@ const EditProfiles = () => {
     // console.log(role);
     // Calls meteor method to change role if the user isn't trying to change their own role.
     // Otherwise throws an error.
+    // Redundancy: Admin user will be able to access page even if it's their own account;
+    // however they won't be able to edit roles of equal or higher authority.
     if (!isOwner && !unAuth) {
       Meteor.call(setRoleMethod, { _id, role }, (error) => {
         if (error) {
