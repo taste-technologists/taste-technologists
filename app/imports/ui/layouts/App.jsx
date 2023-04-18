@@ -14,7 +14,6 @@ import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ListVendors from '../pages/ListVendors';
-import ListRecipes from '../pages/ListRecipes';
 import ListFavorites from '../pages/ListFavorites';
 import RecipeView from '../pages/RecipeView';
 import AddRecipe from '../pages/AddRecipe';
@@ -22,6 +21,8 @@ import EditRecipe from '../pages/EditRecipe';
 import EditProfile from '../pages/EditProfile';
 import ListProfilesAdmin from '../pages/ListProfilesAdmin';
 import InventoryView from '../pages/InventoryView';
+import MyRecipes from '../pages/MyRecipes';
+import SearchRecipes from '../pages/SearchRecipes';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -42,9 +43,10 @@ const App = () => {
           <Route path="/vendors" element={<ListVendors />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
-          <Route path="/list" element={<ProtectedRoute><ListRecipes /></ProtectedRoute>} />
+          <Route path="/my-recipes" element={<ProtectedRoute><MyRecipes /></ProtectedRoute>} />
           <Route path="/favorites" element={<ProtectedRoute><ListFavorites /></ProtectedRoute>} />
           <Route path="/add" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
+          <Route path="/search" element={<ProtectedRoute><SearchRecipes /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditRecipe /></ProtectedRoute>} />
           <Route path="/recipes/:_id" element={<ProtectedRoute><RecipeView /></ProtectedRoute>} />
           <Route path="/inventory/:_id" element={<ProtectedRoute><InventoryView /></ProtectedRoute>} />
@@ -82,7 +84,7 @@ const AdminProtectedRoute = ({ ready, children }) => {
   if (!ready) {
     return <LoadingSpinner />;
   }
-  const isAdmin = Roles.userIsInRole(Meteor.userId(), 'admin');
+  const isAdmin = Roles.userIsInRole(Meteor.userId(), ['admin', 'superadmin']);
   return (isLogged && isAdmin) ? children : <Navigate to="/notauthorized" />;
 };
 

@@ -4,6 +4,7 @@ import { HeartFill } from 'react-bootstrap-icons';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Meteor } from 'meteor/meteor';
 
 const RecipeCard = ({ recipe }) => (
   <Col>
@@ -22,7 +23,9 @@ const RecipeCard = ({ recipe }) => (
         <Card.Text>
           {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
         </Card.Text>
-        <Link to={`/edit/${recipe._id}`}>Edit</Link>
+        {recipe.owner === Meteor.user()?.username ?
+          <Link to={`/edit/${recipe._id}`}>Edit</Link> :
+          ''}
       </Card.Body>
     </Card>
   </Col>
@@ -36,6 +39,10 @@ RecipeCard.propTypes = {
     description: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
     _id: PropTypes.string,
+    owner: PropTypes.string,
+    ingredients: PropTypes.string,
+    instructions: PropTypes.string,
+    servings: PropTypes.string,
   }).isRequired,
 };
 

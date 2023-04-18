@@ -1,13 +1,11 @@
 {
-  "monti": {
-    "appId": "Ro3jBpBniMzaGveex",
-    "appSecret": "2d3061ae-7228-4899-ad01-ae8f15ccd19f"
-  },
-
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "email": "admin@foo.com", "password": "changeme", "role": "superadmin" },
+    { "email": "admin2@foo.com", "password": "changeme", "role": "admin" },
     { "email": "vendor@foo.com", "password": "changeme", "role": "vendor" },
-    { "email": "john@foo.com", "password": "changeme", "role": "user"}
+    { "email": "vendor2@foo.com", "password": "changeme", "role": "vendor" },
+    { "email": "john@foo.com", "password": "changeme", "role":  "user"},
+    { "email": "chris@foo.com", "password": "changeme", "role":  "user"}
   ],
 
   "defaultData": [
@@ -15,6 +13,122 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultRecipes": [
+    {
+      "owner": "john@foo.com",
+      "name": "Enchiladas",
+      "description": "This tasty family dinner is fun to assemble and even more fun to eat. The spicy enchilada sauce pairs perfectly with the gooey chicken-cheese filling that’s all rolled into a crispy tortilla. ",
+      "time": "1 hour",
+      "picture": "https://www.sidechef.com/recipe/306f2fab-427f-4881-af73-a781d3232742.jpg?d=1200x560",
+      "tags": [
+        "Cheese"
+      ],
+      "ingredients": [
+        {
+          "quantity": 0.25,
+          "unit": "cup",
+          "name": "shredded cheese"
+        },
+        {
+          "name":"chicken",
+          "unit": "cup",
+          "quantity": 1
+        },
+        {
+          "name": "flour tortillas",
+          "quantity": "2",
+          "unit": "oz"
+        },
+        {
+          "name": "enchilada sauce",
+          "quantity": "0.5",
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat toaster oven to 375F"
+        },
+        {
+          "step": "In a bowl, add shredded cooked chicken"
+        },
+        {
+          "step": "FOLD IN THE CHEESE"
+        },
+        {
+          "step": "Add half the mixture to each tortilla"
+        },
+        {
+          "step": "Place in an oven-safe dish"
+        },
+        {
+          "step": "Cover tortillas with enchilada sauce and more cheese"
+        },
+        {
+          "step": "Bake for 20 minutes or until sauce is bubbling."
+        }],
+      "servings": 1
+    },
+    {
+      "owner": "john@foo.com",
+      "name": "Feta-Spinach Puff Pastry Bites",
+      "description": "This easy appetizer recipe is great for entertaining. The feta cheese adds a light bite to the rich, creamy spinach and cheese-filled cups that will make them unforgettable.",
+      "time": "35 minutes",
+      "picture": "https://www.allrecipes.com/thmb/XQMSfxRQojpv7WGMHruq-F0IMng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Feta-Spinach-Puff-Pastry-Bites-fabeveryday-9aa534d8ba2a48f5aa36570dcc2c63b5.jpg",
+      "tags": [
+        "Snack",
+        "Cheese"
+      ],
+      "ingredients": [{
+        "name": "Cheese",
+        "quantity": 2,
+        "unit": "cup"
+      },{
+        "name": "Feta",
+        "quantity": 0.5,
+        "unit": "cup"
+      }],
+      "instructions": [
+        {
+          "step": "do something"
+        },
+        {
+          "step": "do another thing"
+        }],
+      "servings": 2
+    },
+    {
+      "owner": "admin@foo.com",
+      "name": "Parmesan Thyme Crisps",
+      "description": "Super simple but can be spiced up if you like with cayenne or other spices. Store in an airtight container, layered between waxed paper.",
+      "time": "30 minutes",
+      "picture": "https://www.allrecipes.com/thmb/XLpy3coYLg-RZqlKoQFgt4M7woE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3540204-b5bad438711a4afb84c98f230bc4e712.jpg",
+      "tags": [
+        "Snack"
+      ],
+      "ingredients": [{
+        "name": "Freshly grated parmesan cheese",
+        "quantity": 8,
+        "unit": "oz"
+      },{
+        "name": "Fresh Thyme Leaves",
+        "quantity": 4,
+        "unit": "tsp"
+      }],
+      "instructions": [
+        {
+          "step": "Preheat oven to 300 degrees F (150 degrees C). Line 2 baking sheets with parchment paper. "
+        },
+        {
+          "step": "Combine Parmesan cheese and thyme leaves in a bowl. Drop heaping teaspoonfuls of the mixture onto the lined baking sheets, spacing them 2 inches apart. Lightly press with your fingers to flatten them into circles 2 inches in diameter. "
+        },
+        {
+          "step": "Bake in the preheated oven until slightly browned and crisp, 8 to 10 minutes. Cool slightly on the baking sheets, about 2 minutes. Loosen edges with a spatula and lift off the parchment paper. Transfer to wire racks and let cool completely until firm, about 10 minutes."
+        }],
+      "servings": 15
+    }
   ],
 
   "defaultItem": [
@@ -40,49 +154,8 @@
     }
   ],
 
-  "defaultRecipes": [
-    {
-      "owner": "john@foo.com",
-      "name": "Feta-Spinach Puff Pastry Bites",
-      "description": "This easy appetizer recipe is great for entertaining. The feta cheese adds a light bite to the rich, creamy spinach and cheese-filled cups that will make them unforgettable.",
-      "time": "35 minutes",
-      "picture": "https://www.allrecipes.com/thmb/XQMSfxRQojpv7WGMHruq-F0IMng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Feta-Spinach-Puff-Pastry-Bites-fabeveryday-9aa534d8ba2a48f5aa36570dcc2c63b5.jpg",
-      "tags": [
-        "Snack",
-        "Cheese"
-      ],
-      "ingredients": [{
-        "name": "Cheese",
-        "quantity": 2,
-        "unit": "Cup(s)"
-      },{
-        "name": "Feta",
-        "quantity": 0.5,
-        "unit": "Cup(s)"
-      }],
-      "instructions": ["do something", "do another thing"],
-      "servings": 2
-    },
-    {
-      "owner": "admin@foo.com",
-      "name": "Parmesan Thyme Crisps",
-      "description": "Super simple but can be spiced up if you like with cayenne or other spices. Store in an airtight container, layered between waxed paper.",
-      "time": "30 minutes",
-      "picture": "https://www.allrecipes.com/thmb/XLpy3coYLg-RZqlKoQFgt4M7woE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3540204-b5bad438711a4afb84c98f230bc4e712.jpg",
-      "tags": [
-        "Snack"
-      ],
-      "ingredients": [{
-        "name": "Freshly grated parmesan cheese",
-        "quantity": 8,
-        "unit": "Ounces(s)"
-      },{
-        "name": "Fresh Thyme Leaves",
-        "quantity": 4,
-        "unit": "Teaspoons(s)"
-      }],
-      "instructions": ["Preheat oven to 300 degrees F (150 degrees C). Line 2 baking sheets with parchment paper. ", "Combine Parmesan cheese and thyme leaves in a bowl. Drop heaping teaspoonfuls of the mixture onto the lined baking sheets, spacing them 2 inches apart. Lightly press with your fingers to flatten them into circles 2 inches in diameter. ","Bake in the preheated oven until slightly browned and crisp, 8 to 10 minutes. Cool slightly on the baking sheets, about 2 minutes. Loosen edges with a spatula and lift off the parchment paper. Transfer to wire racks and let cool completely until firm, about 10 minutes.  "],
-      "servings": 15
-    }
-  ]
+  "monti": {
+    "appId": "Ro3jBpBniMzaGveex",
+    "appSecret": "2d3061ae-7228-4899-ad01-ae8f15ccd19f"
+  }
 }
