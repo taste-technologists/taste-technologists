@@ -8,7 +8,7 @@ import { Recipes } from '../../api/recipes/Recipes';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 /* Renders a table containing all of the Recipe documents. Use <RecipeCard> to render each recipe card. */
-const RecipesPage = () => {
+const MyRecipesPage = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, recipes } = useTracker(() => {
 
@@ -32,4 +32,4 @@ const RecipesPage = () => {
   ) : <LoadingSpinner />);
 };
 
-export default RecipesPage;
+export default MyRecipesPage;
