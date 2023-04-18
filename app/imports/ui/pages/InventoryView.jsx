@@ -33,10 +33,11 @@ const InventoryView = () => {
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Location</th>
-                <th>Hours</th>
-                <th>Inventory</th>
+                <th>Vendor</th>
+                <th>Item</th>
+                <th>Price ($)</th>
+                <th>Size</th>
+                <th>Edit</th>
               </tr>
             </thead>
             <tbody>

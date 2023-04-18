@@ -16,9 +16,9 @@ const ListProfilesAdmin = () => {
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe('userData');
     const subscription2 = Meteor.subscribe(Recipes.generalPublicationName);
-    // const subscription3 = Meteor.subscribe(Inventory.generalPublicationName);
+    const subscription3 = Meteor.subscribe(Inventory.userPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready() && subscription2.ready();
+    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready();
     // Get the Users and Roles
     const users = Meteor.users.find({}).fetch();
     const roles = Meteor.roleAssignment.find().fetch();
