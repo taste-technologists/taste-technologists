@@ -4,29 +4,34 @@ import { HeartFill } from 'react-bootstrap-icons';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Meteor } from 'meteor/meteor';
 
-const RecipeCard = ({ recipe }) => (
-  <Col>
-    <Card className="h-100">
-      <Card.Header>
-        <Card.Img src={recipe.picture} />
-        <Card.Title><Link to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
-        <Card.Subtitle>{recipe.time}</Card.Subtitle>
-        <HeartFill />
-      </Card.Header>
-      <Card.Body>
-        <Card.Text>
-          {recipe.description}
-        </Card.Text>
-        <h6>Tags</h6>
-        <Card.Text>
-          {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
-        </Card.Text>
-        <Link to={`/edit/${recipe._id}`}>Edit</Link>
-      </Card.Body>
-    </Card>
-  </Col>
-);
+const RecipeCard = ({ recipe }) => {
+  return (
+    <Col>
+      <Card className="h-100">
+        <Card.Header>
+          <Card.Img src={recipe.picture} />
+          <Card.Title><Link to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
+          <Card.Subtitle>{recipe.time}</Card.Subtitle>
+          <HeartFill />
+        </Card.Header>
+        <Card.Body>
+          <Card.Text>
+            {recipe.description}
+          </Card.Text>
+          <h6>Tags</h6>
+          <Card.Text>
+            {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
+          </Card.Text>
+          {recipe.owner === Meteor.user()?.username ?
+            <Link to={`/edit/${recipe._id}`}>Edit</Link> :
+            ''}
+        </Card.Body>
+      </Card>
+    </Col>
+  );
+};
 
 RecipeCard.propTypes = {
   recipe: PropTypes.shape({
@@ -36,6 +41,7 @@ RecipeCard.propTypes = {
     description: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string),
     _id: PropTypes.string,
+    owner: PropTypes.string,
   }).isRequired,
 };
 
