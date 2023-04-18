@@ -1,7 +1,7 @@
 import React from 'react';
 import swal from 'sweetalert';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { AutoForm, ErrorsField, HiddenField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, HiddenField, SelectField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
@@ -51,6 +51,11 @@ const EditRecipe = () => {
                 <TextField name="time" />
                 <TextField name="description" />
                 <TextField name="servings" />
+                <TextField name="ingredients" />
+                <TextField name="servings" />
+                <TextField name="instructions" />
+                <TextField name="servings" />
+                <SelectField name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
                 <ErrorsField />
                 <HiddenField name="owner" />
               </Card.Body>
