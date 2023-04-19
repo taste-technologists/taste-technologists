@@ -40,9 +40,13 @@ RecipeCard.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
     _id: PropTypes.string,
     owner: PropTypes.string,
-    // ingredients: PropTypes.string,
-    // instructions: PropTypes.string,
-    // servings: PropTypes.string,
+    ingredients: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      quantity: PropTypes.number,
+      unit: PropTypes.string })),
+    instructions: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string })),
+    servings: PropTypes.number,
   }).isRequired,
 };
 
