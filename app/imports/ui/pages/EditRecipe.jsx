@@ -1,11 +1,12 @@
 import React from 'react';
 import swal from 'sweetalert';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, HiddenField, ListField, ListItemField, LongTextField, NestField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { useParams } from 'react-router';
+import { Plus, TrashFill } from 'react-bootstrap-icons';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
 
@@ -32,8 +33,8 @@ const EditRecipe = () => {
   // console.log('EditStuff', doc, ready);
   // On successful submit, insert the data.
   const submit = (data) => {
-    const { name, picture, time, description, servings } = data;
-    Recipes.collection.update(_id, { $set: { name, picture, time, description, servings } }, (error) => (error ?
+    const { name, picture, time, description, servings, ingredients, instructions, tags } = data;
+    Recipes.collection.update(_id, { $set: { name, picture, time, description, servings, ingredients, instructions, tags } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Recipe updated successfully', 'success')));
   };
@@ -46,15 +47,33 @@ const EditRecipe = () => {
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
             <Card>
               <Card.Body>
-                <TextField name="name" />
-                <TextField name="picture" />
-                <TextField name="time" />
-                <TextField name="description" />
-                <TextField name="servings" />
-                <TextField name="ingredients" />
-                <TextField name="servings" />
-                <TextField name="instructions" />
-                <TextField name="servings" />
+                <Row>
+                  <Col><TextField name="name" showInlineError placeholder="Recipe name" /></Col>
+                  <Col><TextField name="picture" showInlineError placeholder="Recipe picture URL" /></Col>
+                </Row>
+                <Row>
+                  <Col><TextField name="time" showInlineError placeholder="Time" /></Col>
+                  <Col><NumField name="servings" decimal={null} min="0" /></Col>
+                </Row>
+                <LongTextField name="description" placeholder="Describe the recipe here" />
+                <ListField name="ingredients" initialCount={1} addIcon={<Plus className="text-black" size={30} />} removeIcon={<TrashFill className="text-black" size={15} />}>
+                  <ListItemField name="$">
+                    <NestField>
+                      <Row>
+                        <Col><NumField name="quantity" min="0" /></Col>
+                        <Col><SelectField name="unit" allowedValues={['lb', 'cup', 'tsp', 'tbsp', 'oz']} placeholder="Select a unit" /></Col>
+                      </Row>
+                      <Row><TextField name="name" showInlineError placeholder="Ingredient name" /></Row>
+                    </NestField>
+                  </ListItemField>
+                </ListField>
+                <ListField name="instructions" initialCount={1} addIcon={<Plus className="text-black" size={30} />} removeIcon={<TrashFill className="text-black" size={15} />}>
+                  <ListItemField name="$" label="">
+                    <NestField>
+                      <Row><TextField name="step" label="" showInlineError placeholder="Add step" /></Row>
+                    </NestField>
+                  </ListItemField>
+                </ListField>
                 <SelectField name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
                 <SubmitField value="Submit" />
                 <ErrorsField />
