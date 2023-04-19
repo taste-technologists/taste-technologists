@@ -16,7 +16,7 @@ const MyRecipesPage = () => {
     const subscription = Meteor.subscribe(Recipes.generalPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
-    // Get the Recipes
+    // Get the Profiles
     const recipeItem = Recipes.collection.find({}).fetch();
     return {
       recipes: recipeItem,

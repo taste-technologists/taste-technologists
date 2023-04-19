@@ -5,7 +5,11 @@ import { Accounts } from 'meteor/accounts-base';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { Roles } from 'meteor/alanning:roles';
+import { Meteor } from 'meteor/meteor';
+import { _ } from 'meteor/underscore';
+import { Profiles } from '../../api/profiles/Profiles';
 
 /**
  * SignUp component is similar to signin component, but we create a new user instead.
@@ -17,13 +21,38 @@ const SignUp = ({ location }) => {
   const schema = new SimpleSchema({
     email: String,
     password: String,
+    name: String,
+    role: String,
   });
   const bridge = new SimpleSchema2Bridge(schema);
 
   /* Handle SignUp submission. Create user account and a profile entry, then redirect to the home page. */
   const submit = (doc) => {
-    const { email, password } = doc;
+    const { email, password, name, role } = doc;
     Accounts.createUser({ email, username: email, password }, (err) => {
+      if (err) {
+        setError(err.reason);
+      } else {
+        setError('');
+        setRedirectToRef(true);
+      }
+    });
+    // console.log(Meteor.userId());
+    const users = Meteor.users.find({}).fetch();
+    // console.log(`users ${users}`);
+    const user = _.findWhere(users, { username: email });
+    // console.log(`user ${user}`);
+    const userID = user.user._id;
+    // console.log(`userID ${userID}`);
+    // console.log(`userID ${name}`);
+    // console.log(`userID ${role}`);
+    if (role === 'vendor') {
+      Roles.addUsersToRoles(userID, 'vendor');
+    }
+    if (role === 'user') {
+      Roles.addUsersToRoles(userID, 'user');
+    }
+    Profiles.collection.insert({ userID, name, role }, (err) => {
       if (err) {
         setError(err.reason);
       } else {
@@ -49,6 +78,8 @@ const SignUp = ({ location }) => {
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
               <Card.Body>
+                <TextField name="name" placeholder="Name you'd like displayed to others" />
+                <SelectField name="role" allowedValues={['user', 'vendor']} checkboxes inline />
                 <TextField name="email" placeholder="E-mail address" />
                 <TextField name="password" placeholder="Password" type="password" />
                 <ErrorsField />
