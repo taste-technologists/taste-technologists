@@ -30,8 +30,9 @@ const MyRecipesPage = () => {
   // Get the size of the user's recipe array.
   // If user has no recipes, the page will display this and
   // prompt user to add their own recipe.
-  const haveRecipes = recipes.length > 0;
+
   const myRec = _.filter(recipes, (recipe) => recipe.owner === Meteor.user().username);
+  const haveRecipes = myRec.length > 0;
   return (ready ? (
     <Container style={pageStyle}>
       <Row xs={1} md={2} lg={4} className="g-2">
