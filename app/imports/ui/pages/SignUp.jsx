@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, Navigate } from 'react-router-dom';
-import { Accounts } from 'meteor/accounts-base';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
-import { Roles } from 'meteor/alanning:roles';
 import { Meteor } from 'meteor/meteor';
-import { _ } from 'meteor/underscore';
-import { Profiles } from '../../api/profiles/Profiles';
+import { addProfileMethod } from '../../startup/both/Methods';
 
 /**
  * SignUp component is similar to signin component, but we create a new user instead.
@@ -28,38 +25,12 @@ const SignUp = ({ location }) => {
 
   /* Handle SignUp submission. Create user account and a profile entry, then redirect to the home page. */
   const submit = (doc) => {
-    const { email, password, name, role } = doc;
-    Accounts.createUser({ email, username: email, password }, (err) => {
-      if (err) {
-        setError(err.reason);
-      } else {
-        setError('');
-        setRedirectToRef(true);
-      }
-    });
-    // console.log(Meteor.userId());
-    const users = Meteor.users.find({}).fetch();
-    // console.log(`users ${users}`);
-    const user = _.findWhere(users, { username: email });
-    // console.log(`user ${user}`);
-    const userID = user.user._id;
-    // console.log(`userID ${userID}`);
-    // console.log(`userID ${name}`);
-    // console.log(`userID ${role}`);
-    if (role === 'vendor') {
-      Roles.addUsersToRoles(userID, 'vendor');
+    setRedirectToRef(Meteor.call(addProfileMethod, { doc }));
+    if (redirectToReferer) {
+      setError('there\'s an error');
+    } else {
+      setError('');
     }
-    if (role === 'user') {
-      Roles.addUsersToRoles(userID, 'user');
-    }
-    Profiles.collection.insert({ userID, name, role }, (err) => {
-      if (err) {
-        setError(err.reason);
-      } else {
-        setError('');
-        setRedirectToRef(true);
-      }
-    });
   };
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
