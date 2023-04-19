@@ -9,7 +9,7 @@ const Ingredient = ({ ingredient }) => (
     <td>{ingredient.price}</td>
     <td>{ingredient.size}</td>
     <td>
-      <Link to={`/edit/${ingredient._id}`}>Edit</Link>
+      <Link to={`/edit-ingredient/${ingredient._id}`}>Edit</Link>
     </td>
   </tr>
 

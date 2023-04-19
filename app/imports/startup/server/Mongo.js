@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
+import { Vendors } from '../../api/vendor/Vendors';
 
 /* eslint-disable no-console */
 
@@ -38,10 +39,24 @@ const addItem = (data) => {
   Inventory.collection.insert(data);
 };
 
+// Initialize the database with a default vendor document.
+const addVendor = (data) => {
+  console.log(`  Adding: ${data.name} (${data.location})`);
+  Vendors.collection.insert(data);
+};
+
 // Initialize the StuffsCollection if empty.
 if (Inventory.collection.find().count() === 0) {
   if (Meteor.settings.defaultItem) {
     console.log('Creating default recipes.');
     Meteor.settings.defaultItem.forEach(data => addItem(data));
+  }
+}
+
+// Initialize the VendorsCollection if empty.
+if (Vendors.collection.find().count() === 0) {
+  if (Meteor.settings.defaultVendors) {
+    console.log('Creating default vendors.');
+    Meteor.settings.defaultVendors.forEach(data => addVendor(data));
   }
 }

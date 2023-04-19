@@ -6,6 +6,7 @@ import Ingredient from '../components/Ingredient';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import LoadingSpinner from '../components/LoadingSpinner';
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+
 const InventoryView = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ingredients, ready } = useTracker(() => {
@@ -16,7 +17,7 @@ const InventoryView = () => {
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
-    const vendorIngredients = Inventory.collection.find({}).fetch();
+    const vendorIngredients = Inventory.collection.find().fetch();
     return {
       ingredients: vendorIngredients,
       ready: rdy,

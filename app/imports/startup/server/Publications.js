@@ -3,6 +3,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
+import { Vendors } from '../../api/vendor/Vendors';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -33,6 +34,12 @@ Meteor.publish(Inventory.userPublicationName, function () {
   return this.ready();
 });
 
+Meteor.publish(Vendors.userPublicationName, function () {
+  if (this.userId) {
+    return Vendors.collection.find();
+  }
+  return this.ready();
+});
 // General publication.
 // If logged in, then publish all recipes.
 Meteor.publish(Recipes.generalPublicationName, function () {
@@ -51,6 +58,14 @@ Meteor.publish(Inventory.vendorPublicationName, function () {
   return this.ready();
 });
 
+// Vendor-level publication.
+// If logged in and with vendor role, then publish all documents from all users. Otherwise publish nothing.
+Meteor.publish(Vendors.vendorPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'vendor')) {
+    return Vendors.collection.find();
+  }
+  return this.ready();
+});
 // Admin-level publication.
 // If logged in and with admin role, then publish all documents from all users. Otherwise publish nothing.
 Meteor.publish(Stuffs.adminPublicationName, function () {
@@ -74,6 +89,15 @@ Meteor.publish(Recipes.adminPublicationName, function () {
 Meteor.publish(Inventory.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Inventory.collection.find();
+  }
+  return this.ready();
+});
+
+// Admin-level publication.
+// If logged in and with admin role, then publish all recipes from all users. Otherwise publish nothing.
+Meteor.publish(Vendors.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Vendors.collection.find();
   }
   return this.ready();
 });

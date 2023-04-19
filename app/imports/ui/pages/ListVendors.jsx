@@ -1,37 +1,29 @@
 import React from 'react';
-// import { Meteor } from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import { Col, Container, Row, Table } from 'react-bootstrap';
-// import { useTracker } from 'meteor/react-meteor-data';
-// import { Stuffs } from '../../api/stuff/Stuff';
-// import LoadingSpinner from '../components/LoadingSpinner';
+import { useTracker } from 'meteor/react-meteor-data';
+import LoadingSpinner from '../components/LoadingSpinner';
 import VendorItem from '../components/VendorItem';
+import { Vendors } from '../../api/vendor/Vendors';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 const ListVendors = () => {
-
-  const vendors = [
-    { name: 'Nijiya Market', location: '1009 University Ave #101, Honolulu, HI 96826', hours: 'Sun-Sat 9AM-9PM', _id: '1' },
-    { name: 'Manoa Marketplace', location: '2752 Woodlawn Dr, Honolulu, HI 96822', hours: 'Sun-Sat 6AM-11PM', _id: '2' },
-  ];
-
-  /*
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { ready, stuffs } = useTracker(() => {
+  const { ready, vendors } = useTracker(() => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
     // Get access to Stuff documents.
-    const subscription = Meteor.subscribe(Stuffs.userPublicationName);
+    const subscription = Meteor.subscribe(Vendors.userPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
-    const stuffItems = Stuffs.collection.find({}).fetch();
+    const vendorAccount = Vendors.collection.find().fetch();
     return {
-      stuffs: stuffItems,
+      vendors: vendorAccount,
       ready: rdy,
     };
   }, []);
-  */
-  return (
+  return (ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
         <Col md={7}>
@@ -54,6 +46,6 @@ const ListVendors = () => {
         </Col>
       </Row>
     </Container>
-  );
+  ) : <LoadingSpinner />);
 };
 export default ListVendors;
