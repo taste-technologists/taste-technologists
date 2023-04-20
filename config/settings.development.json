@@ -1,11 +1,11 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "superadmin" },
-    { "email": "admin2@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "vendor@foo.com", "password": "changeme", "role": "vendor" },
-    { "email": "vendor2@foo.com", "password": "changeme", "role": "vendor" },
-    { "email": "john@foo.com", "password": "changeme", "role":  "user"},
-    { "email": "chris@foo.com", "password": "changeme", "role":  "user"}
+    { "email": "admin@foo.com", "password": "changeme", "role": "superadmin", "name": "Admin", "vendor": false},
+    { "email": "admin2@foo.com", "password": "changeme", "role": "admin", "name": "Admin 2", "vendor": false },
+    { "email": "vendor@foo.com", "password": "changeme", "role": "vendor" , "name": "Vendor", "vendor": true},
+    { "email": "vendor2@foo.com", "password": "changeme", "role": "vendor", "name": "Vendor 2", "vendor": true },
+    { "email": "john@foo.com", "password": "changeme", "role":  "user", "name": "John", "vendor": false},
+    { "email": "chris@foo.com", "password": "changeme", "role":  "user", "name": "Chris", "vendor": false}
   ],
 
   "defaultData": [
@@ -13,6 +13,11 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultVendor": [
+    { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM"},
+    { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM"}
   ],
 
   "defaultRecipes": [
@@ -162,5 +167,6 @@
   "monti": {
     "appId": "Ro3jBpBniMzaGveex",
     "appSecret": "2d3061ae-7228-4899-ad01-ae8f15ccd19f"
-  }
+  },
+  "loadAssetsFile":  false
 }

@@ -2,33 +2,42 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
+// import { Stuffs } from '../../api/stuff/Stuff';
 import LoadingSpinner from '../components/LoadingSpinner';
-import VendorItem from '../components/VendorItem';
-import { Vendors } from '../../api/vendor/Vendors';
+import VendorProf from '../components/VendorProf';
+import { Vendor } from '../../api/vendor/Vendors';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-const ListVendors = () => {
+const ListVendor = () => {
+
+  /* const vendors = [
+    { name: 'Nijiya Market', location: '1009 University Ave #101, Honolulu, HI 96826', hours: 'Sun-Sat 9AM-9PM', _id: '1' },
+    { name: 'Manoa Marketplace', location: '2752 Woodlawn Dr, Honolulu, HI 96822', hours: 'Sun-Sat 6AM-11PM', _id: '2' },
+  ] */
+
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, vendors } = useTracker(() => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
     // Get access to Stuff documents.
-    const subscription = Meteor.subscribe(Vendors.userPublicationName);
+    const subscription = Meteor.subscribe(Vendor.generalPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
-    const vendorAccount = Vendors.collection.find().fetch();
+    const vendorItems = Vendor.collection.find({}).fetch();
     return {
-      vendors: vendorAccount,
+      vendors: vendorItems,
       ready: rdy,
     };
   }, []);
+
   return (ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
             <h2>Vendor List</h2>
+            <h5><a href="/add-vendor">Add Vendor</a></h5>
           </Col>
           <Table striped bordered hover>
             <thead>
@@ -40,7 +49,7 @@ const ListVendors = () => {
               </tr>
             </thead>
             <tbody>
-              {vendors.map((vendor) => <VendorItem key={vendor._id} vendor={vendor} />)}
+              {vendors.map((vendor) => <VendorProf key={vendor._id} vendor={vendor} />)}
             </tbody>
           </Table>
         </Col>
@@ -48,4 +57,4 @@ const ListVendors = () => {
     </Container>
   ) : <LoadingSpinner />);
 };
-export default ListVendors;
+export default ListVendor;

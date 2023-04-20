@@ -1,8 +1,8 @@
-import { Meteor } from 'meteor/meteor';
+import { Meteor, Assets } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
-import { Vendors } from '../../api/vendor/Vendors';
+import { Vendor } from '../../api/vendor/Vendors';
 
 /* eslint-disable no-console */
 
@@ -39,24 +39,40 @@ const addItem = (data) => {
   Inventory.collection.insert(data);
 };
 
-// Initialize the database with a default vendor document.
-const addVendor = (data) => {
-  console.log(`  Adding: ${data.name} (${data.location})`);
-  Vendors.collection.insert(data);
-};
-
-// Initialize the StuffsCollection if empty.
+// Initialize the InventoryCollection if empty.
 if (Inventory.collection.find().count() === 0) {
   if (Meteor.settings.defaultItem) {
-    console.log('Creating default recipes.');
+    console.log('Creating default inventory.');
     Meteor.settings.defaultItem.forEach(data => addItem(data));
   }
 }
 
-// Initialize the VendorsCollection if empty.
-if (Vendors.collection.find().count() === 0) {
-  if (Meteor.settings.defaultVendors) {
+// Initialize the database with a default inventory document.
+const addVendor = (data) => {
+  console.log(`  Adding: ${data.name} (${data.hours})`);
+  Vendor.collection.insert(data);
+};
+
+// Initialize the VendorCollection if empty.
+if (Vendor.collection.find().count() === 0) {
+  if (Meteor.settings.defaultVendor) {
     console.log('Creating default vendors.');
-    Meteor.settings.defaultVendors.forEach(data => addVendor(data));
+    Meteor.settings.defaultVendor.forEach(data => addVendor(data));
   }
+}
+
+/**
+ * If the loadAssetsFile field in settings.development.json is true, then load the data in private/data.json.
+ * This approach allows you to initialize your system with large amounts of data.
+ * Note that settings.development.json is limited to 64,000 characters.
+ * We use the "Assets" capability in Meteor.
+ * For more info on assets, see https://docs.meteor.com/api/assets.html
+ * User count check is to make sure we don't load the file twice, which would generate errors due to duplicate info.
+ */
+if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
+  const assetsFileName = 'data.json';
+  console.log(`Loading data from private/${assetsFileName}`);
+  const jsonData = JSON.parse(Assets.getText(assetsFileName));
+  jsonData.profiles.map(profile => addData(profile));
+  jsonData.recipes.map(project => addRecipe(project));
 }

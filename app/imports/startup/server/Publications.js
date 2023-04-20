@@ -3,7 +3,8 @@ import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
-import { Vendors } from '../../api/vendor/Vendors';
+import { Profiles } from '../../api/profiles/Profiles';
+import { Vendor } from '../../api/vendor/Vendors';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -34,17 +35,26 @@ Meteor.publish(Inventory.userPublicationName, function () {
   return this.ready();
 });
 
-Meteor.publish(Vendors.userPublicationName, function () {
+Meteor.publish(Profiles.userPublicationName, function () {
   if (this.userId) {
-    return Vendors.collection.find();
+    const username = Meteor.users.findOne(this.userId).username;
+    return Profiles.collection.find({ owner: username });
   }
   return this.ready();
 });
+
 // General publication.
 // If logged in, then publish all recipes.
 Meteor.publish(Recipes.generalPublicationName, function () {
   if (this.userId) {
     return Recipes.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Vendor.generalPublicationName, function () {
+  if (this.userId) {
+    return Vendor.collection.find();
   }
   return this.ready();
 });
@@ -58,14 +68,13 @@ Meteor.publish(Inventory.vendorPublicationName, function () {
   return this.ready();
 });
 
-// Vendor-level publication.
-// If logged in and with vendor role, then publish all documents from all users. Otherwise publish nothing.
-Meteor.publish(Vendors.vendorPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'vendor')) {
-    return Vendors.collection.find();
+Meteor.publish(Profiles.generalPublicationName, function () {
+  if (this.userId) {
+    return Profiles.collection.find();
   }
   return this.ready();
 });
+
 // Admin-level publication.
 // If logged in and with admin role, then publish all documents from all users. Otherwise publish nothing.
 Meteor.publish(Stuffs.adminPublicationName, function () {
@@ -84,20 +93,18 @@ Meteor.publish(Recipes.adminPublicationName, function () {
   return this.ready();
 });
 
-// Admin-level publication.
-// If logged in and with admin role, then publish all items from all users. Otherwise publish nothing.
-Meteor.publish(Inventory.adminPublicationName, function () {
+Meteor.publish(Profiles.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Inventory.collection.find();
+    return Profiles.collection.find();
   }
   return this.ready();
 });
 
 // Admin-level publication.
-// If logged in and with admin role, then publish all recipes from all users. Otherwise publish nothing.
-Meteor.publish(Vendors.adminPublicationName, function () {
+// If logged in and with admin role, then publish all items from all users. Otherwise publish nothing.
+Meteor.publish(Inventory.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Vendors.collection.find();
+    return Inventory.collection.find();
   }
   return this.ready();
 });

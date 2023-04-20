@@ -2,35 +2,34 @@ import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 
 /**
- * The VendorCollection. It encapsulates state and variable values for the VendorInventory.
+ * The ProfileCollection. It encapsulates state and variable values for stuff.
  */
-class VendorCollection {
+class ProfileCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'VendorCollection';
+    this.name = 'ProfileCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
+      userID: String,
+      email: String,
       name: String,
-      location: String,
-      hours: String,
-      owner: {
-        type: Array,
-        optional: true,
-      },
-      'owner.$': String,
+      role: String,
+      vendor: Boolean,
     });
 
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
     // Define names for publications and subscriptions
+    this.userPublicationName = `${this.name}.publication.user`;
+    this.adminPublicationName = `${this.name}.publication.admin`;
     this.generalPublicationName = `${this.name}.publication.general`;
   }
 }
 
 /**
- * The singleton instance of the RecipeCollection.
- * @type {VendorCollection}
+ * The singleton instance of the ProfileCollection.
+ * @type {ProfileCollection}
  */
-export const Vendor = new VendorCollection();
+export const Profiles = new ProfileCollection();

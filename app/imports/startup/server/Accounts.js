@@ -1,10 +1,11 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Roles } from 'meteor/alanning:roles';
+import { Profiles } from '../../api/profiles/Profiles';
 
 /* eslint-disable no-console */
 
-const createUser = (email, password, role) => {
+const createUser = (email, password, role, name, vendor) => {
   console.log(`  Creating user ${email}.`);
   const userID = Accounts.createUser({
     username: email,
@@ -14,7 +15,6 @@ const createUser = (email, password, role) => {
   if (role === 'superadmin') {
     Roles.createRole(role, { unlessExists: true });
     Roles.addUsersToRoles(userID, 'superadmin');
-
   }
   if (role === 'admin') {
     Roles.createRole(role, { unlessExists: true });
@@ -24,18 +24,18 @@ const createUser = (email, password, role) => {
     Roles.createRole(role, { unlessExists: true });
     Roles.addUsersToRoles(userID, 'vendor');
   }
-
   if (role === 'user') {
     Roles.createRole(role, { unlessExists: true });
     Roles.addUsersToRoles(userID, 'user');
   }
+  Profiles.collection.insert({ userID, email, name, role, vendor });
 };
 
 // When running app for first time, pass a settings file to set up a default user account.
 if (Meteor.users.find().count() === 0) {
   if (Meteor.settings.defaultAccounts) {
     console.log('Creating the default user(s)');
-    Meteor.settings.defaultAccounts.forEach(({ email, password, role }) => createUser(email, password, role));
+    Meteor.settings.defaultAccounts.forEach(({ email, password, role, name, vendor }) => createUser(email, password, role, name, vendor));
   } else {
     console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');
   }
