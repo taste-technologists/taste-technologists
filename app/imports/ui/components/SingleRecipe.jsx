@@ -2,6 +2,8 @@
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
+import { Link } from 'react-router-dom';
 
 const SingleRecipeCard = ({ recipe }) => (
   <Container>
@@ -27,7 +29,10 @@ const SingleRecipeCard = ({ recipe }) => (
       <ol>
         {recipe.instructions.map((ins, idx) => <li key={`${recipe._id}${idx}`}>{ins.step}</li>)}
       </ol>
-
+    </Row>
+    <Row> {recipe.owner === Meteor.user()?.username ?
+      <Link to={`/edit/${recipe._id}`}>Edit Recipe</Link> :
+      ''}
     </Row>
   </Container>
 );
@@ -38,6 +43,7 @@ SingleRecipeCard.propTypes = {
     name: PropTypes.string,
     time: PropTypes.string,
     description: PropTypes.string,
+    owner: PropTypes.string,
     ingredients: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string,
       quantity: PropTypes.number,
