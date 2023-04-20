@@ -23,10 +23,18 @@ const SearchRecipesPage = () => {
       ready: rdy,
     };
   }, []);
+  const currentUser = Meteor.user()?.username;
+
   return (ready ? (
     <Container style={pageStyle}>
       <Row xs={1} md={2} lg={4} className="g-2">
-        {recipes.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} />)}
+        {recipes.map((recipe) => {
+          if (recipe.favoriteBy.includes(currentUser)) {
+            return <RecipeCard key={recipe._id} recipe={recipe} favorite="true" />;
+          }
+          return <RecipeCard key={recipe._id} recipe={recipe} favorite="false" />;
+
+        })}
       </Row>
     </Container>
   ) : <LoadingSpinner />);

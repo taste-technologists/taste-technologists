@@ -34,6 +34,8 @@ const RecipeCard = ({ recipe, favorite }) => {
     };
   }, []);
   const recipeItem = Recipes.collection;
+  const [isFavorite, setIsFavorite] = useState(false);
+
   const toggleFavorite = () => {
     const currentUser = Meteor.user()?.username;
     const isAlreadyFavorite = recipe.favoriteBy.includes(currentUser);
@@ -42,10 +44,14 @@ const RecipeCard = ({ recipe, favorite }) => {
       recipeItem.update(`${recipe._id}`, {
         $pull: { favoriteBy: currentUser },
       });
+      setIsFavorite(false);
+
     } else {
       recipeItem.update(`${recipe._id}`, {
         $addToSet: { favoriteBy: currentUser },
       });
+      setIsFavorite(true);
+
     }
   };
   console.log(recipe.favoriteBy);
@@ -57,7 +63,7 @@ const RecipeCard = ({ recipe, favorite }) => {
           <Card.Title><Link to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
           <Card.Subtitle>{recipe.time}</Card.Subtitle>
           {/* <HeartFill onClick={() => recipeItem.update(`${recipe._id}`, { $addToSet: { favoriteBy: Meteor.user()?.username } })} /> */}
-          {favorite ? (
+          {favorite && isFavorite ? (
             <HeartFill onClick={() => toggleFavorite()} />
           ) : (
             <Heart onClick={() => toggleFavorite()} />
