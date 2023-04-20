@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Row } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import RecipeCard from '../components/RecipeCard';
 import { pageStyle } from './pageStyles';
@@ -24,11 +24,21 @@ const SearchRecipesPage = () => {
     };
   }, []);
   const currentUser = Meteor.user()?.username;
-
+  const lunchRecipes = recipes.filter(recipe => recipe.tags.includes('Lunch'));
+  const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
+  const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
+  const [recipeList, setRecipeList] = useState(recipes);
   return (ready ? (
     <Container style={pageStyle}>
+      <Row>
+        <span>
+          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(lunchRecipes)}> Lunch </Button> </Col>
+          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(dinnerRecipes)}>Dinner</Button> </Col>
+          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(snackRecipes)}>Snack</Button> </Col>
+        </span>
+      </Row>
       <Row xs={1} md={2} lg={4} className="g-2">
-        {recipes.map((recipe) => {
+        {recipeList.map((recipe) => {
           if (recipe.favoriteBy.includes(currentUser)) {
             return <RecipeCard key={recipe._id} recipe={recipe} favorite="true" />;
           }
