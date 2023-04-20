@@ -41,7 +41,7 @@ const App = () => {
           <Route exact path="/" element={<Landing />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/vendors" element={<ListVendors />} />
+          <Route path="/vendors" element={<ProtectedRoute><ListVendors /></ProtectedRoute>} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
           <Route path="/add-vendor" element={<VendorProtectedRoute ready={ready}><AddVendor /></VendorProtectedRoute>} />

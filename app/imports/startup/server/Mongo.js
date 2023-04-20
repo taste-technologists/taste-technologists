@@ -49,7 +49,7 @@ if (Inventory.collection.find().count() === 0) {
 
 // Initialize the database with a default inventory document.
 const addVendor = (data) => {
-  console.log(`  Adding: ${data.vendor} (${data.item})`);
+  console.log(`  Adding: ${data.name} (${data.hours})`);
   Vendor.collection.insert(data);
 };
 

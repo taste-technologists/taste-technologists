@@ -1,26 +1,25 @@
 import React from 'react';
 import swal from 'sweetalert';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { AutoForm, ErrorsField, HiddenField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, HiddenField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { useParams } from 'react-router';
-import { Stuffs } from '../../api/stuff/Stuff';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Vendor } from '../../api/vendor/Vendors';
 
 const bridge = new SimpleSchema2Bridge(Vendor.schema);
 
-/* Renders the EditStuff page for editing a single document. */
-const EditStuff = () => {
+/* Renders the EditVendor page for editing a single document. */
+const EditVendor = () => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const { _id } = useParams();
-  // console.log('EditStuff', _id);
+  // console.log('EditVendor', _id);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { doc, ready } = useTracker(() => {
-    // Get access to Stuff documents.
-    const subscription = Meteor.subscribe(Vendor.userPublicationName);
+    // Get access to Vendor documents.
+    const subscription = Meteor.subscribe(Vendor.generalPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the document
@@ -30,13 +29,13 @@ const EditStuff = () => {
       ready: rdy,
     };
   }, [_id]);
-  // console.log('EditStuff', doc, ready);
+  // console.log('EditVendor', doc, ready);
   // On successful submit, insert the data.
   const submit = (data) => {
     const { name, hours, location } = data;
     Vendor.collection.update(_id, { $set: { name, hours, location } }, (error) => (error ?
       swal('Error', error.message, 'error') :
-      swal('Success', 'Item updated successfully', 'success')));
+      swal('Success', 'Vendor updated successfully', 'success')));
   };
 
   return ready ? (
@@ -47,9 +46,9 @@ const EditStuff = () => {
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
             <Card>
               <Card.Body>
-                <TextField name="name" />
-                <NumField name="quantity" decimal={null} />
-                <SelectField name="condition" />
+                <TextField name="name" label="Store" showInlineError />
+                <TextField name="hours" label="Hours of Operation" showInlineError />
+                <TextField name="location" placeholder="Please input address" showInlineError />
                 <SubmitField value="Submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />
@@ -62,4 +61,4 @@ const EditStuff = () => {
   ) : <LoadingSpinner />;
 };
 
-export default EditStuff;
+export default EditVendor;

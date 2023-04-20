@@ -31,10 +31,7 @@ VendorProf.propTypes = {
     name: PropTypes.string,
     location: PropTypes.string,
     hours: PropTypes.string,
-    vendor: {
-      type: Array,
-      optional: true,
-    },
+    owner: PropTypes.arrayOf(PropTypes.string),
     _id: PropTypes.string,
   }).isRequired,
 };
