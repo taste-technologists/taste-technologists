@@ -13,6 +13,7 @@ class ProfileCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       userID: String,
+      email: String,
       name: String,
       role: String,
       vendor: Boolean,
