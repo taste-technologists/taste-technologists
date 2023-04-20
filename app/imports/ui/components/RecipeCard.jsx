@@ -1,16 +1,17 @@
 /* Component for layout out a Profile Card. */
 import { Badge, Card, Col } from 'react-bootstrap';
-import { HeartFill } from 'react-bootstrap-icons';
+import { HeartFill, Heart } from 'react-bootstrap-icons';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
+import { Recipes } from '../../api/recipes/Recipes';
 
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, favorite }) => {
   const { ready, userProfile } = useTracker(() => {
 
     // Get access to Recipe documents.
@@ -32,6 +33,22 @@ const RecipeCard = ({ recipe }) => {
       userProfile: profile,
     };
   }, []);
+  const recipeItem = Recipes.collection;
+  const toggleFavorite = () => {
+    const currentUser = Meteor.user()?.username;
+    const isAlreadyFavorite = recipe.favoriteBy.includes(currentUser);
+
+    if (isAlreadyFavorite) {
+      recipeItem.update(`${recipe._id}`, {
+        $pull: { favoriteBy: currentUser },
+      });
+    } else {
+      recipeItem.update(`${recipe._id}`, {
+        $addToSet: { favoriteBy: currentUser },
+      });
+    }
+  };
+  console.log(recipe.favoriteBy);
   return (ready ? (
     <Col>
       <Card className="h-100">
@@ -39,14 +56,19 @@ const RecipeCard = ({ recipe }) => {
           <Card.Img src={recipe.picture} />
           <Card.Title><Link to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
           <Card.Subtitle>{recipe.time}</Card.Subtitle>
-          <HeartFill />
+          {/* <HeartFill onClick={() => recipeItem.update(`${recipe._id}`, { $addToSet: { favoriteBy: Meteor.user()?.username } })} /> */}
+          {favorite ? (
+            <HeartFill onClick={() => toggleFavorite()} />
+          ) : (
+            <Heart onClick={() => toggleFavorite()} />
+          )}
         </Card.Header>
         <Card.Body>
           <Card.Text>
             {recipe.description}
           </Card.Text>
           <footer className="blockquote-footer">
-            {userProfile.name}
+            {/* {userProfile.name} */}
           </footer>
           <h6>Tags</h6>
           <Card.Text>
@@ -70,6 +92,7 @@ RecipeCard.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
     _id: PropTypes.string,
     owner: PropTypes.string,
+    favoriteBy: PropTypes.arrayOf(PropTypes.string),
     ingredients: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string,
       quantity: PropTypes.number,
@@ -78,6 +101,7 @@ RecipeCard.propTypes = {
       name: PropTypes.string })),
     servings: PropTypes.number,
   }).isRequired,
+  favorite: PropTypes.bool.isRequired,
 };
 
 export default RecipeCard;

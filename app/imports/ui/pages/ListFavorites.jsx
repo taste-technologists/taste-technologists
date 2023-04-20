@@ -23,11 +23,13 @@ const FavoritesPage = () => {
       ready: rdy,
     };
   }, []);
+  const currentUser = Meteor.user()?.username;
+  const favoriteRecipes = recipes.filter(recipe => recipe.favoriteBy.includes(currentUser));
   return (ready ? (
     <Container style={pageStyle}>
       <Row xs={1} md={2} lg={4} className="g-2">
         {/* add parameter to switch heart fill to unfill based on current user */}
-        {recipes.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} />)}
+        {favoriteRecipes.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} favorite="true" />)}
       </Row>
     </Container>
   ) : <LoadingSpinner />);
