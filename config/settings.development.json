@@ -1,11 +1,11 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "superadmin", "name": "Admin" },
-    { "email": "admin2@foo.com", "password": "changeme", "role": "admin", "name": "Admin 2" },
-    { "email": "vendor@foo.com", "password": "changeme", "role": "vendor" , "name": "Vendor"},
-    { "email": "vendor2@foo.com", "password": "changeme", "role": "vendor", "name": "Vendor 2" },
-    { "email": "john@foo.com", "password": "changeme", "role":  "user", "name": "John"},
-    { "email": "chris@foo.com", "password": "changeme", "role":  "user", "name": "Chris"}
+    { "email": "admin@foo.com", "password": "changeme", "role": "superadmin", "name": "Admin", "vendor": false},
+    { "email": "admin2@foo.com", "password": "changeme", "role": "admin", "name": "Admin 2", "vendor": false },
+    { "email": "vendor@foo.com", "password": "changeme", "role": "vendor" , "name": "Vendor", "vendor": true},
+    { "email": "vendor2@foo.com", "password": "changeme", "role": "vendor", "name": "Vendor 2", "vendor": true },
+    { "email": "john@foo.com", "password": "changeme", "role":  "user", "name": "John", "vendor": false},
+    { "email": "chris@foo.com", "password": "changeme", "role":  "user", "name": "Chris", "vendor": false}
   ],
 
   "defaultData": [

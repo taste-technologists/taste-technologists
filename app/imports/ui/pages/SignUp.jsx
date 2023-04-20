@@ -4,7 +4,7 @@ import { Link, Navigate } from 'react-router-dom';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { AutoForm, ErrorsField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, RadioField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { addProfileMethod } from '../../startup/both/Methods';
 
@@ -19,18 +19,30 @@ const SignUp = ({ location }) => {
     email: String,
     password: String,
     name: String,
-    role: String,
+    vendor: {
+      type: Boolean,
+      allowedValues: ['Yes', 'No'],
+      defaultValue: 'No',
+    },
   });
   const bridge = new SimpleSchema2Bridge(schema);
 
   /* Handle SignUp submission. Create user account and a profile entry, then redirect to the home page. */
   const submit = (doc) => {
-    setRedirectToRef(Meteor.call(addProfileMethod, { doc }));
-    if (redirectToReferer) {
-      setError('there\'s an error');
-    } else {
-      setError('');
-    }
+    Meteor.call(addProfileMethod, { doc }, (err) => {
+      if (err) {
+        setError(err.reason);
+      } else {
+        Meteor.loginWithPassword(doc.email, doc.password, (errs) => {
+          if (errs) {
+            setError(errs.reason);
+          } else {
+            setRedirectToRef(true);
+            setError('');
+          }
+        });
+      }
+    });
   };
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
@@ -50,7 +62,7 @@ const SignUp = ({ location }) => {
             <Card>
               <Card.Body>
                 <TextField name="name" placeholder="Name you'd like displayed to others" />
-                <SelectField name="role" allowedValues={['user', 'vendor']} checkboxes inline />
+                <RadioField name="vendor" label="I would like a vendor role" inline />
                 <TextField name="email" placeholder="E-mail address" />
                 <TextField name="password" placeholder="Password" type="password" />
                 <ErrorsField />

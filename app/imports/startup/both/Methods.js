@@ -21,21 +21,17 @@ const addProfileMethod = 'Profiles.add';
 
 Meteor.methods({
   'Profiles.add'({ doc }) {
-    const { email, password, name, role } = doc;
-    console.log(doc);
+    const { email, password, name, vendor } = doc;
+    const role = 'user';
     const userID = Accounts.createUser({ email, username: email, password });
-    Roles.setUserRoles(userID, 'user');
-    console.log(userID);
-    Profiles.collection.insert({ userID, name, role }, (err) => {
-      if (err) {
-        console.log(err.reason);
-        return false;
-      } else {
-        console.log('success');
-        return true;
-      }
-      return true;
-    });
+    Roles.setUserRoles(userID, role);
+    const makeVendor = vendor === 'yes';
+    try {
+      Profiles.collection.insert({ userID, name, role, vendor: makeVendor });
+      return { success: true };
+    } catch (error) {
+      throw new Meteor.Error('add-profile-failed', 'Failed to add user profile');
+    }
   },
 });
 
