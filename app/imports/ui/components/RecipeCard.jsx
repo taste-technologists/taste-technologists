@@ -41,16 +41,18 @@ const RecipeCard = ({ recipe, favorite }) => {
     const isAlreadyFavorite = recipe.favoriteBy.includes(currentUser);
 
     if (isAlreadyFavorite) {
+      setIsFavorite(false);
+
       recipeItem.update(`${recipe._id}`, {
         $pull: { favoriteBy: currentUser },
       });
-      setIsFavorite(false);
 
     } else {
+      setIsFavorite(true);
+
       recipeItem.update(`${recipe._id}`, {
         $addToSet: { favoriteBy: currentUser },
       });
-      setIsFavorite(true);
 
     }
   };

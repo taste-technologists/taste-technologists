@@ -28,13 +28,15 @@ const SearchRecipesPage = () => {
   const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
   const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
   const [recipeList, setRecipeList] = useState(recipes);
+  console.log(recipeList);
   return (ready ? (
     <Container style={pageStyle}>
       <Row>
         <span>
+          <Col style={{ float: 'left' }}> <Button active onClick={() => setRecipeList(recipes)}> All </Button> </Col>
           <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(lunchRecipes)}> Lunch </Button> </Col>
           <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(dinnerRecipes)}>Dinner</Button> </Col>
-          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(snackRecipes)}>Snack</Button> </Col>
+          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(snackRecipes)}> Snack</Button> </Col>
         </span>
       </Row>
       <Row xs={1} md={2} lg={4} className="g-2">
