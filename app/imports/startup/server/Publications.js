@@ -4,6 +4,7 @@ import { Stuffs } from '../../api/stuff/Stuff';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import { Profiles } from '../../api/profiles/Profiles';
+import { Vendor } from '../../api/vendor/Vendors';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -47,6 +48,13 @@ Meteor.publish(Profiles.userPublicationName, function () {
 Meteor.publish(Recipes.generalPublicationName, function () {
   if (this.userId) {
     return Recipes.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Vendor.generalPublicationName, function () {
+  if (this.userId) {
+    return Vendor.collection.find();
   }
   return this.ready();
 });

@@ -22,6 +22,8 @@ import EditProfile from '../pages/EditProfile';
 import ListProfilesAdmin from '../pages/ListProfilesAdmin';
 import MyRecipes from '../pages/MyRecipes';
 import SearchRecipes from '../pages/SearchRecipes';
+import AddVendor from '../pages/AddVendor';
+import EditVendor from '../pages/EditVendor';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -42,11 +44,13 @@ const App = () => {
           <Route path="/vendors" element={<ListVendors />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
+          <Route path="/add-vendor" element={<VendorProtectedRoute ready={ready}><AddVendor /></VendorProtectedRoute>} />
           <Route path="/my-recipes" element={<ProtectedRoute><MyRecipes /></ProtectedRoute>} />
           <Route path="/favorites" element={<ProtectedRoute><ListFavorites /></ProtectedRoute>} />
           <Route path="/add" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
           <Route path="/search" element={<ProtectedRoute><SearchRecipes /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditRecipe /></ProtectedRoute>} />
+          <Route path="/edit-vendor/:_id" element={<ProtectedRoute><EditVendor /></ProtectedRoute>} />
           <Route path="/recipes/:_id" element={<ProtectedRoute><RecipeView /></ProtectedRoute>} />
           <Route path="/profile-edit/:_id" element={<AdminProtectedRoute ready={ready}><EditProfile /></AdminProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListProfilesAdmin /></AdminProtectedRoute>} />
@@ -67,6 +71,23 @@ const App = () => {
 const ProtectedRoute = ({ children }) => {
   const isLogged = Meteor.userId() !== null;
   return isLogged ? children : <Navigate to="/signin" />;
+};
+
+/**
+ * VendorProtectedRoute (see React Router v6 sample)
+ * Checks for Meteor login and admin role before routing to the requested page, otherwise goes to signin page.
+ * @param {any} { component: Component, ...rest }
+ */
+const VendorProtectedRoute = ({ ready, children }) => {
+  const isLogged = Meteor.userId() !== null;
+  if (!isLogged) {
+    return <Navigate to="/signin" />;
+  }
+  if (!ready) {
+    return <LoadingSpinner />;
+  }
+  const isAuth = Roles.userIsInRole(Meteor.userId(), ['admin', 'superadmin', 'vendor']);
+  return (isLogged && isAuth) ? children : <Navigate to="/notauthorized" />;
 };
 
 /**
@@ -102,6 +123,17 @@ AdminProtectedRoute.propTypes = {
 };
 
 AdminProtectedRoute.defaultProps = {
+  ready: false,
+  children: <Landing />,
+};
+
+// Require a component and location to be passed to each AdminProtectedRoute.
+VendorProtectedRoute.propTypes = {
+  ready: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+};
+
+VendorProtectedRoute.defaultProps = {
   ready: false,
   children: <Landing />,
 };
