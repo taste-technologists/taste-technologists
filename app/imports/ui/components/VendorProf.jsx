@@ -44,7 +44,7 @@ const VendorProf = ({ vendor, idx }) => {
       <td>
         <Link to={`/inventory/${vendor._id}`}>Inventory</Link>
       </td>
-      <td hidden={!isAdmin}><Button type="button" variant="danger" onClick={() => removeVendor(vendor._id)}><TrashFill /></Button></td>
+      <td hidden={!isAdmin}><Button type="button" id={`delete-vendor-${idx}`} variant="danger" onClick={() => removeVendor(vendor._id)}><TrashFill /></Button></td>
     </tr>
   );
 };
