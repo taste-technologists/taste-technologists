@@ -5,8 +5,8 @@ import { Roles } from 'meteor/alanning:roles';
 import { Link } from 'react-router-dom';
 import { TrashFill } from 'react-bootstrap-icons';
 import swal from 'sweetalert';
-import { Vendor } from '../../api/vendor/Vendors';
 import { Button } from 'react-bootstrap';
+import { Vendor } from '../../api/vendor/Vendors';
 
 /** Renders a single row in the List Vendor table. See pages/ListVendors.jsx. */
 const VendorProf = ({ vendor, idx }) => {
