@@ -23,6 +23,7 @@
   "defaultRecipes": [
     {
       "owner": "john@foo.com",
+      "favoriteBy": [],
       "name": "Enchiladas",
       "description": "This tasty family dinner is fun to assemble and even more fun to eat. The spicy enchilada sauce pairs perfectly with the gooey chicken-cheese filling that’s all rolled into a crispy tortilla. ",
       "time": "1 hour",
@@ -78,6 +79,7 @@
     },
     {
       "owner": "john@foo.com",
+      "favoriteBy": [],
       "name": "Feta-Spinach Puff Pastry Bites",
       "description": "This easy appetizer recipe is great for entertaining. The feta cheese adds a light bite to the rich, creamy spinach and cheese-filled cups that will make them unforgettable.",
       "time": "35 minutes",
@@ -106,6 +108,7 @@
     },
     {
       "owner": "admin@foo.com",
+      "favoriteBy": [],
       "name": "Parmesan Thyme Crisps",
       "description": "Super simple but can be spiced up if you like with cayenne or other spices. Store in an airtight container, layered between waxed paper.",
       "time": "30 minutes",
