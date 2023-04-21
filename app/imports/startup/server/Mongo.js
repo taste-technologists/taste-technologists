@@ -35,7 +35,7 @@ if (Recipes.collection.find().count() === 0) {
 
 }// Initialize the database with a default inventory document.
 const addItem = (data) => {
-  console.log(`  Adding: ${data.vendor} (${data.item})`);
+  console.log(`  Adding: ${data.name} (${data.item})`);
   Inventory.collection.insert(data);
 };
 
