@@ -28,7 +28,8 @@
       "time": "1 hour",
       "picture": "https://www.sidechef.com/recipe/306f2fab-427f-4881-af73-a781d3232742.jpg?d=1200x560",
       "tags": [
-        "Cheese"
+        "Lunch",
+        "Dinner"
       ],
       "ingredients": [
         {
@@ -83,8 +84,7 @@
       "time": "35 minutes",
       "picture": "https://www.allrecipes.com/thmb/XQMSfxRQojpv7WGMHruq-F0IMng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Feta-Spinach-Puff-Pastry-Bites-fabeveryday-9aa534d8ba2a48f5aa36570dcc2c63b5.jpg",
       "tags": [
-        "Snack",
-        "Cheese"
+        "Snack"
       ],
       "ingredients": [{
         "name": "Cheese",
