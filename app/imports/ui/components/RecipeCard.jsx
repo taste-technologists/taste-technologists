@@ -63,7 +63,6 @@ const RecipeCard = ({ recipe, favorite }) => {
           <Card.Img src={recipe.picture} />
           <Card.Title><Link to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
           <Card.Subtitle>{recipe.time}</Card.Subtitle>
-          {/* <HeartFill onClick={() => recipeItem.update(`${recipe._id}`, { $addToSet: { favoriteBy: Meteor.user()?.username } })} /> */}
           {favorite && isFavorite ? (
             <HeartFill onClick={() => toggleFavorite()} />
           ) : (
@@ -75,7 +74,7 @@ const RecipeCard = ({ recipe, favorite }) => {
             {recipe.description}
           </Card.Text>
           <footer className="blockquote-footer">
-            {/* {userProfile.name} */}
+            {userProfile.name}
           </footer>
           <h6>Tags</h6>
           <Card.Text>
