@@ -34,24 +34,23 @@ const RecipeCard = ({ recipe, favorite }) => {
     };
   }, []);
   const recipeItem = Recipes.collection;
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(recipe.favoriteBy.includes(Meteor.user()?.username));
 
   const toggleFavorite = () => {
-    const currentUser = Meteor.user()?.username;
-    const isAlreadyFavorite = recipe.favoriteBy.includes(currentUser);
+    const isAlreadyFavorite = recipe.favoriteBy.includes(Meteor.user()?.username);
 
     if (isAlreadyFavorite) {
       setIsFavorite(false);
 
       recipeItem.update(`${recipe._id}`, {
-        $pull: { favoriteBy: currentUser },
+        $pull: { favoriteBy: Meteor.user()?.username },
       });
 
     } else {
       setIsFavorite(true);
 
       recipeItem.update(`${recipe._id}`, {
-        $addToSet: { favoriteBy: currentUser },
+        $addToSet: { favoriteBy: Meteor.user()?.username },
       });
 
     }

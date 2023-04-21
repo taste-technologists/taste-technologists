@@ -23,7 +23,6 @@ const SearchRecipesPage = () => {
       ready: rdy,
     };
   }, []);
-  const currentUser = Meteor.user()?.username;
   const lunchRecipes = recipes.filter(recipe => recipe.tags.includes('Lunch'));
   const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
   const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
@@ -41,7 +40,7 @@ const SearchRecipesPage = () => {
       </Row>
       <Row xs={1} md={2} lg={4} className="g-2">
         {recipeList.map((recipe) => {
-          if (recipe.favoriteBy.includes(currentUser)) {
+          if (recipe.favoriteBy.includes(Meteor.user()?.username)) {
             return <RecipeCard key={recipe._id} recipe={recipe} favorite="true" />;
           }
           return <RecipeCard key={recipe._id} recipe={recipe} favorite="false" />;
