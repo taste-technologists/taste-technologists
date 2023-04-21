@@ -137,17 +137,17 @@
   ],
 
   "defaultItem": [
-    { "vendor": "Nijiya",
+    { "name": "Nijiya Market",
       "item": "Shredded Cheese",
       "price": 2,
       "size": "7 oz"
     },
-    { "vendor": "Safeway",
+    { "name": "Manoa Marketplace",
       "item": "Shredded Cheese",
       "price": 3.50,
       "size": "7 oz"
     },
-    { "vendor": "Safeway",
+    { "name": "Manoa Marketplace",
       "item": "Rotisserie Chicken",
       "price": 9.50,
       "size": "2 lbs"
