@@ -4,6 +4,7 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { Card, Col, Container, Row, Table } from 'react-bootstrap';
 import { BasketFill, PersonFill, FileTextFill } from 'react-bootstrap-icons';
 import { _ } from 'meteor/underscore';
+import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Profiles from '../components/Profiles';
 import { Recipes } from '../../api/recipes/Recipes';
@@ -16,9 +17,9 @@ const ListProfilesAdmin = () => {
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe('userData');
     const subscription2 = Meteor.subscribe(Recipes.generalPublicationName);
-    // const subscription3 = Meteor.subscribe(Inventory.generalPublicationName);
+    const subscription3 = Meteor.subscribe(Inventory.userPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready() && subscription2.ready();
+    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready();
     // Get the Users and Roles
     const users = Meteor.users.find({}).fetch();
     const roles = Meteor.roleAssignment.find().fetch();
@@ -61,7 +62,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2"
               >
                 <Card.Title>Recipes</Card.Title>
-                <Card.Text><FileTextFill className="mx-1 mb-1" />{Recipes.collection.find().count() }</Card.Text>
+                <Card.Text><Link to="/search" class="link-light"><FileTextFill className="mx-1 mb-1" /></Link>{Recipes.collection.find().count() }</Card.Text>
               </Card>
             </Col>
             <Col className="text-center">
@@ -72,7 +73,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2"
               >
                 <Card.Title>Ingredients</Card.Title>
-                <Card.Text><BasketFill className="mx-1 mb-1" />{Inventory.collection.find().count()}</Card.Text>
+                <Card.Text><Link to="/inventory:" class="link-light"><BasketFill className="mx-1 mb-1" /></Link>{Inventory.collection.find().count()}</Card.Text>
               </Card>
             </Col>
           </Row>

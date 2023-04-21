@@ -24,6 +24,7 @@ class VendorInventoryCollection {
     this.userPublicationName = `${this.name}.publication.user`;
     this.adminPublicationName = `${this.name}.publication.admin`;
     this.vendorPublicationName = `${this.name}.publication.vendor`;
+
   }
 }
 
