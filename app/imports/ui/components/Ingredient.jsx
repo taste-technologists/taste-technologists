@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Ingredient = ({ ingredient }) => (
+
   <tr>
-    <td>{ingredient.vendor}</td>
+    <td>{ingredient.name}</td>
     <td>{ingredient.item}</td>
     <td>{ingredient.price}</td>
     <td>{ingredient.size}</td>
@@ -17,7 +18,7 @@ const Ingredient = ({ ingredient }) => (
 
 Ingredient.propTypes = {
   ingredient: PropTypes.shape({
-    vendor: PropTypes.string,
+    name: PropTypes.string,
     item: PropTypes.string,
     price: PropTypes.number,
     size: PropTypes.string,

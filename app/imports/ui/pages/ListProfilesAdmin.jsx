@@ -73,7 +73,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2"
               >
                 <Card.Title>Ingredients</Card.Title>
-                <Card.Text><Link to="/inventory" class="link-light"><BasketFill className="mx-1 mb-1" /></Link>{Inventory.collection.find().count()}</Card.Text>
+                <Card.Text><Link to="/inventory:" class="link-light"><BasketFill className="mx-1 mb-1" /></Link>{Inventory.collection.find().count()}</Card.Text>
               </Card>
             </Col>
           </Row>
