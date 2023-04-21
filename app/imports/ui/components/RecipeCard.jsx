@@ -104,7 +104,11 @@ RecipeCard.propTypes = {
       name: PropTypes.string })),
     servings: PropTypes.number,
   }).isRequired,
-  favorite: PropTypes.bool.isRequired,
+  favorite: PropTypes.bool,
+};
+
+RecipeCard.defaultProps = {
+  favorite: false,
 };
 
 export default RecipeCard;
