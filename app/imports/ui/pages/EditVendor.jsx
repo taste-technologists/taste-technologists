@@ -39,17 +39,17 @@ const EditVendor = () => {
   };
 
   return ready ? (
-    <Container className="py-3">
+    <Container className="py-3" id="edit-vendor-page">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Edit Vendor</h2></Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
             <Card>
               <Card.Body>
-                <TextField name="name" label="Store" showInlineError />
-                <TextField name="hours" label="Hours of Operation" showInlineError />
-                <TextField name="location" placeholder="Please input address" showInlineError />
-                <SubmitField value="Submit" />
+                <TextField name="name" id="edit-vendor-form-name" label="Store" showInlineError />
+                <TextField name="hours" id="edit-vendor-form-hours" label="Hours of Operation" showInlineError />
+                <TextField name="location" id="edit-vendor-form-location" placeholder="Please input address" showInlineError />
+                <SubmitField id="edit-vendor-form-submit" value="Submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />
               </Card.Body>

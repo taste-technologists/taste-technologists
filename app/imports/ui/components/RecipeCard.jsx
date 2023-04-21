@@ -22,10 +22,7 @@ const RecipeCard = ({ recipe }) => {
     if (rdy) {
       const profiles = Profiles.collection.find({}).fetch();
       const owner = recipe.owner;
-      console.log(owner);
-      console.log(profiles);
       profile = _.findWhere(profiles, { email: owner });
-      console.log(userProfile);
     }
     return {
       ready: rdy,
