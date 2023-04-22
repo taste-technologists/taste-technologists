@@ -49,13 +49,12 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the AddStuff page for adding a document. */
 const AddRecipe = () => {
-
   // On submit, insert the data.
   const submit = (data, formRef) => {
     const { name, picture, time, description, servings, tags, ingredients, instructions } = data;
     const owner = Meteor.user().username;
     Recipes.collection.insert(
-      { name, picture, time, description, servings, owner, tags, ingredients, instructions },
+      { name, picture, time, description, servings, owner, tags, ingredients, instructions, favoriteBy: [] },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
