@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Accounts } from 'meteor/accounts-base';
 import { Profiles } from '../../api/profiles/Profiles';
+import { Recipes } from '../../api/recipes/Recipes';
 
 const setRoleMethod = 'Profiles.role';
 
@@ -12,8 +13,14 @@ const setRoleMethod = 'Profiles.role';
  */
 Meteor.methods({
   'Profiles.role'({ _id, role }) {
+    // console.log(_id);
     Roles.createRole(role, { unlessExists: true });
     Roles.setUserRoles(_id, role);
+    Profiles.collection.update(
+      { userID: _id },
+      { $set: { role: role } },
+    );
+
   },
 });
 
@@ -35,4 +42,18 @@ Meteor.methods({
   },
 });
 
-export { setRoleMethod, addProfileMethod };
+const removeProfileMethod = 'Profiles.remove';
+
+Meteor.methods({
+  'Profiles.remove'({ userId, email }) {
+    Meteor.users.remove(userId);
+    Profiles.collection.remove({ userID: userId });
+    Recipes.collection.update(
+      { favoriteBy: email },
+      { $pull: { favoriteBy: email } },
+      { multi: true },
+    );
+  },
+});
+
+export { setRoleMethod, addProfileMethod, removeProfileMethod };

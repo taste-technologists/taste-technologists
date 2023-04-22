@@ -94,7 +94,7 @@ Meteor.publish(Recipes.adminPublicationName, function () {
 });
 
 Meteor.publish(Profiles.adminPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+  if (this.userId && Roles.userIsInRole(this.userId, ['admin', 'superadmin'])) {
     return Profiles.collection.find();
   }
   return this.ready();
@@ -118,7 +118,7 @@ Meteor.publish(null, function () {
   return this.ready();
 });
 
-Meteor.publish('userData', function () {
+/* Meteor.publish('userData', function () {
   const isAdmin = Roles.userIsInRole(this.userId, ['admin', 'superadmin']);
   if (isAdmin) {
     return [Meteor.users.find({}, { fields: {
@@ -131,3 +131,4 @@ Meteor.publish('userData', function () {
   }
   return null;
 });
+*/
