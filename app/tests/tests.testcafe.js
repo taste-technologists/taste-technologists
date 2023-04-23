@@ -37,7 +37,9 @@ test.only('Test the List, Add, and Edit Vendor pages', async (testController) =>
   await addvendorPage.isDisplayed(testController);
   await addvendorPage.addVendor(testController, vendor.name, vendor.hours, vendor.location);
   await navBar.gotoListVendorPage(testController);
+  await listvendorPage.isDisplayed(testController);
   await listvendorPage.gotoEditVendorPage(testController);
+  await editvendorPage.isDisplayed(testController);
   await editvendorPage.editVendor(testController);
   await navBar.gotoListVendorPage(testController);
   await listvendorPage.deleteVendor(testController);
