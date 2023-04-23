@@ -9,7 +9,7 @@ class ListvendorPage {
   /** Asserts that this page is currently displayed. */
   async isDisplayed(testController) {
     // This is first test to be run. Wait 60 seconds to avoid timeouts with GitHub Actions.
-    await testController.wait(60000).expect(this.pageSelector.exists).ok();
+    await testController.wait(50000).expect(this.pageSelector.exists).ok();
   }
 
   /** Checks that this page is has a table with at least 2 rows. */
