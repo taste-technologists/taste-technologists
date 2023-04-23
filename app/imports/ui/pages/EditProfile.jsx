@@ -96,7 +96,7 @@ const EditProfiles = () => {
             <Card>
               <Card.Body>
                 <TextField name="email" disabled />
-                <SelectField name="role" placeholder={currentRole} allowedValues={allowed} />
+                <SelectField name="role" id="role-edit" placeholder={currentRole} allowedValues={allowed} />
                 <SubmitField value="Submit" />
                 <ErrorsField />
               </Card.Body>
