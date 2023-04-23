@@ -27,7 +27,7 @@ test('Test that signin and signout work', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test.only('Test the List, Add, and Edit Vendor pages', async (testController) => {
+test('Test the List, Add, and Edit Vendor pages', async (testController) => {
   await landingPage.isDisplayed(testController);
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
