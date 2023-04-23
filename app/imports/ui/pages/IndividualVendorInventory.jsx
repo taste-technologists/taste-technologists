@@ -2,7 +2,8 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Col, Container, Row, Table } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import { CartPlusFill } from 'react-bootstrap-icons';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Vendor } from '../../api/vendor/Vendors';
@@ -23,8 +24,6 @@ const IndividualInventoryView = () => {
     // vendor = Vendor.collection.findOne(vendorID); is only returning Nijiya?
     // eslint-disable-next-line no-param-reassign
     const vendor = Vendor.collection.findOne(vendorID);
-    console.log(vendor);
-    console.log(vendorID);
     const allIngredients = Inventory.collection.find().fetch();
     const vendorIngredients = allIngredients.filter(ingredient => ingredient.name.includes(vendor.name));
     return {
@@ -37,7 +36,7 @@ const IndividualInventoryView = () => {
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
-            <h2>Vendor List</h2>
+            <h2>Vendor List <Link to="/inventory-add"><CartPlusFill className="mb-2" color="black" /></Link> </h2>
           </Col>
           <Table striped bordered hover>
             <thead>
