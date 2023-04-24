@@ -22,7 +22,7 @@ class AdminPage {
   }
 
   async goToAdminEdit(testController) {
-    await testController.click('#edit-profile-oNgLhCy5uiC3NGYLP');
+    await testController.click('#edit-profile-YoBxpyHgJWhwNR8Hm');
   }
 
   async deleteUser(testController) {

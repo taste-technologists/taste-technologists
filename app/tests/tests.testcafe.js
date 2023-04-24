@@ -30,13 +30,13 @@ test('Test that landing page shows up', async (testController) => {
   await landingPage.isDisplayed(testController);
 });
 
-/* test('Test that signin and signout work', async (testController) => {
+test('Test that signin and signout work', async (testController) => {
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
-}); */
+});
 
 test('Test the inventory page and its functionalities', async (testController) => {
   await navBar.gotoSignInPage(testController);
@@ -52,7 +52,7 @@ test('Test the inventory page and its functionalities', async (testController) =
   await signoutPage.isDisplayed(testController);
 });
 
-/*test('Test the listprofilesadmin page and all of its functions work', async (testController) => {
+test.only('Test the listprofilesadmin page and all of its functions work', async (testController) => {
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
@@ -63,31 +63,32 @@ test('Test the inventory page and its functionalities', async (testController) =
   await adminInventory.isDisplayed(testController);
   await adminInventory.hasTable(testController);
   await navBar.goToAdminDashboard(testController);
-  //await adminPage.deleteUser(testController);
+  // await adminPage.deleteUser(testController);
   await adminPage.goToAdminEdit(testController);
+  // dies around here
   await adminEditPage.isDisplayed(testController);
   await adminEditPage.editProfile(testController);
   await navBar.goToAdminDashboard(testController);
-});*/
+});
 
-/*test('Test that signup works', async (testController) => {
+test('Test that signup works', async (testController) => {
   await navBar.gotoSignUpPage(testController);
   await signupPage.isDisplayed(testController);
   await signupPage.signupUser(testController, signupCredentials.name, signupCredentials.vendor, signupCredentials.email, signupCredentials.password);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
-}); */
+});
 
-/*test('Test add recipe form', async (testController) => {
+test('Test add recipe form', async (testController) => {
   await navBar.ensureLogout(testController);
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotoAddRecipePage(testController);
   await addrecipePage.isDisplayed(testController);
   await addrecipePage.addRecipe(testController, recipe.name, recipe.picture, recipe.time, recipe.servings, recipe.description, recipe.ingredientsQuantity, recipe.ingredientsUnit, recipe.ingredientsName, recipe.instructions);
-});*/
+});
 
-/*test('Test the List, Add, and Edit Vendor pages', async (testController) => {
+test('Test the List, Add, and Edit Vendor pages', async (testController) => {
   await landingPage.isDisplayed(testController);
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
@@ -105,4 +106,4 @@ test('Test the inventory page and its functionalities', async (testController) =
   await navBar.gotoListVendorPage(testController);
   await listvendorPage.deleteVendor(testController);
   await listvendorPage.isDisplayed(testController);
-});*/
+});
