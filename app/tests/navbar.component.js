@@ -53,6 +53,25 @@ class NavBar {
     await testController.click('#login-dropdown-sign-up');
   }
 
+  async gotoAddRecipePage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#add-nav');
+  }
+
+  /** Go to vendor page. */
+  async gotoListVendorPage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#add-nav');
+    await testController.click('#navbar-list-vendor');
+
+  }
+
   async goToAdminDashboard(testController) {
     const visible = await Selector('#basic-navbar-nav').visible;
     if (!visible) {

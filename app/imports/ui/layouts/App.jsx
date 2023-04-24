@@ -27,6 +27,7 @@ import EditVendor from '../pages/EditVendor';
 import IndividualVendorInventory from '../pages/IndividualVendorInventory';
 import EditInventory from '../pages/EditInventory';
 import InventoryView from '../pages/InventoryView';
+import AddInventory from '../pages/AddInventory';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -57,7 +58,8 @@ const App = () => {
           <Route path="/recipes/:_id" element={<ProtectedRoute><RecipeView /></ProtectedRoute>} />
           <Route path="/inventory/:_id" element={<ProtectedRoute><IndividualVendorInventory /></ProtectedRoute>} />
           <Route path="/inventory:" element={<ProtectedRoute><InventoryView /></ProtectedRoute>} />
-          <Route path="/edit-ingredient/:_id" element={<ProtectedRoute><EditInventory /></ProtectedRoute>} />
+          <Route path="/inventory-edit/:_id" element={<ProtectedRoute><EditInventory /></ProtectedRoute>} />
+          <Route path="/inventory-add" element={<ProtectedRoute><AddInventory /></ProtectedRoute>} />
           <Route path="/profile-edit/:_id" element={<AdminProtectedRoute ready={ready}><EditProfile /></AdminProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListProfilesAdmin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
