@@ -1,4 +1,4 @@
-import { Meteor, Assets } from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
@@ -72,6 +72,7 @@ if (Vendor.collection.find().count() === 0) {
 if ((Meteor.settings.loadAssetsFile) && (Inventory.collection.find().count() < 5)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
+  // eslint-disable-next-line no-undef
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  jsonData.groceries.map(item => addItem(item));
+  jsonData.groceries.map(data => addItem(data));
 }
