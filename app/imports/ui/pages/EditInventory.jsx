@@ -39,18 +39,18 @@ const EditInventory = () => {
   };
 
   return ready ? (
-    <Container className="py-3">
+    <Container className="py-3" id="edit-inventory-page">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Edit Inventory</h2></Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
             <Card>
               <Card.Body>
-                <TextField name="name" />
-                <TextField name="item" />
-                <NumField name="price" decimal={null} />
-                <TextField name="size" />
-                <SubmitField value="Submit" />
+                <TextField name="name" id="edit-inventory-name" />
+                <TextField name="item" id="edit-inventory-item" />
+                <NumField name="price" decimal={null} id="edit-inventory-price" />
+                <TextField name="size" id="edit-inventory-size" />
+                <SubmitField value="Submit" id="edit-inventory-form-submit" />
                 <ErrorsField />
               </Card.Body>
             </Card>

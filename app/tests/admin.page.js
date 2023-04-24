@@ -24,6 +24,12 @@ class AdminPage {
   async goToAdminEdit(testController) {
     await testController.click('#edit-profile-oNgLhCy5uiC3NGYLP');
   }
+
+  async deleteUser(testController) {
+    await testController.click('#delete-profile-rMWRwBGmftrCrFHEZ');
+    await testController.click(Selector('.swal-button--confirm'));
+  }
+
 }
 
 export const adminPage = new AdminPage();

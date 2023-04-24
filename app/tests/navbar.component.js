@@ -72,6 +72,7 @@ class NavBar {
 
   }
 
+  /** Go to admin page. */
   async goToAdminDashboard(testController) {
     const visible = await Selector('#basic-navbar-nav').visible;
     if (!visible) {
