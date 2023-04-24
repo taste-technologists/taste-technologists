@@ -55,9 +55,9 @@ const addVendor = (data) => {
 
 // Initialize the VendorCollection if empty.
 if (Vendor.collection.find().count() === 0) {
-  if (Meteor.settings.defaultVendor) {
+  if (Meteor.settings.defaultVendors) {
     console.log('Creating default vendors.');
-    Meteor.settings.defaultVendor.forEach(data => addVendor(data));
+    Meteor.settings.defaultVendors.forEach(data => addVendor(data));
   }
 }
 
@@ -69,10 +69,9 @@ if (Vendor.collection.find().count() === 0) {
  * For more info on assets, see https://docs.meteor.com/api/assets.html
  * User count check is to make sure we don't load the file twice, which would generate errors due to duplicate info.
  */
-if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
+if ((Meteor.settings.loadAssetsFile) && (Inventory.collection.find().count() < 5)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  jsonData.profiles.map(profile => addData(profile));
-  jsonData.recipes.map(project => addRecipe(project));
+  jsonData.groceries.map(item => addItem(item));
 }
