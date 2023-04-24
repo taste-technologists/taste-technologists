@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Row } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import RecipeCard from '../components/RecipeCard';
 import { pageStyle } from './pageStyles';
@@ -9,6 +9,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 
 /* Renders a table containing all of the Recipe documents. Use <RecipeCard> to render each recipe card. */
 const SearchRecipesPage = () => {
+  const [recipeList, setRecipeList] = useState([]);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, recipes } = useTracker(() => {
 
@@ -18,15 +19,38 @@ const SearchRecipesPage = () => {
     const rdy = subscription.ready();
     // Get the Profiles
     const recipeItem = Recipes.collection.find({}).fetch();
+    if (rdy) {
+      setRecipeList(recipeItem);
+    }
     return {
       recipes: recipeItem,
       ready: rdy,
     };
   }, []);
+  const lunchRecipes = recipes.filter(recipe => recipe.tags.includes('Lunch'));
+  const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
+  const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
+
+  console.log(recipeList);
+
   return (ready ? (
     <Container style={pageStyle}>
+      <Row>
+        <span>
+          <Col style={{ float: 'left' }}> <Button active onClick={() => setRecipeList(recipes)}> All </Button> </Col>
+          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(lunchRecipes)}> Lunch </Button> </Col>
+          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(dinnerRecipes)}>Dinner</Button> </Col>
+          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(snackRecipes)}> Snack</Button> </Col>
+        </span>
+      </Row>
       <Row xs={1} md={2} lg={4} className="g-2">
-        {recipes.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} />)}
+        {recipeList.map((recipe) => {
+          if (recipe.favoriteBy.includes(Meteor.user()?.username)) {
+            return <RecipeCard key={recipe._id} recipe={recipe} favorite />;
+          }
+          return <RecipeCard key={recipe._id} recipe={recipe} favorite={false} />;
+
+        })}
       </Row>
     </Container>
   ) : <LoadingSpinner />);
