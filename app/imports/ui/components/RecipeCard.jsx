@@ -81,7 +81,7 @@ const RecipeCard = ({ recipe, favorite }) => {
             {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
           </Card.Text>
           {recipe.owner === Meteor.user()?.username ?
-            <Link to={`/edit/${recipe._id}`}>Edit</Link> :
+            <Link className="edit" to={`/edit/${recipe._id}`}>Edit</Link> :
             ''}
         </Card.Body>
       </Card>

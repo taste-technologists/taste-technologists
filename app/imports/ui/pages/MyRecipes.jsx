@@ -38,7 +38,7 @@ const MyRecipesPage = () => {
       <Row xs={1} md={2} lg={4} className="g-2">
         {myRec.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} />)}
       </Row>
-      <Row hidden={haveRecipes} className="text-center pt-5">
+      <Row id="hidden-row" hidden={haveRecipes} className="text-center pt-5">
         <h2>You have no recipes!</h2>
         <h3><a href="../add">Click here to add a recipe.</a></h3>
       </Row>
