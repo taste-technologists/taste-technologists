@@ -36,7 +36,7 @@ const IndividualInventoryView = () => {
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
-            <h2>Vendor List <Link to="/inventory-add"><CartPlusFill className="mb-2" color="black" /></Link> </h2>
+            <h2>Vendor List <Link to="/inventory-add" id="inventory-add-page"><CartPlusFill className="mb-2" color="black" /></Link> </h2>
           </Col>
           <Table striped bordered hover>
             <thead>
@@ -49,7 +49,7 @@ const IndividualInventoryView = () => {
               </tr>
             </thead>
             <tbody>
-              {ingredients.map((ingredient) => <Ingredient key={ingredient._id} ingredient={ingredient} />)}
+              {ingredients.map((ingredient, idx) => <Ingredient key={ingredient._id} idx={idx} ingredient={ingredient} />)}
             </tbody>
           </Table>
         </Col>

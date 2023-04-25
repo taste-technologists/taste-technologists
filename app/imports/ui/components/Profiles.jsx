@@ -9,7 +9,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { removeProfileMethod } from '../../startup/both/Methods';
 
 /** Renders a single row in the List Profiles (Admin) table. See pages/ListProfilesAdmin.jsx. */
-const ProfileItem = ({ prof }) => {
+const ProfileItem = ({ prof, idx }) => {
 
   const removeItem = (userId, email) => {
     // console.log(`The item removed is ${userId}`);
@@ -37,9 +37,9 @@ const ProfileItem = ({ prof }) => {
     <tr>
       <td>{prof.email}</td>
       <td>{prof.role}</td>
-      <td><Link to={`/profile-edit/${prof.userID}`} hidden={prof.role === 'superadmin' || unAuth}>Edit</Link></td>
+      <td><Link to={`/profile-edit/${prof.userID}`} hidden={prof.role === 'superadmin' || unAuth} id={`edit-profile-${idx}`}>Edit</Link></td>
       <td className="text-center">{prof.vendor && prof.role !== 'vendor' ? '✔' : ''}</td>
-      <td className="text-center"><Button type="button" variant="danger" hidden={disable} disabled={disable} onClick={() => removeItem(prof.userID, prof.email)}><TrashFill /></Button></td>
+      <td className="text-center"><Button id={`delete-profile-${idx}`} type="button" variant="danger" hidden={disable} disabled={disable} onClick={() => removeItem(prof.userID, prof.email)}><TrashFill /></Button></td>
     </tr>
   );
 };
@@ -53,6 +53,7 @@ ProfileItem.propTypes = {
     role: PropTypes.string,
     vendor: PropTypes.bool,
   }).isRequired,
+  idx: PropTypes.number.isRequired,
 };
 
 export default ProfileItem;

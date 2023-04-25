@@ -63,12 +63,18 @@ class NavBar {
 
   /** Go to vendor page. */
   async gotoListVendorPage(testController) {
+    await testController.click('#navbar-list-vendor');
+
+  }
+
+  /** Go to admin page. */
+  async goToAdminDashboard(testController) {
     const visible = await Selector('#basic-navbar-nav').visible;
     if (!visible) {
       await testController.click('button.navbar-toggler');
     }
-    await testController.click('#add-nav');
-    await testController.click('#navbar-list-vendor');
+    await testController.expect(Selector('#navbar-current-user').exists).ok();
+    await testController.click('#list-stuff-admin-nav');
   }
 }
 

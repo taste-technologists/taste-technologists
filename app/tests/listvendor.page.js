@@ -36,6 +36,15 @@ class ListvendorPage {
     await testController.click(Selector('.swal-button--confirm'));
     await testController.click(Selector('.swal-button--confirm'));
   }
+
+  async gotoInventoryPage(testController) {
+    await testController.click('#vendor-inventory-0');
+  }
+
+  async gotoInventoryPage2(testController) {
+    await testController.click('#vendor-inventory-1');
+  }
+
 }
 
 export const listvendorPage = new ListvendorPage();

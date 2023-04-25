@@ -29,7 +29,7 @@ const ListProfilesAdmin = () => {
     };
   }, []);
   return (ready ? (
-    <Container className="py-3">
+    <Container className="py-3" id="admin-page">
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center"><h2>Admin Dashboard</h2></Col>
@@ -53,7 +53,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2"
               >
                 <Card.Title>Recipes</Card.Title>
-                <Card.Text><Link to="/search" className="link-light"><FileTextFill className="mx-1 mb-1" /></Link>{Recipes.collection.find().count() }</Card.Text>
+                <Card.Text><Link to="/search" id="admin-recipes" className="link-light"><FileTextFill className="mx-1 mb-1" /></Link>{Recipes.collection.find().count() }</Card.Text>
               </Card>
             </Col>
             <Col className="text-center">
@@ -64,7 +64,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2"
               >
                 <Card.Title>Ingredients</Card.Title>
-                <Card.Text><Link to="/inventory:" className="link-light"><BasketFill className="mx-1 mb-1" /></Link>{Inventory.collection.find().count()}</Card.Text>
+                <Card.Text><Link to="/inventory:" id="admin-inventory" className="link-light"><BasketFill className="mx-1 mb-1" /></Link>{Inventory.collection.find().count()}</Card.Text>
               </Card>
             </Col>
           </Row>
@@ -79,7 +79,7 @@ const ListProfilesAdmin = () => {
               </tr>
             </thead>
             <tbody>
-              {profile.map((prof) => <ProfileItem key={prof._id} prof={prof} />)}
+              {profile.map((prof, idx) => <ProfileItem key={prof._id} prof={prof} idx={idx} />)}
             </tbody>
           </Table>
         </Col>

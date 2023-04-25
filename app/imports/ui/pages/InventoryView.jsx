@@ -18,6 +18,7 @@ const InventoryView = () => {
     const rdy = subscription.ready();
     // Get the Stuff documents
     const vendorIngredients = Inventory.collection.find().fetch();
+    console.log(vendorIngredients);
     return {
       ingredients: vendorIngredients,
       ready: rdy,
@@ -25,7 +26,7 @@ const InventoryView = () => {
   }, []);
 
   return (ready ? (
-    <Container className="py-3">
+    <Container className="py-3" id="admin-inventory-page">
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
@@ -42,7 +43,7 @@ const InventoryView = () => {
               </tr>
             </thead>
             <tbody>
-              {ingredients.map((ingredient) => <Ingredient key={ingredient._id} ingredient={ingredient} />)}
+              {ingredients.map((item, idx) => <Ingredient idx={idx} key={item._id} ingredient={item} />)}
             </tbody>
           </Table>
         </Col>
