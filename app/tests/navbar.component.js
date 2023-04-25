@@ -53,7 +53,7 @@ class NavBar {
     await testController.click('#login-dropdown-sign-up');
   }
 
-  async gotomyrecipePage(testController) {
+  async gotoAddRecipePage(testController) {
     const visible = await Selector('#basic-navbar-nav').visible;
     if (!visible) {
       await testController.click('button.navbar-toggler');
@@ -62,14 +62,13 @@ class NavBar {
   }
 
   /** Go to vendor page. */
-  async gotoMyrecipePage(testController) {
+  async gotoListVendorPage(testController) {
     const visible = await Selector('#basic-navbar-nav').visible;
     if (!visible) {
       await testController.click('button.navbar-toggler');
     }
     await testController.click('#add-nav');
     await testController.click('#navbar-list-vendor');
-    await testController.click('#my-recipes-nav');
   }
 }
 
