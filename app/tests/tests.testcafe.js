@@ -2,6 +2,7 @@ import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
+import { myrecipePage } from './myrecipe.page';
 
 /* global fixture:false, test:false */
 
@@ -21,4 +22,12 @@ test('Test that signin and signout work', async (testController) => {
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test that MyRecipe Page', async (testController) => {
+  await landingPage.isDisplayed(testController);
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotomyrecipePage(testController);
+  await myrecipePage.isDisplayed(testController);
 });
