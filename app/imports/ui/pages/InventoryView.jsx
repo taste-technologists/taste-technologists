@@ -29,7 +29,7 @@ const InventoryView = () => {
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center">
-            <h2>Vendor List</h2>
+            <h2>Vendor Inventory</h2>
           </Col>
           <Table striped bordered hover>
             <thead>

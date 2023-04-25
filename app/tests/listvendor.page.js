@@ -45,6 +45,7 @@ class ListvendorPage {
   async gotoInventoryPage2(testController) {
     await testController.click('#vendor-inventory-0');
   }
+
 }
 
 export const listvendorPage = new ListvendorPage();

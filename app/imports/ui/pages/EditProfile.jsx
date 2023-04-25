@@ -88,7 +88,7 @@ const EditProfiles = () => {
   };
 
   return ready ? (
-    <Container className="py-3" id="#edit-profile-page">
+    <Container className="py-3" id="edit-profile-page">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Edit Role</h2></Col>
