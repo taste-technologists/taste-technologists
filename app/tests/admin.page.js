@@ -14,7 +14,7 @@ class AdminPage {
 
   async hasTable(testController) {
     const rowCount = Selector('tr').count;
-    await testController.expect(rowCount).gte(4);
+    await testController.expect(rowCount).gte(6);
   }
 
   async goToAdminInventory(testController) {
@@ -22,11 +22,11 @@ class AdminPage {
   }
 
   async goToAdminEdit(testController) {
-    await testController.click('#edit-profile-BXCMZmT2gy32GAYic');
+    await testController.click('#edit-profile-MwTxn5xi5c2wsBDbJ');
   }
 
   async deleteUser(testController) {
-    await testController.click('#delete-profile-f2zqhNqqL4sEgsrXz');
+    await testController.click('#delete-profile-eoLp86Qftbe66ywBE');
     await testController.click(Selector('.swal-button--confirm'));
   }
 

@@ -15,7 +15,7 @@ class EditInventoryPage {
   /** Signs up a new user, then checks to see that they are logged in by checking the navbar. */
   async editInventory(testController) {
     //await this.isDisplayed(testController);
-    await testController.click('#edit-inventory-PxNXZP5Lqu7wDkky7');
+    await testController.click('#edit-inventory-tSq4a5r6g596z2Kkv');
     await testController.typeText('#edit-inventory-name', 'Nijiya Market', { replace: true });
     await testController.typeText('#edit-inventory-item', 'Cheese Wheel', { replace: true });
     await testController.typeText('#edit-inventory-size', '15 lbs', { replace: true });
@@ -30,7 +30,7 @@ class EditInventoryPage {
 
   async hasTable(testController) {
     const rowCount = Selector('tr').count;
-    await testController.expect(rowCount).gte(3);
+    await testController.expect(rowCount).gte(27);
   }
 
   async hasTable2(testController) {

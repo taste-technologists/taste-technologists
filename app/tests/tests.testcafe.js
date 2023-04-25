@@ -39,7 +39,7 @@ test('Test that signin and signout work', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test.only('Test the inventory page and its functionalities', async (testController) => {
+test('Test the inventory page and its functionalities', async (testController) => {
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
@@ -60,7 +60,7 @@ test.only('Test the inventory page and its functionalities', async (testControll
   await signoutPage.isDisplayed(testController);
 });
 
-test('Test the listprofilesadmin page and all of its functions work', async (testController) => {
+test.only('Test the listprofilesadmin page and all of its functions work', async (testController) => {
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);

@@ -14,7 +14,7 @@ class AdminInventory {
 
   async hasTable(testController) {
     const rowCount = Selector('tr').count;
-    await testController.expect(rowCount).gte(4);
+    await testController.expect(rowCount).gte(64);
   }
 }
 
