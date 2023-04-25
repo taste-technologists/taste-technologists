@@ -354,5 +354,73 @@
       "price": 2.49,
       "size": "2 lbs"
     }
+  ],
+  "recipes": [
+    {
+      "name": "Tuna Salad",
+      "picture": "https://www.seriouseats.com/thmb/4zcnGTHKz4gkPkK_Kh8X5AtihHk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__06__20160614-tuna-salad-sandwich-vicky-wasik-7-4a99426df6f9457f8820f79c860a5dae.jpg",
+      "time": "15 mins",
+      "description": "A quick and easy tuna salad recipe that is perfect for a healthy lunch or snack.",
+      "servings": 2,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "canned tuna",
+          "quantity": 0.5,
+          "unit": "lb"
+        },
+        {
+          "name": "celery",
+          "quantity": 0.25,
+          "unit": "cups"
+        },
+        {
+          "name": "red onion",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "mayonnaise",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "dijon mustard",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Drain the canned tuna and place it in a mixing bowl."
+        },
+        {
+          "step": "Chop the celery and red onion into small pieces and add them to the bowl with the tuna."
+        },
+        {
+          "step": "Add the mayonnaise, dijon mustard, lemon juice, salt, and pepper to the bowl and mix well."
+        },
+        {
+          "step": "Serve the tuna salad on a bed of lettuce or in a sandwich."
+        }
+      ]
+    }
   ]
 }
