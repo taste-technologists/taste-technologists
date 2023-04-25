@@ -34,13 +34,13 @@ const SearchRecipesPage = () => {
   console.log(recipeList);
 
   return (ready ? (
-    <Container style={pageStyle}>
+    <Container style={pageStyle} id="search-page">
       <Row>
         <span>
-          <Col style={{ float: 'left' }}> <Button active onClick={() => setRecipeList(recipes)}> All </Button> </Col>
-          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(lunchRecipes)}> Lunch </Button> </Col>
-          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(dinnerRecipes)}>Dinner</Button> </Col>
-          <Col style={{ float: 'left' }}> <Button onClick={() => setRecipeList(snackRecipes)}> Snack</Button> </Col>
+          <Col style={{ float: 'left' }}> <Button id="btn-all" active onClick={() => setRecipeList(recipes)}> All </Button> </Col>
+          <Col style={{ float: 'left' }}> <Button id="btn-lunch" onClick={() => setRecipeList(lunchRecipes)}> Lunch </Button> </Col>
+          <Col style={{ float: 'left' }}> <Button id="btn-dinner" onClick={() => setRecipeList(dinnerRecipes)}>Dinner</Button> </Col>
+          <Col style={{ float: 'left' }}> <Button id="btn-snack" onClick={() => setRecipeList(snackRecipes)}> Snack</Button> </Col>
         </span>
       </Row>
       <Row xs={1} md={2} lg={4} className="g-2">

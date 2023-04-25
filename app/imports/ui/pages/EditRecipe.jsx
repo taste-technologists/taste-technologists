@@ -40,7 +40,7 @@ const EditRecipe = () => {
   };
 
   return ready ? (
-    <Container className="py-3">
+    <Container id="editrecipe-page" className="py-3">
       <Row className="justify-content-center">
         <Col xs={10}>
           <Col className="text-center"><h2>Edit Recipe</h2></Col>
@@ -48,34 +48,34 @@ const EditRecipe = () => {
             <Card>
               <Card.Body>
                 <Row>
-                  <Col><TextField name="name" showInlineError placeholder="Recipe name" /></Col>
-                  <Col><TextField name="picture" showInlineError placeholder="Recipe picture URL" /></Col>
+                  <Col><TextField id="edit-recipe-name" name="name" showInlineError placeholder="Recipe name" /></Col>
+                  <Col><TextField id="edit-recipe-picture" name="picture" showInlineError placeholder="Recipe picture URL" /></Col>
                 </Row>
                 <Row>
-                  <Col><TextField name="time" showInlineError placeholder="Time" /></Col>
-                  <Col><NumField name="servings" decimal={null} min="0" /></Col>
+                  <Col><TextField id="edit-recipe-time" name="time" showInlineError placeholder="Time" /></Col>
+                  <Col><NumField id="edit-recipe-servings" name="servings" decimal={null} min="0" /></Col>
                 </Row>
-                <LongTextField name="description" placeholder="Describe the recipe here" />
+                <LongTextField id="edit-recipe-description" name="description" placeholder="Describe the recipe here" />
                 <ListField name="ingredients" initialCount={1} addIcon={<Plus className="text-black" size={30} />} removeIcon={<TrashFill className="text-black" size={15} />}>
                   <ListItemField name="$">
                     <NestField>
                       <Row>
-                        <Col><NumField name="quantity" min="0" /></Col>
-                        <Col><SelectField name="unit" allowedValues={['lb', 'cup', 'tsp', 'tbsp', 'oz']} placeholder="Select a unit" /></Col>
+                        <Col><NumField id="edit-recipe-ingredientsQuantity" name="quantity" min="0" /></Col>
+                        <Col><SelectField id="edit-recipe-ingredientsUnit" name="unit" allowedValues={['lb', 'cup', 'tsp', 'tbsp', 'oz']} placeholder="Select a unit" /></Col>
                       </Row>
-                      <Row><TextField name="name" showInlineError placeholder="Ingredient name" /></Row>
+                      <Row><TextField id="edit-recipe-ingredientsName" name="name" showInlineError placeholder="Ingredient name" /></Row>
                     </NestField>
                   </ListItemField>
                 </ListField>
                 <ListField name="instructions" initialCount={1} addIcon={<Plus className="text-black" size={30} />} removeIcon={<TrashFill className="text-black" size={15} />}>
                   <ListItemField name="$" label="">
                     <NestField>
-                      <Row><TextField name="step" label="" showInlineError placeholder="Add step" /></Row>
+                      <Row><TextField id="edit-recipe-instructions" name="step" label="" showInlineError placeholder="Add step" /></Row>
                     </NestField>
                   </ListItemField>
                 </ListField>
-                <SelectField name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
-                <SubmitField value="Submit" />
+                <SelectField className="edit-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
+                <SubmitField id="editrecipe-submit" value="Submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />
               </Card.Body>

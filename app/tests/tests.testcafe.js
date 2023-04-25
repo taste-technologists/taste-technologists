@@ -2,6 +2,9 @@ import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
+import { searchPage } from './search.page';
+import { editrecipePage } from './editrecipe.page';
+import { recipeviewPage } from './recipe.page';
 import { adminPage } from './admin.page';
 import { adminInventory } from './admin.inventory';
 import { adminEditPage } from './admin.edit.page';
@@ -37,6 +40,29 @@ test('Test that signin and signout work', async (testController) => {
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test that search page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoSearchPage(testController);
+  await searchPage.isDisplayed(testController);
+  await searchPage.isFiltered(testController);
+});
+test('Test that edit recipe page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoEditRecipePage(testController);
+  await editrecipePage.isDisplayed(testController);
+  await editrecipePage.editRecipe(testController, recipe.name, recipe.picture, recipe.time, recipe.servings, recipe.description, recipe.ingredientsQuantity, recipe.ingredientsUnit, recipe.ingredientsName, recipe.instructions);
+
+});
+
+test('Test that individual recipe page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoRecipeViewPage(testController);
+  await recipeviewPage.isDisplayed(testController);
 });
 
 test('Test the inventory page and its functionalities', async (testController) => {
