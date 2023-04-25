@@ -9,6 +9,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 
 /* Renders a table containing all of the Recipe documents. Use <RecipeCard> to render each recipe card. */
 const SearchRecipesPage = () => {
+  const [recipeList, setRecipeList] = useState([]);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, recipes } = useTracker(() => {
 
@@ -18,6 +19,9 @@ const SearchRecipesPage = () => {
     const rdy = subscription.ready();
     // Get the Profiles
     const recipeItem = Recipes.collection.find({}).fetch();
+    if (rdy) {
+      setRecipeList(recipeItem);
+    }
     return {
       recipes: recipeItem,
       ready: rdy,
@@ -26,8 +30,9 @@ const SearchRecipesPage = () => {
   const lunchRecipes = recipes.filter(recipe => recipe.tags.includes('Lunch'));
   const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
   const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
-  const [recipeList, setRecipeList] = useState(recipes);
+
   console.log(recipeList);
+
   return (ready ? (
     <Container style={pageStyle} id="search-page">
       <Row>
@@ -41,9 +46,9 @@ const SearchRecipesPage = () => {
       <Row xs={1} md={2} lg={4} className="g-2">
         {recipeList.map((recipe) => {
           if (recipe.favoriteBy.includes(Meteor.user()?.username)) {
-            return <RecipeCard key={recipe._id} recipe={recipe} favorite="true" />;
+            return <RecipeCard key={recipe._id} recipe={recipe} favorite />;
           }
-          return <RecipeCard key={recipe._id} recipe={recipe} favorite="false" />;
+          return <RecipeCard key={recipe._id} recipe={recipe} favorite={false} />;
 
         })}
       </Row>

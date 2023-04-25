@@ -3,33 +3,25 @@ import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Card, Col, Container, Row, Table } from 'react-bootstrap';
 import { BasketFill, PersonFill, FileTextFill } from 'react-bootstrap-icons';
-import { _ } from 'meteor/underscore';
+import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
-import Profiles from '../components/Profiles';
+import ProfileItem from '../components/Profiles';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
+import { Profiles } from '../../api/profiles/Profiles';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItemAdmin> to render each row. */
 const ListProfilesAdmin = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { profile, ready } = useTracker(() => {
     // Get access to Stuff documents.
-    const subscription = Meteor.subscribe('userData');
+    const subscription = Meteor.subscribe(Profiles.adminPublicationName);
     const subscription2 = Meteor.subscribe(Recipes.generalPublicationName);
-    // const subscription3 = Meteor.subscribe(Inventory.generalPublicationName);
+    const subscription3 = Meteor.subscribe(Inventory.userPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready() && subscription2.ready();
+    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready();
     // Get the Users and Roles
-    const users = Meteor.users.find({}).fetch();
-    const roles = Meteor.roleAssignment.find().fetch();
-
-    // Add the roles to each user.
-    _.each(roles, function (obj) {
-      const user = _.findWhere(users, { _id: obj.user._id });
-      if (user) {
-        user.role = obj.role._id;
-      }
-    });
+    const users = Profiles.collection.find({}).fetch();
 
     return {
       profile: users,
@@ -37,7 +29,7 @@ const ListProfilesAdmin = () => {
     };
   }, []);
   return (ready ? (
-    <Container className="py-3">
+    <Container className="py-3" id="admin-page">
       <Row className="justify-content-center">
         <Col md={7}>
           <Col className="text-center"><h2>Admin Dashboard</h2></Col>
@@ -50,7 +42,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2"
               >
                 <Card.Title>Users</Card.Title>
-                <Card.Text><PersonFill className="mx-1 mb-1" />{Meteor.users.find().count()}</Card.Text>
+                <Card.Text><PersonFill className="mx-1 mb-1" />{Profiles.collection.find().count()}</Card.Text>
               </Card>
             </Col>
             <Col className="text-center">
@@ -61,7 +53,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2"
               >
                 <Card.Title>Recipes</Card.Title>
-                <Card.Text><FileTextFill className="mx-1 mb-1" />{Recipes.collection.find().count() }</Card.Text>
+                <Card.Text><Link to="/search" id="admin-recipes" className="link-light"><FileTextFill className="mx-1 mb-1" /></Link>{Recipes.collection.find().count() }</Card.Text>
               </Card>
             </Col>
             <Col className="text-center">
@@ -72,7 +64,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2"
               >
                 <Card.Title>Ingredients</Card.Title>
-                <Card.Text><BasketFill className="mx-1 mb-1" />{Inventory.collection.find().count()}</Card.Text>
+                <Card.Text><Link to="/inventory:" id="admin-inventory" className="link-light"><BasketFill className="mx-1 mb-1" /></Link>{Inventory.collection.find().count()}</Card.Text>
               </Card>
             </Col>
           </Row>
@@ -82,11 +74,12 @@ const ListProfilesAdmin = () => {
                 <th>Email</th>
                 <th>Role</th>
                 <th>Edit</th>
+                <th>Vendor Request</th>
                 <th>Delete</th>
               </tr>
             </thead>
             <tbody>
-              {profile.map((prof) => <Profiles key={prof._id} prof={prof} />)}
+              {profile.map((prof, idx) => <ProfileItem key={prof._id} prof={prof} idx={idx} />)}
             </tbody>
           </Table>
         </Col>

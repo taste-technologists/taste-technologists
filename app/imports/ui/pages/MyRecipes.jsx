@@ -27,6 +27,7 @@ const MyRecipesPage = () => {
       ready: rdy,
     };
   }, []);
+
   // Get the size of the user's recipe array.
   // If user has no recipes, the page will display this and
   // prompt user to add their own recipe.
@@ -36,7 +37,7 @@ const MyRecipesPage = () => {
   return (ready ? (
     <Container style={pageStyle}>
       <Row xs={1} md={2} lg={4} className="g-2">
-        {myRec.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} />)}
+        {myRec.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} favorite={recipe.favoriteBy.includes(Meteor.user()?.username)} />)}
       </Row>
       <Row id="hidden-row" hidden={haveRecipes} className="text-center pt-5">
         <h2>You have no recipes!</h2>

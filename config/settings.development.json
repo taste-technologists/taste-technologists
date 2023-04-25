@@ -15,6 +15,13 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
 
+  "defaultVendor": [
+    { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM"},
+    { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM"},
+    { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours"},
+    { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4pM-11PM"}
+  ],
+
   "defaultRecipes": [
     {
       "owner": "john@foo.com",
@@ -24,7 +31,8 @@
       "time": "1 hour",
       "picture": "https://www.sidechef.com/recipe/306f2fab-427f-4881-af73-a781d3232742.jpg?d=1200x560",
       "tags": [
-        "Cheese"
+        "Lunch",
+        "Dinner"
       ],
       "ingredients": [
         {
@@ -80,8 +88,7 @@
       "time": "35 minutes",
       "picture": "https://www.allrecipes.com/thmb/XQMSfxRQojpv7WGMHruq-F0IMng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Feta-Spinach-Puff-Pastry-Bites-fabeveryday-9aa534d8ba2a48f5aa36570dcc2c63b5.jpg",
       "tags": [
-        "Snack",
-        "Cheese"
+        "Snack"
       ],
       "ingredients": [{
         "name": "Cheese",
@@ -135,25 +142,38 @@
   ],
 
   "defaultItem": [
-    { "vendor": "Nijiya",
+    { "name": "Nijiya Market",
       "item": "Shredded Cheese",
       "price": 2,
       "size": "7 oz"
     },
-    { "vendor": "Safeway",
+    { "name": "Manoa Marketplace",
       "item": "Shredded Cheese",
       "price": 3.50,
       "size": "7 oz"
     },
-    { "vendor": "Safeway",
+    { "name": "Manoa Marketplace",
       "item": "Rotisserie Chicken",
       "price": 9.50,
       "size": "2 lbs"
+    },
+    { "name": "Nijiya Market",
+      "item": "Nijiya Organic Mochigome ",
+      "price": 15.99,
+      "size": "5 lb"
     }
+  ],
+
+  "defaultVendors" : [
+    { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM" },
+    { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM" },
+    { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours" },
+    { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4PM-11PM" }
   ],
 
   "monti": {
     "appId": "Ro3jBpBniMzaGveex",
     "appSecret": "2d3061ae-7228-4899-ad01-ae8f15ccd19f"
-  }
+  },
+  "loadAssetsFile":  true
 }

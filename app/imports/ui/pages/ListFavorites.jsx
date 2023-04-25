@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Row } from 'react-bootstrap';
+import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
 import RecipeCard from '../components/RecipeCard';
 import { pageStyle } from './pageStyles';
@@ -23,16 +24,22 @@ const FavoritesPage = () => {
       ready: rdy,
     };
   }, []);
+  const myRec = _.filter(recipes, (recipe) => recipe.favoriteBy.includes(Meteor.user()?.username));
+  const haveRecipes = myRec.length > 0;
   return (ready ? (
     <Container style={pageStyle}>
       <Row xs={1} md={2} lg={4} className="g-2">
         {/* add parameter to switch heart fill to unfill based on current user */}
         {recipes.map((recipe) => {
           if (recipe.favoriteBy.includes(Meteor.user()?.username)) {
-            return <RecipeCard key={recipe._id} recipe={recipe} favorite="true" />;
+            return <RecipeCard key={recipe._id} recipe={recipe} favorite />;
           }
           return null;
         })}
+      </Row>
+      <Row hidden={haveRecipes} className="text-center pt-5">
+        <h2>You have no favorite recipes!</h2>
+        <h3>Click the heart on any recipe to add to your favorites.</h3>
       </Row>
     </Container>
   ) : <LoadingSpinner />);

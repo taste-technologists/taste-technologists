@@ -23,10 +23,7 @@ const RecipeCard = ({ recipe, favorite }) => {
     if (rdy) {
       const profiles = Profiles.collection.find({}).fetch();
       const owner = recipe.owner;
-      console.log(owner);
-      console.log(profiles);
       profile = _.findWhere(profiles, { email: owner });
-      console.log(userProfile);
     }
     return {
       ready: rdy,
@@ -64,7 +61,7 @@ const RecipeCard = ({ recipe, favorite }) => {
           <Card.Title><Link class="recipe-view-title" to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
           <Card.Subtitle>{recipe.time}</Card.Subtitle>
           {favorite && isFavorite ? (
-            <HeartFill onClick={() => toggleFavorite()} />
+            <HeartFill className="text-danger" onClick={() => toggleFavorite()} />
           ) : (
             <Heart onClick={() => toggleFavorite()} />
           )}
@@ -107,7 +104,11 @@ RecipeCard.propTypes = {
       name: PropTypes.string })),
     servings: PropTypes.number,
   }).isRequired,
-  favorite: PropTypes.bool.isRequired,
+  favorite: PropTypes.bool,
+};
+
+RecipeCard.defaultProps = {
+  favorite: false,
 };
 
 export default RecipeCard;

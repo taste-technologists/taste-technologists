@@ -4,6 +4,7 @@ import { Stuffs } from '../../api/stuff/Stuff';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import { Profiles } from '../../api/profiles/Profiles';
+import { Vendor } from '../../api/vendor/Vendors';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -51,6 +52,13 @@ Meteor.publish(Recipes.generalPublicationName, function () {
   return this.ready();
 });
 
+Meteor.publish(Vendor.generalPublicationName, function () {
+  if (this.userId) {
+    return Vendor.collection.find();
+  }
+  return this.ready();
+});
+
 // Vendor-level publication.
 // If logged in and with vendor role, then publish all documents from all users. Otherwise publish nothing.
 Meteor.publish(Inventory.vendorPublicationName, function () {
@@ -86,7 +94,7 @@ Meteor.publish(Recipes.adminPublicationName, function () {
 });
 
 Meteor.publish(Profiles.adminPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+  if (this.userId && Roles.userIsInRole(this.userId, ['admin', 'superadmin'])) {
     return Profiles.collection.find();
   }
   return this.ready();
@@ -110,7 +118,7 @@ Meteor.publish(null, function () {
   return this.ready();
 });
 
-Meteor.publish('userData', function () {
+/* Meteor.publish('userData', function () {
   const isAdmin = Roles.userIsInRole(this.userId, ['admin', 'superadmin']);
   if (isAdmin) {
     return [Meteor.users.find({}, { fields: {
@@ -123,3 +131,4 @@ Meteor.publish('userData', function () {
   }
   return null;
 });
+*/
