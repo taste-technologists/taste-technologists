@@ -37,9 +37,9 @@ const ProfileItem = ({ prof }) => {
     <tr>
       <td>{prof.email}</td>
       <td>{prof.role}</td>
-      <td><Link to={`/profile-edit/${prof.userID}`} id={`edit-profile-${prof.userID}`} hidden={prof.role === 'superadmin' || unAuth}>Edit</Link></td>
+      <td><Link to={`/profile-edit/${prof.userID}`} hidden={prof.role === 'superadmin' || unAuth}>Edit</Link></td>
       <td className="text-center">{prof.vendor && prof.role !== 'vendor' ? '✔' : ''}</td>
-      <td className="text-center"><Button type="button" variant="danger" id={`delete-profile-${prof.userID}`} hidden={disable} disabled={disable} onClick={() => removeItem(prof.userID, prof.email)}><TrashFill /></Button></td>
+      <td className="text-center"><Button type="button" variant="danger" hidden={disable} disabled={disable} onClick={() => removeItem(prof.userID, prof.email)}><TrashFill /></Button></td>
     </tr>
   );
 };
