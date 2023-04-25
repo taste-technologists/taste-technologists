@@ -2,7 +2,7 @@ import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
-import { favoritesPage } from './favorites.page';
+import { favorites } from './favorites.page';
 
 /* global fixture:false, test:false */
 
@@ -25,8 +25,11 @@ test('Test that signin and signout work', async (testController) => {
 });
 
 test('Test the Favorite page', async (testController) => {
+  await landingPage.isDisplayed(testController);
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotoFavoritesPage(testController);
-  await favoritesPage.isDisplayed(testController);
+  await favorites.isDisplayed(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });

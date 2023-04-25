@@ -1,16 +1,22 @@
 import { Selector } from 'testcafe';
 
-class FavoritesPage {
+class Favoritespage {
   constructor() {
-    this.pageId = '#favorites-page';
+    this.pageId = '#favorite-page';
     this.pageSelector = Selector(this.pageId);
   }
 
   /** Asserts that this page is currently displayed. */
   async isDisplayed(testController) {
-    // This is first test to be run. Wait 10 seconds to avoid timeouts with GitHub Actions.
-    await testController.wait(10000).expect(this.pageSelector.exists).ok();
+    // This is first test to be run. Wait 60 seconds to avoid timeouts with GitHub Actions.
+    await testController.wait(50000).expect(this.pageSelector.exists).ok();
+  }
+
+  /** Go to favorite page. */
+  async favorites(testController) {
+    await Selector('#basic-navbar-nav').visible;
+    await testController.click('#favorites-nav');
   }
 }
 
-export const favoritesPage = new FavoritesPage();
+export const favorites = new Favoritespage();
