@@ -71,5 +71,16 @@ class NavBar {
       await testController.click(Selector('.edit').nth(0));
     }
   }
+
+  async gotoRecipeViewPage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#my-recipes-nav');
+    if (Selector('.card').exists) {
+      await testController.click(Selector('.recipe-view-title'));
+    }
+  }
 }
 export const navBar = new NavBar();

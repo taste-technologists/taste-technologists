@@ -61,7 +61,7 @@ const RecipeCard = ({ recipe, favorite }) => {
       <Card className="h-100">
         <Card.Header>
           <Card.Img src={recipe.picture} />
-          <Card.Title><Link to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
+          <Card.Title><Link class="recipe-view-title" to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
           <Card.Subtitle>{recipe.time}</Card.Subtitle>
           {favorite && isFavorite ? (
             <HeartFill onClick={() => toggleFavorite()} />

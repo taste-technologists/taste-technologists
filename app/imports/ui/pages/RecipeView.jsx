@@ -28,7 +28,7 @@ const RecipeView = () => {
   // console.log('RecipeView', doc, ready);
   // On successful submit, insert the data.
   return ready ? (
-    <Container className="py-3">
+    <Container id="recipe-view-page" className="py-3">
       <SingleRecipeCard key={doc._id} recipe={doc} />
     </Container>
   ) : <LoadingSpinner />;

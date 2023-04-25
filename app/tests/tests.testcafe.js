@@ -4,6 +4,7 @@ import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
 import { searchPage } from './search.page';
 import { editrecipePage } from './editrecipe.page';
+import { recipeviewPage } from './recipe.page';
 
 /* global fixture:false, test:false */
 
@@ -45,4 +46,11 @@ test('Test that edit recipe page work', async (testController) => {
   await editrecipePage.isDisplayed(testController);
   await editrecipePage.editRecipe(testController, recipe.name, recipe.picture, recipe.time, recipe.servings, recipe.description, recipe.ingredientsQuantity, recipe.ingredientsUnit, recipe.ingredientsName, recipe.instructions);
 
+});
+
+test('Test that individual recipe page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoRecipeViewPage(testController);
+  await recipeviewPage.isDisplayed(testController);
 });
