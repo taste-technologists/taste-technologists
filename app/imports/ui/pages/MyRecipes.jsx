@@ -35,7 +35,7 @@ const MyRecipesPage = () => {
   const myRec = _.filter(recipes, (recipe) => recipe.owner === Meteor.user().username);
   const haveRecipes = myRec.length > 0;
   return (ready ? (
-    <Container style={pageStyle}>
+    <Container style={pageStyle} id="my-recipe-page">
       <Row xs={1} md={2} lg={4} className="g-2">
         {myRec.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} favorite={recipe.favoriteBy.includes(Meteor.user()?.username)} />)}
       </Row>

@@ -7,6 +7,7 @@ import { addrecipePage } from './addrecipe.page';
 import { listvendorPage } from './listvendor.page';
 import { addvendorPage } from './addvendor.page';
 import { editvendorPage } from './editvendor.page';
+import { myrecipePage } from './myrecipe.page';
 
 /* global fixture:false, test:false */
 
@@ -69,4 +70,14 @@ test('Test the List, Add, and Edit Vendor pages', async (testController) => {
   await navBar.gotoListVendorPage(testController);
   await listvendorPage.deleteVendor(testController);
   await listvendorPage.isDisplayed(testController);
+});
+
+test('Test that MyRecipe Page', async (testController) => {
+  await landingPage.isDisplayed(testController);
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotomyrecipePage(testController);
+  await myrecipePage.isDisplayed(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });
