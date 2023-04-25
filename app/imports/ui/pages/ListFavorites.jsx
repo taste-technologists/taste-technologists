@@ -27,7 +27,7 @@ const FavoritesPage = () => {
   const myRec = _.filter(recipes, (recipe) => recipe.favoriteBy.includes(Meteor.user()?.username));
   const haveRecipes = myRec.length > 0;
   return (ready ? (
-    <Container style={pageStyle}>
+    <Container style={pageStyle} id="favorites-page">
       <Row xs={1} md={2} lg={4} className="g-2">
         {/* add parameter to switch heart fill to unfill based on current user */}
         {recipes.map((recipe) => {

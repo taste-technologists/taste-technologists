@@ -106,5 +106,21 @@ class NavBar {
       await testController.click(Selector('.recipe-view-title'));
     }
   }
+
+  async gotoMyRecipePage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#my-recipes-nav');
+  }
+
+  async gotoFavoritesPage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#favorites-nav');
+  }
 }
 export const navBar = new NavBar();
