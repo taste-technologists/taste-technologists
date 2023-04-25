@@ -2,12 +2,17 @@ import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
+import { adminPage } from './admin.page';
+import { adminInventory } from './admin.inventory';
+import { adminEditPage } from './admin.edit.page';
 import { signupPage } from './signup.page';
 import { addrecipePage } from './addrecipe.page';
 import { listvendorPage } from './listvendor.page';
 import { addvendorPage } from './addvendor.page';
 import { editvendorPage } from './editvendor.page';
 import { myrecipePage } from './myrecipe.page';
+import { editInventoryPage } from './editinventory.page';
+import { addInventory } from './addinventory';
 
 /* global fixture:false, test:false */
 
@@ -33,6 +38,45 @@ test('Test that signin and signout work', async (testController) => {
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test the inventory page and its functionalities', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.gotoListVendorPage(testController);
+  await listvendorPage.gotoInventoryPage(testController);
+  await editInventoryPage.editInventory(testController);
+  await navBar.gotoListVendorPage(testController);
+  await listvendorPage.gotoInventoryPage2(testController);
+  await editInventoryPage.hasTable(testController);
+  await navBar.gotoListVendorPage(testController);
+  await listvendorPage.gotoInventoryPage(testController);
+  await editInventoryPage.goToAddInventory(testController);
+  await addInventory.addItem(testController);
+  await navBar.gotoListVendorPage(testController);
+  await listvendorPage.gotoInventoryPage(testController);
+  await editInventoryPage.hasTable2(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});
+
+test.only('Test the listprofilesadmin page and all of its functions work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.goToAdminDashboard(testController);
+  await adminPage.isDisplayed(testController);
+  await adminPage.hasTable(testController);
+  await adminPage.goToAdminInventory(testController);
+  await adminInventory.isDisplayed(testController);
+  await adminInventory.hasTable(testController);
+  await navBar.goToAdminDashboard(testController);
+  // await adminPage.deleteUser(testController);
+  await adminPage.goToAdminEdit(testController);
+  await adminEditPage.isDisplayed(testController);
+  await adminEditPage.editProfile(testController);
+  await navBar.goToAdminDashboard(testController);
 });
 
 test('Test that signup works', async (testController) => {
