@@ -136,7 +136,7 @@
           "step": "Bake in the preheated oven until slightly browned and crisp, 8 to 10 minutes. Cool slightly on the baking sheets, about 2 minutes. Loosen edges with a spatula and lift off the parchment paper. Transfer to wire racks and let cool completely until firm, about 10 minutes."
         }],
       "servings": 15
-    }
+    },
   ],
 
   "defaultItem": [
@@ -163,13 +163,15 @@
   ],
 
   "defaultVendors" : [
-  { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM" },
-  { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM" }
+    { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM" },
+    { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM" },
+    { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours" },
+    { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4PM-11PM" }
   ],
 
   "monti": {
     "appId": "Ro3jBpBniMzaGveex",
     "appSecret": "2d3061ae-7228-4899-ad01-ae8f15ccd19f"
   },
-  "loadAssetsFile":  false
+  "loadAssetsFile":  true
 }
