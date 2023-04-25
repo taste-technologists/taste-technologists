@@ -30,4 +30,6 @@ test('Test that MyRecipe Page', async (testController) => {
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotomyrecipePage(testController);
   await myrecipePage.isDisplayed(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });
