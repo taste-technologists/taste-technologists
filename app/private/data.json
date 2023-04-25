@@ -1,0 +1,426 @@
+{
+  "groceries": [
+    {
+      "name": "Safeway",
+      "item": "Flour Tortillas",
+      "price": 2.50,
+      "size": "10 ct"
+    },
+    {
+      "name": "Safeway",
+      "item": "Cheddar Cheese",
+      "price": 3.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Mozzarella Cheese",
+      "price": 2.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Ground Beef",
+      "price": 7.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Chicken Breast",
+      "price": 6.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Pork Loin",
+      "price": 6.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Ginger",
+      "price": 1.99,
+      "size": "4 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Garlic",
+      "price": 0.99,
+      "size": "1 bulb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Enchilada Sauce",
+      "price": 2.50,
+      "size": "10 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Black Beans",
+      "price": 0.99,
+      "size": "15 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Whole Milk",
+      "price": 3.29,
+      "size": "1 gal"
+    },
+    {
+      "name": "Safeway",
+      "item": "White Bread",
+      "price": 2.99,
+      "size": "20 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Eggs",
+      "price": 2.19,
+      "size": "1 doz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Butter",
+      "price": 3.79,
+      "size": "1 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Sugar",
+      "price": 2.99,
+      "size": "5 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Flour",
+      "price": 3.99,
+      "size": "5 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "White Rice",
+      "price": 4.49,
+      "size": "5 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Brown Rice",
+      "price": 4.75,
+      "size": "5 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Canned Tomatoes",
+      "price": 1.29,
+      "size": "14.5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Canned Beans",
+      "price": 0.99,
+      "size": "15 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Spaghetti",
+      "price": 1.59,
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Frozen Mixed Vegetables",
+      "price": 1.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Frozen Spinach",
+      "price": 3.99,
+      "size": "12 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Chicken Breast",
+      "price": 5.50,
+      "size": "1 lb"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Ground Beef",
+      "price": 5.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Salmon",
+      "price": 9.99,
+      "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Peanut Butter",
+      "price": 3.79,
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Grape Jelly",
+      "price": 2.99,
+      "size": "20 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Russet Potatoes",
+      "price": 3.49,
+      "size": "5 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "Yellow Onions",
+      "price": 2.99,
+      "size": "3 lb"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "White Rice",
+      "price": 8.99,
+      "size": "5 lbs"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Brown Rice",
+      "price": 8.99,
+      "size": "5 lbs"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Soy Sauce",
+      "price": 4.99,
+      "size": "20 fl oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Miso Paste",
+      "price": 5.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Nori",
+      "price": 3.99,
+      "size": "10 sheets"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Tofu",
+      "price": 1.99,
+      "size": "14 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Green Tea",
+      "price": 4.49,
+      "size": "40 bags"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Ramen Noodles",
+      "price": 3.99,
+      "size": "10 pack"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Mirin",
+      "price": 6.99,
+      "size": "25.4 fl oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Sesame Oil",
+      "price": 6.99,
+      "size": "16.9 fl oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Rice Vinegar",
+      "price": 3.99,
+      "size": "10 fl oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Panko Bread Crumbs",
+      "price": 2.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Soba Noodles",
+      "price": 4.99,
+      "size": "12 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Dashi Stock",
+      "price": 4.99,
+      "size": "1.4 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Flour",
+      "price": 2.99,
+      "size": "5 lbs"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Butter",
+      "price": 3.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Sugar",
+      "price": 2.49,
+      "size": "5 lbs"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Shredded Cheddar Cheese",
+      "price": 4.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Russet Potatoes",
+      "price": 1.99,
+      "size": "5 lbs"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Yellow Onions",
+      "price": 0.69,
+      "size": "1 lb"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Carrots",
+      "price": 1.29,
+      "size": "1 lb"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Daikon Radish",
+      "price": 0.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Flour",
+      "price": 2.99,
+      "size": "5 lbs"
+    },
+    {
+      "name": "The Market",
+      "item": "Butter",
+      "price": 3.49,
+      "size": "16 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Sugar",
+      "price": 2.29,
+      "size": "4 lbs"
+    },
+    {
+      "name": "The Market",
+      "item": "Shredded Cheese",
+      "price": 3.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Potatoes",
+      "price": 2.99,
+      "size": "5 lbs"
+    },
+    {
+      "name": "The Market",
+      "item": "Onions",
+      "price": 1.99,
+      "size": "3 lbs"
+    },
+    {
+      "name": "The Market",
+      "item": "Carrots",
+      "price": 2.49,
+      "size": "2 lbs"
+    }
+  ],
+  "recipes": [
+    {
+      "name": "Tuna Salad",
+      "picture": "https://www.seriouseats.com/thmb/4zcnGTHKz4gkPkK_Kh8X5AtihHk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__06__20160614-tuna-salad-sandwich-vicky-wasik-7-4a99426df6f9457f8820f79c860a5dae.jpg",
+      "time": "15 mins",
+      "description": "A quick and easy tuna salad recipe that is perfect for a healthy lunch or snack.",
+      "servings": 2,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "canned tuna",
+          "quantity": 0.5,
+          "unit": "lb"
+        },
+        {
+          "name": "celery",
+          "quantity": 0.25,
+          "unit": "cups"
+        },
+        {
+          "name": "red onion",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "mayonnaise",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "dijon mustard",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Drain the canned tuna and place it in a mixing bowl."
+        },
+        {
+          "step": "Chop the celery and red onion into small pieces and add them to the bowl with the tuna."
+        },
+        {
+          "step": "Add the mayonnaise, dijon mustard, lemon juice, salt, and pepper to the bowl and mix well."
+        },
+        {
+          "step": "Serve the tuna salad on a bed of lettuce or in a sandwich."
+        }
+      ]
+    }
+  ]
+}

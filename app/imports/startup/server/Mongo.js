@@ -1,4 +1,4 @@
-import { Meteor, Assets } from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
@@ -69,10 +69,11 @@ if (Vendor.collection.find().count() === 0) {
  * For more info on assets, see https://docs.meteor.com/api/assets.html
  * User count check is to make sure we don't load the file twice, which would generate errors due to duplicate info.
  */
-if ((Meteor.settings.loadAssetsFile) && (Meteor.users.find().count() < 7)) {
+if ((Meteor.settings.loadAssetsFile) && (Recipes.collection.find().count() < 4)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
+  // eslint-disable-next-line no-undef
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  jsonData.profiles.map(profile => addData(profile));
-  jsonData.recipes.map(project => addRecipe(project));
+  jsonData.groceries.map(data => addItem(data));
+  jsonData.recipes.map(data => addRecipe(data));
 }
