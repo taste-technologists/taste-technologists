@@ -20,25 +20,25 @@ const vendor = { name: 'Safeway', hours: '24 Hours', location: '2855 E Manoa Rd,
 fixture('meteor-application-template-react localhost test with default db')
   .page('http://localhost:3000');
 
-// test('Test that landing page shows up', async (testController) => {
-//   await landingPage.isDisplayed(testController);
-// });
-//
-// test('Test that signin and signout work', async (testController) => {
-//   await navBar.gotoSignInPage(testController);
-//   await signinPage.signin(testController, credentials.username, credentials.password);
-//   await navBar.isLoggedIn(testController, credentials.username);
-//   await navBar.logout(testController);
-//   await signoutPage.isDisplayed(testController);
-// });
-//
-// test('Test that search page work', async (testController) => {
-//   await navBar.gotoSignInPage(testController);
-//   await signinPage.signin(testController, credentials.username, credentials.password);
-//   await navBar.gotoSearchPage(testController);
-//   await searchPage.isDisplayed(testController);
-//   await searchPage.isFiltered(testController);
-// });
+test('Test that landing page shows up', async (testController) => {
+  await landingPage.isDisplayed(testController);
+});
+
+test('Test that signin and signout work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});
+
+test('Test that search page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoSearchPage(testController);
+  await searchPage.isDisplayed(testController);
+  await searchPage.isFiltered(testController);
+});
 test('Test that edit recipe page work', async (testController) => {
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
