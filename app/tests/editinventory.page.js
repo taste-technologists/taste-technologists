@@ -14,7 +14,7 @@ class EditInventoryPage {
 
   /** Signs up a new user, then checks to see that they are logged in by checking the navbar. */
   async editInventory(testController) {
-    //await this.isDisplayed(testController);
+    // await this.isDisplayed(testController);
     await testController.click('#edit-inventory-tSq4a5r6g596z2Kkv');
     await testController.typeText('#edit-inventory-name', 'Nijiya Market', { replace: true });
     await testController.typeText('#edit-inventory-item', 'Cheese Wheel', { replace: true });
