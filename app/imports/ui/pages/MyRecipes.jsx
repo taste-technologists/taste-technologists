@@ -2,7 +2,6 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
-import { _ } from 'meteor/underscore';
 import RecipeCard from '../components/RecipeCard';
 import { pageStyle } from './pageStyles';
 import { Recipes } from '../../api/recipes/Recipes';
@@ -10,12 +9,12 @@ import LoadingSpinner from '../components/LoadingSpinner';
 
 /* Renders a table containing all of the Recipe documents. Use <RecipeCard> to render each recipe card. */
 const MyRecipesPage = () => {
-
+  const showEdit = true;
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, recipes } = useTracker(() => {
 
     // Get access to Recipe documents.
-    const subscription = Meteor.subscribe(Recipes.generalPublicationName);
+    const subscription = Meteor.subscribe(Recipes.userPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Recipes for the logged in user.
@@ -32,12 +31,11 @@ const MyRecipesPage = () => {
   // If user has no recipes, the page will display this and
   // prompt user to add their own recipe.
 
-  const myRec = _.filter(recipes, (recipe) => recipe.owner === Meteor.user().username);
-  const haveRecipes = myRec.length > 0;
+  const haveRecipes = recipes.length > 0;
   return (ready ? (
     <Container style={pageStyle} id="my-recipe-page">
       <Row xs={1} md={2} lg={4} className="g-2">
-        {myRec.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} favorite={recipe.favoriteBy.includes(Meteor.user()?.username)} />)}
+        {recipes.map((recipe) => <RecipeCard showEdit={showEdit} key={recipe._id} recipe={recipe} favorite={recipe.favoriteBy.includes(Meteor.user()?.username)} />)}
       </Row>
       <Row id="hidden-row" hidden={haveRecipes} className="text-center pt-5">
         <h2>You have no recipes!</h2>

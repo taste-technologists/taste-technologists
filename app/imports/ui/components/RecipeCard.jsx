@@ -13,7 +13,8 @@ import LoadingSpinner from './LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
 import { removeRecipeMethod } from '../../startup/both/Methods';
 
-const RecipeCard = ({ recipe, favorite }) => {
+const RecipeCard = ({ recipe, favorite, showEdit }) => {
+
   const { ready, userProfile } = useTracker(() => {
 
     // Get access to Recipe documents.
@@ -58,7 +59,7 @@ const RecipeCard = ({ recipe, favorite }) => {
   const removeItem = () => {
     const _id = recipe._id;
     swal({
-      title: 'Are you sure?',
+      title: 'Are you sure you want to delete this recipe?',
       text: "You won't be able to undo this!",
       icon: 'warning',
       buttons: true,
@@ -98,14 +99,13 @@ const RecipeCard = ({ recipe, favorite }) => {
           <Card.Text>
             {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
           </Card.Text>
-          {recipe.owner === Meteor.user()?.username ? (
-            <Row>
-              <Col><Link className="edit" to={`/edit/${recipe._id}`}>Edit</Link></Col>
-              <Col><Button type="button" variant="danger" onClick={() => removeItem()}>Delete Recipe</Button></Col>
-            </Row>
-          ) :
-            ''}
         </Card.Body>
+        <Card.Footer className="text-end" hidden={!showEdit}>
+          <Row>
+            <Col className="text-start"><Link className="edit" to={`/edit/${recipe._id}`}>Edit</Link></Col>
+            <Col className="text-end"><Button type="button" size="sm" variant="danger" onClick={() => removeItem()}>Delete</Button></Col>
+          </Row>
+        </Card.Footer>
       </Card>
     </Col>
   ) : <LoadingSpinner />);
@@ -130,10 +130,12 @@ RecipeCard.propTypes = {
     servings: PropTypes.number,
   }).isRequired,
   favorite: PropTypes.bool,
+  showEdit: PropTypes.bool,
 };
 
 RecipeCard.defaultProps = {
   favorite: false,
+  showEdit: false,
 };
 
 export default RecipeCard;
