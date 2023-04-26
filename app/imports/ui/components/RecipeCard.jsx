@@ -1,5 +1,5 @@
 /* Component for layout out a Profile Card. */
-import { Badge, Card, Col } from 'react-bootstrap';
+import { Badge, Button, Card, Col, Row } from 'react-bootstrap';
 import { HeartFill, Heart } from 'react-bootstrap-icons';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
+import swal from 'sweetalert';
 import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
+import { removeRecipeMethod } from '../../startup/both/Methods';
 
 const RecipeCard = ({ recipe, favorite }) => {
   const { ready, userProfile } = useTracker(() => {
@@ -52,6 +54,25 @@ const RecipeCard = ({ recipe, favorite }) => {
 
     }
   };
+
+  const removeItem = () => {
+    const _id = recipe._id;
+    swal({
+      title: 'Are you sure?',
+      text: "You won't be able to undo this!",
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        // console.log(`Remove ${_id}`);
+        Meteor.call(removeRecipeMethod, { _id });
+        swal('Deleted!', 'The recipe has been deleted.', 'success');
+      } else {
+        swal('The recipe has not been deleted');
+      }
+    });
+  };
   console.log(recipe.favoriteBy);
   return (ready ? (
     <Col>
@@ -77,8 +98,12 @@ const RecipeCard = ({ recipe, favorite }) => {
           <Card.Text>
             {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
           </Card.Text>
-          {recipe.owner === Meteor.user()?.username ?
-            <Link className="edit" to={`/edit/${recipe._id}`}>Edit</Link> :
+          {recipe.owner === Meteor.user()?.username ? (
+            <Row>
+              <Col><Link className="edit" to={`/edit/${recipe._id}`}>Edit</Link></Col>
+              <Col><Button type="button" variant="danger" onClick={() => removeItem()}>Delete Recipe</Button></Col>
+            </Row>
+          ) :
             ''}
         </Card.Body>
       </Card>
