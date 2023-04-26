@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
 import RecipeCard from '../components/RecipeCard';
@@ -28,6 +28,8 @@ const FavoritesPage = () => {
   const haveRecipes = myRec.length > 0;
   return (ready ? (
     <Container style={pageStyle} id="favorites-page">
+      <Row className="text-center py-4"><Col><h2>Favorites</h2></Col></Row>
+
       <Row xs={1} md={2} lg={4} className="g-2">
         {/* add parameter to switch heart fill to unfill based on current user */}
         {recipes.map((recipe) => {

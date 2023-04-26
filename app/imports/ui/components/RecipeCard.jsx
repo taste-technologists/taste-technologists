@@ -74,14 +74,14 @@ const RecipeCard = ({ recipe, favorite, showEdit }) => {
       }
     });
   };
-  console.log(recipe.favoriteBy);
+  // console.log(recipe.favoriteBy);
   return (ready ? (
     <Col>
       <Card className="h-100">
-        <Card.Header>
-          <Card.Img src={recipe.picture} />
-          <Card.Title><Link class="recipe-view-title" to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
-          <Card.Subtitle>{recipe.time}</Card.Subtitle>
+        <Card.Header className="card-header d-flex flex-column justify-content-center">
+          <Card.Img src={recipe.picture} className="card-img" />
+          <Card.Title className="my-2 fs-5 card-title"><Link className="recipe-view-title" to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
+          <Card.Subtitle className="">{recipe.time}</Card.Subtitle>
           {favorite && isFavorite ? (
             <HeartFill className="text-danger" onClick={() => toggleFavorite()} />
           ) : (
@@ -89,9 +89,7 @@ const RecipeCard = ({ recipe, favorite, showEdit }) => {
           )}
         </Card.Header>
         <Card.Body>
-          <Card.Text>
-            {recipe.description}
-          </Card.Text>
+          <Card.Text className="mt-2">{recipe.description}</Card.Text>
           <footer className="blockquote-footer">
             {userProfile.name}
           </footer>

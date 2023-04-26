@@ -7,10 +7,53 @@ import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { useParams } from 'react-router';
 import { Plus, TrashFill } from 'react-bootstrap-icons';
+import SimpleSchema from 'simpl-schema';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
 
-const bridge = new SimpleSchema2Bridge(Recipes.schema);
+const formSchema = new SimpleSchema({
+  name: {
+    type: String,
+    max: 40,
+  },
+  picture: String,
+  time: String,
+  description: {
+    type: String,
+    max: 200,
+  },
+  servings: {
+    type: Number,
+    defaultValue: 0,
+  },
+  tags: {
+    type: Array,
+  },
+  'tags.$': String,
+  ingredients: {
+    type: Array,
+    optional: false,
+  },
+  'ingredients.$': Object,
+  'ingredients.$.name': String,
+  'ingredients.$.quantity': {
+    type: Number,
+    defaultValue: 0,
+  },
+  'ingredients.$.unit': String,
+  instructions: {
+    type: Array,
+    optional: false,
+  },
+  'instructions.$': Object,
+  'instructions.$.step': String,
+  'instructions.$.num': {
+    type: Number,
+    defaultValue: 0,
+  },
+  owner: String,
+});
+const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the EditStuff page for editing a single document. */
 const EditRecipe = () => {
@@ -41,7 +84,10 @@ const EditRecipe = () => {
 
   return ready ? (
     <Container id="editrecipe-page" className="py-3">
-      <Row className="justify-content-center">
+      <Row className="justify-content-center" hidden={doc !== undefined}>
+        <Col className="text-center"><h2>You don&apos;t have permission to edit this recipe!</h2></Col>
+      </Row>
+      <Row className="justify-content-center" hidden={doc === undefined}>
         <Col xs={10}>
           <Col className="text-center"><h2>Edit Recipe</h2></Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>

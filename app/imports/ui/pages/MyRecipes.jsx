@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import RecipeCard from '../components/RecipeCard';
 import { pageStyle } from './pageStyles';
@@ -34,6 +34,7 @@ const MyRecipesPage = () => {
   const haveRecipes = recipes.length > 0;
   return (ready ? (
     <Container style={pageStyle} id="my-recipe-page">
+      <Row className="text-center py-4"><Col><h2>My Recipes</h2></Col></Row>
       <Row xs={1} md={2} lg={4} className="g-2">
         {recipes.map((recipe) => <RecipeCard showEdit={showEdit} key={recipe._id} recipe={recipe} favorite={recipe.favoriteBy.includes(Meteor.user()?.username)} />)}
       </Row>

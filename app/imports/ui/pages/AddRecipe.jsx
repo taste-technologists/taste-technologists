@@ -10,13 +10,19 @@ import { Recipes } from '../../api/recipes/Recipes';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
-  name: String,
+  name: {
+    type: String,
+    max: 40,
+  },
   picture: String,
   time: String,
-  description: String,
+  description: {
+    type: String,
+    max: 200,
+  },
   servings: {
     type: Number,
-    defaultValue: 0,
+    defaultValue: 1,
   },
   tags: {
     type: Array,
@@ -81,7 +87,7 @@ const AddRecipe = () => {
                   <Col><TextField id="add-recipe-picture" name="picture" showInlineError placeholder="Recipe picture URL" /></Col>
                 </Row>
                 <Row>
-                  <Col><TextField id="add-recipe-time" name="time" showInlineError placeholder="Time" /></Col>
+                  <Col><TextField id="add-recipe-time" name="time" showInlineError placeholder="Ex... 10 min" /></Col>
                   <Col><NumField id="add-recipe-servings" name="servings" decimal={null} min="0" /></Col>
                 </Row>
                 <LongTextField id="add-recipe-description" name="description" placeholder="Describe the recipe here" />
