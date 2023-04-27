@@ -48,7 +48,7 @@ const EditInventory = () => {
               <Card.Body>
                 <TextField name="name" id="edit-inventory-name" />
                 <TextField name="item" id="edit-inventory-item" />
-                <NumField name="price" id="edit-inventory-price" decimal={null} />
+                <NumField name="price" id="edit-inventory-price" decimal />
                 <TextField name="size" id="edit-inventory-size" />
                 <SubmitField value="Submit" id="edit-inventory-form-submit" />
                 <ErrorsField />

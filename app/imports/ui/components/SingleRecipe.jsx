@@ -8,14 +8,17 @@ import { Link } from 'react-router-dom';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
+import { Inventory } from '../../api/vendor/VendorInventory';
+import ingredient from './Ingredient';
 
 const SingleRecipeCard = ({ recipe }) => {
-  const { ready, userProfile } = useTracker(() => {
+  const { ready, userProfile, inventory } = useTracker(() => {
 
     // Get access to Recipe documents.
     const subscription = Meteor.subscribe(Profiles.generalPublicationName);
+    const subscription2 = Meteor.subscribe(Inventory.userPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready();
+    const rdy = subscription.ready() && subscription2.ready();
     let profile = null;
     // Get the Profiles
     if (rdy) {
@@ -23,11 +26,21 @@ const SingleRecipeCard = ({ recipe }) => {
       const owner = recipe.owner;
       profile = _.findWhere(profiles, { email: owner });
     }
+    const inv = Inventory.collection.find().fetch();
     return {
       ready: rdy,
       userProfile: profile,
+      inventory: inv,
     };
   }, []);
+
+  let cost = 0;
+  _.each(recipe.ingredients, (ing) => {
+    const arr = _.filter(inventory, (item) => item.item.toLowerCase() === ing.name.toLowerCase());
+    if (arr.length > 0) {
+      cost += _.min(arr, (obj) => obj.price).price;
+    }
+  });
   return (ready ? (
     <Container>
       <Row className="flex-row justify-content-center">
@@ -37,7 +50,7 @@ const SingleRecipeCard = ({ recipe }) => {
       </Row>
       <Row className="my-2 pe-2">
         {/* Will need to implement a cost function related to vendors and inventory here */}
-        || Cook Time: {recipe.time} || Number of Servings: {recipe.servings} || Estimated Cost: $20 ||
+        || Cook Time: {recipe.time} || Number of Servings: {recipe.servings} || Estimated Cost: ${cost.toFixed(2)} ||
       </Row>
       <Row>
         <Col className="text-center"><Image src={recipe.picture} width={400} /></Col>
