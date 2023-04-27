@@ -122,7 +122,6 @@ test('Test the listprofilesadmin page and all of its functions work', async (tes
 });
 
 test('Test the List, Add, and Edit Vendor pages', async (testController) => {
-  await landingPage.isDisplayed(testController);
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotoListVendorPage(testController);
@@ -142,7 +141,6 @@ test('Test the List, Add, and Edit Vendor pages', async (testController) => {
 });
 
 test('Test that MyRecipes and Favorites Pages works', async (testController) => {
-  await landingPage.isDisplayed(testController);
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotoMyRecipePage(testController);
