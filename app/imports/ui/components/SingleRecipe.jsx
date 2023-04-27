@@ -9,6 +9,7 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
 import { Inventory } from '../../api/vendor/VendorInventory';
+import Footer from './Footer';
 
 const SingleRecipeCard = ({ recipe }) => {
   const { ready, userProfile, inventory } = useTracker(() => {
@@ -39,6 +40,7 @@ const SingleRecipeCard = ({ recipe }) => {
     if (arr.length > 0) {
       cost += _.min(arr, (obj) => obj.price).price;
     }
+    console.log(arr);
   });
   return (ready ? (
     <Container>
@@ -49,7 +51,11 @@ const SingleRecipeCard = ({ recipe }) => {
       </Row>
       <Row className="my-2 pe-2">
         {/* Will need to implement a cost function related to vendors and inventory here */}
-        || Cook Time: {recipe.time} || Number of Servings: {recipe.servings} || Estimated Cost: ${cost.toFixed(2)} ||
+        <Col>
+          Cook Time: {recipe.time}
+        </Col>
+        <Col>Number of Servings: {recipe.servings} </Col>
+        <Col>Estimated Cost: ${cost.toFixed(2)}*</Col>
       </Row>
       <Row>
         <Col className="text-center"><Image src={recipe.picture} width={400} /></Col>
@@ -66,6 +72,7 @@ const SingleRecipeCard = ({ recipe }) => {
           {recipe.instructions.map((ins, idx) => <li key={`${recipe._id}${idx}`}>{ins.step}</li>)}
         </ol>
       </Row>
+      <Row><p>* Please note that the actual cost of the ingredients may be different than the estimated cost.</p></Row>
       <Row> {recipe.owner === Meteor.user()?.username ?
         <Link to={`/edit/${recipe._id}`}>Edit Recipe</Link> :
         ''}
