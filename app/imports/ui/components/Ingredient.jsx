@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+const titleCase = (str) => str.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
 const Ingredient = ({ ingredient, idx }) => (
 
   <tr>
     <td>{ingredient.name}</td>
-    <td>{ingredient.item}</td>
+    <td>{titleCase(ingredient.item)}</td>
     <td>{ingredient.price.toFixed(2)}</td>
     <td>{ingredient.size}</td>
     <td>
