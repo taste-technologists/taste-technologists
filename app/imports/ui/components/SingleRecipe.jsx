@@ -9,7 +9,6 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
 import { Inventory } from '../../api/vendor/VendorInventory';
-import ingredient from './Ingredient';
 
 const SingleRecipeCard = ({ recipe }) => {
   const { ready, userProfile, inventory } = useTracker(() => {
