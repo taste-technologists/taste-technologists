@@ -45,11 +45,11 @@ const SearchRecipesPage = () => {
         </span>
       </Row>
       <Row xs={1} md={2} lg={4} className="g-2 pt-2">
-        {recipeList.map((recipe) => {
+        {recipeList.map((recipe, idx) => {
           if (recipe.favoriteBy.includes(Meteor.user()?.username)) {
-            return <RecipeCard key={recipe._id} recipe={recipe} favorite />;
+            return <RecipeCard key={recipe._id} idx={idx} recipe={recipe} favorite />;
           }
-          return <RecipeCard key={recipe._id} recipe={recipe} favorite={false} />;
+          return <RecipeCard key={recipe._id} idx={idx} recipe={recipe} favorite={false} />;
 
         })}
       </Row>

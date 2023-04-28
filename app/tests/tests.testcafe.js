@@ -17,6 +17,8 @@ import { editInventoryPage } from './editinventory.page';
 import { addInventory } from './addinventory';
 import { myrecipePage } from './myrecipe.page';
 import { favoritesPage } from './favorites.page';
+import { myreviewsPage } from './myreviews.page';
+import { reviewMenu } from './review.component';
 
 /* global fixture:false, test:false */
 
@@ -149,4 +151,19 @@ test('Test that MyRecipes and Favorites Pages works', async (testController) => 
   await favoritesPage.isDisplayed(testController);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test that review component and MyReview page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoSearchPage(testController);
+  await searchPage.gotoRecipePage(testController);
+  await recipeviewPage.isDisplayed(testController);
+  await recipeviewPage.reviewButton(testController);
+  await reviewMenu.addReview(testController);
+  await reviewMenu.reviewCount(testController);
+  await navBar.gotoReviewsPage(testController);
+  await myreviewsPage.isDisplayed(testController);
+  await myreviewsPage.deleteReview(testController);
+  await myreviewsPage.isDisplayed(testController);
 });

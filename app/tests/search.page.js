@@ -20,6 +20,11 @@ class SearchPage {
     await testController.wait(1000).click('#btn-snack');
   }
 
+  async gotoRecipePage(testController) {
+    // This is first test to be run. Wait 10 seconds to avoid timeouts with GitHub Actions.
+    await testController.wait(1000).click('#rec-link-0');
+  }
+
 }
 
 export const searchPage = new SearchPage();
