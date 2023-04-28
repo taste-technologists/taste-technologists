@@ -3,6 +3,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { Accounts } from 'meteor/accounts-base';
 import { Profiles } from '../../api/profiles/Profiles';
 import { Recipes } from '../../api/recipes/Recipes';
+import { RecReviews } from '../../api/recipes/RecipeReviews';
 
 const setRoleMethod = 'Profiles.role';
 
@@ -56,6 +57,19 @@ Meteor.methods({
   },
 });
 
+const addRecipeMethod = 'Recipes.add';
+
+Meteor.methods({
+  'Recipes.add'({ data }) {
+    const { name } = data;
+    const recId = Recipes.collection.insert(data);
+    const recipe = { name: name, recipeId: recId, review: [] };
+    RecReviews.collection.insert(recipe);
+    console.log(`Successfully added ${name} into Recipes`);
+    console.log(`Successfully added ${name} into RecipesReviews`);
+  },
+});
+
 const removeRecipeMethod = 'Recipes.remove';
 
 Meteor.methods({
@@ -65,4 +79,4 @@ Meteor.methods({
   },
 });
 
-export { setRoleMethod, addProfileMethod, removeProfileMethod, removeRecipeMethod };
+export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod, removeRecipeMethod };
