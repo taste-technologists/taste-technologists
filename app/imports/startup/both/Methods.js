@@ -47,11 +47,19 @@ const removeProfileMethod = 'Profiles.remove';
 
 Meteor.methods({
   'Profiles.remove'({ userId, email }) {
+    // Removes user's account from the application.
     Meteor.users.remove(userId);
     Profiles.collection.remove({ userID: userId });
+    // removes user from the favoriteBy for this recipe
     Recipes.collection.update(
       { favoriteBy: email },
       { $pull: { favoriteBy: email } },
+      { multi: true },
+    );
+    // removes reviews created by this user.
+    RecReviews.collection.update(
+      { 'review.userID': userId },
+      { $pull: { review: { userID: userId } } },
       { multi: true },
     );
   },
@@ -76,7 +84,47 @@ Meteor.methods({
   'Recipes.remove'({ _id }) {
     // console.log(`Remove recipe ${_id}`);
     Recipes.collection.remove({ _id: _id });
+    // Removes the reviewcollection object corresponding to this recipe.
+    RecReviews.collection.remove({ recipeId: _id });
   },
 });
 
-export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod, removeRecipeMethod };
+/**
+ * The server-side Review.add Meteor Method is called by both client side.
+ * Its purpose is to add the recipe review to the RecipeReview Collection.
+ */
+const addReviewMethod = 'Review.add';
+
+Meteor.methods({
+  'Review.add'({ recipeId, reviewInfo }) {
+    // Pulls the old review
+    RecReviews.collection.update(
+      { recipeId: recipeId },
+      { $pull: { review: { userID: reviewInfo.userID } } },
+    );
+
+    // Add the new review
+    RecReviews.collection.update(
+      { recipeId: recipeId },
+      { $addToSet: { review: reviewInfo } },
+    );
+    console.log('Successfully added into RecipesReviews');
+  },
+});
+
+/**
+ * The server-side Review.delete Meteor Method is called by both client side.
+ * Its purpose is to delete the recipe review from the RecipeReview Collection.
+ */
+const delReviewMethod = 'Review.delete';
+Meteor.methods({
+  'Review.delete'({ recipeId, reviewInfo }) {
+    RecReviews.collection.update(
+      { recipeId: recipeId },
+      { $pull: { review: { userID: reviewInfo.userID } } },
+    );
+    console.log('Successfully removed from RecipesReviews');
+  },
+});
+
+export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod, removeRecipeMethod, addReviewMethod, delReviewMethod };
