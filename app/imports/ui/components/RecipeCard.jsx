@@ -12,16 +12,22 @@ import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
 import { removeRecipeMethod } from '../../startup/both/Methods';
+import { RecReviews } from '../../api/recipes/RecipeReviews';
+import ReviewRating from './ReviewRating';
 
-const RecipeCard = ({ recipe, favorite, showEdit }) => {
+const RecipeCard = ({ recipe, favorite, showEdit, idx }) => {
 
-  const { ready, userProfile } = useTracker(() => {
+  const { ready, userProfile, all } = useTracker(() => {
 
     // Get access to Recipe documents.
     const subscription = Meteor.subscribe(Profiles.generalPublicationName);
+    const subscription2 = Meteor.subscribe(RecReviews.generalPublicationName);
+
     // Determine if the subscription is ready
-    const rdy = subscription.ready();
+    const rdy = subscription.ready() && subscription2.ready();
     let profile = null;
+    const allReviews = _.pluck(RecReviews.collection.find({ recipeId: recipe._id }).fetch(), 'review').flat();
+
     // Get the Profiles
     if (rdy) {
       const profiles = Profiles.collection.find({}).fetch();
@@ -31,10 +37,14 @@ const RecipeCard = ({ recipe, favorite, showEdit }) => {
     return {
       ready: rdy,
       userProfile: profile,
+      all: allReviews,
     };
   }, []);
   const recipeItem = Recipes.collection;
   const [isFavorite, setIsFavorite] = useState(recipe.favoriteBy.includes(Meteor.user()?.username));
+
+  const sumRatings = _.reduce(_.pluck(all, 'rating'), (memo, num) => memo + num, 0);
+  const average = sumRatings > 0 ? (Math.round((sumRatings / all.length) * 2) / 2).toFixed(1) : 0;
 
   const toggleFavorite = () => {
     const isAlreadyFavorite = recipe.favoriteBy.includes(Meteor.user()?.username);
@@ -78,15 +88,16 @@ const RecipeCard = ({ recipe, favorite, showEdit }) => {
   return (ready ? (
     <Col>
       <Card className="h-100">
-        <Card.Header className="card-header d-flex flex-column justify-content-center">
-          <Card.Img src={recipe.picture} className="card-img" />
-          <Card.Title className="my-2 fs-5 card-title"><Link className="recipe-view-title" to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
+        <Card.Header className="rec-card-header d-flex flex-column justify-content-center px-3 pt-3">
+          <Card.Img src={recipe.picture} className="rec-card-img" />
+          <Card.Title className="my-2 fs-5 rec-card-title"><Link className="recipe-view-title" id={`rec-link-${idx}`} to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
           <Card.Subtitle className="">{recipe.time}</Card.Subtitle>
           {favorite && isFavorite ? (
             <HeartFill className="text-danger" onClick={() => toggleFavorite()} />
           ) : (
             <Heart onClick={() => toggleFavorite()} />
           )}
+          <Row className="mt-auto"><ReviewRating avg={Number(average)} /></Row>
         </Card.Header>
         <Card.Body>
           <Card.Text className="mt-2">{recipe.description}</Card.Text>
@@ -95,7 +106,7 @@ const RecipeCard = ({ recipe, favorite, showEdit }) => {
           </footer>
           <h6>Tags</h6>
           <Card.Text>
-            {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
+            {recipe.tags.map((tag, index) => <Badge key={`${tag}${index}`} bg="secondary" className="mx-1">{tag}</Badge>)}
           </Card.Text>
         </Card.Body>
         <Card.Footer className="text-end" hidden={!showEdit}>
@@ -129,11 +140,13 @@ RecipeCard.propTypes = {
   }).isRequired,
   favorite: PropTypes.bool,
   showEdit: PropTypes.bool,
+  idx: PropTypes.number,
 };
 
 RecipeCard.defaultProps = {
   favorite: false,
   showEdit: false,
+  idx: 1,
 };
 
 export default RecipeCard;

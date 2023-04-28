@@ -2,18 +2,36 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import PropTypes from 'prop-types';
-import { Accordion } from 'react-bootstrap';
+import { Accordion, Pagination } from 'react-bootstrap';
 import AddReview from './AddReview';
 import RecReviewItem from './RecReviewItem';
 
 const ReviewMenu = ({ name, recipeId, userID, all, user }) => {
   const [show, setShow] = useState(false);
-
+  const [activePage, setActivePage] = useState(1);
+  const sortedAll = all.sort((a, b) => b.created - a.created);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const indexOfLastItem = activePage * 5;
+  const indexOfFirstItem = indexOfLastItem - 5;
+  const currentItems = sortedAll.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setActivePage(pageNumber);
+  };
+
+  const paginationItems = [];
+  for (let i = 1; i <= Math.ceil(all.length / 5); i++) {
+    paginationItems.push(
+      <Pagination.Item key={i} active={i === activePage} onClick={() => handlePageChange(i)}>
+        {i}
+      </Pagination.Item>,
+    );
+  }
   return (
     <>
-      <Button variant="primary" id="review-button" onClick={handleShow} className="me-2">
+      <Button variant="outline-primary" id="review-button" onClick={handleShow} className="me-2">
         Reviews
       </Button>
       <Offcanvas show={show} onHide={handleClose} placement="end">
@@ -22,9 +40,13 @@ const ReviewMenu = ({ name, recipeId, userID, all, user }) => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <AddReview name={name} recipeId={recipeId} userID={userID} user={user} />
+          <h3>Reviews: </h3>
           <Accordion>
-            {all.map((rev, idx) => <RecReviewItem key={idx} idx={idx} review={rev} />)}
+            {currentItems.map((rev, idx) => (
+              <RecReviewItem key={idx} idx={idx} review={rev} />
+            ))}
           </Accordion>
+          <Pagination className="my-3">{paginationItems}</Pagination>
         </Offcanvas.Body>
       </Offcanvas>
     </>

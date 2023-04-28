@@ -56,7 +56,7 @@ const AddReview = ({ name, recipeId, userID, user }) => {
             <Card>
               <Card.Body>
                 Note: This will overwrite any current review you may have for this recipe.
-                <ListField name="review" initialCount={1}>
+                <ListField name="review" label="" initialCount={1}>
                   <ListItemField name="$" label="">
                     <NestField>
                       <Row>

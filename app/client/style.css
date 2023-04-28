@@ -56,7 +56,7 @@ th {
 
 /* Set a fixed height for all card headers */
 .rec-card-header {
-  height: 300px;
+  height: 350px;
 }
 
 /* Ensure that the header contents don't overflow the fixed height */
@@ -67,7 +67,6 @@ th {
 
 .rec-card-img {
   height: 70%;
-  width: 70%;
   object-fit: cover;
 }
 
@@ -88,4 +87,8 @@ th {
 
 .accordion-button:not(.collapsed) {
   color: #FFE5B4;
+}
+
+.offcanvas{
+  width:45% !important;
 }

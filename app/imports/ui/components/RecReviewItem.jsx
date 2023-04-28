@@ -5,17 +5,18 @@ import { Accordion, Row, Col } from 'react-bootstrap';
 const RecReviewItem = ({ review, idx }) => (
   <Accordion.Item eventKey={idx}>
     <Accordion.Header>
-      <Row><Col>Reviewer: {review.user}</Col>
-        <Col>{new Date(review.created).toLocaleDateString('en-US', {
+      <Row className="w-100">
+        <Col md={6} lg={6} className="text-start">Reviewer: {review.user}</Col>
+        <Col md={6} lg={6} className="text-end text-lg-center">{new Date(review.created).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'long',
           day: 'numeric',
         })}
         </Col>
+        <Col md={12} lg={12} className="text-start">Rating: {review.rating}/5</Col>
       </Row>
     </Accordion.Header>
     <Accordion.Body>
-      <h5>Rating: {review.rating}/5</h5>
       <h6>Comment: </h6>
       <p className="review-comment">{review.comment}</p>
     </Accordion.Body>
