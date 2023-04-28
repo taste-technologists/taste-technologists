@@ -7,10 +7,11 @@ import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { TrashFill } from 'react-bootstrap-icons';
 import { delReviewMethod } from '../../startup/both/Methods';
-/** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
+/** Renders a single card in the My Review page. See pages/MyReviews.jsx. */
 const RecReviewCard = ({ doc, idx }) => {
   let review;
 
+  // Used to toggle the full comment view
   const [isOpen, setIsOpen] = useState(false);
   const toggleCollapse = () => setIsOpen(!isOpen);
 

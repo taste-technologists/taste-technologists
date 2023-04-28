@@ -11,13 +11,13 @@ import RecReviewCard from '../components/RecReviewCard';
 const RecReviewsPage = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { recipes, ready } = useTracker(() => {
-    // Get access to Recipe documents.
+    // Get access to RecipeReview documents.
     const subscription = Meteor.subscribe(RecReviews.generalPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
 
     let review = null;
-    // Get the Profiles
+    // Get the RecipeReview for belonging to the logged-in user.
     if (rdy) {
       review = RecReviews.collection.find({
         'review.userID': Meteor.userId(),
@@ -30,6 +30,7 @@ const RecReviewsPage = () => {
       ready: rdy,
     };
   });
+  // Used to display descriptive text when there are no recipes.
   const haveReviews = recipes !== null && recipes.length > 0;
 
   return (ready ? (

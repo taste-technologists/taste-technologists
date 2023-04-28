@@ -11,14 +11,16 @@ import { RecReviews } from '../../api/recipes/RecipeReviews';
 import ReviewMenu from '../components/ReviewMenu';
 import { Profiles } from '../../api/profiles/Profiles';
 
-/* Renders the RecipeView page for viewing a single recipe. */
+/* Renders the RecipeView page for viewing a single recipe.
+* Also holds the components related to adding and viewing the recipe's reviews.
+* */
 const RecipeView = () => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const { _id } = useParams();
   // console.log('RecipeView', _id);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { doc, ready, all, user } = useTracker(() => {
-    // Get access to Recipe documents.
+    // Get access to Recipe, RecipeReview, and Profile documents.
     const subscription = Meteor.subscribe(Recipes.generalPublicationName);
     const subscription2 = Meteor.subscribe(RecReviews.generalPublicationName);
     const subscription3 = Meteor.subscribe(Profiles.generalPublicationName);
@@ -46,7 +48,6 @@ const RecipeView = () => {
   const sumRatings = _.reduce(_.pluck(all, 'rating'), (memo, num) => memo + num, 0);
   const average = Number(sumRatings > 0 ? (Math.round((sumRatings / all.length) * 2) / 2).toFixed(1) : 0);
 
-  // Concatenate the three arrays and return
   return ready ? (
     <Container id="recipe-view-page" className="py-3">
       <SingleRecipeCard key={doc._id} recipe={doc} avg={average} />

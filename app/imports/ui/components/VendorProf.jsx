@@ -31,9 +31,8 @@ const VendorProf = ({ vendor, idx }) => {
 
   // To check if user is admin and if there are no owners in the vendor array of this store.
   const isAdmin = Roles.userIsInRole(Meteor.userId(), ['admin', 'superadmin']);
-  const noOwner = Array.isArray(vendor.owner);
   // To check if the currently logged in user is a vendor and is a vendor for the store.
-  const isVendorOwner = Roles.userIsInRole(Meteor.userId(), ['vendor']) && noOwner;
+  const isVendorOwner = Roles.userIsInRole(Meteor.userId(), 'vendor');
   // To check if the user is authorized to edit the vendor profile.
   const isAuth = isAdmin || isVendorOwner;
   return (

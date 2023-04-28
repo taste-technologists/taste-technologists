@@ -8,7 +8,7 @@ import { RecReviews } from '../../api/recipes/RecipeReviews';
 const setRoleMethod = 'Profiles.role';
 
 /**
- * The server-side Profiles.update Meteor Method is called by the client-side Home page after pushing the update button.
+ * The server-side Profiles.role Meteor Method is called by the client-side Home page after pushing the update button.
  * Its purpose is to update the Profiles, ProfilesInterests, and ProfilesProjects collections to reflect the
  * updated situation specified by the user.
  */
@@ -25,6 +25,12 @@ Meteor.methods({
   },
 });
 
+/**
+ * The server-side Profiles.add Meteor Method is called by the client-side Sign-up page
+ * after the user clicks submit.
+ * Its purpose is to create the Meteor account and add their info to the Profiles
+ * collection to include the newly created account.
+ */
 const addProfileMethod = 'Profiles.add';
 
 Meteor.methods({
@@ -43,6 +49,12 @@ Meteor.methods({
   },
 });
 
+/**
+ * The server-side Profiles.remove Meteor Method is called by the client-side admin page
+ * after the admin clicks delete.
+ * Its purpose is to remove the userdata from Meteor Account, Profiles, and Recipes (favoriteBy)
+ * and Recipe Review collections.
+ */
 const removeProfileMethod = 'Profiles.remove';
 
 Meteor.methods({
@@ -65,6 +77,12 @@ Meteor.methods({
   },
 });
 
+/**
+ * The server-side Recipe.add Meteor Method is called by both client and server side.
+ * Its purpose is to add the recipe to the Recipe and RecipeReview Collection.
+ * collections.
+ */
+
 const addRecipeMethod = 'Recipes.add';
 
 Meteor.methods({
@@ -78,6 +96,11 @@ Meteor.methods({
   },
 });
 
+/**
+ * The server-side Recipes.remove Meteor Method is called by client side.
+ * Its purpose is to remove the recipe from the Recipe and RecipeReview Collection.
+ * collections.
+ */
 const removeRecipeMethod = 'Recipes.remove';
 
 Meteor.methods({

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Accordion, Row, Col } from 'react-bootstrap';
-/** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
+
+/** Renders a single Accordion Item in the ReviewMenu Component. See components/ReviewMenu.jsx. */
 const RecReviewItem = ({ review, idx }) => (
   <Accordion.Item eventKey={idx}>
     <Accordion.Header>
