@@ -70,4 +70,13 @@ Meteor.methods({
   },
 });
 
-export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod };
+const removeRecipeMethod = 'Recipes.remove';
+
+Meteor.methods({
+  'Recipes.remove'({ _id }) {
+    // console.log(`Remove recipe ${_id}`);
+    Recipes.collection.remove({ _id: _id });
+  },
+});
+
+export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod, removeRecipeMethod };
