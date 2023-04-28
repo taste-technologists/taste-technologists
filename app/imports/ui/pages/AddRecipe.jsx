@@ -6,7 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { Plus, TrashFill } from 'react-bootstrap-icons';
-import { Recipes } from '../../api/recipes/Recipes';
+import { addRecipeMethod } from '../../startup/both/Methods';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
@@ -56,16 +56,18 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 /* Renders the AddStuff page for adding a document. */
 const AddRecipe = () => {
   // On submit, insert the data.
-  const submit = (data, formRef) => {
-    const { name, picture, time, description, servings, tags, ingredients, instructions } = data;
+  const submit = (doc, formRef) => {
+    const { name, picture, time, description, servings, tags, ingredients, instructions } = doc;
     const owner = Meteor.user().username;
-    Recipes.collection.insert(
-      { name, picture, time, description, servings, owner, tags, ingredients, instructions, favoriteBy: [] },
+    const data = { name, picture, time, description, servings, owner, tags, ingredients, instructions, favoriteBy: [] };
+    Meteor.call(
+      addRecipeMethod,
+      { data },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Recipe added successfully', 'success');
+          swal('Success', 'Item added successfully', 'success');
           formRef.reset();
         }
       },

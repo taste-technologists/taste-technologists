@@ -39,7 +39,7 @@ const SingleRecipeCard = ({ recipe }) => {
     if (arr.length > 0) {
       cost += _.min(arr, (obj) => obj.price).price;
     }
-    console.log(arr);
+    // console.log(arr);
   });
   return (ready ? (
     <Container>

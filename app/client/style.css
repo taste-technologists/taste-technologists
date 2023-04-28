@@ -55,18 +55,37 @@ th {
 }
 
 /* Set a fixed height for all card headers */
-.card-header {
+.rec-card-header {
   height: 300px;
 }
 
 /* Ensure that the header contents don't overflow the fixed height */
-.card-header > * {
+.rec-card-header > * {
   max-height: 100%;
   overflow: hidden;
 }
 
-.card-img {
+.rec-card-img {
   height: 70%;
   width: 70%;
   object-fit: cover;
+}
+
+.review-comment {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Accordion settings for Review Component */
+.accordion-button {
+  background-color: #FFE5B4 !important;
+}
+
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #FFE5B4;
 }
