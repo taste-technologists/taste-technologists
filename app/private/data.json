@@ -353,6 +353,102 @@
       "item": "Carrots",
       "price": 2.49,
       "size": "2 lbs"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "shredded cheese",
+      "price": 2.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "chicken",
+      "price": 4.59,
+      "size": "1 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "flour tortillas",
+      "price": 3.49,
+      "size": "12 oz"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "enchilada sauce",
+      "price": 1.99,
+      "size": "14 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Cheese",
+      "price": 3.79,
+      "size": "16 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Feta",
+      "price": 4.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Freshly grated parmesan cheese",
+      "price": 5.99,
+      "size": "10 oz"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "Fresh Thyme Leaves",
+      "price": 2.49,
+      "size": "1 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "canned tuna",
+      "price": "3.99",
+      "size": "5 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "celery",
+      "price": "1.99",
+      "size": "16 oz"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "red onion",
+      "price": "0.99",
+      "size": "8 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Mayonnaise",
+      "price": "2.49",
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "dijon mustard",
+      "price": "1.79",
+      "size": "8 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "lemon juice",
+      "price": "2.99",
+      "size": "32 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "salt",
+      "price": "0.99",
+      "size": "24 oz"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "pepper",
+      "price": "1.29",
+      "size": "12 oz"
     }
   ],
   "recipes": [

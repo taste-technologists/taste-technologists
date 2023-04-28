@@ -18,7 +18,7 @@ const InventoryView = () => {
     const rdy = subscription.ready();
     // Get the Stuff documents
     const vendorIngredients = Inventory.collection.find().fetch();
-    console.log(vendorIngredients);
+    // console.log(vendorIngredients);
     return {
       ingredients: vendorIngredients,
       ready: rdy,

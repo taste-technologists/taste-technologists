@@ -76,6 +76,51 @@ class NavBar {
     await testController.expect(Selector('#navbar-current-user').exists).ok();
     await testController.click('#list-stuff-admin-nav');
   }
-}
 
+  async gotoSearchPage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#search-recipes-nav');
+  }
+
+  async gotoEditRecipePage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#my-recipes-nav');
+    if (Selector('.card').exists) {
+      await testController.click(Selector('.edit').nth(0));
+    }
+  }
+
+  async gotoRecipeViewPage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#my-recipes-nav');
+    if (Selector('.card').exists) {
+      await testController.click(Selector('.recipe-view-title'));
+    }
+  }
+
+  async gotoMyRecipePage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#my-recipes-nav');
+  }
+
+  async gotoFavoritesPage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#favorites-nav');
+  }
+}
 export const navBar = new NavBar();

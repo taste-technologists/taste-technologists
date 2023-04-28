@@ -1,5 +1,5 @@
 /* Component for layout out a Profile Card. */
-import { Badge, Card, Col } from 'react-bootstrap';
+import { Badge, Button, Card, Col, Row } from 'react-bootstrap';
 import { HeartFill, Heart } from 'react-bootstrap-icons';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
@@ -7,11 +7,14 @@ import { Link } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
+import swal from 'sweetalert';
 import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
+import { removeRecipeMethod } from '../../startup/both/Methods';
 
-const RecipeCard = ({ recipe, favorite }) => {
+const RecipeCard = ({ recipe, favorite, showEdit }) => {
+
   const { ready, userProfile } = useTracker(() => {
 
     // Get access to Recipe documents.
@@ -52,14 +55,33 @@ const RecipeCard = ({ recipe, favorite }) => {
 
     }
   };
-  console.log(recipe.favoriteBy);
+
+  const removeItem = () => {
+    const _id = recipe._id;
+    swal({
+      title: 'Are you sure you want to delete this recipe?',
+      text: "You won't be able to undo this!",
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        // console.log(`Remove ${_id}`);
+        Meteor.call(removeRecipeMethod, { _id });
+        swal('Deleted!', 'The recipe has been deleted.', 'success');
+      } else {
+        swal('The recipe has not been deleted');
+      }
+    });
+  };
+  // console.log(recipe.favoriteBy);
   return (ready ? (
     <Col>
       <Card className="h-100">
-        <Card.Header>
-          <Card.Img src={recipe.picture} />
-          <Card.Title><Link to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
-          <Card.Subtitle>{recipe.time}</Card.Subtitle>
+        <Card.Header className="card-header d-flex flex-column justify-content-center">
+          <Card.Img src={recipe.picture} className="card-img" />
+          <Card.Title className="my-2 fs-5 card-title"><Link className="recipe-view-title" to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
+          <Card.Subtitle className="">{recipe.time}</Card.Subtitle>
           {favorite && isFavorite ? (
             <HeartFill className="text-danger" onClick={() => toggleFavorite()} />
           ) : (
@@ -67,9 +89,7 @@ const RecipeCard = ({ recipe, favorite }) => {
           )}
         </Card.Header>
         <Card.Body>
-          <Card.Text>
-            {recipe.description}
-          </Card.Text>
+          <Card.Text className="mt-2">{recipe.description}</Card.Text>
           <footer className="blockquote-footer">
             {userProfile.name}
           </footer>
@@ -77,10 +97,13 @@ const RecipeCard = ({ recipe, favorite }) => {
           <Card.Text>
             {recipe.tags.map((tag, idx) => <Badge key={`${tag}${idx}`} bg="secondary" className="mx-1">{tag}</Badge>)}
           </Card.Text>
-          {recipe.owner === Meteor.user()?.username ?
-            <Link to={`/edit/${recipe._id}`}>Edit</Link> :
-            ''}
         </Card.Body>
+        <Card.Footer className="text-end" hidden={!showEdit}>
+          <Row>
+            <Col className="text-start"><Link className="edit" to={`/edit/${recipe._id}`}>Edit</Link></Col>
+            <Col className="text-end"><Button type="button" size="sm" variant="danger" onClick={() => removeItem()}>Delete</Button></Col>
+          </Row>
+        </Card.Footer>
       </Card>
     </Col>
   ) : <LoadingSpinner />);
@@ -105,10 +128,12 @@ RecipeCard.propTypes = {
     servings: PropTypes.number,
   }).isRequired,
   favorite: PropTypes.bool,
+  showEdit: PropTypes.bool,
 };
 
 RecipeCard.defaultProps = {
   favorite: false,
+  showEdit: false,
 };
 
 export default RecipeCard;

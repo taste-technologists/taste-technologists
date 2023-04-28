@@ -2,6 +2,9 @@ import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
+import { searchPage } from './search.page';
+import { editrecipePage } from './editrecipe.page';
+import { recipeviewPage } from './recipe.page';
 import { adminPage } from './admin.page';
 import { adminInventory } from './admin.inventory';
 import { adminEditPage } from './admin.edit.page';
@@ -12,6 +15,8 @@ import { addvendorPage } from './addvendor.page';
 import { editvendorPage } from './editvendor.page';
 import { editInventoryPage } from './editinventory.page';
 import { addInventory } from './addinventory';
+import { myrecipePage } from './myrecipe.page';
+import { favoritesPage } from './favorites.page';
 
 /* global fixture:false, test:false */
 
@@ -37,6 +42,29 @@ test('Test that signin and signout work', async (testController) => {
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test that search page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoSearchPage(testController);
+  await searchPage.isDisplayed(testController);
+  await searchPage.isFiltered(testController);
+});
+test('Test that edit recipe page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoEditRecipePage(testController);
+  await editrecipePage.isDisplayed(testController);
+  await editrecipePage.editRecipe(testController, recipe.name, recipe.picture, recipe.time, recipe.servings, recipe.description, recipe.ingredientsQuantity, recipe.ingredientsUnit, recipe.ingredientsName, recipe.instructions);
+
+});
+
+test('Test that individual recipe page work', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoRecipeViewPage(testController);
+  await recipeviewPage.isDisplayed(testController);
 });
 
 test('Test the inventory page and its functionalities', async (testController) => {
@@ -94,7 +122,6 @@ test('Test the listprofilesadmin page and all of its functions work', async (tes
 });
 
 test('Test the List, Add, and Edit Vendor pages', async (testController) => {
-  await landingPage.isDisplayed(testController);
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotoListVendorPage(testController);
@@ -111,4 +138,15 @@ test('Test the List, Add, and Edit Vendor pages', async (testController) => {
   await navBar.gotoListVendorPage(testController);
   await listvendorPage.deleteVendor(testController);
   await listvendorPage.isDisplayed(testController);
+});
+
+test('Test that MyRecipes and Favorites Pages works', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoMyRecipePage(testController);
+  await myrecipePage.isDisplayed(testController);
+  await navBar.gotoFavoritesPage(testController);
+  await favoritesPage.isDisplayed(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });
