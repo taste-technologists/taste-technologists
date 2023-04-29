@@ -665,6 +665,90 @@
       "item": "garlic powder",
       "price": "4.99",
       "size": "3.12 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Libby Vienna Sausage",
+      "price": "1.89",
+      "size": "1 can"
+    },
+    {
+      "name": "The Market",
+      "item": "Spam",
+      "price": "5.29",
+      "size": "1 can"
+    },
+    {
+      "name": "The Market",
+      "item": "Libby Corned Beef Hash",
+      "price": "4.19",
+      "size": "1 can"
+    },
+    {
+      "name": "The Market",
+      "item": "Canned Tuna",
+      "price": "2.59",
+      "size": "1 can"
+    },
+    {
+      "name": "The Market",
+      "item": "Spaghetti",
+      "price": "3.49",
+      "size": "15 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Penne Rigate",
+      "price": "4.19",
+      "size": "15 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Canned Corn",
+      "price": "3.79",
+      "size": "11 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Baking Soda",
+      "price": "2.19",
+      "size": "1 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Flour",
+      "price": "3.59",
+      "size": "32 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Shoyu",
+      "price": "3.09",
+      "size": "12 fl. oz"
+    },
+    {
+      "name": "The Market",
+      "item": "White Rice",
+      "price": "10.19",
+      "size": "5 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Sugar",
+      "price": "3.49",
+      "size": "1 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Brown Sugar",
+      "price": "3.29",
+      "size": "1 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Mustard",
+      "price": "2.79",
+      "size": "14 oz"
     }
   ],
   "recipes": [
