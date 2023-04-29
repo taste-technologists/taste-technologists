@@ -10,7 +10,8 @@ import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import { Profiles } from '../../api/profiles/Profiles';
 import InventoryView from './InventoryView';
-import ListRecipes from './ListRecipes';
+import ListRecipes from '../components/ListRecipes';
+import ListUsers from '../components/ListUsers';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItemAdmin> to render each row. */
 const ListProfilesAdmin = () => {
@@ -80,24 +81,7 @@ const ListProfilesAdmin = () => {
               </Button>
             </Col>
           </Row>
-          { view === 'default' && (
-            <><h2 className="text-center pt-3">Profiles</h2>
-              <Table striped bordered hover>
-                <thead>
-                  <tr>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Edit</th>
-                    <th>Vendor Request</th>
-                    <th>Delete</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {profile.map((prof, idx) => <ProfileItem key={prof._id} prof={prof} idx={idx} />)}
-                </tbody>
-              </Table>
-            </>
-          )}
+          {view === 'default' && <ListUsers />}
           {view === 'recipes' && <ListRecipes />}
           {view === 'inventory' && <InventoryView />}
         </Col>

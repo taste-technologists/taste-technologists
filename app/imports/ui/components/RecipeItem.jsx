@@ -29,7 +29,8 @@ const RecipeItem = ({ recipe, idx }) => {
   };
   return (
     <tr>
-      <td>{recipe.name}</td>
+      <td>{recipe.owner}</td>
+      <td><Link className="recipe-view-title" id={`rec-link-${idx}`} to={`/recipes/${recipe._id}`}>{recipe.name}</Link></td>
       <td>{recipe.description}</td>
       <td>
         <Link to={`/admin-edit/${recipe._id}`}>Edit</Link>
@@ -42,8 +43,9 @@ const RecipeItem = ({ recipe, idx }) => {
 // Require a document to be passed to this component.
 RecipeItem.propTypes = {
   recipe: PropTypes.shape({
+    owner: PropTypes.string,
     name: PropTypes.string,
-    description: PropTypes.number,
+    description: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,
   idx: PropTypes.number.isRequired,

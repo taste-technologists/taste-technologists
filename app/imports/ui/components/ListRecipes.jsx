@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Col, Container, Row, Table } from 'react-bootstrap';
+import { Col, Container, Pagination, Row, Table } from 'react-bootstrap';
+import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
-import LoadingSpinner from '../components/LoadingSpinner';
+import LoadingSpinner from './LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
-import RecipeItem from '../components/RecipeItem';
+import RecipeItem from './RecipeItem';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 const ListRecipes = () => {
+  const [activePage, setActivePage] = useState(1);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { ready, recipes } = useTracker(() => {
     // Note that this subscription will get cleaned up
@@ -17,12 +19,26 @@ const ListRecipes = () => {
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
-    const recipeItems = Recipes.collection.find({}).fetch();
+    const recipeItems = _.sortBy(Recipes.collection.find({}).fetch(), 'name');
     return {
       recipes: recipeItems,
       ready: rdy,
     };
   }, []);
+
+  const indexOfLastItem = activePage * 10;
+  const indexOfFirstItem = indexOfLastItem - 10;
+  const currentItems = recipes.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setActivePage(pageNumber);
+  };
+
+  const paginationItems = _.range(1, Math.ceil(recipes.length / 10) + 1).map((i) => (
+    <Pagination.Item key={i} active={i === activePage} onClick={() => handlePageChange(i)}>
+      {i}
+    </Pagination.Item>
+  ));
   return (ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
@@ -33,6 +49,7 @@ const ListRecipes = () => {
           <Table striped bordered hover>
             <thead>
               <tr>
+                <th>Owner</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>Edit</th>
@@ -40,9 +57,10 @@ const ListRecipes = () => {
               </tr>
             </thead>
             <tbody>
-              {recipes.map((recipe, idx) => <RecipeItem key={recipe._id} recipe={recipe} idx={idx} />)}
+              {currentItems.map((recipe, idx) => <RecipeItem key={recipe._id} recipe={recipe} idx={idx} />)}
             </tbody>
           </Table>
+          <Pagination className="my-3">{paginationItems}</Pagination>
         </Col>
       </Row>
     </Container>
