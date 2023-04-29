@@ -128,7 +128,7 @@
     },
     {
       "name": "Safeway",
-      "item": "Frozen Mixed Vegetables",
+      "item": "Mixed Vegetables",
       "price": 1.99,
       "size": "16 oz"
     },
@@ -449,6 +449,306 @@
       "item": "pepper",
       "price": "1.29",
       "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "provolone cheese",
+      "price": "3.50",
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "avocado",
+      "price": "2.50",
+      "size": "1 whole"
+    },
+    {
+      "name": "Safeway",
+      "item": "tomato",
+      "price": "3.59",
+      "size": "1 whole"
+    },
+    {
+      "name": "Safeway",
+      "item": "balsamic vinegar",
+      "price": "5.99",
+      "size": "16.9 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "hummus",
+      "price": "5.99",
+      "size": "10 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "naan bread",
+      "price": "5.99",
+      "size": "4 piece"
+    },
+    {
+      "name": "Safeway",
+      "item": "arugula",
+      "price": "3.99",
+      "size": "5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "date",
+      "price": "8.99",
+      "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "pumpkin seeds",
+      "price": "5.99",
+      "size": "11 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "polenta",
+      "price": "3.99",
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "chicken broth",
+      "price": "2.50",
+      "size": "32 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "paprika",
+      "price": "4.49",
+      "size": "2.12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "boneless salmon fillets",
+      "price": "6.99",
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "dried basil",
+      "price": "4.99",
+      "size": "0.42 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "olive oil",
+      "price": "9.99",
+      "size": "25.5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "sweet potatoes",
+      "price": "1.99",
+      "size": "1 whole"
+    },
+    {
+      "name": "Safeway",
+      "item": "canned chicken",
+      "price": "5.49",
+      "size": "10 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "cilantro",
+      "price": "1.69",
+      "size": "1 bunch"
+    },
+    {
+      "name": "Safeway",
+      "item": "chili powder",
+      "price": "2.84",
+      "size": "2.5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "lime juice",
+      "price": "2.49",
+      "size": "15 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "baking powder",
+      "price": "1.79",
+      "size": "1 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "blueberries",
+      "price": "5.00",
+      "size": "18 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "confectioners sugar",
+      "price": "4.49",
+      "size": "32 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "plain greek yogurt",
+      "price": "5.49",
+      "size": "32 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "stevia brown sugar blend",
+      "price": "8.49",
+      "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "vanilla extract",
+      "price": "3.99",
+      "size": "1 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "chocolate chips",
+      "price": "4.49",
+      "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "raw cashews",
+      "price": "7.99",
+      "size": "10 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "banana",
+      "price": "0.33",
+      "size": "1 whole"
+    },
+    {
+      "name": "Safeway",
+      "item": "cacao powder",
+      "price": "7.49",
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "soy milk",
+      "price": "5.49",
+      "size": "0.5 gal"
+    },
+    {
+      "name": "Safeway",
+      "item": "sea salt",
+      "price": "4.49",
+      "size": "17.6 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "peanuts",
+      "price": "2.99",
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "parsley",
+      "price": "1.49",
+      "size": "1 bunch"
+    },
+    {
+      "name": "Safeway",
+      "item": "onion powder",
+      "price": "4.49",
+      "size": "2.62 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "garlic powder",
+      "price": "4.99",
+      "size": "3.12 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Libby Vienna Sausage",
+      "price": "1.89",
+      "size": "1 can"
+    },
+    {
+      "name": "The Market",
+      "item": "Spam",
+      "price": "5.29",
+      "size": "1 can"
+    },
+    {
+      "name": "The Market",
+      "item": "Libby Corned Beef Hash",
+      "price": "4.19",
+      "size": "1 can"
+    },
+    {
+      "name": "The Market",
+      "item": "Canned Tuna",
+      "price": "2.59",
+      "size": "1 can"
+    },
+    {
+      "name": "The Market",
+      "item": "Spaghetti",
+      "price": "3.49",
+      "size": "15 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Penne Rigate",
+      "price": "4.19",
+      "size": "15 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Canned Corn",
+      "price": "3.79",
+      "size": "11 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Baking Soda",
+      "price": "2.19",
+      "size": "1 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Flour",
+      "price": "3.59",
+      "size": "32 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Shoyu",
+      "price": "3.09",
+      "size": "12 fl. oz"
+    },
+    {
+      "name": "The Market",
+      "item": "White Rice",
+      "price": "10.19",
+      "size": "5 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Sugar",
+      "price": "3.49",
+      "size": "1 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Brown Sugar",
+      "price": "3.29",
+      "size": "1 lb"
+    },
+    {
+      "name": "The Market",
+      "item": "Mustard",
+      "price": "2.79",
+      "size": "14 oz"
     }
   ],
   "recipes": [
@@ -1122,6 +1422,523 @@
         },
         {
           "step": "Bake for 20-30 min until bubbly and slightly brown."
+        }
+      ]
+    },
+    {
+      "name": "Delicious Avocado Sandwich",
+      "picture": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1977630.jpg&q=60&c=sc&orient=true&poi=auto&h=512",
+      "time": "10 mins",
+      "description": "This was always a lunchtime favorite with my gal pals. It's simple, delicious, and refreshing! The measurements for the ingredients are all approximate, as this sandwich is best when tailored to personal taste. Particularly scrumptious on potato, oat, or country white bread. Enjoy!",
+      "servings": 1,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegetarian", "Pescatarian", "Lunch", "Snack"],
+      "ingredients": [
+        {
+          "name": "bread",
+          "quantity": 2,
+          "unit": "slice"
+        },
+        {
+          "name": "provolone cheese",
+          "quantity": 2,
+          "unit": "slice"
+        },
+        {
+          "name": "avocado",
+          "quantity": 0.25,
+          "unit": "unit"
+        },
+        {
+          "name": "tomato",
+          "quantity": 0.5,
+          "unit": "unit"
+        },
+        {
+          "name": "balsamic vinegar",
+          "quantity": 1.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Lay 1 slice bread on a plate. Place provolone cheese on bread and top with avocado and tomato slices, respectively. Drizzle balsamic vinegar over tomato and top with remaining slice of bread."
+        }
+      ]
+    },
+    {
+      "name": "Arugula and Hummus Mini Pizzas",
+      "picture": "https://www.allrecipes.com/thmb/wbZ0KIHiO1RrDeh5LpnGytwMuKE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/2633731-1069599967e1477899961796b44c730b.jpg",
+      "time": "10 mins",
+      "description": "A nice quick and fresh snack that is healthy and delicious! This can also be made on pita bread instead of naan.",
+      "servings": 1,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegan","Vegetarian","Pescatarian","Dairy-free","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "hummus",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "naan bread",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "name": "arugula",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "date",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "pumpkin seeds",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "balsamic vinegar",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Spread hummus onto naan bread; top with arugula, date, and pumpkin seeds. Drizzle balsamic vinegar over pizza."
+        }
+      ]
+    },
+    {
+      "name": "Creamy Parmesan Polenta",
+      "picture": "https://www.allrecipes.com/thmb/COPneIimad8WzKPBMpL8Yy6_DNA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/2210387-creamy-parmesan-polenta-Buckwheat-Queen-4x3-2-17fcfd76073e4c2b88241fc1b7d8fd78.jpg",
+      "time": "10 mins",
+      "description": "Grab a polenta package, one cup of chicken broth, and some Parmesan cheese and you're minutes away from a deliciously creamy polenta side dish. You can also serve it as an appetizer or use it as a base for a hearty stew.",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegetarian", "Pescatarian", "Snack"],
+      "ingredients": [
+        {
+          "name": "polenta",
+          "quantity": 18,
+          "unit": "oz"
+        },
+        {
+          "name": "chicken broth",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "parmesan cheese",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "ground black pepper",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "paprika",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Combine polenta and chicken broth in a saucepan over medium heat; cook and stir until polenta has broken down and blended with the broth, about 5 minutes."
+        },
+        {
+          "step": "Remove from the heat; stir in Parmesan cheese, pepper, and paprika."
+        }
+      ]
+    },
+    {
+      "name": "Tomato Basil Salmon",
+      "picture": "https://www.allrecipes.com/thmb/pwRYBOEwMyl6ebuc6_yvJdrT8Cc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/691788-Tomato-Basil-Salmon-166624-CookinBug-2000-109b336fd1684b0e872608c576b49e28.jpg",
+      "time": "30 mins",
+      "description": "This quick salmon dish is perfect for a weeknight dinner. Serve with a side of sauteed spinach and a glass of pinot noir.",
+      "servings": 2,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": ["Lunch", "Dinner"],
+      "ingredients": [
+        {
+          "name": "boneless salmon fillets",
+          "quantity": 12,
+          "unit": "oz"
+        },
+        {
+          "name": "dried basil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "tomato",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "grated parmesan cheese",
+          "quantity": 2,
+          "unit": "tbsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat oven to 375 degrees F (190 degrees C). Line a baking sheet with a piece of aluminum foil, and spray with nonstick cooking spray. Place the salmon fillets onto the foil, sprinkle with basil, top with tomato slices, drizzle with olive oil, and sprinkle with the Parmesan cheese."
+        },
+        {
+          "step": "Bake in the preheated oven until the salmon is opaque in the center, and the Parmesan cheese is lightly browned on top, about 20 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Quick and Easy Mashed Sweet Potatoes",
+      "picture": "https://www.allrecipes.com/thmb/gruImgNseq_rh-CwBIQlHbiIQGo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1285557-2f4d34a2615146b495d93de1fe20444c.jpg",
+      "time": "30 mins",
+      "description": "This is my favorite quick and easy recipe. For more flavor, add maple syrup.",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegetarian", "Pescatarian", "Lunch", "Dinner"],
+      "ingredients": [
+        {
+          "name": "sweet potatoes",
+          "quantity": 6,
+          "unit": "unit"
+        },
+        {
+          "name": "butter",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "garlic",
+          "quantity": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "dried basil",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "dried thyme",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Place potatoes into a large pot and cover with salted water; bring to a boil. Reduce heat to medium-low and simmer until tender, about 20 minutes; drain."
+        },
+        {
+          "step": "Transfer potatoes to a large bowl; mash butter, garlic, basil, and thyme into the potatoes with a potato masher until smooth."
+        }
+      ]
+    },
+    {
+      "name": "Mexi-Chicken Avocado Cups",
+      "picture": "https://www.allrecipes.com/thmb/EKLWgacfdTn2wqecqQx_SywLvlE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1895674-0c24cb316a514e01b0e64871122cbbac.jpg",
+      "time": "10 mins",
+      "description": "A Mexican-style side dish made of chicken and avocado, no cooking required. It's a quick, healthy, and delicious recipe guaranteed to make you feel and look good.",
+      "servings": 3,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": ["Dairy-free", "Lunch", "Snack"],
+      "ingredients": [
+        {
+          "name": "canned chicken",
+          "quantity": 18,
+          "unit": "oz"
+        },
+        {
+          "name": "cilantro",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "chili powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "avocado",
+          "quantity": 3,
+          "unit": "unit"
+        },
+        {
+          "name": "lime juice",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Stir chicken, cilantro, and chili powder together in a bowl."
+        },
+        {
+          "step": "Arrange avocado halves on serving dish and brush with lime juice. Spoon chicken mixture into avocado halves."
+        }
+      ]
+    },
+    {
+      "name": "No-Egg Blueberry Mug Cake",
+      "picture": "https://www.allrecipes.com/thmb/4pd9XLKQTiJvmrLlxS8zglS78IA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/263726_no-egg-blueberry-mug-cake_Buckwheat-Queen-03f267ee0f3745cebd055eba56d1e835.jpg",
+      "time": "7 mins",
+      "description": "The perfect dessert when you're home alone and have a craving for sometime homemade and fruity. It is also egg free so perfect for those with allergies.",
+      "servings": 1,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegetarian", "Pescatarian", "Breakfast", "Snack"],
+      "ingredients": [
+        {
+          "name": "all-purpose flour",
+          "quantity": 4,
+          "unit": "tbsp"
+        },
+        {
+          "name": "white sugar",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "name": "vanilla sugar",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "baking powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "milk",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 0.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "blueberries",
+          "quantity": 10,
+          "unit": "unit"
+        },
+        {
+          "name": "confectioners sugar",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Combine flour, sugar, vanilla sugar, and baking powder in a large mug. Add milk and oil; mix batter well with a fork or a small whisk. Carefully fold in blueberries so they are completely covered with batter."
+        },
+        {
+          "step": "Microwave on high until cake has risen by 50%, 30 seconds to 2 minutes, depending on strength of your microwave. Allow to cool in the mug for a few minutes. Dust with confectioners' sugar."
+        }
+      ]
+    },
+    {
+      "name": "Healthy Peanut Butter Mousse",
+      "picture": "https://www.allrecipes.com/thmb/V0DgNFwU03TZEu0_RVHtdWqLpt8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4453566-87b196742fb54c378006dd4e790afdc9.jpg",
+      "time": "6 mins",
+      "description": "I whipped this up after school one day when I wanted peanut butter and a healthy snack. There are many other toppings that can be used with this such as Nutella®, extra peanut butter, granola, fruit, oats, graham crackers, cookies, or cereal. The possibilities are endless!",
+      "servings": 1,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegetarian", "Pescatarian", "Breakfast","Snack"],
+      "ingredients": [
+        {
+          "name": "peanut butter",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "plain greek yogurt",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "stevia brown sugar blend",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "vanilla extract",
+          "quantity": 0.125,
+          "unit": "tsp"
+        },
+        {
+          "name": "chocolate chips",
+          "quantity": 1,
+          "unit": "tbsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Microwave peanut butter in a microwave-safe bowl until liquid and smooth, about 20 seconds."
+        },
+        {
+          "step": "Stir Greek yogurt into the peanut butter with a spoon until smooth, scraping off any peanut butter stuck to the spoon. Stir in stevia and vanilla extract. Fold in chocolate chips."
+        }
+      ]
+    },
+    {
+      "name": "Salted Chocolate-Peanut Butter Vegan Nice Cream",
+      "picture": "https://www.allrecipes.com/thmb/sCtMUyaGCF6zQmshUIvkIj11kWM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/5449624-906abd5afca042f485027104300e0c28.jpg",
+      "time": "10 mins",
+      "description": "It's like your favorite peanut butter cup, but better because it includes a touch of salt. And, ya know, it's in nice cream (=ice cream) form, so...yum.",
+      "servings": 1,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegan", "Vegetarian", "Pescatarian"],
+      "ingredients": [
+        {
+          "name": "raw cashews",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "banana",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "ice",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "extra-firm tofu",
+          "quantity": 3,
+          "unit": "oz"
+        },
+        {
+          "name": "cacao powder",
+          "quantity": 0.33,
+          "unit": "cup"
+        },
+        {
+          "name": "pitted medjool dates",
+          "quantity": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "peanut butter",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "name": "vanilla extract",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "soy milk",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "sea salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "peanuts",
+          "quantity": 0.33,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Place cashews in a bowl and cover with water. Soak for 1 to 3 hours. Drain."
+        },
+        {
+          "step": "Combine soaked cashews, banana, ice cubes, tofu, cacao powder, dates, peanut butter, vanilla extract, 1 teaspoon soy milk, and salt in a blender. Process until smooth. Add an additional teaspoon of soy milk only if needed, in order to keep the mixture as thick as possible."
+        },
+        {
+          "step": "Pour into a bowl and sprinkle with crushed peanuts."
+        }
+      ]
+    },
+    {
+      "name": "Avocado Toast",
+      "picture": "https://www.allrecipes.com/thmb/AttzeodZPaVs_prTgBoA1za6o2s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3605756-4910cb02090848bebfbe1563270f38d9.jpg",
+      "time": "10 mins",
+      "description": "This is a delicious, healthy, hearty breakfast recipe. If you are not vegan, you can add fried eggs to your toast for a delicious vegetarian meal.",
+      "servings": 4,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegan","Vegetarian", "Pescatarian", "Dairy-free", "Breakfast", "Lunch", "Snack"],
+      "ingredients": [
+        {
+          "name": "bread",
+          "quantity": 4,
+          "unit": "slice"
+        },
+        {
+          "name": "avocado",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "parsley",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 0.5,
+          "unit": "unit"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "ground black pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "onion powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Toast bread in a toaster or toaster oven."
+        },
+        {
+          "step": "Scoop avocado into a bowl. Add parsley, olive oil, lemon juice, salt, pepper, onion powder, and garlic powder; mash together using a potato masher. Spread avocado mixture into each piece of toast."
         }
       ]
     }
