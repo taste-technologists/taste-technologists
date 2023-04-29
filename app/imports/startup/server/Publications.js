@@ -97,7 +97,7 @@ Meteor.publish(Stuffs.adminPublicationName, function () {
 // Admin-level publication.
 // If logged in and with admin role, then publish all recipes from all users. Otherwise publish nothing.
 Meteor.publish(Recipes.adminPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+  if (this.userId && Roles.userIsInRole(this.userId, ['admin', 'superadmin'])) {
     return Recipes.collection.find();
   }
   return this.ready();
@@ -113,7 +113,7 @@ Meteor.publish(Profiles.adminPublicationName, function () {
 // Admin-level publication.
 // If logged in and with admin role, then publish all items from all users. Otherwise publish nothing.
 Meteor.publish(Inventory.adminPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+  if (this.userId && Roles.userIsInRole(this.userId, ['admin', 'superadmin'])) {
     return Inventory.collection.find();
   }
   return this.ready();

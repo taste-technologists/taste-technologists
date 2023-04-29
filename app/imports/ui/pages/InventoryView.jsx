@@ -2,9 +2,10 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Col, Container, Row, Table } from 'react-bootstrap';
-import Ingredient from '../components/Ingredient';
+import { _ } from 'meteor/underscore';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import LoadingSpinner from '../components/LoadingSpinner';
+import IngredientAdmin from '../components/IngredientAdmin';
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 
 const InventoryView = () => {
@@ -25,6 +26,7 @@ const InventoryView = () => {
     };
   }, []);
 
+  const sorted = _.sortBy(ingredients, 'name');
   return (ready ? (
     <Container className="py-3" id="admin-inventory-page">
       <Row className="justify-content-center">
@@ -32,21 +34,24 @@ const InventoryView = () => {
           <Col className="text-center">
             <h2>Vendor List</h2>
           </Col>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Vendor</th>
-                <th>Item</th>
-                <th>Price ($)</th>
-                <th>Size</th>
-                <th>Edit</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ingredients.map((item, idx) => <Ingredient idx={idx} key={item._id} ingredient={item} />)}
-            </tbody>
-          </Table>
         </Col>
+      </Row>
+      <Row>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Vendor</th>
+              <th>Item</th>
+              <th>Price ($)</th>
+              <th>Size</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sorted.map((item, idx) => <IngredientAdmin idx={idx} key={item._id} ingredient={item} />)}
+          </tbody>
+        </Table>
       </Row>
     </Container>
   ) : <LoadingSpinner />);
