@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
+import { _ } from 'meteor/underscore';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import { BasketFill, PersonFill, FileTextFill } from 'react-bootstrap-icons';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -23,7 +24,7 @@ const ListProfilesAdmin = () => {
   };
 
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { ready } = useTracker(() => {
+  const { ready, reviews } = useTracker(() => {
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe(Profiles.adminPublicationName);
     const subscription2 = Meteor.subscribe(Recipes.generalPublicationName);
@@ -31,7 +32,9 @@ const ListProfilesAdmin = () => {
     const subscription4 = Meteor.subscribe(RecReviews.generalPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready() && subscription2.ready() && subscription3.ready() && subscription4.ready();
+    const reviewItems = _.sortBy(RecReviews.collection.find({ review: { $exists: true, $not: { $size: 0 } } }).fetch(), 'name');
     return {
+      reviews: reviewItems,
       ready: rdy,
     };
   }, []);
@@ -90,7 +93,7 @@ const ListProfilesAdmin = () => {
                 id="admin-reviews"
               >
                 <Card.Title>Reviews</Card.Title>
-                <Card.Text><BasketFill className="mx-1 mb-1" />{Inventory.collection.find().count()}</Card.Text>
+                <Card.Text><BasketFill className="mx-1 mb-1" />{reviews.length}</Card.Text>
               </Button>
             </Col>
           </Row>
