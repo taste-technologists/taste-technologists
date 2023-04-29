@@ -449,6 +449,222 @@
       "item": "pepper",
       "price": "1.29",
       "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "provolone cheese",
+      "price": "3.50",
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "avocado",
+      "price": "2.50",
+      "size": "1 unit"
+    },
+    {
+      "name": "Safeway",
+      "item": "tomato",
+      "price": "3.59",
+      "size": "1 unit"
+    },
+    {
+      "name": "Safeway",
+      "item": "balsamic vinegar",
+      "price": "5.99",
+      "size": "16.9 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "hummus",
+      "price": "5.99",
+      "size": "10 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "naan bread",
+      "price": "5.99",
+      "size": "4 piece"
+    },
+    {
+      "name": "Safeway",
+      "item": "arugula",
+      "price": "3.99",
+      "size": "5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "date",
+      "price": "8.99",
+      "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "pumpkin seeds",
+      "price": "5.99",
+      "size": "11 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "polenta",
+      "price": "3.99",
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "chicken broth",
+      "price": "2.50",
+      "size": "32 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "paprika",
+      "price": "4.49",
+      "size": "2.12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "boneless salmon fillets",
+      "price": "6.99",
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "dried basil",
+      "price": "4.99",
+      "size": "0.42 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "olive oil",
+      "price": "9.99",
+      "size": "25.5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "sweet potatoes",
+      "price": "1.99",
+      "size": "1 unit"
+    },
+    {
+      "name": "Safeway",
+      "item": "canned chicken",
+      "price": "5.49",
+      "size": "10 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "cilantro",
+      "price": "1.69",
+      "size": "1 bunch"
+    },
+    {
+      "name": "Safeway",
+      "item": "chili powder",
+      "price": "2.84",
+      "size": "2.5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "lime juice",
+      "price": "2.49",
+      "size": "15 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "baking powder",
+      "price": "1.79",
+      "size": "1 lb"
+    },
+    {
+      "name": "Safeway",
+      "item": "blueberries",
+      "price": "5.00",
+      "size": "18 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "confectioners sugar",
+      "price": "4.49",
+      "size": "32 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "plain greek yogurt",
+      "price": "5.49",
+      "size": "32 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "stevia brown sugar blend",
+      "price": "8.49",
+      "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "vanilla extract",
+      "price": "3.99",
+      "size": "1 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "chocolate chips",
+      "price": "4.49",
+      "size": "12 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "raw cashews",
+      "price": "7.99",
+      "size": "10 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "banana",
+      "price": "0.33",
+      "size": "1 unit"
+    },
+    {
+      "name": "Safeway",
+      "item": "cacao powder",
+      "price": "7.49",
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "soy milk",
+      "price": "5.49",
+      "size": "0.5 gal"
+    },
+    {
+      "name": "Safeway",
+      "item": "sea salt",
+      "price": "4.49",
+      "size": "17.6 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "peanuts",
+      "price": "2.99",
+      "size": "16 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "parsley",
+      "price": "1.49",
+      "size": "1 bunch"
+    },
+    {
+      "name": "Safeway",
+      "item": "onion powder",
+      "price": "4.49",
+      "size": "2.62 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "garlic powder",
+      "price": "4.99",
+      "size": "3.12 oz"
     }
   ],
   "recipes": [
@@ -928,7 +1144,7 @@
           "unit": "cup"
         },
         {
-          "name": "pitted medjool dates",
+          "name": "date",
           "quantity": 2,
           "unit": "unit"
         },
