@@ -107,7 +107,7 @@ const EditRecipe = () => {
                     <NestField>
                       <Row>
                         <Col><NumField id="edit-recipe-ingredientsQuantity" name="quantity" min="0" /></Col>
-                        <Col><SelectField id="edit-recipe-ingredientsUnit" name="unit" allowedValues={['lb', 'cup', 'tsp', 'tbsp', 'oz']} placeholder="Select a unit" /></Col>
+                        <Col><SelectField id="edit-recipe-ingredientsUnit" name="unit" allowedValues={['box', 'whole', 'lg', 'med', 'sm', 'slice', 'piece', 'lb', 'cup', 'tsp', 'tbsp', 'oz', 'can']} placeholder="Select a unit" /></Col>
                       </Row>
                       <Row><TextField id="edit-recipe-ingredientsName" name="name" showInlineError placeholder="Ingredient name" /></Row>
                     </NestField>
