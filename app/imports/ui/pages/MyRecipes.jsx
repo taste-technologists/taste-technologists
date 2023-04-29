@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Row, Col, Pagination } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
+import { _ } from 'meteor/underscore';
 import RecipeCard from '../components/RecipeCard';
 import { pageStyle } from './pageStyles';
 import { Recipes } from '../../api/recipes/Recipes';
