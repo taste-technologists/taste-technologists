@@ -3,7 +3,8 @@ import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { _ } from 'meteor/underscore';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
-import { BasketFill, PersonFill, FileTextFill, StarFill } from 'react-bootstrap-icons';
+import { BasketFill, PersonFill, FileTextFill, StarFill, KeyFill } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
@@ -34,10 +35,15 @@ const ListProfilesAdmin = () => {
     const rdy = subscription.ready() && subscription2.ready() && subscription3.ready() && subscription4.ready();
     const reviewItems = _.sortBy(RecReviews.collection.find({ review: { $exists: true, $not: { $size: 0 } } }).fetch(), 'name');
     return {
-      reviews: reviewItems,
+      reviews: _.pluck(reviewItems, 'review').flat(),
       ready: rdy,
     };
   }, []);
+
+  const sum = reviews.length;
+
+  console.log(reviews);
+
   return (ready ? (
     <Container className="py-3" id="admin-page">
       <Row className="justify-content-center">
@@ -93,7 +99,7 @@ const ListProfilesAdmin = () => {
                 id="admin-reviews"
               >
                 <Card.Title>Reviews</Card.Title>
-                <Card.Text><StarFill className="mx-1 mb-1" />{reviews.length}</Card.Text>
+                <Card.Text><StarFill className="mx-1 mb-1" />{sum}</Card.Text>
               </Button>
             </Col>
           </Row>
@@ -103,6 +109,7 @@ const ListProfilesAdmin = () => {
           {view === 'reviews' && <ListReviews />}
         </Col>
       </Row>
+      <Row className="text-end"><Col xs={12}><Link to="/admin-gen" id="admin-gen"><KeyFill color="#F2F2F2" size={8} /></Link></Col></Row>
     </Container>
   ) : <LoadingSpinner />);
 };

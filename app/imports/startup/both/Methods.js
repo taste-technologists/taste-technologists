@@ -143,7 +143,7 @@ const addFavMethod = 'Fave.add';
 
 Meteor.methods({
   'Fave.add'({ recipeId, user }) {
-    console.log(recipeId, user);
+    // console.log(recipeId, user);
     // Add the new review
     RecFaves.collection.update(
       { recipeId: recipeId },
@@ -181,4 +181,16 @@ Meteor.methods({
   },
 });
 
-export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod, removeRecipeMethod, addReviewMethod, delReviewMethod, addFavMethod, delFavMethod };
+const wipeoutMethod = 'Review.wipeout';
+Meteor.methods({
+  'Review.wipeout'() {
+    RecReviews.collection.update(
+      {}, // Filter to match all documents
+      { $set: { review: [] } }, // Update to set review array to empty
+      { multi: true }, // Option to update multiple documents
+    );
+    console.log('You just wiped everything...');
+  },
+});
+
+export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod, removeRecipeMethod, addReviewMethod, delReviewMethod, addFavMethod, delFavMethod, wipeoutMethod };

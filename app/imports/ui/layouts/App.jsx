@@ -30,6 +30,7 @@ import InventoryView from '../pages/InventoryView';
 import AddInventory from '../pages/AddInventory';
 import MyReviews from '../pages/MyReviews';
 import AdminEditRecipe from '../pages/AdminEditRecipe';
+import GenericPage from '../pages/Generic';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
           <Route path="/search" element={<ProtectedRoute><SearchRecipes /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditRecipe /></ProtectedRoute>} />
           <Route path="/admin-edit/:_id" element={<AdminProtectedRoute ready={ready}><AdminEditRecipe /></AdminProtectedRoute>} />
+          <Route path="/admin-gen/" element={<AdminProtectedRoute ready={ready}><GenericPage /></AdminProtectedRoute>} />
           <Route path="/edit-vendor/:_id" element={<ProtectedRoute><EditVendor /></ProtectedRoute>} />
           <Route path="/recipes/:_id" element={<ProtectedRoute><RecipeView /></ProtectedRoute>} />
           <Route path="/inventory/:_id" element={<ProtectedRoute><IndividualVendorInventory /></ProtectedRoute>} />
