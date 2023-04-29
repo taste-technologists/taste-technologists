@@ -41,7 +41,7 @@ const ListUsers = () => {
   ));
   return (ready ? (
     <Container className="py-3">
-      <h2 className="text-center pt-3">Profiles</h2>
+      <h2 className="text-center pt-3">Users</h2>
       <Table striped bordered hover>
         <thead>
           <tr>

@@ -3,7 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { _ } from 'meteor/underscore';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
-import { BasketFill, PersonFill, FileTextFill } from 'react-bootstrap-icons';
+import { BasketFill, PersonFill, FileTextFill, StarFill } from 'react-bootstrap-icons';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
@@ -41,7 +41,7 @@ const ListProfilesAdmin = () => {
   return (ready ? (
     <Container className="py-3" id="admin-page">
       <Row className="justify-content-center">
-        <Col md={7}>
+        <Col md={10}>
           <Col className="text-center"><h2>Admin Dashboard</h2></Col>
           <Row className="justify-content-center">
             <Col xs={12} sm={3} md={3} lg={3} className="text-center">
@@ -93,7 +93,7 @@ const ListProfilesAdmin = () => {
                 id="admin-reviews"
               >
                 <Card.Title>Reviews</Card.Title>
-                <Card.Text><BasketFill className="mx-1 mb-1" />{reviews.length}</Card.Text>
+                <Card.Text><StarFill className="mx-1 mb-1" />{reviews.length}</Card.Text>
               </Button>
             </Col>
           </Row>
