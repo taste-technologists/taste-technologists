@@ -819,6 +819,484 @@
       ]
     },
     {
+      "name": "Mug Omelette",
+      "picture": "https://www.simplyrecipes.com/thmb/EtOoSVhSQ4W-LIzuW-mqhxavSis=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__02__mug-omelette-horiz-a-1800-3c7f3152669f4397a1570c42ff5f5691.jpg",
+      "time": "7 mins",
+      "description": "In a hurry? Try a microwave omelette! It's amazingly light and fluffy. You'll have an easy meal in a few minutes.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "olive oil",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "eggs",
+          "quantity": 2,
+          "unit": "lg"
+        },
+        {
+          "name": "milk",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "shredded cheese",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "green onion",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        },
+        {
+          "name": "pepper",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Lightly coat the inside of a large mug with the olive oil."
+        },
+        {
+          "step": "Finely chop the green onions."
+        },
+        {
+          "step": "Crack the eggs into the mug, add milk, and beat with a fork. "
+        },
+        {
+          "step": "Add the rest of the ingredients. Stir well with a fork until mixed. "
+        },
+        {
+          "step": "Microwave for 30 seconds on high. Remove from microwave and stir with a fork. "
+        },
+        {
+          "step": "Return to the microwave and cook for another 20 to 30 seconds. "
+        },
+        {
+          "step": "Repeat this until the egg has set to your preference. "
+        }
+      ]
+    },
+    {
+      "name": "Microwave Sweet Potato",
+      "picture": "https://www.acouplecooks.com/wp-content/uploads/2021/11/Microwave-Sweet-Potatoes-003.jpg",
+      "time": "8 mins",
+      "description": "Satisfying snack that can be made in a microwave.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "sweet potato",
+          "quantity": 6,
+          "unit": "oz"
+        },
+        {
+          "name": "butter",
+          "quantity": 1,
+          "unit": "tbsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Wash the sweet potato."
+        },
+        {
+          "step": "Prick the sweet potato with a fork and wrap it with a wet paper towel."
+        },
+        {
+          "step": "Microwave on High power making sure to flip and continue cooking on the second side: 2 to 3 minutes per side. "
+        },
+        {
+          "step": "Prick both sides to assess doneness, taking care because it is hot. If the fork goes in all the way with no give, it is done. Otherwise, continue cooking at 1 minute intervals until tender."
+        },
+        {
+          "step": "Serve with butter. "
+        }
+      ]
+    },
+    {
+      "name": "Microwave Mac & Cheese",
+      "picture": "https://www.biggerbolderbaking.com/wp-content/uploads/2016/01/IMG_9206.jpg",
+      "time": "10 mins",
+      "description": "In a time crunch? My macaroni and cheese is quick to whip up and calls for just a few ingredients, making this mug recipe a fan favorite.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "macaroni",
+          "quantity": 1,
+          "unit": "oz"
+        },
+        {
+          "name": "water",
+          "quantity": 0.75,
+          "unit": "cup"
+        },
+        {
+          "name": "milk",
+          "quantity": 4,
+          "unit": "tbsp"
+        },
+        {
+          "name": "cornstarch",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "shredded cheese",
+          "quantity": 4,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        },
+        {
+          "name": "pepper",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "In a large microwavable mug or large bowl add in the macaroni and the water. You need a large mug as the water will boil up."
+        },
+        {
+          "step": "Microwave for roughly 3.5 minutes. You want the pasta to be fully cooked. (Timing is based on my 1200w microwave so your timing might vary)"
+        },
+        {
+          "step": "Pour off the remaining cooking water. "
+        },
+        {
+          "step": "Stir in the milk, cornstarch and shredded cheese and microwave for a final 60 seconds to create your sauce. Stir well, season with salt and pepper and enjoy."
+        }
+      ]
+    },
+    {
+      "name": "Frozen Blueberry Bites",
+      "picture": "https://zenandspice.com/wp-content/uploads/2014/07/Frozen-Yogurt-Blueberries-22-1024x823.jpg",
+      "time": "11 hr 20 min",
+      "description": "Healthy, delicious and easy to make, this triple-threat recipe is sure to become a go-to favorite.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "vanilla yogurt",
+          "quantity": 8,
+          "unit": "oz"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "blueberries",
+          "quantity": 2,
+          "unit": "cups"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "In a large bowl, carefully mix the blueberries, lemon juice and yogurt together. (Be gentle; you don’t want any berries to get squished.)"
+        },
+        {
+          "step": "Scoop out the yogurt-coated blueberries one by one and place them on a baking sheet lined with parchment paper."
+        },
+        {
+          "step": "Freeze for about an hour, or overnight."
+        }
+      ]
+    },
+    {
+      "name": "5-Minute Silken Tofu with Green Onion",
+      "picture": "https://garlicdelight.com/wp-content/uploads/Silken-Tofu-Green-Onion-10-1024x1024.jpg",
+      "time": "5 min",
+      "description": "This easy vegan recipe using silken tofu is a quick-to-make appetizer. You'll love the silky texture.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "silken tofu",
+          "quantity": 12.3,
+          "unit": "oz"
+        },
+        {
+          "name": "shoyu",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "green onions",
+          "quantity": 2,
+          "unit": "piece"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Place the silken tofu on a plate. If you find the silken tofu is weeping, drain it using a paper towel to soak up the water or tilt the plate over the sink to pour out the excess liquid."
+        },
+        {
+          "step": "Cut the silken tofu into cubes. You may need to be careful when halving the block of silken tofu height-wise. Don't cut your hands and avoid squishing the tofu.\n"
+        },
+        {
+          "step": "Chop and sprinkle the green onions over the silken tofu."
+        },
+        {
+          "step": "Pour the shoyu over the silken tofu and green onions."
+        }
+      ]
+    },
+    {
+      "name": "5-Minute Vegetarian Burrito Bowl",
+      "picture": "https://www.healthy-liv.com/wp-content/uploads/2015/04/IMG_37721-e1430445049301.jpg",
+      "time": "5 min",
+      "description": "An easy way to make a vegetarian burrito bowl without doing any actual cooking or even leaving your dorm room. ",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "cooked rice",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "canned black beans",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "salsa",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "plain greek yogurt",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "shredded cheese",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "avocado",
+          "quantity": 0.5,
+          "unit": "sm"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "In a microwave-safe bowl, combine rice, black beans, salsa, plain Greek yogurt, and shredded cheese. Microwave on high for 30-60 seconds, or until heated through."
+        },
+        {
+          "step": "Dice avocado and to the bowl"
+        },
+        {
+          "step": "Season with salt and pepper."
+        }
+      ]
+    },
+    {
+      "name": "Toaster Oven Roasted Broccoli",
+      "picture": "https://toasterovenlove.com/wp-content/uploads/toaster-oven-roasted-broccoli-1-1.jpg",
+      "time": "25 min",
+      "description": "Toaster Oven Roasted Broccoli is the perfect quick and easy side dish. A squeeze of fresh lemon brightens up this easy roasted vegetable side dish.   ",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "broccoli",
+          "quantity": 5,
+          "unit": "oz"
+        },
+        {
+          "name": "garlic",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 0.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.125,
+          "unit": "tsp"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Adjust your toaster oven cooking rack to the lowest position and heat to 425°F on the “Bake” setting. Lightly oil a rimmed baking pan"
+        },
+        {
+          "step": "Cut the broccoli florets from the stalks and slice large florets in half or quarter. Peel the stalks and slice into 1/4-inch rounds."
+        },
+        {
+          "step": "Add all of the broccoli, garlic, oil, salt, pepper to the pan. Toss well to combine and then spread in an even layer."
+        },
+        {
+          "step": "Roast broccoli until the florets are lightly browned and fork-tender, about 10 to 16 minutes depending on the size of your florets and personal preference."
+        },
+        {
+          "step": "Sprinkle lemon juice over pan and add more salt and pepper to taste and toss broccoli before serving."
+        }
+      ]
+    },
+    {
+      "name": "Crispy Microwave Potato Chips",
+      "picture": "https://i.ytimg.com/vi/gFGpHL276xQ/hqdefault.jpg",
+      "time": "13 min",
+      "description": "You won't believe how easy it is to make Crispy Microwave Potato Chips for delicious, crunchy chips containing all-natural ingredients.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "russet potato",
+          "quantity": 1,
+          "unit": "med"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.125,
+          "unit": "tsp"
+        },
+        {
+          "name": "ice water",
+          "quantity": 2,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Rinse potatoes, scrubbing any dirt off skin. Peel if desired, but I like chips with the skins on."
+        },
+        {
+          "step": "Thinly slice your potatoes using a knife. The thinner, the better, so you want to slice thinly enough that you are almost shaving the potato; so thin they are transparent. Slices should be between 1/8 - 1/16 inch thick."
+        },
+        {
+          "step": "Immediately place slices in ice water. This helps to remove the starch and create crispy chips with those delicious air pockets."
+        },
+        {
+          "step": "Dry both sides well on a kitchen towel or paper towel. The dryer they are the better they will crisp."
+        },
+        {
+          "step": "Line a plate with a piece of parchment paper. Lay the potato slices out so they aren't touching. Brush with a little olive oil, then sprinkle with salt."
+        },
+        {
+          "step": "Microwave on high for roughly 1.30- 2.30 minutes on one side, and then roughly 1 - 2 minutes on the other side or until golden brown. Timing may vary based on your microwave. You will know when they are done as they will crisp and turn a toasted brown color."
+        },
+        {
+          "step": "Sprinkle the finished potato chips with salt and enjoy"
+        }
+      ]
+    },
+    {
+      "name": "Miso Glazed Salmon Recipe",
+      "picture": "https://www.seriouseats.com/thmb/1fIkWS6HBfc3sDtApkw0I5-FnXU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/SEA-miso-glazed-salmon-in-the-toaster-oven-recipe-hero-02_1-46d33fe83f6a478aab6da56c3bd28c5a.JPG",
+      "time": "40 min",
+      "description": "Charred, sweet and savory with a tender interior, this is about as good as salmon gets.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "white miso",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "shoyu",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": 0.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "sugar",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "sugar",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Salmon Fillet, Skinless",
+          "quantity": 1,
+          "unit": "piece"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Whisk together miso, soy sauce, oil, and sugar. Rub mixture over every surface of salmon fillets. Transfer to a plastic zipper lock bag or sealable container. Proceed immediately to next step, or for best results, marinate for about 30 minutes or up to 2 days. "
+        },
+        {
+          "step": "Preheat a broiler (toaster oven or regular oven) to high. Cover a small broiler pan with aluminum foil. Rub excess marinade off of salmon and place on broiler pan. Broil until top surface is well charred and salmon is barely warm in the center, about 5 minutes, using the foil to protect any areas that threaten to burn. Serve immediately. "
+        },
+        {
+          "step": "Serve with rice or vegetables"
+        }
+      ]
+    },
+    {
       "name": "PB & J Sandwich",
       "picture": "https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/2018_grilled-peanut-butter-and-jelly_20336_760x580.jpg?ext=.jpg",
       "time": "10 mins",
