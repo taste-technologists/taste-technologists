@@ -7,6 +7,8 @@ import RecipeCard from '../components/RecipeCard';
 import { pageStyle } from './pageStyles';
 import { Recipes } from '../../api/recipes/Recipes';
 import LoadingSpinner from '../components/LoadingSpinner';
+import { RecFaves } from '../../api/recipes/RecipeFav';
+import { Profiles } from '../../api/profiles/Profiles';
 
 /* Renders a table containing all of the Recipe documents. Use <RecipeCard> to render each recipe card. */
 const FavoritesPage = () => {
@@ -14,20 +16,31 @@ const FavoritesPage = () => {
   const [activePage, setActivePage] = useState(1);
 
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { ready, recipes } = useTracker(() => {
+  const { ready, recipes, faves } = useTracker(() => {
 
     // Get access to Recipe documents.
     const subscription = Meteor.subscribe(Recipes.generalPublicationName);
+    const subscription2 = Meteor.subscribe(RecFaves.generalPublicationName);
+    const subscription3 = Meteor.subscribe(Profiles.userPublicationName);
+
     // Determine if the subscription is ready
-    const rdy = subscription.ready();
+    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready();
     // Get the Profiles
     const recipeItem = Recipes.collection.find({}).fetch();
+    let profile;
+    if (rdy) {
+      profile = Profiles.collection.find({}).fetch()[0].email;
+    }
+    const faveId = _.pluck(RecFaves.collection.find({ favoriteBy: profile }).fetch(), 'recipeId');
+    // console.log(profile);
     return {
       recipes: recipeItem,
       ready: rdy,
+      faves: faveId,
     };
   }, []);
-  const myRec = _.filter(recipes, (recipe) => recipe.favoriteBy.includes(Meteor.user()?.username));
+
+  const myRec = recipes.filter(recipe => faves.includes(recipe._id));
   const haveRecipes = myRec.length > 0;
 
   const indexOfLastItem = activePage * 8;
@@ -50,12 +63,7 @@ const FavoritesPage = () => {
 
       <Row xs={1} md={2} lg={4} className="g-2">
         {/* add parameter to switch heart fill to unfill based on current user */}
-        {currentItems.map((recipe) => {
-          if (recipe.favoriteBy.includes(Meteor.user()?.username)) {
-            return <RecipeCard key={recipe._id} recipe={recipe} favorite />;
-          }
-          return null;
-        })}
+        {currentItems.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} />)}
       </Row>
       <Row hidden={haveRecipes} className="text-center pt-5">
         <h2>You have no favorite recipes!</h2>

@@ -66,13 +66,7 @@ const SearchRecipesPage = () => {
         </span>
       </Row>
       <Row xs={1} md={2} lg={4} className="g-2 pt-2">
-        {currentItems.map((recipe, idx) => {
-          if (recipe.favoriteBy.includes(Meteor.user()?.username)) {
-            return <RecipeCard key={recipe._id} idx={idx} recipe={recipe} favorite />;
-          }
-          return <RecipeCard key={recipe._id} idx={idx} recipe={recipe} favorite={false} />;
-
-        })}
+        {currentItems.map((recipe, idx) => <RecipeCard key={recipe._id} idx={idx} recipe={recipe} />)}
       </Row>
       <Pagination className="my-3">{paginationItems}</Pagination>
     </Container>
