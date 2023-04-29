@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
 
-class AdminRecipes {
+class AdminRecipesComponent {
   constructor() {
     this.pageId = '#admin-recipe-page';
     this.pageSelector = Selector(this.pageId);
@@ -18,4 +18,4 @@ class AdminRecipes {
   }
 }
 
-export const adminRecipes = new AdminRecipes();
+export const adminRecipes = new AdminRecipesComponent();

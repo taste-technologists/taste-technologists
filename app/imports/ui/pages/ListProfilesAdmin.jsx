@@ -10,6 +10,8 @@ import { Profiles } from '../../api/profiles/Profiles';
 import InventoryView from './InventoryView';
 import ListRecipes from '../components/ListRecipes';
 import ListUsers from '../components/ListUsers';
+import { RecReviews } from '../../api/recipes/RecipeReviews';
+import ListReviews from '../components/ListReviews';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItemAdmin> to render each row. */
 const ListProfilesAdmin = () => {
@@ -26,10 +28,9 @@ const ListProfilesAdmin = () => {
     const subscription = Meteor.subscribe(Profiles.adminPublicationName);
     const subscription2 = Meteor.subscribe(Recipes.generalPublicationName);
     const subscription3 = Meteor.subscribe(Inventory.userPublicationName);
+    const subscription4 = Meteor.subscribe(RecReviews.generalPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready();
-    // Get the Users and Roles
-
+    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready() && subscription4.ready();
     return {
       ready: rdy,
     };
@@ -40,7 +41,7 @@ const ListProfilesAdmin = () => {
         <Col md={7}>
           <Col className="text-center"><h2>Admin Dashboard</h2></Col>
           <Row className="justify-content-center">
-            <Col xs={12} sm={4} md={4} lg={4} className="text-center">
+            <Col xs={12} sm={3} md={3} lg={3} className="text-center">
               <Button
                 onClick={() => handleCardClick('default')}
                 variant="primary"
@@ -53,7 +54,7 @@ const ListProfilesAdmin = () => {
                 <Card.Text><PersonFill className="mx-1 mb-1" />{Profiles.collection.find().count()}</Card.Text>
               </Button>
             </Col>
-            <Col xs={12} sm={4} md={4} lg={4} className="text-center">
+            <Col xs={12} sm={3} md={3} lg={3} className="text-center">
               <Button
                 id="admin-recipes"
                 onClick={() => handleCardClick('recipes')}
@@ -66,7 +67,7 @@ const ListProfilesAdmin = () => {
                 <Card.Text><FileTextFill className="mx-1 mb-1" />{Recipes.collection.find().count() }</Card.Text>
               </Button>
             </Col>
-            <Col xs={12} sm={4} md={4} lg={4} className="text-center">
+            <Col xs={12} sm={3} md={3} lg={3} className="text-center">
               <Button
                 onClick={() => handleCardClick('inventory')}
                 bg="success"
@@ -79,10 +80,24 @@ const ListProfilesAdmin = () => {
                 <Card.Text><BasketFill className="mx-1 mb-1" />{Inventory.collection.find().count()}</Card.Text>
               </Button>
             </Col>
+            <Col xs={12} sm={3} md={3} lg={3} className="text-center">
+              <Button
+                onClick={() => handleCardClick('reviews')}
+                bg="success"
+                variant="secondary"
+                text="white"
+                className="mb-2 px-3"
+                id="admin-reviews"
+              >
+                <Card.Title>Reviews</Card.Title>
+                <Card.Text><BasketFill className="mx-1 mb-1" />{Inventory.collection.find().count()}</Card.Text>
+              </Button>
+            </Col>
           </Row>
           {view === 'default' && <ListUsers />}
           {view === 'recipes' && <ListRecipes />}
           {view === 'inventory' && <InventoryView />}
+          {view === 'reviews' && <ListReviews />}
         </Col>
       </Row>
     </Container>

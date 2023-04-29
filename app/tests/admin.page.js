@@ -25,6 +25,10 @@ class AdminPage {
     await testController.click('#admin-recipes');
   }
 
+  async goToAdminReviews(testController) {
+    await testController.click('#admin-reviews');
+  }
+
   async goToAdminEdit(testController) {
     await testController.click('#edit-profile-5');
   }

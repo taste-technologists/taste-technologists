@@ -19,7 +19,8 @@ import { myrecipePage } from './myrecipe.page';
 import { favoritesPage } from './favorites.page';
 import { myreviewsPage } from './myreviews.page';
 import { reviewMenu } from './review.component';
-import { adminRecipes } from './admin.recipes';
+import { adminRecipes } from './admin.recipes.component';
+import { adminReviews } from './admin.reviews.component';
 
 /* global fixture:false, test:false */
 
@@ -123,6 +124,9 @@ test('Test the listprofilesadmin page and all of its functions work', async (tes
   await adminPage.goToAdminRecipes(testController);
   await adminRecipes.isDisplayed(testController);
   await adminRecipes.hasTable(testController);
+  await adminPage.goToAdminReviews(testController);
+  await adminReviews.isDisplayed(testController);
+  await adminReviews.hasTable(testController);
 });
 
 test('Test the List, Add, and Edit Vendor pages', async (testController) => {
