@@ -40,7 +40,7 @@ const ListRecipes = () => {
     </Pagination.Item>
   ));
   return (ready ? (
-    <Container className="py-3">
+    <Container className="py-3" id="admin-recipe-page">
       <Row className="justify-content-center">
         <Col>
           <Col className="text-center">

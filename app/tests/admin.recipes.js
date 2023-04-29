@@ -1,8 +1,8 @@
 import { Selector } from 'testcafe';
 
-class AdminInventory {
+class AdminRecipes {
   constructor() {
-    this.pageId = '#admin-inventory-page';
+    this.pageId = '#admin-recipe-page';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -18,4 +18,4 @@ class AdminInventory {
   }
 }
 
-export const adminInventory = new AdminInventory();
+export const adminRecipes = new AdminRecipes();

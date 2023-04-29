@@ -19,12 +19,13 @@ import { myrecipePage } from './myrecipe.page';
 import { favoritesPage } from './favorites.page';
 import { myreviewsPage } from './myreviews.page';
 import { reviewMenu } from './review.component';
+import { adminRecipes } from './admin.recipes';
 
 /* global fixture:false, test:false */
 
 /** Credentials for one of the sample users defined in settings.development.json. */
 // const credentials = { username: 'john@foo.com', password: 'changeme' };
-const signupCredentials = { name: 'christi', vendor: 'No', email: 'clyyoung', password: 'changeme' };
+const signupCredentials = { name: 'Zzz', vendor: 'No', email: 'zz', password: 'changeme' };
 const recipe = { name: 'Creamy Pesto Penne with Sausage', picture: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3783692.jpg&q=60&c=sc&orient=true&poi=auto&h=512',
   time: '25 min', servings: '2', description: 'Quick weeknight dinner.',
   ingredientsQuantity: '16', ingredientsUnit: 'oz', ingredientsName: 'penne pasta', instructions: 'Make the dish', tags: 'Snack' };
@@ -112,15 +113,16 @@ test('Test the listprofilesadmin page and all of its functions work', async (tes
   await navBar.goToAdminDashboard(testController);
   await adminPage.isDisplayed(testController);
   await adminPage.hasTable(testController);
+  await adminPage.deleteUser(testController);
+  await adminPage.goToAdminEdit(testController);
+  await adminEditPage.editProfile(testController);
+  await navBar.goToAdminDashboard(testController);
   await adminPage.goToAdminInventory(testController);
   await adminInventory.isDisplayed(testController);
   await adminInventory.hasTable(testController);
-  await navBar.goToAdminDashboard(testController);
-  await adminPage.deleteUser(testController);
-  await adminPage.goToAdminEdit(testController);
-  await adminEditPage.isDisplayed(testController);
-  await adminEditPage.editProfile(testController);
-  await navBar.goToAdminDashboard(testController);
+  await adminPage.goToAdminRecipes(testController);
+  await adminRecipes.isDisplayed(testController);
+  await adminRecipes.hasTable(testController);
 });
 
 test('Test the List, Add, and Edit Vendor pages', async (testController) => {

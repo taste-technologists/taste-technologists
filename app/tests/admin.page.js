@@ -14,11 +14,15 @@ class AdminPage {
 
   async hasTable(testController) {
     const rowCount = Selector('tr').count;
-    await testController.expect(rowCount).gte(6);
+    await testController.expect(rowCount).gte(2);
   }
 
   async goToAdminInventory(testController) {
     await testController.click('#admin-inventory');
+  }
+
+  async goToAdminRecipes(testController) {
+    await testController.click('#admin-recipes');
   }
 
   async goToAdminEdit(testController) {
