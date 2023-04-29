@@ -89,11 +89,11 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
           <Card.Title className="my-2 fs-5 rec-card-title"><Link className="recipe-view-title" id={`rec-link-${idx}`} to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
           <Card.Subtitle className="">{recipe.time}</Card.Subtitle>
           {isFavorite ? (
-            <HeartFill className="text-danger" onClick={() => toggleFavorite()} />
+            <HeartFill className="text-danger mt-auto" onClick={() => toggleFavorite()} />
           ) : (
-            <Heart onClick={() => toggleFavorite()} />
+            <Heart className="mt-auto" onClick={() => toggleFavorite()} />
           )}
-          <Row className="mt-auto"><ReviewRating avg={Number(average)} /></Row>
+          <Row className=""><ReviewRating avg={Number(average)} /></Row>
         </Card.Header>
         <Card.Body>
           <Card.Text className="mt-2">{recipe.description}</Card.Text>

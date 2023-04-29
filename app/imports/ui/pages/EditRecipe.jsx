@@ -14,7 +14,7 @@ import { Recipes } from '../../api/recipes/Recipes';
 const formSchema = new SimpleSchema({
   name: {
     type: String,
-    max: 40,
+    max: 60,
   },
   picture: String,
   time: String,
