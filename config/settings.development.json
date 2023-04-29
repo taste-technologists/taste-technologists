@@ -19,7 +19,8 @@
     { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM"},
     { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM"},
     { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours"},
-    { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4pM-11PM"}
+    { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4PM-11PM"},
+    { "name":  "Farmers Market at Campus Center", "location": "Campus Center First Floor, 2465 Campus Road, Honolulu, HI 96822", "hours": "Tuesdays 8AM-2:30PM" }
   ],
 
   "defaultRecipes": [
@@ -64,7 +65,7 @@
           "step": "In a bowl, add shredded cooked chicken"
         },
         {
-          "step": "FOLD IN THE CHEESE"
+          "step": "Fold the cheese into the chicken."
         },
         {
           "step": "Add half the mixture to each tortilla"
@@ -79,34 +80,6 @@
           "step": "Bake for 20 minutes or until sauce is bubbling."
         }],
       "servings": 1
-    },
-    {
-      "owner": "john@foo.com",
-      "favoriteBy": [],
-      "name": "Feta-Spinach Puff Pastry Bites",
-      "description": "This easy appetizer recipe is great for entertaining. The feta cheese adds a light bite to the rich, creamy spinach and cheese-filled cups that will make them unforgettable.",
-      "time": "35 minutes",
-      "picture": "https://www.allrecipes.com/thmb/XQMSfxRQojpv7WGMHruq-F0IMng=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Feta-Spinach-Puff-Pastry-Bites-fabeveryday-9aa534d8ba2a48f5aa36570dcc2c63b5.jpg",
-      "tags": [
-        "Snack"
-      ],
-      "ingredients": [{
-        "name": "Cheese",
-        "quantity": 2,
-        "unit": "cup"
-      },{
-        "name": "Feta",
-        "quantity": 0.5,
-        "unit": "cup"
-      }],
-      "instructions": [
-        {
-          "step": "do something"
-        },
-        {
-          "step": "do another thing"
-        }],
-      "servings": 2
     },
     {
       "owner": "admin@foo.com",
