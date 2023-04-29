@@ -17,7 +17,9 @@
 
   "defaultVendor": [
     { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM"},
-    { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM"}
+    { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM"},
+    { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours"},
+    { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4pM-11PM"}
   ],
 
   "defaultRecipes": [
@@ -163,10 +165,10 @@
   ],
 
   "defaultVendors" : [
-  { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM" },
-  { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM" },
-  { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours" },
-  { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4PM-11PM" }
+    { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM" },
+    { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM" },
+    { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours" },
+    { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4PM-11PM" }
   ],
 
   "monti": {

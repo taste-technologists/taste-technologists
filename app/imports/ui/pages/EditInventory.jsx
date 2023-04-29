@@ -46,11 +46,11 @@ const EditInventory = () => {
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
             <Card>
               <Card.Body>
-                <TextField name="name" />
-                <TextField name="item" />
-                <NumField name="price" decimal={null} />
-                <TextField name="size" />
-                <SubmitField value="Submit" />
+                <TextField name="name" id="edit-inventory-name" />
+                <TextField name="item" id="edit-inventory-item" />
+                <NumField name="price" id="edit-inventory-price" decimal />
+                <TextField name="size" id="edit-inventory-size" />
+                <SubmitField value="Submit" id="edit-inventory-form-submit" />
                 <ErrorsField />
               </Card.Body>
             </Card>

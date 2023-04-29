@@ -5,6 +5,7 @@ import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import { Profiles } from '../../api/profiles/Profiles';
 import { Vendor } from '../../api/vendor/Vendors';
+import { RecReviews } from '../../api/recipes/RecipeReviews';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -55,6 +56,15 @@ Meteor.publish(Recipes.generalPublicationName, function () {
 Meteor.publish(Vendor.generalPublicationName, function () {
   if (this.userId) {
     return Vendor.collection.find();
+  }
+  return this.ready();
+});
+
+// General publication.
+// If logged in, then publish all recipe reviews.
+Meteor.publish(RecReviews.generalPublicationName, function () {
+  if (this.userId) {
+    return RecReviews.collection.find();
   }
   return this.ready();
 });

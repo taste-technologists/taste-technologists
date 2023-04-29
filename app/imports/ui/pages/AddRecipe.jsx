@@ -6,17 +6,23 @@ import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { Plus, TrashFill } from 'react-bootstrap-icons';
-import { Recipes } from '../../api/recipes/Recipes';
+import { addRecipeMethod } from '../../startup/both/Methods';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
-  name: String,
+  name: {
+    type: String,
+    max: 40,
+  },
   picture: String,
   time: String,
-  description: String,
+  description: {
+    type: String,
+    max: 200,
+  },
   servings: {
     type: Number,
-    defaultValue: 0,
+    defaultValue: 1,
   },
   tags: {
     type: Array,
@@ -50,11 +56,13 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 /* Renders the AddStuff page for adding a document. */
 const AddRecipe = () => {
   // On submit, insert the data.
-  const submit = (data, formRef) => {
-    const { name, picture, time, description, servings, tags, ingredients, instructions } = data;
+  const submit = (doc, formRef) => {
+    const { name, picture, time, description, servings, tags, ingredients, instructions } = doc;
     const owner = Meteor.user().username;
-    Recipes.collection.insert(
-      { name, picture, time, description, servings, owner, tags, ingredients, instructions, favoriteBy: [] },
+    const data = { name, picture, time, description, servings, owner, tags, ingredients, instructions, favoriteBy: [] };
+    Meteor.call(
+      addRecipeMethod,
+      { data },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -81,7 +89,7 @@ const AddRecipe = () => {
                   <Col><TextField id="add-recipe-picture" name="picture" showInlineError placeholder="Recipe picture URL" /></Col>
                 </Row>
                 <Row>
-                  <Col><TextField id="add-recipe-time" name="time" showInlineError placeholder="Time" /></Col>
+                  <Col><TextField id="add-recipe-time" name="time" showInlineError placeholder="Ex... 10 min" /></Col>
                   <Col><NumField id="add-recipe-servings" name="servings" decimal={null} min="0" /></Col>
                 </Row>
                 <LongTextField id="add-recipe-description" name="description" placeholder="Describe the recipe here" />
@@ -90,7 +98,7 @@ const AddRecipe = () => {
                     <NestField>
                       <Row>
                         <Col><NumField id="add-recipe-ingredientsQuantity" name="quantity" min="0" /></Col>
-                        <Col><SelectField id="add-recipe-ingredientsUnit" name="unit" allowedValues={['lb', 'cup', 'tsp', 'tbsp', 'oz']} placeholder="Select a unit" /></Col>
+                        <Col><SelectField id="add-recipe-ingredientsUnit" name="unit" allowedValues={['box', 'unit', 'slice', 'piece', 'lb', 'cup', 'tsp', 'tbsp', 'oz']} placeholder="Select a unit" /></Col>
                       </Row>
                       <Row><TextField id="add-recipe-ingredientsName" name="name" showInlineError placeholder="Ingredient name" /></Row>
                     </NestField>

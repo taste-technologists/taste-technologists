@@ -27,7 +27,9 @@ const Footer = () => (
         <br />
         University of Hawaii
         <br />
-        Last Updated: 4/5/2023
+        <a href="https://forms.gle/g3BMLPyUibYVdFcs9">
+          Help us improve our application through your community feedback!
+        </a>
         <br />
         <a href="https://taste-technologists.github.io/">
           Project Documentation

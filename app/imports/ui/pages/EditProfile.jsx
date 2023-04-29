@@ -88,7 +88,7 @@ const EditProfiles = () => {
   };
 
   return ready ? (
-    <Container className="py-3">
+    <Container className="py-3" id="edit-profile-page">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Edit Role</h2></Col>
@@ -96,8 +96,8 @@ const EditProfiles = () => {
             <Card>
               <Card.Body>
                 <TextField name="email" disabled />
-                <SelectField name="role" placeholder={currentRole} allowedValues={allowed} />
-                <SubmitField value="Submit" />
+                <SelectField name="role" id="role" placeholder={currentRole} allowedValues={allowed} />
+                <SubmitField value="Submit" id="edit-profile-form-submit" />
                 <ErrorsField />
               </Card.Body>
             </Card>

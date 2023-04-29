@@ -3,6 +3,7 @@ import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import { Vendor } from '../../api/vendor/Vendors';
+import { addRecipeMethod } from '../both/Methods';
 
 /* eslint-disable no-console */
 
@@ -23,17 +24,17 @@ if (Stuffs.collection.find().count() === 0) {
 // Initialize the database with a default recipe document.
 const addRecipe = (data) => {
   console.log(`  Adding: ${data.name} (${data.owner})`);
-  Recipes.collection.insert(data);
+  Meteor.call(addRecipeMethod, { data });
 };
 
-// Initialize the StuffsCollection if empty.
+// Initialize the Recipes and RecipeReviews Collection if empty.
 if (Recipes.collection.find().count() === 0) {
   if (Meteor.settings.defaultRecipes) {
     console.log('Creating default recipes.');
     Meteor.settings.defaultRecipes.forEach(data => addRecipe(data));
   }
-
-}// Initialize the database with a default inventory document.
+}
+// Initialize the database with a default inventory document.
 const addItem = (data) => {
   console.log(`  Adding: ${data.name} (${data.item})`);
   Inventory.collection.insert(data);
@@ -55,12 +56,12 @@ const addVendor = (data) => {
 
 // Initialize the VendorCollection if empty.
 if (Vendor.collection.find().count() === 0) {
-  if (Meteor.settings.defaultVendors) {
+  if (Meteor.settings.defaultVendor) {
     console.log('Creating default vendors.');
-    Meteor.settings.defaultVendors.forEach(data => addVendor(data));
+    Meteor.settings.defaultVendor.forEach(data => addVendor(data));
   }
-}
 
+}
 /**
  * If the loadAssetsFile field in settings.development.json is true, then load the data in private/data.json.
  * This approach allows you to initialize your system with large amounts of data.
