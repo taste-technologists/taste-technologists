@@ -517,6 +517,613 @@
           "step": "Serve the tuna salad on a bed of lettuce or in a sandwich."
         }
       ]
+    },
+    {
+      "name": "PB & J Sandwich",
+      "picture": "https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/2018_grilled-peanut-butter-and-jelly_20336_760x580.jpg?ext=.jpg",
+      "time": "10 mins",
+      "description": "A quick and simple lunch to get you through that 12 PM lecture.",
+      "servings": 1,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "white bread",
+          "quantity": 2,
+          "unit": "slices"
+        },
+        {
+          "name": "Peanut Butter",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Grape Jelly",
+          "quantity": 1,
+          "unit": "tbsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "(Optional) Place slices of bread in toaster and set it to preferred level of toastiness."
+        },
+        {
+          "step": "Spread peanut butter onto one slice of bread."
+        },
+        {
+          "step": "Spread jelly onto other slice of bread."
+        },
+        {
+          "step": "Put pieces of bread together and enjoy."
+        }
+      ]
+    },
+    {
+      "name": "Sloppy Joeʻs",
+      "picture": "https://www.allrecipes.com/thmb/n7rFc9EPnznhq6txdOoCqEw8BHI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/24264-sloppy-joes-dianne-3x2-1-16a5c18a55b94454b36a5424c9dd0c40.jpg",
+      "time": "35 mins",
+      "description": "Great recipe for game nights with your friends!",
+      "servings": 6,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "Lean ground beef",
+          "quantity": 1,
+          "unit": "lb"
+        },
+        {
+          "name": "Onion",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "Green Bell Pepper",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "Ketchup",
+          "quantity": 0.75,
+          "unit": "cup"
+        },
+        {
+          "name": "Brown Sugar",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Yellow Mustard",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "Garlic Powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Hamburger Buns",
+          "quantity": 6,
+          "unit": "buns"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Heat a large skillet and ook ground beef 3-4 minutes."
+        },
+        {
+          "step": "Add in chopped onion and green pepper then cook another 3-5 minutes."
+        },
+        {
+          "step": "Stir in ketchup, brown sugar, yellow mustard and garlic powder, then let simmer for 20-30 minutes."
+        },
+        {
+          "step": "Divide meat evenly among 6 buns and enjoy!"
+        }
+      ]
+    },
+    {
+      "name": "Tatertot Casserole",
+      "picture": "https://www.allrecipes.com/thmb/CApUobud7QvhGNa6D1zvu-VQHGI=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/7665864-b47330e1504c49c291b33d2217c4ddae.jpg",
+      "time": "45 mins",
+      "description": "A quick and easy dinner with only 4 ingredients.",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "ground beef",
+          "quantity": 1,
+          "unit": "lbs"
+        },
+        {
+          "name": "Cream of Mushroom Soup",
+          "quantity": 10.5,
+          "unit": "oz"
+        },
+        {
+          "name": "Frozen tater tots",
+          "quantity": 16,
+          "unit": "oz"
+        },
+        {
+          "name": "Cheddar Cheese",
+          "quantity": 2,
+          "unit": "cups"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat oven to 350 degrees F."
+        },
+        {
+          "step": "Heat a large skillet and cook ground beef for 7-10 minutes."
+        },
+        {
+          "step": "Trasnfer ground beef to baking dish and layer tater tots on top."
+        },
+        {
+          "step": "Sprinkle shredded cheese on top of tater tots."
+        },
+        {
+          "step": "Bake for 30-40 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Baked Garlic Parmesan Chicken",
+      "picture": "https://www.allrecipes.com/thmb/wnbE0q3ZBbV3oaR-eYYbJdDQI_4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/55860-baked-garlic-parmesan-chicken-AlbertaRose-4x3-6f15fbf00fb2457db3cf484dacec92b4.jpg",
+      "time": "30 mins",
+      "description": "Amazing chicken to add on top of any pasta or salad for a great tasting meal.",
+      "servings": 6,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "Olive oil",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "garlic",
+          "quantity": 1,
+          "unit": "clove"
+        },
+        {
+          "name": "Bread crumbs",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "Parmesan",
+          "quantity": 0.6,
+          "unit": "cup"
+        },
+        {
+          "name": "Dried basil",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "Black pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Boneless Chicken Breast",
+          "quantity": 6,
+          "unit": "breasts"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat oven to 350 degrees F, lightly grease a baking dish."
+        },
+        {
+          "step": "Blend olive oil and garlic into one bowl and mix bread crumbs, parmesan cheese, basil and pepper in another bowl. "
+        },
+        {
+          "step": "Dip each chicken breast in the olive oil mixture then in the breadcrumb mixture making sure to cover the entire thing."
+        },
+        {
+          "step": "Bake for 30 min or until chicken is fully cooked."
+        }
+      ]
+    },
+    {
+      "name": "Chicken Pot Pie",
+      "picture": "https://www.allrecipes.com/thmb/ZvIFEOdmIb4ipLtcVzze4ylbfBI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8618-easy-chicken-pot-pie-4x3-1250-c415bc8b7dfe47f2af2e158756b9b664.jpg",
+      "time": "40 mins",
+      "description": "Easy to make chicken pot pie using pie crust!",
+      "servings": 6,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "Chicken breast",
+          "quantity": 2,
+          "unit": "cups"
+        },
+        {
+          "name": "Mixed vegetables",
+          "quantity": 1,
+          "unit": "can"
+        },
+        {
+          "name": "Cream of chicken soup",
+          "quantity": 1,
+          "unit": "can"
+        },
+        {
+          "name": "Milk",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "Frozen pie crusts",
+          "quantity": 2,
+          "unit": "cans"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat oven to 350 degrees F."
+        },
+        {
+          "step": "Dice chicken breast and combine with vegetables, cream of chicken soup and milk in a bowl."
+        },
+        {
+          "step": "Lay bottom pie crust in a pan and pour mixture in."
+        },
+        {
+          "step": "Cover with top pie crust, seal the edges and poke holes in the top."
+        },
+        {
+          "step": "Bake in the oven until the crust is golden brown (about 30 min)."
+        }
+      ]
+    },
+    {
+      "name": "Creamy Pesto Mac with spinach",
+      "picture": "https://www.budgetbytes.com/wp-content/uploads/2016/03/Pesto-Mac-with-Spinach-V1.jpg",
+      "time": "30 mins",
+      "description": "A simple mac and cheese with pesto sauce.",
+      "servings": 6,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "Macaroni",
+          "quantity": 2,
+          "unit": "cups"
+        },
+        {
+          "name": "Butter",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "All Purpose Flour",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Milk",
+          "quantity": 2,
+          "unit": "cup"
+        },
+        {
+          "name": "Parmesan",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "Basil Pesto",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "Salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Frozen Spinach",
+          "quantity": 0.5,
+          "unit": "lb"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Thaw spinach and bring a pot of water to a boil."
+        },
+        {
+          "step": "Add macaroni noodles to pot and let boil 7-10 minutes then drain."
+        },
+        {
+          "step": "Heat small pot and butter and flour then stir until it forms a creamy sauce."
+        },
+        {
+          "step": "Whisk milk into butter and flour mixture, let simmer to thicken and remove from heat."
+        },
+        {
+          "step": "Whisk parmesan and pesto into sauce until smooth, season with salt and pepper to taste."
+        },
+        {
+          "step": "Combine noodles, spinach and sauce back into large pot and stir until everything is evenly coated."
+        }
+      ]
+    },
+    {
+      "name": "Homemade Garlic Bread",
+      "picture": "https://www.budgetbytes.com/wp-content/uploads/2015/03/Freezer-Garlic-Bread-close-500x500.jpg",
+      "time": "30 mins",
+      "description": "Easy garlic bread that you can freeze and toast at anytime to enjoy.",
+      "servings": 12,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "Butter",
+          "quantity": 8,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Olive Oil",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Garlic",
+          "quantity": 4,
+          "unit": "cloves"
+        },
+        {
+          "name": "Garlic Powder",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "Salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "Dried Parsley",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Garlic",
+          "quantity": 4,
+          "unit": "cloves"
+        },
+        {
+          "name": "French Loaf",
+          "quantity": 1,
+          "unit": "loaf"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Add butter, olive oil, minced garlic, garlic powder, salt and parsley to a bowl."
+        },
+        {
+          "step": "Mix all together until you get a smooth mixture."
+        },
+        {
+          "step": "Slice french loaf into 1-inch thick slices."
+        },
+        {
+          "step": "Spread mixture evenly onto all slices."
+        },
+        {
+          "step": "Arrange slices on baking sheet and put into freeze to allow butter to harden."
+        },
+        {
+          "step": "Preheat oven to 400 degrees F and bake as many slices as you like for 5-7 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Apple Pie Overnight Oats",
+      "picture": "https://www.budgetbytes.com/wp-content/uploads/2022/04/Apple-Pie-Overnight-Oats-V1.jpg",
+      "time": "8 hrs",
+      "description": "Easy, tasty, make-ahead breakfast to grab on the way out in the morning.",
+      "servings": 4,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "Old-fashioned Oats",
+          "quantity": 1.3,
+          "unit": "cup"
+        },
+        {
+          "name": "Cinnamon",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Ground Ginger",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "Ground Cloves",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "Chopped Walnuts",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "Dried Cranberries",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "Applesauce",
+          "quantity": 1.3,
+          "unit": "cup"
+        },
+        {
+          "name": "Milk",
+          "quantity": 1.3,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Add 1/3 cup oats to 4 resealable containers along with 1/8 tsp cinnamon, pinch of ginger and pinch of cloves."
+        },
+        {
+          "step": "Add 2 tbsp chopped walnuts and 1 tbsp dried cranberries to each container."
+        },
+        {
+          "step": "Add 1/3 cup applesauce and 1/3 cup milk to each container."
+        },
+        {
+          "step": "Close containers and refrigerate overnight or up to 4 days. Stir before eating."
+        }
+      ]
+    },
+    {
+      "name": "Sausage and Egg Breakfast Quesadilla",
+      "picture": "https://www.budgetbytes.com/wp-content/uploads/2020/12/Sausage-and-Egg-Breakfast-Quesadillas-V2.jpg",
+      "time": "25 mins",
+      "description": "Easy filling breakfast that can be frozen to enjoy later.",
+      "servings": 6,
+      "owner": "john@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "Country Sausage",
+          "quantity": 8,
+          "unit": "oz"
+        },
+        {
+          "name": "Eggs",
+          "quantity": 6,
+          "unit": "eggs"
+        },
+        {
+          "name": "Salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "Pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "Cheddar",
+          "quantity": 6,
+          "unit": "oz"
+        },
+        {
+          "name": "Flour Tortillas",
+          "quantity": 6,
+          "unit": "tortillas"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Add sausage to a skillet and cook until fully browned."
+        },
+        {
+          "step": "Crack eggs into bowl and season with salt and pepper, whisk eggs."
+        },
+        {
+          "step": "Cook eggs in skillet until they are set but still moist, add in sausage and cheese."
+        },
+        {
+          "step": "Fold together until cheese is melted and ingredients are evenly mixed."
+        },
+        {
+          "step": "Divide evenly among tortillas, fold over and place back in skillet until tortillas are crispy and brown."
+        }
+      ]
+    },
+    {
+      "name": "Cheesecake Crescent Rolls",
+      "picture": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F19%2F2015%2F08%2F20%2FCheesecake_Crescent_Rolls_118.jpg",
+      "time": "25 mins",
+      "description": "Easy sweet breakfast treat to impress your friends.",
+      "servings": 6,
+      "owner": "admin@foo.com",
+      "favoriteBy": [],
+      "tags": [],
+      "ingredients": [
+        {
+          "name": "Crescent Dough",
+          "quantity": 2,
+          "unit": "cans"
+        },
+        {
+          "name": "Cream Cheese",
+          "quantity": 16,
+          "unit": "oz"
+        },
+        {
+          "name": "Sugar",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "Butter",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "Vanilla Extract",
+          "quantity": 1.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Cinnamon",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat oven to 350 degrees F."
+        },
+        {
+          "step": "Unroll and spread out 1 can of cresecent dough in a baking dish."
+        },
+        {
+          "step": "Combine sofetened cream cheese, sugar and vanilla and spread or crescent dough."
+        },
+        {
+          "step": "Unroll other can of crescent dough and lay on top cream cheese."
+        },
+        {
+          "step": "Melt butter and spread over the top, sprinkle cinnamon and sugar over the top."
+        },
+        {
+          "step": "Bake for 20-30 min until bubbly and slightly brown."
+        }
+      ]
     }
   ]
 }
