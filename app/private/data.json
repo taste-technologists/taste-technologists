@@ -470,7 +470,7 @@
         {
           "name": "celery",
           "quantity": 0.25,
-          "unit": "cups"
+          "unit": "cup"
         },
         {
           "name": "red onion",
@@ -531,7 +531,7 @@
         {
           "name": "white bread",
           "quantity": 2,
-          "unit": "slices"
+          "unit": "slice"
         },
         {
           "name": "Peanut Butter",
@@ -653,7 +653,7 @@
         {
           "name": "Cheddar Cheese",
           "quantity": 2,
-          "unit": "cups"
+          "unit": "cup"
         }
       ],
       "instructions": [
@@ -748,7 +748,7 @@
         {
           "name": "Chicken breast",
           "quantity": 2,
-          "unit": "cups"
+          "unit": "cup"
         },
         {
           "name": "Mixed vegetables",
@@ -768,7 +768,7 @@
         {
           "name": "Frozen pie crusts",
           "quantity": 2,
-          "unit": "cans"
+          "unit": "can"
         }
       ],
       "instructions": [
@@ -802,7 +802,7 @@
         {
           "name": "Macaroni",
           "quantity": 2,
-          "unit": "cups"
+          "unit": "cup"
         },
         {
           "name": "Butter",
