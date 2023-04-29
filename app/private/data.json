@@ -460,13 +460,13 @@
       "name": "Safeway",
       "item": "avocado",
       "price": "2.50",
-      "size": "1 unit"
+      "size": "1 whole"
     },
     {
       "name": "Safeway",
       "item": "tomato",
       "price": "3.59",
-      "size": "1 unit"
+      "size": "1 whole"
     },
     {
       "name": "Safeway",
@@ -544,7 +544,7 @@
       "name": "Safeway",
       "item": "sweet potatoes",
       "price": "1.99",
-      "size": "1 unit"
+      "size": "1 whole"
     },
     {
       "name": "Safeway",
@@ -622,7 +622,7 @@
       "name": "Safeway",
       "item": "banana",
       "price": "0.33",
-      "size": "1 unit"
+      "size": "1 whole"
     },
     {
       "name": "Safeway",
@@ -757,12 +757,12 @@
         {
           "name": "avocado",
           "quantity": 0.25,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "tomato",
           "quantity": 0.5,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "balsamic vinegar",
@@ -804,7 +804,7 @@
         {
           "name": "date",
           "quantity": 1,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "pumpkin seeds",
@@ -891,7 +891,7 @@
         {
           "name": "tomato",
           "quantity": 1,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "olive oil",
@@ -926,7 +926,7 @@
         {
           "name": "sweet potatoes",
           "quantity": 6,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "butter",
@@ -936,7 +936,7 @@
         {
           "name": "garlic",
           "quantity": 2,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "dried basil",
@@ -986,7 +986,7 @@
         {
           "name": "avocado",
           "quantity": 3,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "lime juice",
@@ -1046,7 +1046,7 @@
         {
           "name": "blueberries",
           "quantity": 10,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "confectioners sugar",
@@ -1126,7 +1126,7 @@
         {
           "name": "banana",
           "quantity": 1,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "ice",
@@ -1146,7 +1146,7 @@
         {
           "name": "date",
           "quantity": 2,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "peanut butter",
@@ -1203,7 +1203,7 @@
         {
           "name": "avocado",
           "quantity": 1,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "parsley",
@@ -1218,7 +1218,7 @@
         {
           "name": "lemon juice",
           "quantity": 0.5,
-          "unit": "unit"
+          "unit": "whole"
         },
         {
           "name": "salt",
