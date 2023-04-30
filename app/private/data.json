@@ -2555,6 +2555,92 @@
           "step": "Scoop avocado into a bowl. Add parsley, olive oil, lemon juice, salt, pepper, onion powder, and garlic powder; mash together using a potato masher. Spread avocado mixture into each piece of toast."
         }
       ]
+    },
+    {
+      "name": "Fried Rice",
+      "picture": "https://onohawaiianrecipes.com/wp-content/uploads/2020/08/Fried-Rice-683x1024-1.jpg",
+      "time": "25 mins",
+      "description": "A great meal to combine all of the leftover ingredients from the fridge and to use any leftover rice.",
+      "servings": 6,
+      "owner": "admin@foo.com",
+      "author": "Admin",
+      "favoriteBy": [],
+      "tags": ["Dairy-free", "Breakfast", "Lunch", "Snack"],
+      "ingredients": [
+        {
+          "name": "leftover rice",
+          "quantity": 4,
+          "unit": "cups"
+        },
+        {
+          "name": "onion",
+          "quantity": 0.5,
+          "unit": "unit"
+        },
+        {
+          "name": "spam",
+          "quantity": 0.5,
+          "unit": "can"
+        },
+        {
+          "name": "oil",
+          "quantity": 6,
+          "unit": "tbsp"
+        },
+        {
+          "name": "carrot",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "oyster sauce",
+          "quantity": 2.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "soy sauce",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "eggs",
+          "quantity": 2,
+          "unit": "units"
+        },
+        {
+          "name": "green onion",
+          "quantity": 1,
+          "unit": "unit"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Crack and whisk the two eggs together."
+        },
+        {
+          "step": "Heat a wok or large frying pan over medium heat. Drizzle in 2 tablespoons of oil and scramble the eggs for 30 seconds or until cooked to your preference. Set the eggs aside on a plate."
+        },
+        {
+          "step": "Dice carrots and onions "
+        },
+        {
+          "step": "Drizzle in 2 tablespoons of oil again to the wok. Fry the toughest vegetable (for this recipe it is the carrots) for a couple of minutes. Then keep frying the next tender vegetable (onions) and fry for another couple of minutes. Lastly, add in the most tender vegetable and cook for a minute. Set aside the cooked vegetables."
+        },
+        {
+          "step": "Fry the meat in the wok for a few minutes or until the meat is cooked."
+        },
+        {
+          "step": "Drizzle in 2 tablespoons of oil again to the wok. Add in the leftover rice and fry it until all of the rice has been coated in the oil. Add in the oyster sauce, shoyu, and salt. Stir fry until well combined."
+        },
+        {
+          "step": "Add everything back to the wok. Eggs, vegetables, and meat. Stir fry everything until has mixed well. Serve hot as a hearty meal or side dish. Enjoy!"
+        }
+      ]
     }
   ]
 }
