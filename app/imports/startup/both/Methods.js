@@ -113,6 +113,7 @@ Meteor.methods({
     Recipes.collection.remove({ _id: _id });
     // Removes the reviewcollection object corresponding to this recipe.
     RecReviews.collection.remove({ recipeId: _id });
+    RecFaves.collection.remove({ recipeId: _id });
   },
 });
 
