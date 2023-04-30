@@ -30,7 +30,7 @@ const AdminRecReviewItem = ({ name, recId, review, idx }) => {
       }
     });
   };
-
+  // console.log(review.userID);
   return (
     <tr>
       <td>{review.user}</td>
@@ -55,7 +55,7 @@ const AdminRecReviewItem = ({ name, recId, review, idx }) => {
         day: 'numeric',
       })}
       </td>
-      <td><Button type="button" id={`review-delete-${idx}`} variant="danger" onClick={() => removeReview(recId, review.userID)}><TrashFill /></Button></td>
+      <td><Button type="button" id={`review-delete-${idx}`} variant="danger" onClick={() => removeReview(recId, review)}><TrashFill /></Button></td>
     </tr>
   );
 };

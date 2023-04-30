@@ -25,7 +25,7 @@ const ListProfilesAdmin = () => {
   };
 
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { ready, reviews } = useTracker(() => {
+  const { ready, reviews, profiles, recipes, inventory } = useTracker(() => {
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe(Profiles.adminPublicationName);
     const subscription2 = Meteor.subscribe(Recipes.adminPublicationName);
@@ -34,9 +34,15 @@ const ListProfilesAdmin = () => {
     // Determine if the subscription is ready
     const rdy = subscription.ready() && subscription2.ready() && subscription3.ready() && subscription4.ready();
     const reviewItems = _.sortBy(RecReviews.collection.find({ review: { $exists: true, $not: { $size: 0 } } }).fetch(), 'name');
+    const profileItems = Profiles.collection.find();
+    const recipeItems = Recipes.collection.find();
+    const inventoryItems = Inventory.collection.find();
     return {
       reviews: _.pluck(reviewItems, 'review').flat(),
       ready: rdy,
+      profiles: profileItems.count(),
+      recipes: recipeItems.count(),
+      inventory: inventoryItems.count(),
     };
   }, []);
 
@@ -60,7 +66,7 @@ const ListProfilesAdmin = () => {
                 id="admin-profiles"
               >
                 <Card.Title>Users</Card.Title>
-                <Card.Text><PersonFill className="mx-1 mb-1" />{Profiles.collection.find().count()}</Card.Text>
+                <Card.Text><PersonFill className="mx-1 mb-1" />{profiles}</Card.Text>
               </Button>
             </Col>
             <Col xs={12} sm={3} md={3} lg={3} className="text-center">
@@ -73,7 +79,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2 px-3 text-white"
               >
                 <Card.Title>Recipes</Card.Title>
-                <Card.Text><FileTextFill className="mx-1 mb-1" />{Recipes.collection.find().count() }</Card.Text>
+                <Card.Text><FileTextFill className="mx-1 mb-1" />{recipes}</Card.Text>
               </Button>
             </Col>
             <Col xs={12} sm={3} md={3} lg={3} className="text-center">
@@ -86,7 +92,7 @@ const ListProfilesAdmin = () => {
                 id="admin-inventory"
               >
                 <Card.Title>Ingredients</Card.Title>
-                <Card.Text><BasketFill className="mx-1 mb-1" />{Inventory.collection.find().count()}</Card.Text>
+                <Card.Text><BasketFill className="mx-1 mb-1" />{inventory}</Card.Text>
               </Button>
             </Col>
             <Col xs={12} sm={3} md={3} lg={3} className="text-center">

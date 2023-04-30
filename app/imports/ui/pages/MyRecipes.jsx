@@ -52,7 +52,7 @@ const MyRecipesPage = () => {
     <Container style={pageStyle} id="my-recipe-page">
       <Row className="text-center py-4"><Col><h2>My Recipes</h2></Col></Row>
       <Row xs={1} md={2} lg={4} className="g-2">
-        {currentItems.map((recipe) => <RecipeCard showEdit={showEdit} key={recipe._id} recipe={recipe} favorite={recipe.favoriteBy.includes(Meteor.user()?.username)} />)}
+        {currentItems.map((recipe, idx) => <RecipeCard idx={idx} showEdit={showEdit} key={recipe._id} recipe={recipe} favorite={recipe.favoriteBy.includes(Meteor.user()?.username)} />)}
       </Row>
       <Row id="hidden-row" hidden={haveRecipes} className="text-center pt-5">
         <h2>You have no recipes!</h2>

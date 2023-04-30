@@ -13,7 +13,6 @@ class AddInventory {
   }
 
   async addItem(testController) {
-    await testController.typeText('#add-inventory-form-name', 'Manoa Marketplace');
     await testController.typeText('#add-inventory-form-item', 'Canned Tomatoes');
     await testController.typeText('#add-inventory-form-price', '2.99');
     await testController.typeText('#add-inventory-form-size', '8 oz');

@@ -12,6 +12,12 @@ class MyrecipePage {
     await testController.expect(this.pageSelector.exists).ok();
   }
 
+  async deleteRecipe(testController) {
+    await testController.click('#delete-recipe-0');
+    await testController.click(Selector('.swal-button--confirm'));
+    await testController.click(Selector('.swal-button--confirm'));
+  }
+
 }
 
 export const myrecipePage = new MyrecipePage();

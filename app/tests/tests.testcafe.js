@@ -80,6 +80,7 @@ test('Test the inventory page and its functionalities', async (testController) =
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.gotoListVendorPage(testController);
   await listvendorPage.gotoInventoryPage(testController);
+  await editInventoryPage.deleteIngredient(testController);
   await editInventoryPage.editInventory(testController);
   await navBar.gotoListVendorPage(testController);
   await listvendorPage.gotoInventoryPage2(testController);
@@ -88,7 +89,6 @@ test('Test the inventory page and its functionalities', async (testController) =
   await listvendorPage.gotoInventoryPage(testController);
   await editInventoryPage.goToAddInventory(testController);
   await addInventory.addItem(testController);
-  await navBar.gotoListVendorPage(testController);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
 });
@@ -196,6 +196,13 @@ test('Test that MyRecipes and Favorites Pages works', async (testController) => 
   await favoritesPage.isDisplayed(testController);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test that the delete recipe button works on My Recipes page', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoMyRecipePage(testController);
+  await myrecipePage.deleteRecipe(testController);
 });
 
 test('Test that review component and MyReview page work', async (testController) => {

@@ -98,7 +98,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
         <Card.Footer className="text-end" hidden={!showEdit}>
           <Row>
             <Col className="text-start"><Link className="edit" to={`/edit/${recipe._id}`}>Edit</Link></Col>
-            <Col className="text-end"><Button type="button" size="sm" variant="danger" onClick={() => removeItem()}>Delete</Button></Col>
+            <Col className="text-end"><Button id={`delete-recipe-${idx}`} type="button" size="sm" variant="danger" onClick={() => removeItem()}>Delete</Button></Col>
           </Row>
         </Card.Footer>
       </Card>
@@ -131,7 +131,7 @@ RecipeCard.propTypes = {
 
 RecipeCard.defaultProps = {
   showEdit: false,
-  idx: 1,
+  idx: 0,
 };
 
 export default RecipeCard;
