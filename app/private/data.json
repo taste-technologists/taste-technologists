@@ -248,6 +248,12 @@
     },
     {
       "name": "Nijiya Market",
+      "item": "Apple Cider Vinegar",
+      "price": 3.99,
+      "size": "10 fl oz"
+    },
+    {
+      "name": "Nijiya Market",
       "item": "Panko Bread Crumbs",
       "price": 2.99,
       "size": "8 oz"
@@ -377,6 +383,12 @@
       "item": "enchilada sauce",
       "price": 1.99,
       "size": "14 oz"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "Cucumber",
+      "price": 1.99,
+      "size": "1 lb"
     },
     {
       "name": "Safeway",
@@ -561,6 +573,12 @@
     {
       "name": "Safeway",
       "item": "chili powder",
+      "price": "2.84",
+      "size": "2.5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "dried oregano",
       "price": "2.84",
       "size": "2.5 oz"
     },
@@ -2553,6 +2571,516 @@
         },
         {
           "step": "Scoop avocado into a bowl. Add parsley, olive oil, lemon juice, salt, pepper, onion powder, and garlic powder; mash together using a potato masher. Spread avocado mixture into each piece of toast."
+        }
+      ]
+    },
+    {
+      "name": "Fried Rice",
+      "picture": "https://onohawaiianrecipes.com/wp-content/uploads/2020/08/Fried-Rice-683x1024-1.jpg",
+      "time": "25 mins",
+      "description": "A great meal to combine all of the leftover ingredients from the fridge and to use any leftover rice.",
+      "servings": 6,
+      "owner": "admin@foo.com",
+      "author": "Admin",
+      "favoriteBy": [],
+      "tags": ["Dairy-free", "Breakfast", "Lunch", "Snack"],
+      "ingredients": [
+        {
+          "name": "rice",
+          "quantity": 4,
+          "unit": "cups"
+        },
+        {
+          "name": "onion",
+          "quantity": 0.5,
+          "unit": "unit"
+        },
+        {
+          "name": "spam",
+          "quantity": 6,
+          "unit": "oz"
+        },
+        {
+          "name": "oil",
+          "quantity": 6,
+          "unit": "tbsp"
+        },
+        {
+          "name": "carrot",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "oyster sauce",
+          "quantity": 2.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "soy sauce",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "eggs",
+          "quantity": 2,
+          "unit": "units"
+        },
+        {
+          "name": "green onion",
+          "quantity": 1,
+          "unit": "unit"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Crack and whisk the two eggs together."
+        },
+        {
+          "step": "Heat a wok or large frying pan over medium heat. Drizzle in 2 tablespoons of oil and scramble the eggs for 30 seconds or until cooked to your preference. Set the eggs aside on a plate."
+        },
+        {
+          "step": "Dice carrots and onions "
+        },
+        {
+          "step": "Drizzle in 2 tablespoons of oil again to the wok. Fry the toughest vegetable (for this recipe it is the carrots) for a couple of minutes. Then keep frying the next tender vegetable (onions) and fry for another couple of minutes. Lastly, add in the most tender vegetable and cook for a minute. Set aside the cooked vegetables."
+        },
+        {
+          "step": "Fry the meat in the wok for a few minutes or until the meat is cooked."
+        },
+        {
+          "step": "Drizzle in 2 tablespoons of oil again to the wok. Add in the leftover rice and fry it until all of the rice has been coated in the oil. Add in the oyster sauce, shoyu, and salt. Stir fry until well combined."
+        },
+        {
+          "step": "Add everything back to the wok. Eggs, vegetables, and meat. Stir fry everything until has mixed well. Serve hot as a hearty meal or side dish. Enjoy!"
+        }
+      ]
+    },
+    {
+      "name": "Spam Musubi",
+      "picture": "https://onolicioushawaii.com/wp-content/uploads/2019/07/Spam-Musubi-recipe-1.jpg.webp",
+      "time": "30 mins",
+      "description": "Spam Musubi is a famous Hawaii snack made from Spam, rice, and nori. It's portable, affordable, and tasty! It's the most popular way to eat Spam in Hawaii.",
+      "servings": 10,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "white rice",
+          "quantity": 2,
+          "unit": "cups"
+        },
+        {
+          "name": "spam",
+          "quantity": 12,
+          "unit": "oz"
+        },
+        {
+          "name": "oil",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "nori",
+          "quantity": 5,
+          "unit": "sheets"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Wash uncooked rice, drain and rinse."
+        },
+        {
+          "step": "Bring 2 cups water to a boil in a medium saucepan. Add rice and stir. Reduce heat, cover, and simmer for 20 minutes."
+        },
+        {
+          "step": "Slice luncheon meat lengthwise into 10 slices, or to desired thickness."
+        },
+        {
+          "step": "Heat oil in a large skillet over medium-high heat. Cook slices until lightly browned, about 2 minutes per side."
+        },
+        {
+          "step": "Cut nori sheets in half and lay on a flat work surface. Place a rice press in the center of a sheet, and press rice tightly inside. Top with a slice of luncheon meat, and remove press. Wrap nori around rice, sealing edges with a small amount of water. (Rice may also be formed by hand in the shape of the meat slices and about 1-inch thick.)"
+        }
+      ]
+    },
+    {
+      "name": "Cucumber Onion Salad",
+      "picture": "https://www.thecookierookie.com/wp-content/uploads/2019/08/easy-cucumber-salad-cumcumber-onion-salad-recipe-6-of-6.jpg",
+      "time": "10 mins",
+      "description": "This is a delicious, healthy, hearty breakfast recipe. If you are not vegan, you can add fried eggs to your toast for a delicious vegetarian meal.",
+      "servings": 8,
+      "owner": "john@foo.com",
+      "author": "john",
+      "favoriteBy": [],
+      "tags": ["Vegan","Vegetarian", "Pescatarian", "Dairy-free", "Breakfast", "Lunch", "Snack"],
+      "ingredients": [
+        {
+          "name": "cucumbers",
+          "quantity": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "red onion",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "apple cider vinegar",
+          "quantity": 0.3,
+          "unit": "cup"
+        },
+        {
+          "name": "water",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "sugar",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "ground black pepper",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Slice each cucumber in ¼-inch slices and add to a large bowl."
+        },
+        {
+          "step": "Slice onions into half moons"
+        },
+        {
+          "step": "Add in the sliced red onion and toss to combine"
+        },
+        {
+          "step": "In a mason jar or small bowl, whisk together the apple cider vinegar, water, sugar, salt, and pepper."
+        },
+        {
+          "step": "Pour the dressing mixture over the cucumber and onion and toss to fully coat/combine."
+        }
+      ]
+    },
+    {
+      "name": "Parmesan Potato Wedges",
+      "picture": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Parmesan-Potato-Wedges_EXPS_SDFM18_16812_D10_04_4b-14.jpg?fit=700,1024",
+      "time": "40 mins",
+      "description": "When you are craving fries but want a healthy alternative",
+      "servings": 8,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack","Vegetarian"],
+      "ingredients": [
+        {
+          "name": "parmesan",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "potato",
+          "quantity": 4,
+          "unit": "unit"
+        },
+        {
+          "name": "dried oregano",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "chilli powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat oven to 400°. "
+        },
+        {
+          "step": "Mix parmesan, salt, garlic powder, oregano and chilli powder together."
+        },
+        {
+          "step": "Cut each potato lengthwise into 8 wedges; place in a parchment-lined 15x10x1-in. pan. Spritz with cooking spray; sprinkle with cheese mixture. Bake until tender, about 30 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Spaghetti Aglio E Olio",
+      "picture": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/8/22/1/BX0707H_spaghetti-aglio-e-olio_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1487192969834.jpeg",
+      "time": "20 mins",
+      "description": "An easy pasta dinner that you can make very quickly!",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "garlic",
+          "quantity": 8,
+          "unit": "clove"
+        },
+        {
+          "name": "oil",
+          "quantity": 0.3,
+          "unit": "cup"
+        },
+        {
+          "name": "parsley",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "parmesan",
+          "quantity": 1,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Bring a large pot of water to a boil. Add 2 tablespoons of salt and the pasta and cook according to the directions on the package. Set aside 1 1/2 cups of the pasta cooking water before you drain the pasta."
+        },
+        {
+          "step": "Meanwhile, heat the olive oil over medium heat in a pot large enough to hold the pasta, such as a 12-inch saute pan or a large, shallow pot. Add the garlic and cook for 2 minutes, stirring frequently, until it just begins to turn golden on the edges-don't overcook it! Carefully add the reserved pasta-cooking water to the garlic and oil and bring to a boil. Lower the heat, add 1 teaspoon of salt, and simmer for about 5 minutes, until the liquid is reduced by about a third."
+        },
+        {
+          "step": "Add the drained pasta to the garlic sauce and toss. Off the heat, add the parsley and Parmesan and toss well. Allow the pasta to rest off the heat for 5 minutes"
+        }
+      ]
+    },
+    {
+      "name": "Microwave Corn on the Cob",
+      "picture": "https://www.allrecipes.com/thmb/IAUKonQ2zGoRKoTdlXe2fWdBsko=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Screen-Shot-2022-08-17-at-12.31.01-PM-cddd7a58c4564f649cdcc39b8dd29c3e.png",
+      "time": "5 mins",
+      "description": "Microwave corn on the cob quickly and easily, with only a microwave!",
+      "servings": 1,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack","Vegetarian","Vegan"],
+      "ingredients": [
+        {
+          "name": "corn",
+          "quantity": 1,
+          "unit": "ear"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Remove the husk and silk from corn."
+        },
+        {
+          "step": "Wrap a moist paper towel around the corn and place it on a microwave-safe plate."
+        },
+        {
+          "step": "Microwave until the kernels are tender, but still crisp (three to five minutes)."
+        }
+      ]
+    },
+    {
+      "name": "Tasty 2-Step Chicken Bake",
+      "picture": "https://www.campbells.com/wp-content/uploads/2021/07/Tasty2StepChickenBake_wide.jpg",
+      "time": "30 mins",
+      "description": "Super easy with only 2 ingredients!",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 1.25,
+          "unit": "lb"
+        },
+        {
+          "name": "Cream of Mushroom Soup",
+          "quantity": 10.5,
+          "unit": "oz"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Heat the oven to 400°F.   While the oven is heating, season the chicken with salt and pepper.  Place the chicken into an 8x8x2-inch baking dish.  Spread the soup over the chicken.  Cover the baking dish."
+        },
+        {
+          "step": "Bake for 25 minutes or until the chicken is done."
+        }
+      ]
+    },
+    {
+      "name": "Baked Banana Chips",
+      "picture": "https://www.allrecipes.com/thmb/VXHf-9KgFMuOOEabuWFOLcPWQcE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4577553-a46106cf85c44818872e34ccf241fbda.jpg",
+      "time": "2 hr",
+      "description": "Simple and easy crispy banana chips",
+      "servings": 2,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack","Vegan","Vegetarian"],
+      "ingredients": [
+        {
+          "name": "banana",
+          "quantity": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Slice bananas into 1/10 inch pieces"
+        },
+        {
+          "step": "Preheat the oven to 225 degrees F (110 degrees C). Line a baking sheet with parchment paper."
+        },
+        {
+          "step": "Spread banana slices out onto the prepared baking sheet, making sure slices are not touching. Brush with lemon juice."
+        },
+        {
+          "step": "Bake in the preheated oven for 90 minutes. Check bananas, lifting slices up to separate from the paper once or twice. Continue baking until bananas are dried out, 30 to 90 minutes more."
+        },
+        {
+          "step": "Let bananas cool until crispy, at least 5 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Quick-n'-Easy Chicken Cheesesteak",
+      "picture": "https://www.allrecipes.com/thmb/09X54MlUMlh1YgnpI9Ty-qRsY3k=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3659739-3c420e73bbd949d48af2b82f5d65124a.jpg",
+      "time": "5 mins",
+      "description": "A chicken cheesesteak sandwich made with just 3 ingredients and ready in less than 5 minutes. Add sautéed bell peppers and onions if desired.",
+      "servings": 1,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "canned chicken",
+          "quantity": 5,
+          "unit": "oz"
+        },
+        {
+          "name": "cheddar cheese",
+          "quantity": 1,
+          "unit": "slice"
+        },
+        {
+          "name": "hamburger bun",
+          "quantity": 1,
+          "unit": "bun"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Warm chicken in a nonstick skillet over medium heat, until heated through, about 3 minutes"
+        },
+        {
+          "step": "Scrape chicken into the center of the pan to form a shape similar to the bun. Cut cheddar cheese slice in half and place over chicken; cook until cheddar is melted, 1 to 2 minutes."
+        },
+        {
+          "step": "Place chicken and cheese mixture onto the one half of hamburger bun. Top it with the other half"
+        }
+      ]
+    },
+    {
+      "name": "Tuna Mayo Onigiri",
+      "picture": "https://www.abeautifulplate.com/wp-content/uploads/2017/08/spicy-tuna-onigiri-3.jpg",
+      "time": "30 mins",
+      "description": "Sushi on a budget, this filling dish will be sure to fix your sushi cravings!",
+      "servings": 3,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "canned tuna",
+          "quantity": 3,
+          "unit": "oz"
+        },
+        {
+          "name": "mayo",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "name": "white rice",
+          "quantity": 1.5,
+          "unit": "cups"
+        },
+        {
+          "name": "soy sauce",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Wash and cook the rice."
+        },
+        {
+          "step": "While the rice cooks, open the can of tuna and drain out any excess liquid. Add the tuna to a bowl along with the mayonnaise and soy sauce. Mix well to form a uniform paste."
+        },
+        {
+          "step": "Prepare a bowl of water and a small bowl of salt."
+        },
+        {
+          "step": "When the rice is cooked, stir it to fluff and then transfer it to a bowl to cool slightly and cover it with a damp towel to keep it from drying out."
+        },
+        {
+          "step": "When the rice is cool enough to handle but still on the hot side, wet your hands in the water bowl. Dab your index finger in the bowl of salt and rub the salt around your hands."
+        },
+        {
+          "step": "Working quickly, scoop ⅙ of the rice into your non-dominant hand and make a little well in the center of the rice."
+        },
+        {
+          "step": "Add about 2 teaspoons of tuna mayo filling into the well and cover the tuna with the surrounding rice."
+        },
+        {
+          "step": "Cup the hand holding the rice like a taco and then use 2-3 fingers of your opposite hand to shape the rice into a triangle."
+        },
+        {
+          "step": "Toss the rice ball onto another side and then repeat the cupping and shaping step. Repeat until the onigiri is the desired shape."
         }
       ]
     }
