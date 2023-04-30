@@ -30,11 +30,15 @@ class AdminPage {
   }
 
   async goToAdminEdit(testController) {
-    await testController.click('#edit-profile-5');
+    await testController.click('#edit-profile-4');
+  }
+
+  async goToAdminGen(testController) {
+    await testController.click('#admin-gen');
   }
 
   async deleteUser(testController) {
-    await testController.click('#delete-profile-6');
+    await testController.click('#delete-profile-0');
     await testController.click(Selector('.swal-button--confirm'));
     await testController.click(Selector('.swal-button--confirm'));
   }

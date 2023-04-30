@@ -1,8 +1,8 @@
 import { Selector } from 'testcafe';
 
-class AdminRecipesComponent {
+class AdminGenPage {
   constructor() {
-    this.pageId = '#admin-recipe-page';
+    this.pageId = '#admin-gen';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -12,21 +12,15 @@ class AdminRecipesComponent {
     await testController.expect(this.pageSelector.exists).ok();
   }
 
-  async hasTable(testController) {
-    const rowCount = Selector('tr').count;
-    await testController.expect(rowCount).gte(2);
+  async genReviews(testController) {
+    await testController.click('#rev-gen');
   }
 
-  async deleteRecipe(testController) {
-    await testController.click('#delete-recipe-0');
+  async wipeReviews(testController) {
+    await testController.click('#wipeout');
     await testController.click(Selector('.swal-button--confirm'));
     await testController.click(Selector('.swal-button--confirm'));
   }
-
-  async gotoAdminRecEdit(testController) {
-    await testController.click('#admin-edit-0');
-  }
-
 }
 
-export const adminRecipes = new AdminRecipesComponent();
+export const adminGenPage = new AdminGenPage();

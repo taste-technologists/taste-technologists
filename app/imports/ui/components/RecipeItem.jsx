@@ -33,7 +33,7 @@ const RecipeItem = ({ recipe, idx }) => {
       <td><Link className="recipe-view-title" id={`rec-link-${idx}`} to={`/recipes/${recipe._id}`}>{recipe.name}</Link></td>
       <td>{recipe.description}</td>
       <td>
-        <Link to={`/admin-edit/${recipe._id}`}>Edit</Link>
+        <Link id={`admin-edit-${idx}`} to={`/admin-edit/${recipe._id}`}>Edit</Link>
       </td>
       <td className="text-center"><Button id={`delete-recipe-${idx}`} type="button" variant="danger" onClick={() => removeRecipe()}><TrashFill /></Button></td>
     </tr>

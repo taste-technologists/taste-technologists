@@ -16,6 +16,16 @@ class AdminInventory {
     const rowCount = Selector('tr').count;
     await testController.expect(rowCount).gte(2);
   }
+
+  async deleteIngredient(testController) {
+    await testController.click('#delete-ing-0');
+    await testController.click(Selector('.swal-button--confirm'));
+    await testController.click(Selector('.swal-button--confirm'));
+  }
+
+  async gotoAdminIngEdit(testController) {
+    await testController.click('#edit-inventory-0');
+  }
 }
 
 export const adminInventory = new AdminInventory();

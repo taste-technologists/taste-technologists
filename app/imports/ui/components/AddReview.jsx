@@ -32,7 +32,7 @@ const AddReview = ({ name, recipeId, userID, user }) => {
   // On submit, insert the data.
   const submit = (data, formRef) => {
     const { rating, comment } = data.review[0];
-    const reviewInfo = { userID, user, rating: Number(rating), comment, created: new Date(), edited: new Date() };
+    const reviewInfo = { userID, user, rating: Number(rating), comment, created: new Date() };
     // console.log(reviewInfo);
     // console.log(recipeId);
     Meteor.call(addReviewMethod, { recipeId, reviewInfo }, (error) => {

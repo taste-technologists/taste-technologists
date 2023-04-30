@@ -4,6 +4,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { _ } from 'meteor/underscore';
 import { DatabaseFillAdd, Fire } from 'react-bootstrap-icons';
+import swal from 'sweetalert';
 import { pageStyle } from './pageStyles';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { Recipes } from '../../api/recipes/Recipes';
@@ -11,7 +12,7 @@ import { addReviewMethod, wipeoutMethod } from '../../startup/both/Methods';
 import { Reviews } from '../../api/recipes/Reviews';
 
 /* Renders a table containing all of the Recipe documents. Use <RecipeCard> to render each recipe card. */
-const GenericPage = () => {
+const Generator = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { recipes, ready } = useTracker(() => {
     // Get access to RecipeReview documents.
@@ -31,7 +32,7 @@ const GenericPage = () => {
       ready: rdy,
     };
   });
-  // Used to display descriptive text when there are no recipes.
+  // Sets rev to be the pre-filled review.
   const rev = Reviews;
   // console.log(rev);
 
@@ -44,16 +45,30 @@ const GenericPage = () => {
   };
 
   const wipeout = () => {
-    Meteor.call(wipeoutMethod);
+
+    swal({
+      title: 'Are you sure?',
+      text: "You won't be able to undo this!",
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        Meteor.call(wipeoutMethod);
+        swal('Deleted!', 'You have just wiped out all Reviews.', 'success');
+      } else {
+        swal('The reviews have not been deleted');
+      }
+    });
   };
 
   return (ready ? (
-    <Container style={pageStyle} id="my-reviews-page" className="text-center">
+    <Container style={pageStyle} id="admin-gen" className="text-center">
       <h2 className="text-center pb-5">Review Generator</h2>
       <Row className="justify-content-center">
         <Col md={5}>
           <Row className="my-5">
-            <Button type="button" variant="success" onClick={() => addRev()}><DatabaseFillAdd /> Add Random Review</Button>
+            <Button type="button" id="rev-gen" variant="success" onClick={() => addRev()}><DatabaseFillAdd /> Add Random Review</Button>
           </Row>
 
         </Col>
@@ -64,10 +79,10 @@ const GenericPage = () => {
       <Row className="my-5" />
 
       <Row className="py-5 mt-auto justify-content-center">
-        <Col md={3}><Button type="button" variant="danger" onClick={() => wipeout()}><Fire /> This Will Wipe Out ALL REVIEWS</Button></Col>
+        <Col md={3}><Button type="button" id="wipeout" variant="danger" onClick={() => wipeout()}><Fire /> This Will Wipe Out ALL REVIEWS</Button></Col>
       </Row>
     </Container>
   ) : <LoadingSpinner />);
 };
 
-export default GenericPage;
+export default Generator;
