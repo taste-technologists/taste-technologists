@@ -36,8 +36,11 @@ if (Recipes.collection.find().count() === 0) {
 }
 // Initialize the database with a default inventory document.
 const addItem = (data) => {
+  const toTitleCase = (str) => str.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+  const { name, item, price, size } = data;
+  const doc = { name, item: toTitleCase(item), price, size };
   console.log(`  Adding: ${data.name} (${data.item})`);
-  Inventory.collection.insert(data);
+  Inventory.collection.insert(doc);
 };
 
 // Initialize the InventoryCollection if empty.

@@ -65,7 +65,7 @@ const App = () => {
           <Route path="/inventory/:_id" element={<ProtectedRoute><IndividualVendorInventory /></ProtectedRoute>} />
           <Route path="/inventory:" element={<ProtectedRoute><InventoryView /></ProtectedRoute>} />
           <Route path="/inventory-edit/:_id" element={<ProtectedRoute><EditInventory /></ProtectedRoute>} />
-          <Route path="/inventory-add" element={<ProtectedRoute><AddInventory /></ProtectedRoute>} />
+          <Route path="/inventory-add/:_id" element={<ProtectedRoute><AddInventory /></ProtectedRoute>} />
           <Route path="/profile-edit/:_id" element={<AdminProtectedRoute ready={ready}><EditProfile /></AdminProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListProfilesAdmin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
