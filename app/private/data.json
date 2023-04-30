@@ -835,12 +835,6 @@
       "size": "1 qt"
     },
     {
-      "name": "Farmers Market at Campus Center",
-      "item": "shredded cheese",
-      "price": 3.49,
-      "size": "8 oz"
-    },
-    {
       "name": "Manoa Marketplace",
       "item": "green onion",
       "price": 0.99,
@@ -881,8 +875,259 @@
       "item": "Avocado",
       "price": 2.49,
       "size": "1 piece"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Kale",
+      "price": 2.99,
+      "size": "1 bunch"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Strawberries",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Zucchini",
+      "price": 1.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Green Beans",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Honeycrisp Apples",
+      "price": 3.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Papaya",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Pineapple",
+      "price": 3.99,
+      "size": "1 pineapple"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Mango",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Lilikoi (Passionfruit)",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Rambutan",
+      "price": 5.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Poha Berry",
+      "price": 6.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Sweet Potato",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Starfruit",
+      "price": 3.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Bananas",
+      "price": 1.99,
+      "size": "1 bunch"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Dragonfruit",
+      "price": 3.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Watermelon",
+      "price": 4.99,
+      "size": "1 watermelon"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Lychee",
+      "price": 6.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Pineapple Guava",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Coconut",
+      "price": 3.99,
+      "size": "1 coconut"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Green Beans",
+      "price": 2.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Ginger",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Turmeric",
+      "price": 3.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Bitter Melon",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Okra",
+      "price": 3.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Long Beans",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Eggplant",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Chinese Cabbage",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Bok Choy",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Daikon Radish",
+      "price": 2.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Snow Peas",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Sweet Potato",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Taro",
+      "price": 3.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Longs",
+      "item": "Milk",
+      "price": 3.49,
+      "size": "1 gallon"
+    },
+    {
+      "name": "Longs",
+      "item": "Bread",
+      "price": 2.99,
+      "size": "24 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Eggs",
+      "price": 2.49,
+      "size": "1 dozen"
+    },
+    {
+      "name": "Longs",
+      "item": "Butter",
+      "price": 4.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Shredded Cheese",
+      "price": 5.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Spaghetti",
+      "price": 1.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Brown Rice",
+      "price": 3.49,
+      "size": "2 lb"
+    },
+    {
+      "name": "Longs",
+      "item": "Cheerios",
+      "price": 4.99,
+      "size": "18 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Canned Tomatoes",
+      "price": 1.99,
+      "size": "28 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Sugar",
+      "price": 2.99,
+      "size": "4 lb"
     }
-
   ],
   "recipes": [
     {
@@ -894,7 +1139,7 @@
       "owner": "chris@foo.com",
       "author": "Chris",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Lunch", "Pescatarian"],
       "ingredients": [
         {
           "name": "canned tuna",
@@ -960,7 +1205,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Breakfast","Vegetarian", "Gluten-Free"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1031,7 +1276,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Snack","Dinner", "Lunch", "Vegetarian"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1071,7 +1316,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Lunch", "Dinner","Vegetarian"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1133,7 +1378,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Snack","Vegetarian"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1172,7 +1417,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Vegan","Vegetarian","Snack","Lunch","Dinner","Breakfast"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1214,7 +1459,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Vegetarian","Lunch","Dinner","Gluten-Free"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1268,7 +1513,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner","Snack","Vegetarian","Vegan", "Gluten-Free", "Dairy-Free"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1328,7 +1573,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Vegan","Vegetarian","Snack","Dairy-Free","Gluten-Free"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1384,7 +1629,7 @@
       "servings": 1,
       "owner": "chris@foo.com",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Pescatarian","Dairy-Free","Dinner"],
       "author": "Chris",
       "ingredients": [
         {
@@ -1400,11 +1645,6 @@
         {
           "name": "vegetable oil",
           "quantity": 0.5,
-          "unit": "tbsp"
-        },
-        {
-          "name": "sugar",
-          "quantity": 1,
           "unit": "tbsp"
         },
         {
@@ -1439,7 +1679,7 @@
       "owner": "john@foo.com",
       "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Lunch", "Dairy-Free"],
       "ingredients": [
         {
           "name": "white bread",
@@ -1481,7 +1721,7 @@
       "owner": "admin@foo.com",
       "author": "Admin",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "Lean ground beef",
@@ -1548,7 +1788,7 @@
       "owner": "john@foo.com",
       "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "ground beef",
@@ -1598,7 +1838,7 @@
       "owner": "admin@foo.com",
       "author": "Admin",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "Olive oil",
@@ -1660,7 +1900,7 @@
       "owner": "john@foo.com",
       "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "Chicken breast",
@@ -1715,7 +1955,7 @@
       "owner": "admin@foo.com",
       "author": "Admin",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "Macaroni",
@@ -1793,7 +2033,7 @@
       "owner": "john@foo.com",
       "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Snack", "Dinner"],
       "ingredients": [
         {
           "name": "Butter",
@@ -1866,7 +2106,7 @@
       "owner": "admin@foo.com",
       "author": "Admin",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Breakfast","Snack"],
       "ingredients": [
         {
           "name": "Old-fashioned Oats",
@@ -1933,7 +2173,7 @@
       "owner": "john@foo.com",
       "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Breakfast"],
       "ingredients": [
         {
           "name": "Country Sausage",
@@ -2838,8 +3078,13 @@
       "owner": "john@foo.com",
       "author": "John",
       "favoriteBy": [],
-      "tags": ["Breakfast","Lunch","Snack"],
+      "tags": ["Breakfast","Lunch","Snack","Dinner"],
       "ingredients": [
+        {
+          "name": "spaghetti",
+          "quantity": 1,
+          "unit": "box"
+        },
         {
           "name": "salt",
           "quantity": 1,
