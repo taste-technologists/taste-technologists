@@ -18,6 +18,11 @@ class RecipeCollection {
       description: String,
       servings: Number,
       owner: String,
+      author: {
+        type:
+        String,
+        optional: true,
+      },
       favoriteBy: {
         type: Array,
         optional: true,

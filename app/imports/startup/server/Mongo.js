@@ -71,7 +71,7 @@ if (Vendor.collection.find().count() === 0) {
    * For more info on assets, see https://docs.meteor.com/api/assets.html
    * User count check is to make sure we don't load the file twice, which would generate errors due to duplicate info.
    */
-if ((Meteor.settings.loadAssetsFile) && (Recipes.collection.find().count() < 4)) {
+if ((Meteor.settings.loadAssetsFile) && (Recipes.collection.find().count() < 3)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
   // eslint-disable-next-line no-undef

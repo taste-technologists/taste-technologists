@@ -28,7 +28,7 @@ const ListProfilesAdmin = () => {
   const { ready, reviews } = useTracker(() => {
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe(Profiles.adminPublicationName);
-    const subscription2 = Meteor.subscribe(Recipes.generalPublicationName);
+    const subscription2 = Meteor.subscribe(Recipes.adminPublicationName);
     const subscription3 = Meteor.subscribe(Inventory.userPublicationName);
     const subscription4 = Meteor.subscribe(RecReviews.generalPublicationName);
     // Determine if the subscription is ready
@@ -42,7 +42,7 @@ const ListProfilesAdmin = () => {
 
   const sum = reviews.length;
 
-  console.log(reviews);
+  // console.log(reviews);
 
   return (ready ? (
     <Container className="py-3" id="admin-page">

@@ -6,30 +6,23 @@ import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { Link } from 'react-router-dom';
 import { useTracker } from 'meteor/react-meteor-data';
-import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import ReviewRating from './ReviewRating';
 
 const SingleRecipeCard = ({ recipe, avg }) => {
-  const { ready, userProfile, inventory } = useTracker(() => {
+  const { ready, inventory } = useTracker(() => {
 
     // Get access to Recipe documents.
-    const subscription = Meteor.subscribe(Profiles.generalPublicationName);
-    const subscription2 = Meteor.subscribe(Inventory.userPublicationName);
+    const subscription = Meteor.subscribe(Inventory.userPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready() && subscription2.ready();
-    let profile = null;
+    const rdy = subscription.ready();
+
     // Get the Profiles
-    if (rdy) {
-      const profiles = Profiles.collection.find({}).fetch();
-      const owner = recipe.owner;
-      profile = _.findWhere(profiles, { email: owner });
-    }
+
     const inv = Inventory.collection.find().fetch();
     return {
       ready: rdy,
-      userProfile: profile,
       inventory: inv,
     };
   }, []);
@@ -46,7 +39,7 @@ const SingleRecipeCard = ({ recipe, avg }) => {
     <Container>
       <Row className="flex-row justify-content-center">
         <h2 className="text-center">{recipe.name}</h2>
-        <h6 className="text-center">Created by: {userProfile.name}</h6>
+        <h6 className="text-center">Created by: {recipe.author}</h6>
         {recipe.description}
       </Row>
       <Row className="my-2 pe-2 py-2">
@@ -86,6 +79,7 @@ SingleRecipeCard.propTypes = {
   recipe: PropTypes.shape({
     picture: PropTypes.string,
     name: PropTypes.string,
+    author: PropTypes.string,
     time: PropTypes.string,
     description: PropTypes.string,
     owner: PropTypes.string,

@@ -23,7 +23,7 @@ const RecipeView = () => {
     // Get access to Recipe, RecipeReview, and Profile documents.
     const subscription = Meteor.subscribe(Recipes.generalPublicationName);
     const subscription2 = Meteor.subscribe(RecReviews.generalPublicationName);
-    const subscription3 = Meteor.subscribe(Profiles.generalPublicationName);
+    const subscription3 = Meteor.subscribe(Profiles.userPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready() && subscription2.ready() && subscription3.ready();
 

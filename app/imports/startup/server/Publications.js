@@ -49,7 +49,7 @@ Meteor.publish(Profiles.userPublicationName, function () {
 // If logged in, then publish all recipes.
 Meteor.publish(Recipes.generalPublicationName, function () {
   if (this.userId) {
-    return Recipes.collection.find();
+    return Recipes.collection.find({}, { fields: { owner: 0 } });
   }
   return this.ready();
 });

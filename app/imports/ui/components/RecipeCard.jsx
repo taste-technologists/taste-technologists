@@ -8,7 +8,6 @@ import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
 import swal from 'sweetalert';
-import { Profiles } from '../../api/profiles/Profiles';
 import LoadingSpinner from './LoadingSpinner';
 import { addFavMethod, delFavMethod, removeRecipeMethod } from '../../startup/both/Methods';
 import { RecReviews } from '../../api/recipes/RecipeReviews';
@@ -17,28 +16,19 @@ import { RecFaves } from '../../api/recipes/RecipeFav';
 
 const RecipeCard = ({ recipe, showEdit, idx }) => {
 
-  const { ready, userProfile, all, faves } = useTracker(() => {
+  const { ready, all, faves } = useTracker(() => {
 
     // Get access to Recipe documents.
-    const subscription = Meteor.subscribe(Profiles.generalPublicationName);
     const subscription2 = Meteor.subscribe(RecReviews.generalPublicationName);
     const subscription3 = Meteor.subscribe(RecFaves.generalPublicationName);
 
     // Determine if the subscription is ready
-    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready();
-    let profile = null;
+    const rdy = subscription2.ready() && subscription3.ready();
     const allReviews = _.pluck(RecReviews.collection.find({ recipeId: recipe._id }).fetch(), 'review').flat();
     const recFaves = _.pluck(RecFaves.collection.find({ recipeId: recipe._id }).fetch(), 'favoriteBy').flat();
 
-    // Get the Profiles
-    if (rdy) {
-      const profiles = Profiles.collection.find({}).fetch();
-      const owner = recipe.owner;
-      profile = _.findWhere(profiles, { email: owner });
-    }
     return {
       ready: rdy,
-      userProfile: profile,
       all: allReviews,
       faves: recFaves,
     };
@@ -98,7 +88,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
         <Card.Body>
           <Card.Text className="mt-2">{recipe.description}</Card.Text>
           <footer className="blockquote-footer">
-            {userProfile.name}
+            {recipe.author}
           </footer>
           <h6>Tags</h6>
           <Card.Text>
@@ -119,6 +109,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
 RecipeCard.propTypes = {
   recipe: PropTypes.shape({
     picture: PropTypes.string,
+    author: PropTypes.string,
     name: PropTypes.string,
     time: PropTypes.string,
     description: PropTypes.string,

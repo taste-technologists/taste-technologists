@@ -6,7 +6,10 @@ import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { Plus, TrashFill } from 'react-bootstrap-icons';
+import { useTracker } from 'meteor/react-meteor-data';
 import { addRecipeMethod } from '../../startup/both/Methods';
+import { Profiles } from '../../api/profiles/Profiles';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
@@ -55,11 +58,22 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the AddStuff page for adding a document. */
 const AddRecipe = () => {
-  // On submit, insert the data.
+
+  const author = useTracker(() => {
+    const sub = Meteor.subscribe(Profiles.userPublicationName);
+    return sub.ready() ? Profiles.collection.findOne().name : null;
+  });
+
+  if (!author) {
+    return <LoadingSpinner />;
+  }
+
   const submit = (doc, formRef) => {
+
     const { name, picture, time, description, servings, tags, ingredients, instructions } = doc;
     const owner = Meteor.user().username;
-    const data = { name, picture, time, description, servings, owner, tags, ingredients, instructions, favoriteBy: [] };
+
+    const data = { name, picture, time, description, servings, author, owner, tags, ingredients, instructions, favoriteBy: [] };
     Meteor.call(
       addRecipeMethod,
       { data },
