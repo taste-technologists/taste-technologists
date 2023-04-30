@@ -200,7 +200,7 @@ export const Reviews = [
     userID: generateRandomString(),
     user: `${firstNames[Math.floor(Math.random() * firstNames.length)]}`,
     rating: Math.round(Math.random() * 3),
-    comment: 'This recipe was okay, but it could have been better. There were some aspects of it that I didn\';t really enjoy.',
+    comment: 'This recipe was okay, but it could have been better. There were some aspects of it that I didn\'t really enjoy.',
     created: new Date(Date.now() - Math.floor(Math.random() * (7 * 24 * 60 * 60 * 1000))),
     edited: new Date(Date.now() - Math.floor(Math.random() * (7 * 24 * 60 * 60 * 1000))),
   },

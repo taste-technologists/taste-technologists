@@ -17,6 +17,7 @@
 
   "defaultVendor": [
     { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM"},
+    { "name": "Longs", "location": "2750 Woodlawn Dr., Honolulu, HI 96822", "hours": "Sun-Sat 7AM-12AM"},
     { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM"},
     { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours"},
     { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4PM-11PM"},
@@ -28,6 +29,7 @@
       "owner": "john@foo.com",
       "favoriteBy": [],
       "name": "Enchiladas",
+      "author": "John",
       "description": "This tasty family dinner is fun to assemble and even more fun to eat. The spicy enchilada sauce pairs perfectly with the gooey chicken-cheese filling that’s all rolled into a crispy tortilla. ",
       "time": "1 hour",
       "picture": "https://www.sidechef.com/recipe/306f2fab-427f-4881-af73-a781d3232742.jpg?d=1200x560",
@@ -84,6 +86,7 @@
     {
       "owner": "admin@foo.com",
       "favoriteBy": [],
+      "author": "Admin",
       "name": "Parmesan Thyme Crisps",
       "description": "Super simple but can be spiced up if you like with cayenne or other spices. Store in an airtight container, layered between waxed paper.",
       "time": "30 minutes",
@@ -135,13 +138,6 @@
       "price": 15.99,
       "size": "5 lb"
     }
-  ],
-
-  "defaultVendors" : [
-    { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM" },
-    { "name": "Manoa Marketplace", "location": "2752 Woodlawn Dr, Honolulu, HI 96822", "hours": "Sun-Sat 6AM-11PM" },
-    { "name": "Safeway", "location": "2855 E Manoa Rd, Honolulu, HI 96822", "hours": "Sun-Sat 24 Hours" },
-    { "name": "The Market", "location": "2585 Dole St, Honolulu, HI 96822", "hours": "Sun-Sat 4PM-11PM" }
   ],
 
   "monti": {

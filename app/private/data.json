@@ -749,7 +749,122 @@
       "item": "Mustard",
       "price": "2.79",
       "size": "14 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "canned tuna",
+      "price": 3.99,
+      "size": "6 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "celery",
+      "price": 1.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "red onion",
+      "price": 0.99,
+      "size": "0.5 lb"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "mayonnaise",
+      "price": 2.49,
+      "size": "12 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "dijon mustard",
+      "price": 1.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "lemon juice",
+      "price": 2.29,
+      "size": "32 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "salt",
+      "price": 1.29,
+      "size": "26 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "pepper",
+      "price": 1.99,
+      "size": "3 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "olive oil",
+      "price": 8.99,
+      "size": "25.4 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "eggs",
+      "price": 4.99,
+      "size": "dozen"
+    },
+    {
+      "name": "The Market",
+      "item": "milk",
+      "price": 2.49,
+      "size": "1 qt"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "shredded cheese",
+      "price": 3.49,
+      "size": "8 oz"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "green onion",
+      "price": 0.99,
+      "size": "bunch"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Silken Tofu",
+      "price": 4.99,
+      "size": "12 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Black Beans",
+      "price": 2.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Broccoli",
+      "price": 3.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "Greek Yogurt",
+      "price": 1.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Shredded Cheese",
+      "price": 3.79,
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Avocado",
+      "price": 2.49,
+      "size": "1 piece"
     }
+
   ],
   "recipes": [
     {
@@ -758,7 +873,8 @@
       "time": "15 mins",
       "description": "A quick and easy tuna salad recipe that is perfect for a healthy lunch or snack.",
       "servings": 2,
-      "owner": "john@foo.com",
+      "owner": "chris@foo.com",
+      "author": "Chris",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1188,7 +1304,7 @@
     },
     {
       "name": "Crispy Microwave Potato Chips",
-      "picture": "https://i.ytimg.com/vi/gFGpHL276xQ/hqdefault.jpg",
+      "picture": "https://www.biggerbolderbaking.com/wp-content/uploads/2016/08/IMG_5853.jpg",
       "time": "13 min",
       "description": "You won't believe how easy it is to make Crispy Microwave Potato Chips for delicious, crunchy chips containing all-natural ingredients.",
       "servings": 1,
@@ -1303,6 +1419,7 @@
       "description": "A quick and simple lunch to get you through that 12 PM lecture.",
       "servings": 1,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1344,6 +1461,7 @@
       "description": "Great recipe for game nights with your friends!",
       "servings": 6,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1410,6 +1528,7 @@
       "description": "A quick and easy dinner with only 4 ingredients.",
       "servings": 4,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1459,6 +1578,7 @@
       "description": "Amazing chicken to add on top of any pasta or salad for a great tasting meal.",
       "servings": 6,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1520,6 +1640,7 @@
       "description": "Easy to make chicken pot pie using pie crust!",
       "servings": 6,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1574,6 +1695,7 @@
       "description": "A simple mac and cheese with pesto sauce.",
       "servings": 6,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1651,6 +1773,7 @@
       "description": "Easy garlic bread that you can freeze and toast at anytime to enjoy.",
       "servings": 12,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1723,6 +1846,7 @@
       "description": "Easy, tasty, make-ahead breakfast to grab on the way out in the morning.",
       "servings": 4,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1789,6 +1913,7 @@
       "description": "Easy filling breakfast that can be frozen to enjoy later.",
       "servings": 6,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1848,6 +1973,7 @@
       "description": "Easy sweet breakfast treat to impress your friends.",
       "servings": 6,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1910,6 +2036,7 @@
       "description": "This was always a lunchtime favorite with my gal pals. It's simple, delicious, and refreshing! The measurements for the ingredients are all approximate, as this sandwich is best when tailored to personal taste. Particularly scrumptious on potato, oat, or country white bread. Enjoy!",
       "servings": 1,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Lunch", "Snack"],
       "ingredients": [
@@ -1952,6 +2079,7 @@
       "description": "A nice quick and fresh snack that is healthy and delicious! This can also be made on pita bread instead of naan.",
       "servings": 1,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Vegan","Vegetarian","Pescatarian","Dairy-free","Lunch","Snack"],
       "ingredients": [
@@ -1999,6 +2127,7 @@
       "description": "Grab a polenta package, one cup of chicken broth, and some Parmesan cheese and you're minutes away from a deliciously creamy polenta side dish. You can also serve it as an appetizer or use it as a base for a hearty stew.",
       "servings": 4,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Snack"],
       "ingredients": [
@@ -2044,6 +2173,7 @@
       "description": "This quick salmon dish is perfect for a weeknight dinner. Serve with a side of sauteed spinach and a glass of pinot noir.",
       "servings": 2,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Lunch", "Dinner"],
       "ingredients": [
@@ -2089,6 +2219,7 @@
       "description": "This is my favorite quick and easy recipe. For more flavor, add maple syrup.",
       "servings": 4,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Lunch", "Dinner"],
       "ingredients": [
@@ -2134,6 +2265,7 @@
       "description": "A Mexican-style side dish made of chicken and avocado, no cooking required. It's a quick, healthy, and delicious recipe guaranteed to make you feel and look good.",
       "servings": 3,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Dairy-free", "Lunch", "Snack"],
       "ingredients": [
@@ -2179,6 +2311,7 @@
       "description": "The perfect dessert when you're home alone and have a craving for sometime homemade and fruity. It is also egg free so perfect for those with allergies.",
       "servings": 1,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Breakfast", "Snack"],
       "ingredients": [
@@ -2239,6 +2372,7 @@
       "description": "I whipped this up after school one day when I wanted peanut butter and a healthy snack. There are many other toppings that can be used with this such as Nutella®, extra peanut butter, granola, fruit, oats, graham crackers, cookies, or cereal. The possibilities are endless!",
       "servings": 1,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Breakfast","Snack"],
       "ingredients": [
@@ -2284,6 +2418,7 @@
       "description": "It's like your favorite peanut butter cup, but better because it includes a touch of salt. And, ya know, it's in nice cream (=ice cream) form, so...yum.",
       "servings": 1,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Vegan", "Vegetarian", "Pescatarian"],
       "ingredients": [
@@ -2362,6 +2497,7 @@
       "description": "This is a delicious, healthy, hearty breakfast recipe. If you are not vegan, you can add fried eggs to your toast for a delicious vegetarian meal.",
       "servings": 4,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Vegan","Vegetarian", "Pescatarian", "Dairy-free", "Breakfast", "Lunch", "Snack"],
       "ingredients": [
