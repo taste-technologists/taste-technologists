@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { _ } from 'meteor/underscore';
-import { Card, Col, Container, Row, Button } from 'react-bootstrap';
+import { Card, Col, Container, Row, Button, Table } from 'react-bootstrap';
 import { BasketFill, PersonFill, FileTextFill, StarFill, KeyFill } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -50,62 +50,60 @@ const ListProfilesAdmin = () => {
 
   // console.log(reviews);
 
+  // Define the styles for smaller screens using media queries
+
   return (ready ? (
     <Container className="py-3" id="admin-page">
       <Row className="justify-content-center">
         <Col md={10}>
           <Col className="text-center"><h2>Admin Dashboard</h2></Col>
-          <Row className="justify-content-center">
-            <Col xs={12} sm={3} md={3} lg={3} className="text-center">
+          <Row className="justify-content-center text-center flex-nowrap">
+            <Col className="pe-1">
               <Button
                 onClick={() => handleCardClick('default')}
                 variant="primary"
                 key="primary"
                 text="white"
-                className="mb-2 px-3"
+                className="mb-2 admin-btn"
                 id="admin-profiles"
               >
-                <Card.Title>Users</Card.Title>
-                <Card.Text><PersonFill className="mx-1 mb-1" />{profiles}</Card.Text>
+                <>Users<br /><PersonFill className="mx-1 mb-1" />{profiles}</>
               </Button>
             </Col>
-            <Col xs={12} sm={3} md={3} lg={3} className="text-center">
+            <Col className="text-center">
               <Button
                 id="admin-recipes"
                 onClick={() => handleCardClick('recipes')}
                 variant="warning"
                 key="warning"
                 text="white"
-                className="mb-2 px-3 text-white"
+                className="mb-2 text-white admin-btn"
               >
-                <Card.Title>Recipes</Card.Title>
-                <Card.Text><FileTextFill className="mx-1 mb-1" />{recipes}</Card.Text>
+                <>Recipes<br /><FileTextFill className="mx-1 mb-1" />{recipes}</>
               </Button>
             </Col>
-            <Col xs={12} sm={3} md={3} lg={3} className="text-center">
+            <Col className="text-center">
               <Button
                 onClick={() => handleCardClick('inventory')}
                 bg="success"
                 variant="success"
                 text="white"
-                className="mb-2 px-3"
+                className="mb-2 admin-btn"
                 id="admin-inventory"
               >
-                <Card.Title>Inventory</Card.Title>
-                <Card.Text><BasketFill className="mx-1 mb-1" />{inventory}</Card.Text>
+                <>Inventory<br /><BasketFill className="mx-1 mb-1" />{inventory}</>
               </Button>
             </Col>
-            <Col xs={12} sm={3} md={3} lg={3} className="text-center">
+            <Col className="text-center">
               <Button
                 onClick={() => handleCardClick('reviews')}
                 bg="success"
                 variant="secondary"
                 text="white"
-                className="mb-2 px-3"
+                className="mb-2 admin-btn"
                 id="admin-reviews"
               >
-                <Card.Title>Reviews</Card.Title>
-                <Card.Text><StarFill className="mx-1 mb-1" />{sum}</Card.Text>
+                <>Reviews<br /><StarFill className="mx-1 mb-1" />{sum}</>
               </Button>
             </Col>
           </Row>
