@@ -34,7 +34,6 @@ const SearchRecipesPage = () => {
   const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
   const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
 
-
   // console.log(recipeList);
 
   const indexOfLastItem = activePage * 8;

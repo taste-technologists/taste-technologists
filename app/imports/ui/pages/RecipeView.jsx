@@ -49,7 +49,7 @@ const RecipeView = () => {
   const average = Number(sumRatings > 0 ? (Math.round((sumRatings / all.length) * 2) / 2).toFixed(1) : 0);
 
   return ready ? (
-    <Container id="recipe-view-page" className="py-3">
+    <Container id="recipe-view-page" className="py-3 uniform">
       <SingleRecipeCard key={doc._id} recipe={doc} avg={average} />
       <ReviewMenu user={user} userID={Meteor.userId()} name={doc.name} recipeId={_id} all={all} />
     </Container>

@@ -93,7 +93,7 @@ const EditProfiles = () => {
         <Col xs={10}>
           <Col className="text-center"><h2>Edit Role</h2></Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
-            <Card>
+            <Card className="uniform">
               <Card.Body>
                 <TextField name="email" disabled />
                 <SelectField name="role" id="role" placeholder={currentRole} allowedValues={allowed} />

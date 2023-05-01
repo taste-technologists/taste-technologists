@@ -108,7 +108,7 @@ const SingleRecipeCard = ({ recipe, avg }) => {
         </ul>
         <div className="text-end">
           <OverlayTrigger trigger="click" placement="top" overlay={popover}>
-            <Button variant="outline-primary" style={{ maxWidth: '250px' }}>Check Inventory</Button>
+            <Button variant="secondary" style={{ maxWidth: '250px' }}>Check Inventory</Button>
           </OverlayTrigger>
         </div>
       </Row>

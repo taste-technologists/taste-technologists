@@ -37,10 +37,10 @@ const ReviewMenu = ({ name, recipeId, userID, all, user }) => {
   ));
   return (
     <>
-      <Button variant="outline-primary" id="review-button" onClick={handleShow} className="me-2">
+      <Button variant="secondary" id="review-button" onClick={handleShow} className="me-2">
         Reviews
       </Button>
-      <Offcanvas show={show} onHide={handleClose} placement="end">
+      <Offcanvas show={show} onHide={handleClose} placement="end" className="bg-img">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Reviews</Offcanvas.Title>
         </Offcanvas.Header>

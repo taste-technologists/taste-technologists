@@ -1,7 +1,7 @@
 /* Use Open Sans as the default sans serif font. */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap');
 
 /* Set up some CSS variables to theme the application. */
 :root {
@@ -15,6 +15,21 @@
 body {
   --bs-light-rgb: var(--matr-navbar-bg-rgb);
   font-family: 'Noto Sans', sans-serif!important;
+  background: fixed center center url("/images/kherbs65.jpg");
+  background-size: cover;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.bg-img {
+  background: fixed center center url("/images/herbs66.jpg");
+  background-size: cover;
+}
+
+.uniform {
+  background-color: rgba(255, 255, 255, 0.76) !important;
 }
 
 /* Set the alert background on the signin and signup pages. */
@@ -42,15 +57,15 @@ body {
 }
 
 tr:nth-child(1) {
-  background-color: #CEB180;
+  background-color: rgba(206, 177, 128, 0.8);
 }
 
 tr:nth-child(2n+1) {
-  background-color: #FFE5B4;
+  background-color: rgba(255, 229, 180, 0.8);
 }
 
 tr:nth-child(2n) {
-  background-color: #FFE5B4;
+  background-color: rgba(255, 229, 180, 0.8);
 }
 
 th {
@@ -88,12 +103,12 @@ th {
 }
 
 .navbar-g {
-  background: linear-gradient(#f6d492,#FFE5B4,#f6d492);
+  background: linear-gradient(#FFE5B4,#FFE5B4,#FFE5B4, rgba(255, 255, 255, 0.78));
   font-weight: bold;
 }
 /* Accordion settings for Review Component */
 .accordion-button {
-  background-color: #FFE5B4 !important;
+  background-color: rgba(255, 229, 180, 0.62) !important;
 }
 
 
@@ -134,4 +149,9 @@ th {
   #add-recipe-tags .form-check {
     display: inline-block !important;
   }
+}
+
+.b-foot {
+  background: linear-gradient(rgba(255, 255, 255, 0.72),#FFE5B4, #FFE5B4,#FFE5B4);
+
 }

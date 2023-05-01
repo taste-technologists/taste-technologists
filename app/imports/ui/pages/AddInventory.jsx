@@ -61,7 +61,7 @@ const AddInventory = () => {
         <Col xs={10}>
           <Col className="text-center"><h2>Add Inventory </h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
-            <Card>
+            <Card className="uniform">
               <Card.Body>
                 <TextField name="name" id="add-inventory-form-name" label="Name" disabled value={vendorName} />
                 <TextField name="item" id="add-inventory-form-item" label="Item" showInlineError />

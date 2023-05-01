@@ -3,7 +3,7 @@ import { Col, Container, Form, FormControl, Button } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const Footer = () => (
-  <footer className="mt-auto py-3 bg-light">
+  <footer className="mt-auto py-3 b-foot">
     <Container>
       <Col className="text-center ">
         <h5>Sign Up For Ingredient Price Drop Updates!</h5>

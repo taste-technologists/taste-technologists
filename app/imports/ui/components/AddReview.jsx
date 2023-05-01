@@ -12,7 +12,7 @@ import { addReviewMethod } from '../../startup/both/Methods';
 const formSchema = new SimpleSchema({
   review: {
     type: Array,
-    optional: true,
+    optional: false,
   },
   'review.$': {
     type: Object,

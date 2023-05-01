@@ -88,7 +88,7 @@ const AdminEditRecipe = () => {
         <Col xs={10}>
           <Col className="text-center"><h2>Edit Recipe</h2></Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
-            <Card>
+            <Card className="uniform">
               <Card.Body>
                 <Row>
                   <Col><TextField id="edit-recipe-name" name="name" showInlineError placeholder="Recipe name" /></Col>

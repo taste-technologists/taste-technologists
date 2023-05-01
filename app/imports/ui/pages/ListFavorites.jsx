@@ -66,7 +66,7 @@ const FavoritesPage = () => {
         {currentItems.map((recipe) => <RecipeCard key={recipe._id} recipe={recipe} />)}
       </Row>
       <Row hidden={haveRecipes} className="text-center pt-5">
-        <h2>You have no favorite recipes!</h2>
+        <h3>You have no favorite recipes!</h3>
         <h3>Click the heart on any recipe to add to your favorites.</h3>
       </Row>
       <Pagination className="my-3  flex-wrap" hidden={!haveRecipes}>{paginationItems}</Pagination>
