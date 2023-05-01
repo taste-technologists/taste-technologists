@@ -1,11 +1,12 @@
 /* Component for layout out a Profile Card. */
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import { Accordion, Col, Container, Image, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { Link } from 'react-router-dom';
 import { useTracker } from 'meteor/react-meteor-data';
+import AccordionBody from 'react-bootstrap/AccordionBody';
 import LoadingSpinner from './LoadingSpinner';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import ReviewRating from './ReviewRating';
@@ -27,14 +28,32 @@ const SingleRecipeCard = ({ recipe, avg }) => {
     };
   }, []);
 
+  const foundArr = [];
+  const missArr = [];
   let cost = 0;
+
   _.each(recipe.ingredients, (ing) => {
     const arr = _.filter(inventory, (item) => item.item.toLowerCase() === ing.name.toLowerCase());
     if (arr.length > 0) {
+      foundArr.push(arr);
+
       cost += _.min(arr, (obj) => obj.price).price;
+    } else {
+      missArr.push(ing.name);
     }
+    // console.log(missArr);
     // console.log(arr);
   });
+  const thisArr = foundArr.flat();
+  const renderedArray = thisArr.map((item) => (
+    <div key={item._id}>
+      <h2>{item.name}</h2>
+      <p>Item: {item.item}</p>
+      <p>Price: {item.price}</p>
+      <p>Size: {item.size}</p>
+    </div>
+  ));
+
   return (ready ? (
     <Container fluid>
       <Row className="flex-row justify-content-center">
@@ -59,6 +78,14 @@ const SingleRecipeCard = ({ recipe, avg }) => {
         <ul>
           {recipe.ingredients.map((ing) => <li key={`${recipe._id}${ing.name}`}>{ing.quantity} {ing.unit} {ing.name}</li>)}
         </ul>
+        <Accordion>
+          <Accordion.Header>Nearby stores with ingredients</Accordion.Header>
+          <AccordionBody>
+            {renderedArray}
+            <h2>The following are not yet available at any vendor</h2>
+            {missArr.map((ing) => <p>{ing}</p>)}
+          </AccordionBody>
+        </Accordion>
       </Row>
       <Row>
         <h2>Instructions:</h2>
@@ -86,7 +113,8 @@ SingleRecipeCard.propTypes = {
     ingredients: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string,
       quantity: PropTypes.number,
-      unit: PropTypes.string })),
+      unit: PropTypes.string,
+    })),
     servings: PropTypes.number,
     instructions: PropTypes.arrayOf(PropTypes.shape({
       step: PropTypes.string,

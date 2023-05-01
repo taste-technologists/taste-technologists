@@ -85,7 +85,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
           )}
           <Row className=""><ReviewRating avg={Number(average)} /></Row>
         </Card.Header>
-        <Card.Body>
+        <Card.Body className="rec-card-middle">
           <Card.Text className="mt-2">{recipe.description}</Card.Text>
           <footer className="blockquote-footer">
             {recipe.author}
@@ -95,7 +95,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
             {recipe.tags.map((tag, index) => <Badge key={`${tag}${index}`} bg="secondary" className="mx-1">{tag}</Badge>)}
           </Card.Text>
         </Card.Body>
-        <Card.Footer className="text-end" hidden={!showEdit}>
+        <Card.Footer className="text-end rec-card-footer" hidden={!showEdit}>
           <Row>
             <Col className="text-start"><Link className="edit" to={`/edit/${recipe._id}`}>Edit</Link></Col>
             <Col className="text-end"><Button id={`delete-recipe-${idx}`} type="button" size="sm" variant="danger" onClick={() => removeItem()}>Delete</Button></Col>

@@ -1,6 +1,8 @@
 /* Use Open Sans as the default sans serif font. */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
 
+@import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
+
 /* Set up some CSS variables to theme the application. */
 :root {
   --matr-navbar-bg: #FFE5B4;
@@ -12,6 +14,7 @@
  */
 body {
   --bs-light-rgb: var(--matr-navbar-bg-rgb);
+  font-family: 'Economica', sans-serif!important;
 }
 
 /* Set the alert background on the signin and signup pages. */
@@ -57,6 +60,15 @@ th {
 /* Set a fixed height for all card headers */
 .rec-card-header {
   height: 350px;
+  background-color: #fffaf0!important;
+}
+
+.rec-card-middle {
+  background-color: #FEFBF1!important;
+}
+
+.rec-card-footer {
+  background-color: #FFEECC!important;
 }
 
 /* Ensure that the header contents don't overflow the fixed height */
