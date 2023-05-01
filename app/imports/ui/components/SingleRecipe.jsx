@@ -64,9 +64,8 @@ const SingleRecipeCard = ({ recipe, avg }) => {
       <Row className="flex-row justify-content-center">
         <h2 className="text-center">{recipe.name}</h2>
         <h6 className="text-center">Created by: {recipe.author}</h6>
-        {recipe.description}
       </Row>
-      <Row className="my-2 py-2">
+      <Row className="my-2 py-2 ">
         {/* Will need to implement a cost function related to vendors and inventory here */}
         <Col xs={6} md={3}>
           Cook Time:<br /> {recipe.time}
@@ -75,13 +74,14 @@ const SingleRecipeCard = ({ recipe, avg }) => {
         <Col xs={6} md={3}>Estimated Cost:<br /> ${cost.toFixed(2)}*</Col>
         <Col xs={6} md={3}>Avg Rating:<br /> <ReviewRating avg={Number(avg)} /></Col>
       </Row>
+      <Row className="flex-row justify-content-center pb-2">{recipe.description}</Row>
       <Row>
         <Col className="text-center"><Image fluid src={recipe.picture} width={400} /></Col>
       </Row>
       <Row>
         <h2>Ingredients</h2>
         <ul className="px-5">
-          {recipe.ingredients.map((ing) => <li key={`${recipe._id}${ing.name}`}>{ing.quantity} {ing.unit} {ing.name}</li>)}
+          {recipe.ingredients.map((ing) => <li key={`${recipe._id}${ing.name}`}><input type="checkbox" />{ing.quantity} {ing.unit} {ing.name}</li>)}
         </ul>
         <Accordion>
           <Accordion.Header>Nearby stores with ingredients</Accordion.Header>

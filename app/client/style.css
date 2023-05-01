@@ -1,7 +1,7 @@
 /* Use Open Sans as the default sans serif font. */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
 
-@import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
 
 /* Set up some CSS variables to theme the application. */
 :root {
@@ -14,7 +14,7 @@
  */
 body {
   --bs-light-rgb: var(--matr-navbar-bg-rgb);
-  font-family: 'Economica', sans-serif!important;
+  font-family: 'Noto Sans', sans-serif!important;
 }
 
 /* Set the alert background on the signin and signup pages. */
@@ -87,6 +87,10 @@ th {
   white-space: pre-wrap;
 }
 
+.navbar-g {
+  background: linear-gradient(to right, #FFE5B4,#FFF5E4);
+  font-weight: bold;
+}
 /* Accordion settings for Review Component */
 .accordion-button {
   background-color: #FFE5B4 !important;

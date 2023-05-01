@@ -92,7 +92,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
           </footer>
           <h6>Tags</h6>
           <Card.Text>
-            {recipe.tags.map((tag, index) => <Badge key={`${tag}${index}`} bg="secondary" className="mx-1">{tag}</Badge>)}
+            {recipe.tags.map((tag, index) => <Badge key={`${tag}${index}`} bg="primary" className="mx-1">{tag}</Badge>)}
           </Card.Text>
         </Card.Body>
         <Card.Footer className="text-end rec-card-footer" hidden={!showEdit}>
