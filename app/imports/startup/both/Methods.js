@@ -4,6 +4,7 @@ import { Accounts } from 'meteor/accounts-base';
 import { Profiles } from '../../api/profiles/Profiles';
 import { Recipes } from '../../api/recipes/Recipes';
 import { RecReviews } from '../../api/recipes/RecipeReviews';
+import { RecFaves } from '../../api/recipes/RecipeFav';
 
 const setRoleMethod = 'Profiles.role';
 
@@ -90,9 +91,12 @@ Meteor.methods({
     const { name } = data;
     const recId = Recipes.collection.insert(data);
     const recipe = { name: name, recipeId: recId, review: [] };
+    const fave = { name: name, recipeId: recId, favoriteBy: [] };
     RecReviews.collection.insert(recipe);
+    RecFaves.collection.insert(fave);
     console.log(`Successfully added ${name} into Recipes`);
     console.log(`Successfully added ${name} into RecipesReviews`);
+    console.log(`Successfully added ${name} into RecipesFaves`);
   },
 });
 
@@ -109,6 +113,7 @@ Meteor.methods({
     Recipes.collection.remove({ _id: _id });
     // Removes the reviewcollection object corresponding to this recipe.
     RecReviews.collection.remove({ recipeId: _id });
+    RecFaves.collection.remove({ recipeId: _id });
   },
 });
 
@@ -135,6 +140,33 @@ Meteor.methods({
   },
 });
 
+const addFavMethod = 'Fave.add';
+
+Meteor.methods({
+  'Fave.add'({ recipeId, user }) {
+    // console.log(recipeId, user);
+    // Add the new review
+    RecFaves.collection.update(
+      { recipeId: recipeId },
+      { $addToSet: { favoriteBy: user } },
+    );
+    console.log('Successfully added into RecipesReviews');
+  },
+});
+
+const delFavMethod = 'Fave.del';
+
+Meteor.methods({
+  'Fave.del'({ recipeId, user }) {
+    // Add the new review
+    RecFaves.collection.update(
+      { recipeId: recipeId },
+      { $pull: { favoriteBy: user } },
+    );
+    console.log('Successfully deleted from RecipesReviews');
+  },
+});
+
 /**
  * The server-side Review.delete Meteor Method is called by both client side.
  * Its purpose is to delete the recipe review from the RecipeReview Collection.
@@ -150,4 +182,16 @@ Meteor.methods({
   },
 });
 
-export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod, removeRecipeMethod, addReviewMethod, delReviewMethod };
+const wipeoutMethod = 'Review.wipeout';
+Meteor.methods({
+  'Review.wipeout'() {
+    RecReviews.collection.update(
+      {}, // Filter to match all documents
+      { $set: { review: [] } }, // Update to set review array to empty
+      { multi: true }, // Option to update multiple documents
+    );
+    console.log('You just wiped everything...');
+  },
+});
+
+export { setRoleMethod, addProfileMethod, removeProfileMethod, addRecipeMethod, removeRecipeMethod, addReviewMethod, delReviewMethod, addFavMethod, delFavMethod, wipeoutMethod };

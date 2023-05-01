@@ -2,35 +2,36 @@ import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 
 /**
- * The StuffsCollection. It encapsulates state and variable values for stuff.
+ * The RecipeReviews. It encapsulates state and variable values for Recipes.
  */
-class StuffsCollection {
+class RecipeFavCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'StuffsCollection';
+    this.name = 'RecipeFavesCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       name: String,
-      quantity: Number,
-      owner: String,
-      condition: {
-        type: String,
-        allowedValues: ['excellent', 'good', 'fair', 'poor'],
-        defaultValue: 'good',
+      recipeId: String,
+      favoriteBy: {
+        type: Array,
+        optional: true,
       },
+      'favoriteBy.$': String,
     });
+
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
     // Define names for publications and subscriptions
     this.userPublicationName = `${this.name}.publication.user`;
     this.adminPublicationName = `${this.name}.publication.admin`;
+    this.generalPublicationName = `${this.name}.publication.general`;
   }
 }
 
 /**
- * The singleton instance of the StuffsCollection.
- * @type {StuffsCollection}
+ * The singleton instance of the RecipeCollection.
+ * @type {RecipeReviewsCollection}
  */
-export const Stuffs = new StuffsCollection();
+export const RecFaves = new RecipeFavCollection();

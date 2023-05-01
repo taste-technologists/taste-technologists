@@ -17,6 +17,10 @@ class ProfileCollection {
       name: String,
       role: String,
       vendor: Boolean,
+      vendorName: {
+        type: String,
+        optional: true,
+      },
     });
 
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

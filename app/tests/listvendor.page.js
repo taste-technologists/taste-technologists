@@ -26,13 +26,13 @@ class ListvendorPage {
   /** Go to add vendor page. */
   async gotoEditVendorPage(testController) {
     await Selector('#basic-navbar-nav').visible;
-    await testController.click('#edit-vendor-2');
+    await testController.click('#edit-vendor-6');
   }
 
   /** Delete test vendor. */
   async deleteVendor(testController) {
     await Selector('#basic-navbar-nav').visible;
-    await testController.click('#delete-vendor-2');
+    await testController.click('#delete-vendor-6');
     await testController.click(Selector('.swal-button--confirm'));
     await testController.click(Selector('.swal-button--confirm'));
   }

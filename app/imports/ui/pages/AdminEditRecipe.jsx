@@ -14,7 +14,7 @@ import { Recipes } from '../../api/recipes/Recipes';
 const formSchema = new SimpleSchema({
   name: {
     type: String,
-    max: 60,
+    max: 40,
   },
   picture: String,
   time: String,
@@ -56,14 +56,14 @@ const formSchema = new SimpleSchema({
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the EditStuff page for editing a single document. */
-const EditRecipe = () => {
+const AdminEditRecipe = () => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const { _id } = useParams();
   // console.log('EditStuff', _id);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { doc, ready } = useTracker(() => {
     // Get access to Stuff documents.
-    const subscription = Meteor.subscribe(Recipes.userPublicationName);
+    const subscription = Meteor.subscribe(Recipes.adminPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the document
@@ -81,13 +81,10 @@ const EditRecipe = () => {
       swal('Error', error.message, 'error') :
       swal('Success', 'Recipe updated successfully', 'success')));
   };
-  const transform = (label) => ` ${label}`;
+
   return ready ? (
-    <Container id="editrecipe-page" className="py-3">
-      <Row className="justify-content-center" hidden={doc !== undefined}>
-        <Col className="text-center"><h2>You don&apos;t have permission to edit this recipe!</h2></Col>
-      </Row>
-      <Row className="justify-content-center" hidden={doc === undefined}>
+    <Container id="admin-editrecipe-page" className="py-3">
+      <Row className="justify-content-center">
         <Col xs={10}>
           <Col className="text-center"><h2>Edit Recipe</h2></Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
@@ -120,16 +117,7 @@ const EditRecipe = () => {
                     </NestField>
                   </ListItemField>
                 </ListField>
-                <p>Tags</p><p />
-                <SelectField
-                  className="edit-recipe-tags tags-select-container"
-                  name="tags"
-                  allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']}
-                  checkboxes
-                  inline
-                  label=""
-                  transform={transform}
-                />
+                <SelectField className="edit-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
                 <SubmitField id="editrecipe-submit" value="Submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />
@@ -142,4 +130,4 @@ const EditRecipe = () => {
   ) : <LoadingSpinner />;
 };
 
-export default EditRecipe;
+export default AdminEditRecipe;

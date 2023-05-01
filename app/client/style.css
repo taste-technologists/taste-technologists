@@ -1,6 +1,8 @@
 /* Use Open Sans as the default sans serif font. */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&display=swap');
+
 /* Set up some CSS variables to theme the application. */
 :root {
   --matr-navbar-bg: #FFE5B4;
@@ -12,6 +14,22 @@
  */
 body {
   --bs-light-rgb: var(--matr-navbar-bg-rgb);
+  font-family: 'Noto Sans', sans-serif!important;
+  background: fixed center center url("/images/kherbs65.jpg");
+  background-size: cover;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.bg-img {
+  background: fixed center center url("/images/herbs66.jpg");
+  background-size: cover;
+}
+
+.uniform {
+  background-color: rgba(255, 255, 255, 0.76) !important;
 }
 
 /* Set the alert background on the signin and signup pages. */
@@ -39,15 +57,15 @@ body {
 }
 
 tr:nth-child(1) {
-  background-color: #CEB180;
+  background-color: rgba(206, 177, 128, 0.8);
 }
 
 tr:nth-child(2n+1) {
-  background-color: #FFE5B4;
+  background-color: rgba(255, 229, 180, 0.8);
 }
 
 tr:nth-child(2n) {
-  background-color: #FFE5B4;
+  background-color: rgba(255, 229, 180, 0.8);
 }
 
 th {
@@ -57,6 +75,15 @@ th {
 /* Set a fixed height for all card headers */
 .rec-card-header {
   height: 350px;
+  background-color: #fffaf0!important;
+}
+
+.rec-card-middle {
+  background-color: #FEFBF1!important;
+}
+
+.rec-card-footer {
+  background-color: #FFEECC!important;
 }
 
 /* Ensure that the header contents don't overflow the fixed height */
@@ -66,7 +93,7 @@ th {
 }
 
 .rec-card-img {
-  height: 70%;
+  height: 60%;
   object-fit: cover;
 }
 
@@ -75,9 +102,13 @@ th {
   white-space: pre-wrap;
 }
 
+.navbar-g {
+  background: linear-gradient(#FFE5B4,#FFE5B4,#FFE5B4, rgba(255, 255, 255, 0.78));
+  font-weight: bold;
+}
 /* Accordion settings for Review Component */
 .accordion-button {
-  background-color: #FFE5B4 !important;
+  background-color: rgba(255, 229, 180, 0.62) !important;
 }
 
 
@@ -91,4 +122,43 @@ th {
 
 .offcanvas{
   width:45% !important;
+  min-width: 350px;
+}
+
+.admin-btn {
+  font-size: 16px;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.tags-select-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 10px;
+  }
+  .admin-btn {
+    font-size: 0.65rem !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+  }
+  #add-recipe-tags .form-check {
+    display: inline-block !important;
+  }
+  .popover {
+    font-size: 0.65rem !important;
+  }
+}
+
+.b-foot {
+  background: linear-gradient(rgba(255, 255, 255, 0.72),#FFE5B4, #FFE5B4,#FFE5B4);
+
+}
+
+.dropdown-menu {
+  min-width: auto !important;
 }

@@ -314,6 +314,12 @@
     },
     {
       "name": "Nijiya Market",
+      "item": "Apple Cider Vinegar",
+      "price": 3.99,
+      "size": "10 fl oz"
+    },
+    {
+      "name": "Nijiya Market",
       "item": "Panko Bread Crumbs",
       "price": 2.99,
       "size": "8 oz"
@@ -443,6 +449,12 @@
       "item": "enchilada sauce",
       "price": 1.99,
       "size": "14 oz"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "Cucumber",
+      "price": 1.99,
+      "size": "1 lb"
     },
     {
       "name": "Safeway",
@@ -645,6 +657,12 @@
     {
       "name": "Safeway",
       "item": "chili powder",
+      "price": "2.84",
+      "size": "2.5 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "dried oregano",
       "price": "2.84",
       "size": "2.5 oz"
     },
@@ -875,6 +893,366 @@
       "item": "Hamburger Buns",
       "price": "3.19",
       "size": "1 doz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "canned tuna",
+      "price": 3.99,
+      "size": "6 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "celery",
+      "price": 1.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "red onion",
+      "price": 0.99,
+      "size": "0.5 lb"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "mayonnaise",
+      "price": 2.49,
+      "size": "12 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "dijon mustard",
+      "price": 1.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "lemon juice",
+      "price": 2.29,
+      "size": "32 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "salt",
+      "price": 1.29,
+      "size": "26 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "pepper",
+      "price": 1.99,
+      "size": "3 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "olive oil",
+      "price": 8.99,
+      "size": "25.4 oz"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "eggs",
+      "price": 4.99,
+      "size": "dozen"
+    },
+    {
+      "name": "The Market",
+      "item": "milk",
+      "price": 2.49,
+      "size": "1 qt"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "green onion",
+      "price": 0.99,
+      "size": "bunch"
+    },
+    {
+      "name": "Nijiya Market",
+      "item": "Silken Tofu",
+      "price": 4.99,
+      "size": "12 oz"
+    },
+    {
+      "name": "The Market",
+      "item": "Black Beans",
+      "price": 2.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Broccoli",
+      "price": 3.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Manoa Marketplace",
+      "item": "Greek Yogurt",
+      "price": 1.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Shredded Cheese",
+      "price": 3.79,
+      "size": "8 oz"
+    },
+    {
+      "name": "Safeway",
+      "item": "Avocado",
+      "price": 2.49,
+      "size": "1 piece"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Kale",
+      "price": 2.99,
+      "size": "1 bunch"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Strawberries",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Zucchini",
+      "price": 1.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Green Beans",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Honeycrisp Apples",
+      "price": 3.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Papaya",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Pineapple",
+      "price": 3.99,
+      "size": "1 pineapple"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Mango",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Lilikoi (Passionfruit)",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Rambutan",
+      "price": 5.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Poha Berry",
+      "price": 6.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Sweet Potato",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Starfruit",
+      "price": 3.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Bananas",
+      "price": 1.99,
+      "size": "1 bunch"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Dragonfruit",
+      "price": 3.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Watermelon",
+      "price": 4.99,
+      "size": "1 watermelon"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Lychee",
+      "price": 6.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Pineapple Guava",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Coconut",
+      "price": 3.99,
+      "size": "1 coconut"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Green Beans",
+      "price": 2.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Ginger",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Turmeric",
+      "price": 3.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Bitter Melon",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Okra",
+      "price": 3.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Long Beans",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Eggplant",
+      "price": 2.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Chinese Cabbage",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Bok Choy",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Daikon Radish",
+      "price": 2.49,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Snow Peas",
+      "price": 4.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Sweet Potato",
+      "price": 1.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Farmers Market at Campus Center",
+      "item": "Taro",
+      "price": 3.99,
+      "size": "1 lb"
+    },
+    {
+      "name": "Longs",
+      "item": "Milk",
+      "price": 3.49,
+      "size": "1 gallon"
+    },
+    {
+      "name": "Longs",
+      "item": "Bread",
+      "price": 2.99,
+      "size": "24 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Eggs",
+      "price": 2.49,
+      "size": "1 dozen"
+    },
+    {
+      "name": "Longs",
+      "item": "Butter",
+      "price": 4.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Shredded Cheese",
+      "price": 5.99,
+      "size": "8 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Spaghetti",
+      "price": 1.99,
+      "size": "16 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Brown Rice",
+      "price": 3.49,
+      "size": "2 lb"
+    },
+    {
+      "name": "Longs",
+      "item": "Cheerios",
+      "price": 4.99,
+      "size": "18 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Canned Tomatoes",
+      "price": 1.99,
+      "size": "28 oz"
+    },
+    {
+      "name": "Longs",
+      "item": "Sugar",
+      "price": 2.99,
+      "size": "4 lb"
     }
   ],
   "recipes": [
@@ -884,9 +1262,10 @@
       "time": "15 mins",
       "description": "A quick and easy tuna salad recipe that is perfect for a healthy lunch or snack.",
       "servings": 2,
-      "owner": "john@foo.com",
+      "owner": "chris@foo.com",
+      "author": "Chris",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Lunch", "Pescatarian"],
       "ingredients": [
         {
           "name": "canned tuna",
@@ -945,14 +1324,488 @@
       ]
     },
     {
+      "name": "Mug Omelette",
+      "picture": "https://www.simplyrecipes.com/thmb/EtOoSVhSQ4W-LIzuW-mqhxavSis=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__02__mug-omelette-horiz-a-1800-3c7f3152669f4397a1570c42ff5f5691.jpg",
+      "time": "7 mins",
+      "description": "In a hurry? Try a microwave omelette! It's amazingly light and fluffy. You'll have an easy meal in a few minutes.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Vegetarian", "Gluten-Free"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "olive oil",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "eggs",
+          "quantity": 2,
+          "unit": "lg"
+        },
+        {
+          "name": "milk",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "shredded cheese",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "green onion",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        },
+        {
+          "name": "pepper",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Lightly coat the inside of a large mug with the olive oil."
+        },
+        {
+          "step": "Finely chop the green onions."
+        },
+        {
+          "step": "Crack the eggs into the mug, add milk, and beat with a fork. "
+        },
+        {
+          "step": "Add the rest of the ingredients. Stir well with a fork until mixed. "
+        },
+        {
+          "step": "Microwave for 30 seconds on high. Remove from microwave and stir with a fork. "
+        },
+        {
+          "step": "Return to the microwave and cook for another 20 to 30 seconds. "
+        },
+        {
+          "step": "Repeat this until the egg has set to your preference. "
+        }
+      ]
+    },
+    {
+      "name": "Microwave Sweet Potato",
+      "picture": "https://www.acouplecooks.com/wp-content/uploads/2021/11/Microwave-Sweet-Potatoes-003.jpg",
+      "time": "8 mins",
+      "description": "Satisfying snack that can be made in a microwave.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Snack","Dinner", "Lunch", "Vegetarian"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "sweet potato",
+          "quantity": 6,
+          "unit": "oz"
+        },
+        {
+          "name": "butter",
+          "quantity": 1,
+          "unit": "tbsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Wash the sweet potato."
+        },
+        {
+          "step": "Prick the sweet potato with a fork and wrap it with a wet paper towel."
+        },
+        {
+          "step": "Microwave on High power making sure to flip and continue cooking on the second side: 2 to 3 minutes per side. "
+        },
+        {
+          "step": "Prick both sides to assess doneness, taking care because it is hot. If the fork goes in all the way with no give, it is done. Otherwise, continue cooking at 1 minute intervals until tender."
+        },
+        {
+          "step": "Serve with butter. "
+        }
+      ]
+    },
+    {
+      "name": "Microwave Mac & Cheese",
+      "picture": "https://www.biggerbolderbaking.com/wp-content/uploads/2016/01/IMG_9206.jpg",
+      "time": "10 mins",
+      "description": "In a time crunch? My macaroni and cheese is quick to whip up and calls for just a few ingredients, making this mug recipe a fan favorite.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Lunch", "Dinner","Vegetarian"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "macaroni",
+          "quantity": 1,
+          "unit": "oz"
+        },
+        {
+          "name": "water",
+          "quantity": 0.75,
+          "unit": "cup"
+        },
+        {
+          "name": "milk",
+          "quantity": 4,
+          "unit": "tbsp"
+        },
+        {
+          "name": "cornstarch",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "shredded cheese",
+          "quantity": 4,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        },
+        {
+          "name": "pepper",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "In a large microwavable mug or large bowl add in the macaroni and the water. You need a large mug as the water will boil up."
+        },
+        {
+          "step": "Microwave for roughly 3.5 minutes. You want the pasta to be fully cooked. (Timing is based on my 1200w microwave so your timing might vary)"
+        },
+        {
+          "step": "Pour off the remaining cooking water. "
+        },
+        {
+          "step": "Stir in the milk, cornstarch and shredded cheese and microwave for a final 60 seconds to create your sauce. Stir well, season with salt and pepper and enjoy."
+        }
+      ]
+    },
+    {
+      "name": "Frozen Blueberry Bites",
+      "picture": "https://zenandspice.com/wp-content/uploads/2014/07/Frozen-Yogurt-Blueberries-22-1024x823.jpg",
+      "time": "11 hr 20 min",
+      "description": "Healthy, delicious and easy to make, this triple-threat recipe is sure to become a go-to favorite.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Snack","Vegetarian"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "vanilla yogurt",
+          "quantity": 8,
+          "unit": "oz"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "blueberries",
+          "quantity": 2,
+          "unit": "cups"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "In a large bowl, carefully mix the blueberries, lemon juice and yogurt together. (Be gentle; you don’t want any berries to get squished.)"
+        },
+        {
+          "step": "Scoop out the yogurt-coated blueberries one by one and place them on a baking sheet lined with parchment paper."
+        },
+        {
+          "step": "Freeze for about an hour, or overnight."
+        }
+      ]
+    },
+    {
+      "name": "5-Minute Silken Tofu with Green Onion",
+      "picture": "https://garlicdelight.com/wp-content/uploads/Silken-Tofu-Green-Onion-10-1024x1024.jpg",
+      "time": "5 min",
+      "description": "This easy vegan recipe using silken tofu is a quick-to-make appetizer. You'll love the silky texture.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegan","Vegetarian","Snack","Lunch","Dinner","Breakfast"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "silken tofu",
+          "quantity": 12.3,
+          "unit": "oz"
+        },
+        {
+          "name": "shoyu",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "green onions",
+          "quantity": 2,
+          "unit": "piece"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Place the silken tofu on a plate. If you find the silken tofu is weeping, drain it using a paper towel to soak up the water or tilt the plate over the sink to pour out the excess liquid."
+        },
+        {
+          "step": "Cut the silken tofu into cubes. You may need to be careful when halving the block of silken tofu height-wise. Don't cut your hands and avoid squishing the tofu.\n"
+        },
+        {
+          "step": "Chop and sprinkle the green onions over the silken tofu."
+        },
+        {
+          "step": "Pour the shoyu over the silken tofu and green onions."
+        }
+      ]
+    },
+    {
+      "name": "5-Minute Vegetarian Burrito Bowl",
+      "picture": "https://www.healthy-liv.com/wp-content/uploads/2015/04/IMG_37721-e1430445049301.jpg",
+      "time": "5 min",
+      "description": "An easy way to make a vegetarian burrito bowl without doing any actual cooking or even leaving your dorm room. ",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegetarian","Lunch","Dinner","Gluten-Free"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "cooked rice",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "canned black beans",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "salsa",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "plain greek yogurt",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "shredded cheese",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "avocado",
+          "quantity": 0.5,
+          "unit": "sm"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "In a microwave-safe bowl, combine rice, black beans, salsa, plain Greek yogurt, and shredded cheese. Microwave on high for 30-60 seconds, or until heated through."
+        },
+        {
+          "step": "Dice avocado and to the bowl"
+        },
+        {
+          "step": "Season with salt and pepper."
+        }
+      ]
+    },
+    {
+      "name": "Toaster Oven Roasted Broccoli",
+      "picture": "https://toasterovenlove.com/wp-content/uploads/toaster-oven-roasted-broccoli-1-1.jpg",
+      "time": "25 min",
+      "description": "Toaster Oven Roasted Broccoli is the perfect quick and easy side dish. A squeeze of fresh lemon brightens up this easy roasted vegetable side dish.   ",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Dinner","Snack","Vegetarian","Vegan", "Gluten-Free", "Dairy-Free"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "broccoli",
+          "quantity": 5,
+          "unit": "oz"
+        },
+        {
+          "name": "garlic",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 0.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.0625,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.125,
+          "unit": "tsp"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Adjust your toaster oven cooking rack to the lowest position and heat to 425°F on the “Bake” setting. Lightly oil a rimmed baking pan"
+        },
+        {
+          "step": "Cut the broccoli florets from the stalks and slice large florets in half or quarter. Peel the stalks and slice into 1/4-inch rounds."
+        },
+        {
+          "step": "Add all of the broccoli, garlic, oil, salt, pepper to the pan. Toss well to combine and then spread in an even layer."
+        },
+        {
+          "step": "Roast broccoli until the florets are lightly browned and fork-tender, about 10 to 16 minutes depending on the size of your florets and personal preference."
+        },
+        {
+          "step": "Sprinkle lemon juice over pan and add more salt and pepper to taste and toss broccoli before serving."
+        }
+      ]
+    },
+    {
+      "name": "Crispy Microwave Potato Chips",
+      "picture": "https://www.biggerbolderbaking.com/wp-content/uploads/2016/08/IMG_5853.jpg",
+      "time": "13 min",
+      "description": "You won't believe how easy it is to make Crispy Microwave Potato Chips for delicious, crunchy chips containing all-natural ingredients.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Vegan","Vegetarian","Snack","Dairy-Free","Gluten-Free"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "russet potato",
+          "quantity": 1,
+          "unit": "med"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.125,
+          "unit": "tsp"
+        },
+        {
+          "name": "ice water",
+          "quantity": 2,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Rinse potatoes, scrubbing any dirt off skin. Peel if desired, but I like chips with the skins on."
+        },
+        {
+          "step": "Thinly slice your potatoes using a knife. The thinner, the better, so you want to slice thinly enough that you are almost shaving the potato; so thin they are transparent. Slices should be between 1/8 - 1/16 inch thick."
+        },
+        {
+          "step": "Immediately place slices in ice water. This helps to remove the starch and create crispy chips with those delicious air pockets."
+        },
+        {
+          "step": "Dry both sides well on a kitchen towel or paper towel. The dryer they are the better they will crisp."
+        },
+        {
+          "step": "Line a plate with a piece of parchment paper. Lay the potato slices out so they aren't touching. Brush with a little olive oil, then sprinkle with salt."
+        },
+        {
+          "step": "Microwave on high for roughly 1.30- 2.30 minutes on one side, and then roughly 1 - 2 minutes on the other side or until golden brown. Timing may vary based on your microwave. You will know when they are done as they will crisp and turn a toasted brown color."
+        },
+        {
+          "step": "Sprinkle the finished potato chips with salt and enjoy"
+        }
+      ]
+    },
+    {
+      "name": "Miso Glazed Salmon Recipe",
+      "picture": "https://www.seriouseats.com/thmb/1fIkWS6HBfc3sDtApkw0I5-FnXU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/SEA-miso-glazed-salmon-in-the-toaster-oven-recipe-hero-02_1-46d33fe83f6a478aab6da56c3bd28c5a.JPG",
+      "time": "40 min",
+      "description": "Charred, sweet and savory with a tender interior, this is about as good as salmon gets.",
+      "servings": 1,
+      "owner": "chris@foo.com",
+      "favoriteBy": [],
+      "tags": ["Pescatarian","Dairy-Free","Dinner"],
+      "author": "Chris",
+      "ingredients": [
+        {
+          "name": "white miso",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "shoyu",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": 0.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "sugar",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "Salmon Fillet, Skinless",
+          "quantity": 1,
+          "unit": "piece"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Whisk together miso, soy sauce, oil, and sugar. Rub mixture over every surface of salmon fillets. Transfer to a plastic zipper lock bag or sealable container. Proceed immediately to next step, or for best results, marinate for about 30 minutes or up to 2 days. "
+        },
+        {
+          "step": "Preheat a broiler (toaster oven or regular oven) to high. Cover a small broiler pan with aluminum foil. Rub excess marinade off of salmon and place on broiler pan. Broil until top surface is well charred and salmon is barely warm in the center, about 5 minutes, using the foil to protect any areas that threaten to burn. Serve immediately. "
+        },
+        {
+          "step": "Serve with rice or vegetables"
+        }
+      ]
+    },
+    {
       "name": "PB & J Sandwich",
       "picture": "https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/2018_grilled-peanut-butter-and-jelly_20336_760x580.jpg?ext=.jpg",
       "time": "10 mins",
       "description": "A quick and simple lunch to get you through that 12 PM lecture.",
       "servings": 1,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Lunch", "Dairy-Free"],
       "ingredients": [
         {
           "name": "white bread",
@@ -992,8 +1845,9 @@
       "description": "Great recipe for game nights with your friends!",
       "servings": 6,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "Ground Beef",
@@ -1058,8 +1912,9 @@
       "description": "A quick and easy dinner with only 4 ingredients.",
       "servings": 4,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "Ground Beef",
@@ -1107,8 +1962,9 @@
       "description": "Amazing chicken to add on top of any pasta or salad for a great tasting meal.",
       "servings": 6,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "olive oil",
@@ -1168,8 +2024,9 @@
       "description": "Easy to make chicken pot pie using pie crust!",
       "servings": 6,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "Chicken breast",
@@ -1222,8 +2079,9 @@
       "description": "A simple mac and cheese with pesto sauce.",
       "servings": 6,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Dinner"],
       "ingredients": [
         {
           "name": "Macaroni",
@@ -1299,8 +2157,9 @@
       "description": "Easy garlic bread that you can freeze and toast at anytime to enjoy.",
       "servings": 12,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Snack", "Dinner"],
       "ingredients": [
         {
           "name": "Butter",
@@ -1371,8 +2230,9 @@
       "description": "Easy, tasty, make-ahead breakfast to grab on the way out in the morning.",
       "servings": 4,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Breakfast","Snack"],
       "ingredients": [
         {
           "name": "Old-fashioned Oats",
@@ -1437,8 +2297,9 @@
       "description": "Easy filling breakfast that can be frozen to enjoy later.",
       "servings": 6,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
-      "tags": [],
+      "tags": ["Breakfast"],
       "ingredients": [
         {
           "name": "Country Sausage",
@@ -1496,6 +2357,7 @@
       "description": "Easy sweet breakfast treat to impress your friends.",
       "servings": 6,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": [],
       "ingredients": [
@@ -1558,6 +2420,7 @@
       "description": "This was always a lunchtime favorite with my gal pals. It's simple, delicious, and refreshing! The measurements for the ingredients are all approximate, as this sandwich is best when tailored to personal taste. Particularly scrumptious on potato, oat, or country white bread. Enjoy!",
       "servings": 1,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Lunch", "Snack"],
       "ingredients": [
@@ -1600,6 +2463,7 @@
       "description": "A nice quick and fresh snack that is healthy and delicious! This can also be made on pita bread instead of naan.",
       "servings": 1,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Vegan","Vegetarian","Pescatarian","Dairy-free","Lunch","Snack"],
       "ingredients": [
@@ -1647,6 +2511,7 @@
       "description": "Grab a polenta package, one cup of chicken broth, and some Parmesan cheese and you're minutes away from a deliciously creamy polenta side dish. You can also serve it as an appetizer or use it as a base for a hearty stew.",
       "servings": 4,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Snack"],
       "ingredients": [
@@ -1692,6 +2557,7 @@
       "description": "This quick salmon dish is perfect for a weeknight dinner. Serve with a side of sauteed spinach and a glass of pinot noir.",
       "servings": 2,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Lunch", "Dinner"],
       "ingredients": [
@@ -1737,6 +2603,7 @@
       "description": "This is my favorite quick and easy recipe. For more flavor, add maple syrup.",
       "servings": 4,
       "owner": "john@foo.com",
+      "author": "John",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Lunch", "Dinner"],
       "ingredients": [
@@ -1782,6 +2649,7 @@
       "description": "A Mexican-style side dish made of chicken and avocado, no cooking required. It's a quick, healthy, and delicious recipe guaranteed to make you feel and look good.",
       "servings": 3,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Dairy-free", "Lunch", "Snack"],
       "ingredients": [
@@ -1827,6 +2695,7 @@
       "description": "The perfect dessert when you're home alone and have a craving for sometime homemade and fruity. It is also egg free so perfect for those with allergies.",
       "servings": 1,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Breakfast", "Snack"],
       "ingredients": [
@@ -1887,6 +2756,7 @@
       "description": "I whipped this up after school one day when I wanted peanut butter and a healthy snack. There are many other toppings that can be used with this such as Nutella®, extra peanut butter, granola, fruit, oats, graham crackers, cookies, or cereal. The possibilities are endless!",
       "servings": 1,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Vegetarian", "Pescatarian", "Breakfast","Snack"],
       "ingredients": [
@@ -1932,6 +2802,7 @@
       "description": "It's like your favorite peanut butter cup, but better because it includes a touch of salt. And, ya know, it's in nice cream (=ice cream) form, so...yum.",
       "servings": 1,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Vegan", "Vegetarian", "Pescatarian"],
       "ingredients": [
@@ -2010,6 +2881,7 @@
       "description": "This is a delicious, healthy, hearty breakfast recipe. If you are not vegan, you can add fried eggs to your toast for a delicious vegetarian meal.",
       "servings": 4,
       "owner": "admin@foo.com",
+      "author": "Admin",
       "favoriteBy": [],
       "tags": ["Vegan","Vegetarian", "Pescatarian", "Dairy-free", "Breakfast", "Lunch", "Snack"],
       "ingredients": [
@@ -2065,6 +2937,1144 @@
         },
         {
           "step": "Scoop avocado into a bowl. Add parsley, olive oil, lemon juice, salt, pepper, onion powder, and garlic powder; mash together using a potato masher. Spread avocado mixture into each piece of toast."
+        }
+      ]
+    },
+    {
+      "name": "Fried Rice",
+      "picture": "https://onohawaiianrecipes.com/wp-content/uploads/2020/08/Fried-Rice-683x1024-1.jpg",
+      "time": "25 mins",
+      "description": "A great meal to combine all of the leftover ingredients from the fridge and to use any leftover rice.",
+      "servings": 6,
+      "owner": "admin@foo.com",
+      "author": "Admin",
+      "favoriteBy": [],
+      "tags": ["Dairy-free", "Lunch"],
+      "ingredients": [
+        {
+          "name": "rice",
+          "quantity": 4,
+          "unit": "cups"
+        },
+        {
+          "name": "onion",
+          "quantity": 0.5,
+          "unit": "unit"
+        },
+        {
+          "name": "spam",
+          "quantity": 6,
+          "unit": "oz"
+        },
+        {
+          "name": "oil",
+          "quantity": 6,
+          "unit": "tbsp"
+        },
+        {
+          "name": "carrot",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "oyster sauce",
+          "quantity": 2.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "soy sauce",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "eggs",
+          "quantity": 2,
+          "unit": "units"
+        },
+        {
+          "name": "green onion",
+          "quantity": 1,
+          "unit": "unit"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Crack and whisk the two eggs together."
+        },
+        {
+          "step": "Heat a wok or large frying pan over medium heat. Drizzle in 2 tablespoons of oil and scramble the eggs for 30 seconds or until cooked to your preference. Set the eggs aside on a plate."
+        },
+        {
+          "step": "Dice carrots and onions "
+        },
+        {
+          "step": "Drizzle in 2 tablespoons of oil again to the wok. Fry the toughest vegetable (for this recipe it is the carrots) for a couple of minutes. Then keep frying the next tender vegetable (onions) and fry for another couple of minutes. Lastly, add in the most tender vegetable and cook for a minute. Set aside the cooked vegetables."
+        },
+        {
+          "step": "Fry the meat in the wok for a few minutes or until the meat is cooked."
+        },
+        {
+          "step": "Drizzle in 2 tablespoons of oil again to the wok. Add in the leftover rice and fry it until all of the rice has been coated in the oil. Add in the oyster sauce, shoyu, and salt. Stir fry until well combined."
+        },
+        {
+          "step": "Add everything back to the wok. Eggs, vegetables, and meat. Stir fry everything until has mixed well. Serve hot as a hearty meal or side dish. Enjoy!"
+        }
+      ]
+    },
+    {
+      "name": "Spam Musubi",
+      "picture": "https://onolicioushawaii.com/wp-content/uploads/2019/07/Spam-Musubi-recipe-1.jpg.webp",
+      "time": "30 mins",
+      "description": "Spam Musubi is a famous Hawaii snack made from Spam, rice, and nori. It's portable, affordable, and tasty! It's the most popular way to eat Spam in Hawaii.",
+      "servings": 10,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "white rice",
+          "quantity": 2,
+          "unit": "cups"
+        },
+        {
+          "name": "spam",
+          "quantity": 12,
+          "unit": "oz"
+        },
+        {
+          "name": "oil",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "nori",
+          "quantity": 5,
+          "unit": "sheets"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Wash uncooked rice, drain and rinse."
+        },
+        {
+          "step": "Bring 2 cups water to a boil in a medium saucepan. Add rice and stir. Reduce heat, cover, and simmer for 20 minutes."
+        },
+        {
+          "step": "Slice luncheon meat lengthwise into 10 slices, or to desired thickness."
+        },
+        {
+          "step": "Heat oil in a large skillet over medium-high heat. Cook slices until lightly browned, about 2 minutes per side."
+        },
+        {
+          "step": "Cut nori sheets in half and lay on a flat work surface. Place a rice press in the center of a sheet, and press rice tightly inside. Top with a slice of luncheon meat, and remove press. Wrap nori around rice, sealing edges with a small amount of water. (Rice may also be formed by hand in the shape of the meat slices and about 1-inch thick.)"
+        }
+      ]
+    },
+    {
+      "name": "Cucumber Onion Salad",
+      "picture": "https://www.thecookierookie.com/wp-content/uploads/2019/08/easy-cucumber-salad-cumcumber-onion-salad-recipe-6-of-6.jpg",
+      "time": "10 mins",
+      "description": "This is a delicious, healthy, hearty breakfast recipe. If you are not vegan, you can add fried eggs to your toast for a delicious vegetarian meal.",
+      "servings": 8,
+      "owner": "john@foo.com",
+      "author": "john",
+      "favoriteBy": [],
+      "tags": ["Vegan","Vegetarian", "Pescatarian", "Dairy-free", "Breakfast", "Lunch", "Snack"],
+      "ingredients": [
+        {
+          "name": "cucumbers",
+          "quantity": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "red onion",
+          "quantity": 1,
+          "unit": "unit"
+        },
+        {
+          "name": "apple cider vinegar",
+          "quantity": 0.3,
+          "unit": "cup"
+        },
+        {
+          "name": "water",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "sugar",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "ground black pepper",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Slice each cucumber in ¼-inch slices and add to a large bowl."
+        },
+        {
+          "step": "Slice onions into half moons"
+        },
+        {
+          "step": "Add in the sliced red onion and toss to combine"
+        },
+        {
+          "step": "In a mason jar or small bowl, whisk together the apple cider vinegar, water, sugar, salt, and pepper."
+        },
+        {
+          "step": "Pour the dressing mixture over the cucumber and onion and toss to fully coat/combine."
+        }
+      ]
+    },
+    {
+      "name": "Parmesan Potato Wedges",
+      "picture": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Parmesan-Potato-Wedges_EXPS_SDFM18_16812_D10_04_4b-14.jpg?fit=700,1024",
+      "time": "40 mins",
+      "description": "When you are craving fries but want a healthy alternative",
+      "servings": 8,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack","Vegetarian"],
+      "ingredients": [
+        {
+          "name": "parmesan",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "potato",
+          "quantity": 4,
+          "unit": "unit"
+        },
+        {
+          "name": "dried oregano",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "chilli powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat oven to 400°. "
+        },
+        {
+          "step": "Mix parmesan, salt, garlic powder, oregano and chilli powder together."
+        },
+        {
+          "step": "Cut each potato lengthwise into 8 wedges; place in a parchment-lined 15x10x1-in. pan. Spritz with cooking spray; sprinkle with cheese mixture. Bake until tender, about 30 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Spaghetti Aglio E Olio",
+      "picture": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/8/22/1/BX0707H_spaghetti-aglio-e-olio_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1487192969834.jpeg",
+      "time": "20 mins",
+      "description": "An easy pasta dinner that you can make very quickly!",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack","Dinner"],
+      "ingredients": [
+        {
+          "name": "spaghetti",
+          "quantity": 1,
+          "unit": "box"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "garlic",
+          "quantity": 8,
+          "unit": "clove"
+        },
+        {
+          "name": "oil",
+          "quantity": 0.3,
+          "unit": "cup"
+        },
+        {
+          "name": "parsley",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "parmesan",
+          "quantity": 1,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Bring a large pot of water to a boil. Add 2 tablespoons of salt and the pasta and cook according to the directions on the package. Set aside 1 1/2 cups of the pasta cooking water before you drain the pasta."
+        },
+        {
+          "step": "Meanwhile, heat the olive oil over medium heat in a pot large enough to hold the pasta, such as a 12-inch saute pan or a large, shallow pot. Add the garlic and cook for 2 minutes, stirring frequently, until it just begins to turn golden on the edges-don't overcook it! Carefully add the reserved pasta-cooking water to the garlic and oil and bring to a boil. Lower the heat, add 1 teaspoon of salt, and simmer for about 5 minutes, until the liquid is reduced by about a third."
+        },
+        {
+          "step": "Add the drained pasta to the garlic sauce and toss. Off the heat, add the parsley and Parmesan and toss well. Allow the pasta to rest off the heat for 5 minutes"
+        }
+      ]
+    },
+    {
+      "name": "Microwave Corn on the Cob",
+      "picture": "https://www.allrecipes.com/thmb/IAUKonQ2zGoRKoTdlXe2fWdBsko=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Screen-Shot-2022-08-17-at-12.31.01-PM-cddd7a58c4564f649cdcc39b8dd29c3e.png",
+      "time": "5 mins",
+      "description": "Microwave corn on the cob quickly and easily, with only a microwave!",
+      "servings": 1,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack","Vegetarian","Vegan"],
+      "ingredients": [
+        {
+          "name": "corn",
+          "quantity": 1,
+          "unit": "ear"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Remove the husk and silk from corn."
+        },
+        {
+          "step": "Wrap a moist paper towel around the corn and place it on a microwave-safe plate."
+        },
+        {
+          "step": "Microwave until the kernels are tender, but still crisp (three to five minutes)."
+        }
+      ]
+    },
+    {
+      "name": "Tasty 2-Step Chicken Bake",
+      "picture": "https://www.campbells.com/wp-content/uploads/2021/07/Tasty2StepChickenBake_wide.jpg",
+      "time": "30 mins",
+      "description": "Super easy with only 2 ingredients!",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 1.25,
+          "unit": "lb"
+        },
+        {
+          "name": "Cream of Mushroom Soup",
+          "quantity": 10.5,
+          "unit": "oz"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Heat the oven to 400°F.   While the oven is heating, season the chicken with salt and pepper.  Place the chicken into an 8x8x2-inch baking dish.  Spread the soup over the chicken.  Cover the baking dish."
+        },
+        {
+          "step": "Bake for 25 minutes or until the chicken is done."
+        }
+      ]
+    },
+    {
+      "name": "Baked Banana Chips",
+      "picture": "https://www.allrecipes.com/thmb/VXHf-9KgFMuOOEabuWFOLcPWQcE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4577553-a46106cf85c44818872e34ccf241fbda.jpg",
+      "time": "2 hr",
+      "description": "Simple and easy crispy banana chips",
+      "servings": 2,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack","Vegan","Vegetarian"],
+      "ingredients": [
+        {
+          "name": "banana",
+          "quantity": 2,
+          "unit": "unit"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Slice bananas into 1/10 inch pieces"
+        },
+        {
+          "step": "Preheat the oven to 225 degrees F (110 degrees C). Line a baking sheet with parchment paper."
+        },
+        {
+          "step": "Spread banana slices out onto the prepared baking sheet, making sure slices are not touching. Brush with lemon juice."
+        },
+        {
+          "step": "Bake in the preheated oven for 90 minutes. Check bananas, lifting slices up to separate from the paper once or twice. Continue baking until bananas are dried out, 30 to 90 minutes more."
+        },
+        {
+          "step": "Let bananas cool until crispy, at least 5 minutes."
+        }
+      ]
+    },
+    {
+      "name": "Quick-n'-Easy Chicken Cheesesteak",
+      "picture": "https://www.allrecipes.com/thmb/09X54MlUMlh1YgnpI9Ty-qRsY3k=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3659739-3c420e73bbd949d48af2b82f5d65124a.jpg",
+      "time": "5 mins",
+      "description": "A chicken cheesesteak sandwich made with just 3 ingredients and ready in less than 5 minutes. Add sautéed bell peppers and onions if desired.",
+      "servings": 1,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "canned chicken",
+          "quantity": 5,
+          "unit": "oz"
+        },
+        {
+          "name": "cheddar cheese",
+          "quantity": 1,
+          "unit": "slice"
+        },
+        {
+          "name": "hamburger bun",
+          "quantity": 1,
+          "unit": "bun"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Warm chicken in a nonstick skillet over medium heat, until heated through, about 3 minutes"
+        },
+        {
+          "step": "Scrape chicken into the center of the pan to form a shape similar to the bun. Cut cheddar cheese slice in half and place over chicken; cook until cheddar is melted, 1 to 2 minutes."
+        },
+        {
+          "step": "Place chicken and cheese mixture onto the one half of hamburger bun. Top it with the other half"
+        }
+      ]
+    },
+    {
+      "name": "Tuna Mayo Onigiri",
+      "picture": "https://www.abeautifulplate.com/wp-content/uploads/2017/08/spicy-tuna-onigiri-3.jpg",
+      "time": "30 mins",
+      "description": "Sushi on a budget, this filling dish will be sure to fix your sushi cravings!",
+      "servings": 3,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "canned tuna",
+          "quantity": 3,
+          "unit": "oz"
+        },
+        {
+          "name": "mayo",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "name": "white rice",
+          "quantity": 1.5,
+          "unit": "cups"
+        },
+        {
+          "name": "soy sauce",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Wash and cook the rice."
+        },
+        {
+          "step": "While the rice cooks, open the can of tuna and drain out any excess liquid. Add the tuna to a bowl along with the mayonnaise and soy sauce. Mix well to form a uniform paste."
+        },
+        {
+          "step": "Prepare a bowl of water and a small bowl of salt."
+        },
+        {
+          "step": "When the rice is cooked, stir it to fluff and then transfer it to a bowl to cool slightly and cover it with a damp towel to keep it from drying out."
+        },
+        {
+          "step": "When the rice is cool enough to handle but still on the hot side, wet your hands in the water bowl. Dab your index finger in the bowl of salt and rub the salt around your hands."
+        },
+        {
+          "step": "Working quickly, scoop ⅙ of the rice into your non-dominant hand and make a little well in the center of the rice."
+        },
+        {
+          "step": "Add about 2 teaspoons of tuna mayo filling into the well and cover the tuna with the surrounding rice."
+        },
+        {
+          "step": "Cup the hand holding the rice like a taco and then use 2-3 fingers of your opposite hand to shape the rice into a triangle."
+        },
+        {
+          "step": "Toss the rice ball onto another side and then repeat the cupping and shaping step. Repeat until the onigiri is the desired shape."
+        }
+      ]
+    },
+    {
+      "name": "Fried Bacon-Wrapped Enoki Mushrooms",
+      "picture": "https://cdn-0.magicskillet.com/wp-content/uploads/2018/09/fried-bacon-wrapped-enoki-mushrooms-recipe.jpg?_ga=2.240033923.1402795265.1682925408-171728066.1682925408&_gl=1*1eqj0mb*_ga*MTcxNzI4MDY2LjE2ODI5MjU0MDg.*_ga_1XSE09HBYJ*MTY4MjkyNTQwOC4xLjEuMTY4MjkyNTQ0My4wLjAuMA..",
+      "time": "15 mins",
+      "description": "This is one of the popular appetizers! Enoki mushrooms have a mild, savory taste and crunchy texture. These mushrooms look like a cluster of small flower buds and reputed to have many healthful properties.",
+      "servings": 12,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Dinner","Lunch","Snack"],
+      "ingredients": [
+        {
+          "name": "enoki mushrooms",
+          "quantity": 6,
+          "unit": "oz"
+        },
+        {
+          "name": "halved bacon",
+          "quantity": 12,
+          "unit": "slice"
+        },
+        {
+          "name": "unsalted butter",
+          "quantity": 0.25,
+          "unit": "piece"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Wash enoki mushrooms under cold running water. Cut off the root parts, then separate mushrooms into 12 bunches."
+        },
+        {
+          "step": "In a medium nonstick skillet, heat the butter over medium heat. Add enoki wraps and cook, turning once, until bacon turns golden brown, for about 4 minutes."
+        },
+        {
+          "step": "Remove cooked enoki wraps from the skillet. Drain on the paper towels. Serve immediately."
+        }
+      ]
+    },
+    {
+      "name": "Air Fryer Roasted Lemony Fish Fillets",
+      "picture": "https://cdn-0.magicskillet.com/wp-content/uploads/2022/05/air-fryer-roasted-lemony-fish-fillets.jpg?_ga=2.180126116.1402795265.1682925408-171728066.1682925408&_gl=1*w19s78*_ga*MTcxNzI4MDY2LjE2ODI5MjU0MDg.*_ga_1XSE09HBYJ*MTY4MjkzNDUyMy4zLjEuMTY4MjkzNDU5MS4wLjAuMA..",
+      "time": "18 mins",
+      "description": "Air fryer roasted lemony fish fillets. It might seem like a simple kitchen hack, but the air fryer is the best way to roast fish. It’s safer than using a deep fryer, and it creates less grease.",
+      "servings": 4,
+      "owner": "chris@foo.com",
+      "author": "Chris",
+      "favoriteBy": [],
+      "tags": ["Dinner"],
+      "ingredients": [
+        {
+          "name": "lemon juice",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "quantity": 1.5,
+          "unit": "tbsp"
+        },
+        {
+          "name": "kosher salt freshly ground black pepper",
+          "quantity": 0.50,
+          "unit": "tsp"
+        },
+        {
+          "name": "skinless white fish fillets",
+          "quantity": 4,
+          "unit": "piece"
+        },
+        {
+          "name": "Dijon mustard",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Spray the top of the fish ( I used cod fillets) with olive oil and sprinkle with lemon juice. Season with salt and black pepper. Spread the Dijon mustard on top of the fillets."
+        },
+        {
+          "step": "Preheat your air fryer to 400 F (200 C) for 5 minutes."
+        },
+        {
+          "step": "Working in batches, place the fillets in the air fryer basket in a single layer. Fry at 375 F (190 C) for 7-8 minutes. Repeat with the remaining fillets. Serve immediately."
+        }
+      ]
+    },
+    {
+      "name": "Slow Cooker Caramel Flan",
+      "picture": "https://cdn-0.magicskillet.com/wp-content/uploads/2022/10/slow-cooker-caramel-flan-recipe.jpg?_ga=2.218406937.1402795265.1682925408-171728066.1682925408&_gl=1*42l4o1*_ga*MTcxNzI4MDY2LjE2ODI5MjU0MDg.*_ga_1XSE09HBYJ*MTY4MjkzNDUyMy4zLjEuMTY4MjkzNTM0Ny4wLjAuMA..",
+      "time": "2 hrs 30 mins",
+      "description": "Flan is a traditional Spanish and Latin American dessert recipe that is often prepared with eggs, sugar, and milk. The slow cooker is an excellent way to prepare this dessert because it allows the custard to cook slowly without the risk of burning.",
+      "servings": 4,
+      "owner": "chris@foo.com",
+      "author": "Chris",
+      "favoriteBy": [],
+      "tags": ["Breakfast", "Snack"],
+      "ingredients": [
+        {
+          "name": "whole milk",
+          "quantity": 2.5,
+          "unit": "cup"
+        },
+        {
+          "name": "sugar",
+          "quantity": 0.6,
+          "unit": "cup"
+        },
+        {
+          "name": "eggs lightly beaten",
+          "quantity": 3,
+          "unit": "piece"
+        },
+        {
+          "name": "vanilla extract",
+          "quantity": 2,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Melt 1/3 cup sugar in a small nonstick skillet over medium heat, stirring occasionally, until it turns golden. Quickly pour the syrup into the bottom of a 1-quart (1 L) souffle dish. Tilt the bottom to spread the caramel. Set it aside and allow it to cool."
+        },
+        {
+          "step": "In the same skillet, heat the milk and the remaining 1/3 cup of sugar until steaming and beginning to bubble at the edges. Whisk the milk mixture into eggs and vanilla. Pour into the souffle dish over caramel."
+        },
+        {
+          "step": "Place the souffle dish on a rack in a 6-quart (6 L0 slow cooker. Add 1-inch (2.5 cm) of hot water to the slow cooker."
+        },
+        {
+          "step": "Cover the pot and cook on a low-heat setting for 1½-2 hours, or until the custard is set and a sharp knife inserted halfway in the center comes out clean."
+        },
+        {
+          "step": "Turn off the cooker and open the lid. Remove the souffle dish and transfer it to a wire rack. Cool, then refrigerate for at least 8 hours or overnight. To unmold, just loosen the edge of the custard with a sharp knife. Place a rimmed serving dish over the souffle dish and invert. Enjoy!"
+        }
+      ]
+    },
+    {
+      "name": "Basic Mashed Potatoes",
+      "picture": "https://www.allrecipes.com/thmb/hb2bnoBuQGhvJYTRUGu6prcUEo4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/24771-basic-mashed-potatoes-mfs318-ed832ab37551471cba0997410217d4c5.jpg",
+      "time": "35 mins",
+      "description": "Made with Idaho potatoes, milk, butter, and optional garlic, this go-to recipe for simple, homemade mashed potatoes is a classic holiday dish.",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Breakfast", "Snack"],
+      "ingredients": [
+        {
+          "name": "baking potatoes, peeled and quartered",
+          "quantity": 2,
+          "unit": "pound"
+        },
+        {
+          "name": "milk",
+          "quantity": 1,
+          "unit": "cup"
+        },
+        {
+          "name": "butter",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt and ground black pepper",
+          "quantity": 1,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Bring a large pot of salted water to a boil. Add potatoes and garlic, lower heat to medium, and simmer until potatoes are tender, 15 to 20 minutes."
+        },
+        {
+          "step": "When the potatoes are almost finished, heat milk and butter in a small saucepan over low heat until butter is melted."
+        },
+        {
+          "step": "Drain potatoes and return to the pot."
+        },
+        {
+          "step": "Slowly add warm milk mixture, blending it in with a potato masher or electric mixer until potatoes are smooth and creamy. Season with salt and pepper."
+        }
+      ]
+    },
+    {
+      "name": "Oyakodon",
+      "picture": "https://www.allrecipes.com/thmb/jqIbef6OL9JY8H34QtHUs4c6tv8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3963616-oyakodon-japanese-chicken-and-egg-rice-bowl-iYing-4x3-1-60750fbc4fd94b5b9fa0eb3902d13bee.jpg",
+      "time": "40 mins",
+      "description": "Oyakodon is a delicious traditional Japanese meal consisting of chicken sautéed and then cooked in a Japanese broth, and then finished with egg and served over rice. It's really easy, filling, and delicious.",
+      "servings": 4,
+      "owner": "chris@foo.com",
+      "author": "Chris",
+      "favoriteBy": [],
+      "tags": ["Lunch", "Dinner"],
+      "ingredients": [
+        {
+          "name": "olive oil",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "skinless, boneless chicken thighs, cut into small pieces",
+          "quantity": 4,
+          "unit": "piece"
+        },
+        {
+          "name": "onion, cut in half and sliced",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "name": "dashi stock, made with dashi powder",
+          "quantity": 2,
+          "unit": "cup"
+        },
+        {
+          "name": "soy sauce",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "mirin (Japanese rice wine)",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "name": "brown sugar",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "name": "large eggs",
+          "quantity": 4,
+          "unit": "piece"
+        },
+        {
+          "name": "hot cooked white rice",
+          "quantity": 4,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Heat oil in a large skillet over medium heat. Add chicken and cook until beginning to brown, about 5 minutes. Add onion; cook and stir until onion is translucent, about 5 minutes.    Pour in stock, then whisk in soy sauce, mirin, and brown sugar; stir until sugar dissolves. Bring to a boil, then lower heat and simmer until slightly reduced, about 10 minutes."
+        },
+        {
+          "step": "Whisk eggs in a bowl until well-beaten, then pour into the hot stock mixture. Cover the skillet, reduce the heat, and steam until egg is cooked, about 5 minutes. Remove from the heat."
+        },
+        {
+          "step": "Divide rice among 4 deep soup bowls and top with equal amounts of the soup mixture."
+        }
+      ]
+    },
+    {
+      "name": "Easy Sesame Chicken",
+      "picture": "https://www.allrecipes.com/thmb/Hp8OioZREPjT1tsKvNcyPODzZfk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8502498_Easy-Sesame-Chicken_CookingWithSheila_4x3-cf87d01e127145c5bdc926053d39fac0.jpg",
+      "time": "22 mins",
+      "description": "This sweet and savory dish is simple to make and budget-friendly. Add broccoli and serve over rice or noodles for a complete meal.",
+      "servings": 6,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Lunch", "Dinner"],
+      "ingredients": [
+        {
+          "name": "cornstarch",
+          "quantity": 0.5,
+          "unit": "cup"
+        },
+        {
+          "name": "salt",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "freshly ground black pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "skinless, boneless chicken breast halves, cut into bite-sized pieces",
+          "quantity": 4,
+          "unit": "piece"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "honey",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "reduced-sodium soy sauce",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "rice vinegar",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "chile-garlic sauce",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "garlic, chopped",
+          "quantity": 2,
+          "unit": "slice"
+        },
+        {
+          "name": "minced fresh ginger root",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "sesame oil",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "roasted sesame seeds, divided",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "name": "green onions, chopped",
+          "quantity": 2,
+          "unit": "piece"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Whisk cornstarch, salt, and black pepper together in a large bowl; add chicken and toss to coat."
+        },
+        {
+          "step": "Heat oil in a skillet over medium-high heat. Fry chicken in batches, turning occasionally, until lightly browned, about 5 minutes."
+        },
+        {
+          "step": "Whisk together honey, soy sauce, rice vinegar, chile-garlic sauce, garlic, ginger, sesame oil, and 1 tablespoon sesame seeds in a small bowl."
+        },
+        {
+          "step": "Pour sauce over chicken in the skillet; toss to coat chicken. Reduce heat to medium-low; simmer until sauce thickens and chicken is no longer pink in the center and the juices run clear, about 2 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C), about 2 minutes."
+        },
+        {
+          "step": "Sprinkle with remaining 1 tablespoon sesame seeds and chopped green onions."
+        }
+      ]
+    },
+    {
+      "name": "Special Fried Rice",
+      "picture": "https://www.allrecipes.com/thmb/NjOFvwcA7Iq7VEbVHCGyfPX36l4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/2507550-0c2048ad026e487da25e8e1813282227.jpg",
+      "time": "30 mins",
+      "description": "This special fried rice is a variation of the typical restaurant-style fried rice and is sure to be a hit! Any cooked meat can be added, but it tastes great with shrimp, bacon, Spam, ham, Chinese sausage, or pork.",
+      "servings": 2,
+      "owner": "chris@foo.com",
+      "author": "Chris",
+      "favoriteBy": [],
+      "tags": ["Lunch", "Dinner"],
+      "ingredients": [
+        {
+          "name": "canola oil",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "egg",
+          "quantity": 2,
+          "unit": "piece"
+        },
+        {
+          "name": "water",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "sesame oil",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "onion",
+          "quantity": 0.50,
+          "unit": "piece"
+        },
+        {
+          "name": "garlic, minced",
+          "quantity": 1,
+          "unit": "slice"
+        },
+        {
+          "name": "frozen peas and carrots, thawed and patted dry with paper towel",
+          "quantity": 0.25,
+          "unit": "cup"
+        },
+        {
+          "name": "cold cooked jasmine rice",
+          "quantity": 2,
+          "unit": "cup"
+        },
+        {
+          "name": "light soy sauce",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "fish sauce",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "white sugar",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "ground white pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Heat 2 teaspoons canola oil in a large wok or skillet over high heat until smoking."
+        },
+        {
+          "step": "Beat eggs and water together in a bowl until smooth. Pour beaten egg mixture into the skillet, let it cook in the oil briefly to begin to firm, and then scramble lightly with a wooden spoon until the eggs are cooked and shiny, 2 to 3 minutes. Remove cooked eggs to a plate."
+        },
+        {
+          "step": "Pour 1 teaspoon sesame oil into the hot pan. Add enough canola oil to cover the cooking surface of the pan and heat to smoking. Sauté onion and garlic in oil until fragrant, 1 to 2 minutes; add peas and carrots and cook until hot, 1 to 2 minutes more. Return cooked eggs to the pan."
+        },
+        {
+          "step": "Gradually add rice to the skillet, tossing chunks to break into individual grains and mixing with vegetables; cook and stir until the rice starts to turn a light brown color and is completely hot, 2 to 3 minutes."
+        },
+        {
+          "step": "Stir Sriracha sauce, soy sauce, fish sauce, sugar, salt, white pepper, and monosodium glutamate into the rice mixture; continue to cook and stir until the grains of rice are no longer sticking together, 2 to 3 minutes more. Remove pan from heat. Sprinkle green onion and cilantro over rice; toss to mix."
+        },
+        {
+          "step": "Peel outside skin of cucumber with vegetable shredder to create a ragged design on the outside. Slice cucumber diagonally and arrange in a circle around a serving platter. Serve rice in the middle of the platter; top with additional green onion and white pepper."
+        }
+      ]
+    },
+    {
+      "name": "Roasted Garlic Lemon Broccoli",
+      "picture": "https://www.allrecipes.com/thmb/bmG-FrUKMg-WOMuKY6Kz98sezGQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/5521411-roasted-garlic-lemon-broccoli-jewels-1x1-1-22ed72a9a1b543159fa4fda5aad56995.jpg",
+      "time": "25 mins",
+      "description": "Florets are roasted after being tossed in olive oil and sprinkled with sea salt, freshly ground black pepper, and minced garlic. A squeeze of lemon juice before serving seals the deal.",
+      "servings": 6,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Lunch", "Snack", "Breakfast", "Vegan"],
+      "ingredients": [
+        {
+          "name": "broccoli, separated into florets",
+          "quantity": 2,
+          "unit": "piece"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "sea salt",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "ground black pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "garlic, minced",
+          "quantity": 1,
+          "unit": "slice"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Preheat the oven to 400 degrees F (200 degrees C)."
+        },
+        {
+          "step": "Toss broccoli florets with extra virgin olive oil, sea salt, pepper, and garlic in a large bowl. Spread the broccoli out in an even layer on a baking sheet."
+        },
+        {
+          "step": "Bake in the preheated oven until florets are tender enough to pierce the stems with a fork, 15 to 20 minutes. Remove and transfer to a serving platter."
+        },
+        {
+          "step": "Squeeze lemon juice liberally over broccoli before serving for a refreshing, tangy finish."
+        }
+      ]
+    },
+    {
+      "name": "Chef John's New Orleans-Style Barbequed Shrimp",
+      "picture": "https://www.allrecipes.com/thmb/mMhT9h4ocPmri1yym1ZxQNiyg-0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3550201-chef-johns-new-orleans-style-barbequed-shrimp-Eat-1x1-1-d85b053ec62a4b63ba2f47f75e0d9c8e.jpg",
+      "time": "2 hrs 20 mins",
+      "description": "This indigenous American shellfish dish, cooked on the stovetop, has plenty of big flavors from garlic, rosemary, and freshly cracked black pepper. Serve over hot cooked rice. Use the largest shrimp you can get.",
+      "servings": 4,
+      "owner": "chris@foo.com",
+      "author": "Chris",
+      "favoriteBy": [],
+      "tags": ["Dinner"],
+      "ingredients": [
+        {
+          "name": "freshly ground black pepper",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "smoked paprika",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "cayenne pepper",
+          "quantity": 0.1,
+          "unit": "tsp"
+        },
+        {
+          "name": "butter",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "name": "chicken stock",
+          "quantity": 2,
+          "unit": "cup"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Worcestershire sauce",
+          "quantity": 2,
+          "unit": "tbsp"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Peel shrimp and place into a mixing bowl; set shrimp shells aside in a saucepan."
+        },
+        {
+          "step": "Drizzle vegetable oil over shrimp and season with black pepper, smoked paprika, cayenne pepper, and seafood seasoning. Mix shrimp to coat with spices and cover bowl with plastic wrap; refrigerate shrimp to absorb flavors, at least 1 hour."
+        },
+        {
+          "step": "Place reserved shrimp shells in saucepan over medium-high heat with 1 tablespoon butter; cook and stir until shells are pink and fragrant, 1 to 2 minutes. Pour in chicken stock, bring to a boil, and reduce heat to low; simmer until shrimp shells have given off their flavor, 20 to 30 minutes."
+        },
+        {
+          "step": "Strain shrimp stock through a fine mesh strainer into a bowl and add lemon juice, Worcestershire sauce, and hot sauce. Stir to combine."
+        },
+        {
+          "step": "Place a large skillet over high heat until pan is very hot; sear shrimp in the very hot, dry pan until shrimp are browned, about 1 minute per side."
+        },
+        {
+          "step": "Stir 3 tablespoons cold butter, garlic, and minced rosemary into shrimp; cook and stir until shrimp are opaque in the middle and garlic is fragrant, 1 minute. Pour in shrimp stock."
+        },
+        {
+          "step": "Transfer shrimp from skillet to a bowl, using a slotted spoon; reserve sauce in skillet. Bring sauce to a boil and cook until reduced slightly, about 5 minutes. Adjust seasoning to taste. Return shrimp to pan, reduce heat to low, and warm through, about 1 minute. Serve shrimp drizzled with pan sauce; garnish with a rosemary sprig."
+        }
+      ]
+    },
+    {
+      "name": "Sarah's Ambrosia Fruit Salad",
+      "picture": "https://www.allrecipes.com/thmb/PX5kg9pE2UPck0EnZNXuMuOiEuM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1085529-826863652d634446956e5ffb7df5da63.jpg",
+      "time": "2 hrs 25 mins",
+      "description": "It's a great refreshing fruit salad for every occasion, especially summer months and hot days.",
+      "servings": 4,
+      "owner": "john@foo.com",
+      "author": "John",
+      "favoriteBy": [],
+      "tags": ["Lunch", "Snack", "Breakfast", "Vegan"],
+      "ingredients": [
+        {
+          "name": "pineapple tidbits, drained",
+          "quantity": 20,
+          "unit": "oz"
+        },
+        {
+          "name": "mandarin oranges, drained",
+          "quantity": 15,
+          "unit": "oz"
+        },
+        {
+          "name": "sour cream",
+          "quantity": 16,
+          "unit": "oz"
+        },
+        {
+          "name": "miniature marshmallows\n",
+          "quantity": 10.5,
+          "unit": "oz"
+        },
+        {
+          "name": "shredded coconut",
+          "quantity": 0.75,
+          "unit": "cup"
+        }
+      ],
+      "instructions": [
+        {
+          "step": "Mix pineapple, oranges, sour cream, marshmallows, and coconut together in a bowl. Cover bowl with plastic wrap and refrigerate until flavors blend, 2 hours to overnight."
         }
       ]
     }

@@ -1,72 +1,70 @@
 import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { useTracker } from 'meteor/react-meteor-data';
 import { Col, Container, Pagination, Row, Table } from 'react-bootstrap';
 import { _ } from 'meteor/underscore';
-import { Inventory } from '../../api/vendor/VendorInventory';
-import LoadingSpinner from '../components/LoadingSpinner';
-import IngredientAdmin from '../components/IngredientAdmin';
-/* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+import { useTracker } from 'meteor/react-meteor-data';
+import LoadingSpinner from './LoadingSpinner';
+import { Profiles } from '../../api/profiles/Profiles';
+import ProfileItem from './Profiles';
 
-const InventoryView = () => {
+/* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+const ListUsers = () => {
   const [activePage, setActivePage] = useState(1);
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { ingredients, ready } = useTracker(() => {
+  const { ready, profiles } = useTracker(() => {
     // Note that this subscription will get cleaned up
     // when your component is unmounted or deps change.
     // Get access to Stuff documents.
-    const subscription = Meteor.subscribe(Inventory.userPublicationName);
+    const subscription = Meteor.subscribe(Profiles.adminPublicationName);
     // Determine if the subscription is ready
     const rdy = subscription.ready();
     // Get the Stuff documents
-    const vendorIngredients = _.sortBy(Inventory.collection.find().fetch(), 'name');
-    // console.log(vendorIngredients);
+    const profileItems = _.sortBy(Profiles.collection.find({}).fetch(), 'email');
     return {
-      ingredients: vendorIngredients,
+      profiles: profileItems,
       ready: rdy,
     };
   }, []);
 
   const indexOfLastItem = activePage * 10;
   const indexOfFirstItem = indexOfLastItem - 10;
-  const currentItems = ingredients.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = profiles.slice(indexOfFirstItem, indexOfLastItem);
 
   const handlePageChange = (pageNumber) => {
     setActivePage(pageNumber);
   };
 
-  const paginationItems = _.range(1, Math.ceil(ingredients.length / 10) + 1).map((i) => (
+  const paginationItems = _.range(1, Math.ceil(profiles.length / 10) + 1).map((i) => (
     <Pagination.Item key={i} active={i === activePage} onClick={() => handlePageChange(i)}>
       {i}
     </Pagination.Item>
   ));
-
   return (ready ? (
-    <Container fluid className="py-3" id="admin-inventory-page">
+    <Container className="py-3">
       <Row className="justify-content-center">
         <Col xs={10} className="text-center">
-          <h2>Vendor Inventory</h2>
+          <h2>Users</h2>
         </Col>
       </Row>
       <Row>
         <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Vendor</th>
-              <th>Item</th>
-              <th>Price ($)</th>
-              <th>Size</th>
+              <th>Email</th>
+              <th>Role</th>
               <th>Edit</th>
+              <th>Vendor Request</th>
               <th>Delete</th>
             </tr>
           </thead>
           <tbody>
-            {currentItems.map((item, idx) => <IngredientAdmin idx={idx} key={item._id} ingredient={item} />)}
+            {currentItems.map((prof, idx) => <ProfileItem key={prof._id} prof={prof} idx={idx} />)}
           </tbody>
         </Table>
-        <Pagination size="sm" className="flex-wrap my-3">{paginationItems}</Pagination>
       </Row>
+      <Pagination className="my-3 flex-wrap">{paginationItems}</Pagination>
     </Container>
   ) : <LoadingSpinner />);
 };
-export default InventoryView;
+
+export default ListUsers;

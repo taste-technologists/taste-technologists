@@ -33,10 +33,10 @@ const AddVendor = () => {
   return (
     <Container className="py-3" id="add-vendor-page">
       <Row className="justify-content-center">
-        <Col xs={5}>
+        <Col xs={10}>
           <Col className="text-center"><h2>Add Vendor</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
-            <Card>
+            <Card className="uniform">
               <Card.Body>
                 <TextField name="name" id="add-vendor-form-name" label="Store" showInlineError />
                 <TextField name="hours" id="add-vendor-form-hours" label="Hours of Operation" showInlineError />

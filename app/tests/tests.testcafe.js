@@ -19,17 +19,22 @@ import { myrecipePage } from './myrecipe.page';
 import { favoritesPage } from './favorites.page';
 import { myreviewsPage } from './myreviews.page';
 import { reviewMenu } from './review.component';
+import { adminRecipes } from './admin.recipes.component';
+import { adminReviews } from './admin.reviews.component';
+import { admineditrecipePage } from './admineditrecipe.page';
+import { adminEditInventoryPage } from './admineditinventory.page';
+import { adminGenPage } from './admin.gen.page';
 
 /* global fixture:false, test:false */
 
 /** Credentials for one of the sample users defined in settings.development.json. */
 // const credentials = { username: 'john@foo.com', password: 'changeme' };
-const signupCredentials = { name: 'christi', vendor: 'No', email: 'clyyoung', password: 'changeme' };
+const signupCredentials = { name: 'Aaa', vendor: 'No', email: 'a@a.a', password: 'changeme' };
 const recipe = { name: 'Creamy Pesto Penne with Sausage', picture: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F3783692.jpg&q=60&c=sc&orient=true&poi=auto&h=512',
   time: '25 min', servings: '2', description: 'Quick weeknight dinner.',
   ingredientsQuantity: '16', ingredientsUnit: 'oz', ingredientsName: 'penne pasta', instructions: 'Make the dish', tags: 'Snack' };
 const credentials = { username: 'admin@foo.com', password: 'changeme' };
-const vendor = { name: 'Safeway', hours: '24 Hours', location: '2855 E Manoa Rd, Honolulu, HI 96822' };
+const vendor = { name: 'Aaaa', hours: '24 Hours', location: '2855 E Manoa Rd, Honolulu, HI 96822' };
 
 fixture('meteor-application-template-react localhost test with default db')
   .page('http://localhost:3000');
@@ -75,6 +80,7 @@ test('Test the inventory page and its functionalities', async (testController) =
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.gotoListVendorPage(testController);
   await listvendorPage.gotoInventoryPage(testController);
+  await editInventoryPage.deleteIngredient(testController);
   await editInventoryPage.editInventory(testController);
   await navBar.gotoListVendorPage(testController);
   await listvendorPage.gotoInventoryPage2(testController);
@@ -83,7 +89,6 @@ test('Test the inventory page and its functionalities', async (testController) =
   await listvendorPage.gotoInventoryPage(testController);
   await editInventoryPage.goToAddInventory(testController);
   await addInventory.addItem(testController);
-  await navBar.gotoListVendorPage(testController);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
 });
@@ -105,22 +110,62 @@ test('Test add recipe form', async (testController) => {
   await addrecipePage.addRecipe(testController, recipe.name, recipe.picture, recipe.time, recipe.servings, recipe.description, recipe.ingredientsQuantity, recipe.ingredientsUnit, recipe.ingredientsName, recipe.instructions);
 });
 
-test('Test the listprofilesadmin page and all of its functions work', async (testController) => {
+test('Test the listprofilesadmin page and profile functions', async (testController) => {
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
   await navBar.goToAdminDashboard(testController);
   await adminPage.isDisplayed(testController);
   await adminPage.hasTable(testController);
+  await adminPage.deleteUser(testController);
+  await adminPage.goToAdminEdit(testController);
+  await adminEditPage.editProfile(testController);
+});
+test('Test admin recipes functionality', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.goToAdminDashboard(testController);
+  await adminPage.isDisplayed(testController);
+  await adminPage.goToAdminRecipes(testController);
+  await adminRecipes.isDisplayed(testController);
+  await adminRecipes.hasTable(testController);
+  await adminRecipes.deleteRecipe(testController);
+  await adminRecipes.gotoAdminRecEdit(testController);
+  await admineditrecipePage.isDisplayed(testController);
+  await admineditrecipePage.editRecipe(testController, recipe.name, recipe.picture, recipe.time, recipe.servings, recipe.description, recipe.ingredientsQuantity, recipe.ingredientsUnit, recipe.ingredientsName, recipe.instructions);
+});
+test('Test admin inventory functionality', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.goToAdminDashboard(testController);
   await adminPage.goToAdminInventory(testController);
   await adminInventory.isDisplayed(testController);
   await adminInventory.hasTable(testController);
+  await adminInventory.deleteIngredient(testController);
+  await adminEditInventoryPage.editInventory(testController);
+});
+test('Test admin review functionality', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
   await navBar.goToAdminDashboard(testController);
-  await adminPage.deleteUser(testController);
-  await adminPage.goToAdminEdit(testController);
-  await adminEditPage.isDisplayed(testController);
-  await adminEditPage.editProfile(testController);
+  await adminPage.isDisplayed(testController);
+  await adminPage.goToAdminGen(testController);
+  await adminGenPage.isDisplayed(testController);
+  await adminGenPage.genReviews(testController);
   await navBar.goToAdminDashboard(testController);
+  await adminPage.goToAdminReviews(testController);
+  await adminReviews.isDisplayed(testController);
+  await adminReviews.hasTable(testController);
+  await adminReviews.deleteReview(testController);
+  await adminPage.goToAdminGen(testController);
+  await adminGenPage.wipeReviews(testController);
+  await navBar.goToAdminDashboard(testController);
+  await adminPage.goToAdminReviews(testController);
+  await adminReviews.isDisplayed(testController);
+  await adminReviews.hasTable2(testController);
 });
 
 test('Test the List, Add, and Edit Vendor pages', async (testController) => {
@@ -151,6 +196,13 @@ test('Test that MyRecipes and Favorites Pages works', async (testController) => 
   await favoritesPage.isDisplayed(testController);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
+});
+
+test('Test that the delete recipe button works on My Recipes page', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoMyRecipePage(testController);
+  await myrecipePage.deleteRecipe(testController);
 });
 
 test('Test that review component and MyReview page work', async (testController) => {

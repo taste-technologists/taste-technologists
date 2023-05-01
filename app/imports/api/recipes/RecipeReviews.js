@@ -24,7 +24,6 @@ class RecipeReviewsCollection {
       'review.$.user': String,
       'review.$.comment': String,
       'review.$.created': Date,
-      'review.$.edited': Date,
     });
 
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

@@ -1,89 +1,119 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
-import { Card, Col, Container, Row, Table } from 'react-bootstrap';
-import { BasketFill, PersonFill, FileTextFill } from 'react-bootstrap-icons';
+import { _ } from 'meteor/underscore';
+import { Col, Container, Row, Button } from 'react-bootstrap';
+import { BasketFill, PersonFill, FileTextFill, StarFill, KeyFill } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
-import ProfileItem from '../components/Profiles';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import { Profiles } from '../../api/profiles/Profiles';
+import InventoryView from './InventoryView';
+import ListRecipes from '../components/ListRecipes';
+import ListUsers from '../components/ListUsers';
+import { RecReviews } from '../../api/recipes/RecipeReviews';
+import ListReviews from '../components/ListReviews';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItemAdmin> to render each row. */
 const ListProfilesAdmin = () => {
+
+  const [view, setView] = useState('default');
+
+  const handleCardClick = (viewName) => {
+    setView(viewName);
+  };
+
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
-  const { profile, ready } = useTracker(() => {
+  const { ready, reviews, profiles, recipes, inventory } = useTracker(() => {
     // Get access to Stuff documents.
     const subscription = Meteor.subscribe(Profiles.adminPublicationName);
-    const subscription2 = Meteor.subscribe(Recipes.generalPublicationName);
+    const subscription2 = Meteor.subscribe(Recipes.adminPublicationName);
     const subscription3 = Meteor.subscribe(Inventory.userPublicationName);
+    const subscription4 = Meteor.subscribe(RecReviews.generalPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready();
-    // Get the Users and Roles
-    const users = Profiles.collection.find({}).fetch();
-
+    const rdy = subscription.ready() && subscription2.ready() && subscription3.ready() && subscription4.ready();
+    const reviewItems = _.sortBy(RecReviews.collection.find({ review: { $exists: true, $not: { $size: 0 } } }).fetch(), 'name');
+    const profileItems = Profiles.collection.find();
+    const recipeItems = Recipes.collection.find();
+    const inventoryItems = Inventory.collection.find();
     return {
-      profile: users,
+      reviews: _.pluck(reviewItems, 'review').flat(),
       ready: rdy,
+      profiles: profileItems.count(),
+      recipes: recipeItems.count(),
+      inventory: inventoryItems.count(),
     };
   }, []);
+
+  const sum = reviews.length;
+
+  // console.log(reviews);
+
+  // Define the styles for smaller screens using media queries
+
   return (ready ? (
     <Container className="py-3" id="admin-page">
       <Row className="justify-content-center">
-        <Col md={7}>
+        <Col md={10}>
           <Col className="text-center"><h2>Admin Dashboard</h2></Col>
-          <Row className="justify-content-center">
-            <Col className="text-center">
-              <Card
-                bg="primary"
+          <Row className="justify-content-center text-center flex-nowrap">
+            <Col className="pe-1">
+              <Button
+                onClick={() => handleCardClick('default')}
+                variant="primary"
                 key="primary"
                 text="white"
-                className="mb-2"
+                className="mb-2 admin-btn"
+                id="admin-profiles"
               >
-                <Card.Title>Users</Card.Title>
-                <Card.Text><PersonFill className="mx-1 mb-1" />{Profiles.collection.find().count()}</Card.Text>
-              </Card>
+                <>Users<br /><PersonFill className="mx-1 mb-1" />{profiles}</>
+              </Button>
             </Col>
             <Col className="text-center">
-              <Card
-                bg="warning"
+              <Button
+                id="admin-recipes"
+                onClick={() => handleCardClick('recipes')}
+                variant="warning"
                 key="warning"
                 text="white"
-                className="mb-2"
+                className="mb-2 text-white admin-btn"
               >
-                <Card.Title>Recipes</Card.Title>
-                <Card.Text><Link to="/search" id="admin-recipes" className="link-light"><FileTextFill className="mx-1 mb-1" /></Link>{Recipes.collection.find().count() }</Card.Text>
-              </Card>
+                <>Recipes<br /><FileTextFill className="mx-1 mb-1" />{recipes}</>
+              </Button>
             </Col>
             <Col className="text-center">
-              <Card
+              <Button
+                onClick={() => handleCardClick('inventory')}
                 bg="success"
-                key="success"
+                variant="success"
                 text="white"
-                className="mb-2"
+                className="mb-2 admin-btn"
+                id="admin-inventory"
               >
-                <Card.Title>Ingredients</Card.Title>
-                <Card.Text><Link to="/inventory:" id="admin-inventory" className="link-light"><BasketFill className="mx-1 mb-1" /></Link>{Inventory.collection.find().count()}</Card.Text>
-              </Card>
+                <>Inventory<br /><BasketFill className="mx-1 mb-1" />{inventory}</>
+              </Button>
+            </Col>
+            <Col className="text-center">
+              <Button
+                onClick={() => handleCardClick('reviews')}
+                bg="success"
+                variant="secondary"
+                text="white"
+                className="mb-2 admin-btn"
+                id="admin-reviews"
+              >
+                <>Reviews<br /><StarFill className="mx-1 mb-1" />{sum}</>
+              </Button>
             </Col>
           </Row>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Edit</th>
-                <th>Vendor Request</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {profile.map((prof, idx) => <ProfileItem key={prof._id} prof={prof} idx={idx} />)}
-            </tbody>
-          </Table>
+          {view === 'default' && <ListUsers />}
+          {view === 'recipes' && <ListRecipes />}
+          {view === 'inventory' && <InventoryView />}
+          {view === 'reviews' && <ListReviews />}
         </Col>
       </Row>
+      <Row className="text-end"><Col xs={12}><Link to="/admin-gen" id="admin-gen"><KeyFill color="#F2F2F2" size={8} /></Link></Col></Row>
     </Container>
   ) : <LoadingSpinner />);
 };

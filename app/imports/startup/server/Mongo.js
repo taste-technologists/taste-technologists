@@ -1,25 +1,10 @@
 import { Meteor } from 'meteor/meteor';
-import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import { Vendor } from '../../api/vendor/Vendors';
 import { addRecipeMethod } from '../both/Methods';
 
 /* eslint-disable no-console */
-
-// Initialize the database with a default data document.
-const addData = (data) => {
-  console.log(`  Adding: ${data.name} (${data.owner})`);
-  Stuffs.collection.insert(data);
-};
-
-// Initialize the StuffsCollection if empty.
-if (Stuffs.collection.find().count() === 0) {
-  if (Meteor.settings.defaultData) {
-    console.log('Creating default data.');
-    Meteor.settings.defaultData.forEach(data => addData(data));
-  }
-}
 
 // Initialize the database with a default recipe document.
 const addRecipe = (data) => {
@@ -36,8 +21,11 @@ if (Recipes.collection.find().count() === 0) {
 }
 // Initialize the database with a default inventory document.
 const addItem = (data) => {
+  const toTitleCase = (str) => str.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+  const { name, item, price, size } = data;
+  const doc = { name, item: toTitleCase(item), price, size };
   console.log(`  Adding: ${data.name} (${data.item})`);
-  Inventory.collection.insert(data);
+  Inventory.collection.insert(doc);
 };
 
 // Initialize the InventoryCollection if empty.
@@ -71,7 +59,7 @@ if (Vendor.collection.find().count() === 0) {
    * For more info on assets, see https://docs.meteor.com/api/assets.html
    * User count check is to make sure we don't load the file twice, which would generate errors due to duplicate info.
    */
-if ((Meteor.settings.loadAssetsFile) && (Recipes.collection.find().count() < 4)) {
+if ((Meteor.settings.loadAssetsFile) && (Recipes.collection.find().count() < 3)) {
   const assetsFileName = 'data.json';
   console.log(`Loading data from private/${assetsFileName}`);
   // eslint-disable-next-line no-undef

@@ -14,19 +14,31 @@ class AdminPage {
 
   async hasTable(testController) {
     const rowCount = Selector('tr').count;
-    await testController.expect(rowCount).gte(6);
+    await testController.expect(rowCount).gte(2);
   }
 
   async goToAdminInventory(testController) {
     await testController.click('#admin-inventory');
   }
 
+  async goToAdminRecipes(testController) {
+    await testController.click('#admin-recipes');
+  }
+
+  async goToAdminReviews(testController) {
+    await testController.click('#admin-reviews');
+  }
+
   async goToAdminEdit(testController) {
-    await testController.click('#edit-profile-5');
+    await testController.click('#edit-profile-4');
+  }
+
+  async goToAdminGen(testController) {
+    await testController.click('#admin-gen');
   }
 
   async deleteUser(testController) {
-    await testController.click('#delete-profile-6');
+    await testController.click('#delete-profile-0');
     await testController.click(Selector('.swal-button--confirm'));
     await testController.click(Selector('.swal-button--confirm'));
   }

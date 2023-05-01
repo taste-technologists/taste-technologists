@@ -12,7 +12,7 @@ import { addReviewMethod } from '../../startup/both/Methods';
 const formSchema = new SimpleSchema({
   review: {
     type: Array,
-    optional: true,
+    optional: false,
   },
   'review.$': {
     type: Object,
@@ -32,7 +32,7 @@ const AddReview = ({ name, recipeId, userID, user }) => {
   // On submit, insert the data.
   const submit = (data, formRef) => {
     const { rating, comment } = data.review[0];
-    const reviewInfo = { userID, user, rating: Number(rating), comment, created: new Date(), edited: new Date() };
+    const reviewInfo = { userID, user, rating: Number(rating), comment, created: new Date() };
     // console.log(reviewInfo);
     // console.log(recipeId);
     Meteor.call(addReviewMethod, { recipeId, reviewInfo }, (error) => {
@@ -48,9 +48,9 @@ const AddReview = ({ name, recipeId, userID, user }) => {
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   let fRef = null;
   return (
-    <Container className="py-3">
+    <Container fluid className="py-3">
       <Row className="justify-content-center">
-        <Col>
+        <Col xs={12}>
           <Col className="text-center"><h2>Add Review for {name}</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>

@@ -6,13 +6,16 @@ import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { Plus, TrashFill } from 'react-bootstrap-icons';
+import { useTracker } from 'meteor/react-meteor-data';
 import { addRecipeMethod } from '../../startup/both/Methods';
+import { Profiles } from '../../api/profiles/Profiles';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
   name: {
     type: String,
-    max: 40,
+    max: 60,
   },
   picture: String,
   time: String,
@@ -55,11 +58,22 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the AddStuff page for adding a document. */
 const AddRecipe = () => {
-  // On submit, insert the data.
+
+  const author = useTracker(() => {
+    const sub = Meteor.subscribe(Profiles.userPublicationName);
+    return sub.ready() ? Profiles.collection.findOne().name : null;
+  });
+
+  if (!author) {
+    return <LoadingSpinner />;
+  }
+
   const submit = (doc, formRef) => {
+
     const { name, picture, time, description, servings, tags, ingredients, instructions } = doc;
     const owner = Meteor.user().username;
-    const data = { name, picture, time, description, servings, owner, tags, ingredients, instructions, favoriteBy: [] };
+
+    const data = { name, picture, time, description, servings, author, owner, tags, ingredients, instructions, favoriteBy: [] };
     Meteor.call(
       addRecipeMethod,
       { data },
@@ -73,16 +87,16 @@ const AddRecipe = () => {
       },
     );
   };
-
+  const transform = (label) => ` ${label}`;
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   let fRef = null;
   return (
     <Container className="py-3" id="addrecipe-page">
       <Row className="justify-content-center">
-        <Col xs={8}>
+        <Col xs={10}>
           <Col className="text-center"><h2>Add Recipe</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
-            <Card>
+            <Card className="uniform">
               <Card.Body>
                 <Row>
                   <Col><TextField id="add-recipe-name" name="name" showInlineError placeholder="Recipe name" /></Col>
@@ -111,9 +125,17 @@ const AddRecipe = () => {
                     </NestField>
                   </ListItemField>
                 </ListField>
-
+                <p>Tags</p><p />
                 <div id="add-recipe-tags">
-                  <SelectField id="add-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
+                  <SelectField
+                    id="add-recipe-tags"
+                    name="tags"
+                    label=""
+                    allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']}
+                    checkboxes
+                    className="tags-select-container"
+                    transform={transform}
+                  />
                 </div>
                 <SubmitField id="addrecipe-submit" value="Submit" />
                 <ErrorsField />

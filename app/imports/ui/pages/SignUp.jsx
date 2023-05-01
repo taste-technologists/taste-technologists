@@ -54,16 +54,23 @@ const SignUp = ({ location }) => {
   return (
     <Container id="signup-page" className="py-3">
       <Row className="justify-content-center">
-        <Col xs={5}>
+        <Col xs={10}>
           <Col className="text-center">
             <h2>Register your account</h2>
           </Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
               <Card.Body>
-                <TextField id="signup-name" name="name" placeholder="Name you'd like displayed to others" />
+                <TextField id="signup-name" name="name" placeholder="Display Name" />
                 <div id="signup-vendor">
-                  <RadioField id="signup-vendor" name="vendor" label="I would like a vendor role" inline />
+                  <RadioField
+                    id="signup-vendor"
+                    name="vendor"
+                    label="I would like a vendor role:"
+                    inline
+                    labelClassName="pe-3"
+                    inputClassName="pe-3"
+                  />
                 </div>
                 <TextField id="signup-email" name="email" placeholder="E-mail address" />
                 <TextField id="signup-password" name="password" placeholder="Password" type="password" />

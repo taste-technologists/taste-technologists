@@ -41,12 +41,12 @@ const EditInventory = () => {
   return ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
-        <Col xs={5}>
+        <Col xs={10}>
           <Col className="text-center"><h2>Edit Inventory</h2></Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)} model={doc}>
-            <Card>
+            <Card className="uniform">
               <Card.Body>
-                <TextField name="name" id="edit-inventory-name" />
+                <TextField name="name" id="edit-inventory-name" disabled />
                 <TextField name="item" id="edit-inventory-item" />
                 <NumField name="price" id="edit-inventory-price" decimal />
                 <TextField name="size" id="edit-inventory-size" />
