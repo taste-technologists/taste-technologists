@@ -75,7 +75,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
     <Col>
       <Card className="h-100">
         <Card.Header className="rec-card-header d-flex flex-column justify-content-center px-3 pt-3">
-          <Card.Img src={recipe.picture} className="rec-card-img" />
+          <Card.Img src={recipe.picture} className="rec-card-img" onError={(e) => { e.target.onerror = null; e.target.src = '/images/FaS-SimpleBold-transparent.png'; }} />
           <Card.Title className="my-2 fs-5 rec-card-title"><Link className="recipe-view-title" id={`rec-link-${idx}`} to={`/recipes/${recipe._id}`}>{recipe.name}</Link></Card.Title>
           <Card.Subtitle className="">{recipe.time}</Card.Subtitle>
           {isFavorite ? (

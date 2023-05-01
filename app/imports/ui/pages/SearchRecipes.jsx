@@ -29,9 +29,11 @@ const SearchRecipesPage = () => {
       ready: rdy,
     };
   }, []);
+  const breakfastRecipes = recipes.filter(recipe => recipe.tags.includes('Breakfast'));
   const lunchRecipes = recipes.filter(recipe => recipe.tags.includes('Lunch'));
   const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
   const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
+
 
   // console.log(recipeList);
 
@@ -60,6 +62,7 @@ const SearchRecipesPage = () => {
       <Row>
         <span>
           <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-all" active onClick={() => setStuff(recipes)}> All </Button> </Col>
+          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-breakfast" onClick={() => setStuff(breakfastRecipes)}> Breakfast </Button> </Col>
           <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-lunch" onClick={() => setStuff(lunchRecipes)}> Lunch </Button> </Col>
           <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-dinner" onClick={() => setStuff(dinnerRecipes)}>Dinner</Button> </Col>
           <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-snack" onClick={() => setStuff(snackRecipes)}> Snack</Button> </Col>

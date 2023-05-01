@@ -2823,7 +2823,7 @@
       "owner": "admin@foo.com",
       "author": "Admin",
       "favoriteBy": [],
-      "tags": ["Dairy-free", "Breakfast", "Lunch", "Snack"],
+      "tags": ["Dairy-free", "Lunch"],
       "ingredients": [
         {
           "name": "rice",
