@@ -50,7 +50,7 @@ const SingleRecipeCard = ({ recipe, avg }) => {
   });
   const thisArr = foundArr.flat();
   const renderedArray = thisArr.map((item) => (
-    <Row key={item._id}>
+    <Row key={item._id} className="border border-1">
       <Col xs={3} className="pe-0">
         <b>{item.name}</b>
       </Col>
@@ -76,7 +76,7 @@ const SingleRecipeCard = ({ recipe, avg }) => {
             {missArr.map((ing, idx) => <li key={idx}>{ing}<br /></li>)}
           </ul>
         </div>
-        <b>Please help us by adding ingredients to the vendor inventory.</b>
+        <em>Please help us by adding ingredients to the vendor inventory.</em>
       </Popover.Body>
     </Popover>
   );

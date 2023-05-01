@@ -149,9 +149,16 @@ th {
   #add-recipe-tags .form-check {
     display: inline-block !important;
   }
+  .popover {
+    font-size: 0.65rem !important;
+  }
 }
 
 .b-foot {
   background: linear-gradient(rgba(255, 255, 255, 0.72),#FFE5B4, #FFE5B4,#FFE5B4);
 
+}
+
+.dropdown-menu {
+  min-width: auto !important;
 }

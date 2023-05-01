@@ -1,22 +1,11 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
-import { Stuffs } from '../../api/stuff/Stuff';
 import { Recipes } from '../../api/recipes/Recipes';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import { Profiles } from '../../api/profiles/Profiles';
 import { Vendor } from '../../api/vendor/Vendors';
 import { RecReviews } from '../../api/recipes/RecipeReviews';
 import { RecFaves } from '../../api/recipes/RecipeFav';
-
-// User-level publication.
-// If logged in, then publish documents owned by this user. Otherwise publish nothing.
-Meteor.publish(Stuffs.userPublicationName, function () {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Stuffs.collection.find({ owner: username });
-  }
-  return this.ready();
-});
 
 // User-level publication.
 // If logged in, then publish recipes owned by this user. Otherwise publish nothing.
@@ -89,15 +78,6 @@ Meteor.publish(Inventory.vendorPublicationName, function () {
 Meteor.publish(Profiles.generalPublicationName, function () {
   if (this.userId) {
     return Profiles.collection.find();
-  }
-  return this.ready();
-});
-
-// Admin-level publication.
-// If logged in and with admin role, then publish all documents from all users. Otherwise publish nothing.
-Meteor.publish(Stuffs.adminPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Stuffs.collection.find();
   }
   return this.ready();
 });

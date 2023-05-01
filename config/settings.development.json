@@ -8,13 +8,6 @@
     { "email": "chris@foo.com", "password": "changeme", "role":  "user", "name": "Chris", "vendor": false}
   ],
 
-  "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
-  ],
-
   "defaultVendor": [
     { "name": "Nijiya Market", "location": "1009 University Ave #101, Honolulu, HI 96826", "hours": "Sun-Sat 9AM-9PM"},
     { "name": "Longs", "location": "2750 Woodlawn Dr., Honolulu, HI 96822", "hours": "Sun-Sat 7AM-12AM"},
