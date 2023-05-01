@@ -1,12 +1,11 @@
 /* Component for layout out a Profile Card. */
-import { Accordion, Col, Container, Image, Row } from 'react-bootstrap';
+import { Popover, OverlayTrigger, Button, Col, Container, Image, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { Link } from 'react-router-dom';
 import { useTracker } from 'meteor/react-meteor-data';
-import AccordionBody from 'react-bootstrap/AccordionBody';
 import LoadingSpinner from './LoadingSpinner';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import ReviewRating from './ReviewRating';
@@ -51,14 +50,36 @@ const SingleRecipeCard = ({ recipe, avg }) => {
   });
   const thisArr = foundArr.flat();
   const renderedArray = thisArr.map((item) => (
-    <div key={item._id}>
-      <h2>{item.name}</h2>
-      <p>Item: {item.item}</p>
-      <p>Price: {item.price}</p>
-      <p>Size: {item.size}</p>
-    </div>
+    <Row key={item._id}>
+      <Col xs={3} className="pe-0">
+        <b>{item.name}</b>
+      </Col>
+      <Col xs={4} className="pe-0">
+        {item.item}
+      </Col>
+      <Col xs={2} className="pe-0">
+        {`$${item.price.toFixed(2)}`}
+      </Col>
+      <Col xs={3}>
+        {item.size}
+      </Col>
+    </Row>
   ));
-
+  const popover = (
+    <Popover id="popover-basic" style={{ minWidth: '380px', maxWidth: '80%' }}>
+      <Popover.Header as="h3">Ingredient Locations</Popover.Header>
+      <Popover.Body>
+        {renderedArray}
+        <div hidden={missArr.length === 0}>
+          <b>Not yet available:</b> <br />
+          <ul>
+            {missArr.map((ing, idx) => <li key={idx}>{ing}<br /></li>)}
+          </ul>
+        </div>
+        <b>Please help us by adding ingredients to the vendor inventory.</b>
+      </Popover.Body>
+    </Popover>
+  );
   return (ready ? (
     <Container fluid>
       <Row className="flex-row justify-content-center">
@@ -81,16 +102,13 @@ const SingleRecipeCard = ({ recipe, avg }) => {
       <Row>
         <h2>Ingredients</h2>
         <ul className="px-5">
-          {recipe.ingredients.map((ing) => <li key={`${recipe._id}${ing.name}`}><input type="checkbox" />{ing.quantity} {ing.unit} {ing.name}</li>)}
+          {recipe.ingredients.map((ing) => <li key={`${recipe._id}${ing.name}`}>{ing.quantity} {ing.unit} {ing.name}</li>)}
         </ul>
-        <Accordion>
-          <Accordion.Header>Nearby stores with ingredients</Accordion.Header>
-          <AccordionBody>
-            {renderedArray}
-            <h2>The following are not yet available at any vendor</h2>
-            {missArr.map((ing) => <p>{ing}</p>)}
-          </AccordionBody>
-        </Accordion>
+        <div className="text-end">
+          <OverlayTrigger trigger="click" placement="top" overlay={popover}>
+            <Button variant="outline-primary" style={{ maxWidth: '250px' }}>Check Inventory</Button>
+          </OverlayTrigger>
+        </div>
       </Row>
       <Row>
         <h2>Instructions:</h2>
