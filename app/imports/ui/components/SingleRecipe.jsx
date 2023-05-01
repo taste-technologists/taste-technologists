@@ -97,7 +97,9 @@ const SingleRecipeCard = ({ recipe, avg }) => {
       </Row>
       <Row className="flex-row justify-content-center pb-2">{recipe.description}</Row>
       <Row>
-        <Col className="text-center"><Image fluid src={recipe.picture} width={400} /></Col>
+        <Col className="text-center">
+          <Image fluid src={recipe.picture} width={400} onError={(e) => { e.target.onerror = null; e.target.src = '/images/FaS-SimpleBold-transparent.png'; }} />
+        </Col>
       </Row>
       <Row>
         <h2>Ingredients</h2>
