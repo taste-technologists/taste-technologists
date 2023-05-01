@@ -29,9 +29,9 @@ const SearchRecipesPage = () => {
       ready: rdy,
     };
   }, []);
-  const lunchRecipes = recipes.filter(recipe => recipe.tags.includes('Lunch'));
-  const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
-  const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
+  const lunchRecipes = recipes.filter(recipe => recipe.tags.includes('Breakfast'));
+  const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Lunch'));
+  const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
 
   // console.log(recipeList);
 
@@ -60,9 +60,9 @@ const SearchRecipesPage = () => {
       <Row>
         <span>
           <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-all" active onClick={() => setStuff(recipes)}> All </Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-lunch" onClick={() => setStuff(lunchRecipes)}> Lunch </Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-dinner" onClick={() => setStuff(dinnerRecipes)}>Dinner</Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-snack" onClick={() => setStuff(snackRecipes)}> Snack</Button> </Col>
+          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-breakfast" onClick={() => setStuff(lunchRecipes)}> Breakfast </Button> </Col>
+          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-lunch" onClick={() => setStuff(dinnerRecipes)}>Lunch</Button> </Col>
+          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-dinner" onClick={() => setStuff(snackRecipes)}> Dinner</Button> </Col>
         </span>
       </Row>
       <Row xs={1} md={2} lg={4} className="g-2 pt-2">

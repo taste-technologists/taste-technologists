@@ -15,9 +15,9 @@ class SearchPage {
   async isFiltered(testController) {
     // This is first test to be run. Wait 10 seconds to avoid timeouts with GitHub Actions.
     await testController.wait(1000).click('#btn-all');
+    await testController.wait(1000).click('#btn-breakfast');
     await testController.wait(1000).click('#btn-lunch');
     await testController.wait(1000).click('#btn-dinner');
-    await testController.wait(1000).click('#btn-snack');
   }
 
   async gotoRecipePage(testController) {
