@@ -42,7 +42,7 @@ const RecReviewCard = ({ doc, idx }) => {
 
   return (
     <Col>
-      <Card className="px-0">
+      <Card className="px-0 review-card">
         <Card.Header>
           <>
             <Card.Title><Link to={`/recipes/${doc.recipeId}`}>{doc.name}</Link></Card.Title>

@@ -13,7 +13,7 @@ const NavBar = () => {
   }), []);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="navbar-g">
       <Container fluid>
         <Navbar.Brand as={NavLink} to="/">
           <Image src="/images/taste-technologists-logo.png" width="180px" />
