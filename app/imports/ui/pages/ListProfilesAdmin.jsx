@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { _ } from 'meteor/underscore';
-import { Card, Col, Container, Row, Button, Table } from 'react-bootstrap';
+import { Col, Container, Row, Button } from 'react-bootstrap';
 import { BasketFill, PersonFill, FileTextFill, StarFill, KeyFill } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
