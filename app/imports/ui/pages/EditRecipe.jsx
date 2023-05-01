@@ -120,7 +120,7 @@ const EditRecipe = () => {
                     </NestField>
                   </ListItemField>
                 </ListField>
-                <SelectField className="edit-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
+                <SelectField className="edit-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']} checkboxes inline />
                 <SubmitField id="editrecipe-submit" value="Submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />

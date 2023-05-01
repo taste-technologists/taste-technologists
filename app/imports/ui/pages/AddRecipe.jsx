@@ -93,7 +93,7 @@ const AddRecipe = () => {
   return (
     <Container className="py-3" id="addrecipe-page">
       <Row className="justify-content-center">
-        <Col xs={8}>
+        <Col xs={10}>
           <Col className="text-center"><h2>Add Recipe</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>
@@ -127,7 +127,7 @@ const AddRecipe = () => {
                 </ListField>
 
                 <div id="add-recipe-tags">
-                  <SelectField id="add-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack']} checkboxes inline />
+                  <SelectField id="add-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']} checkboxes inline />
                 </div>
                 <SubmitField id="addrecipe-submit" value="Submit" />
                 <ErrorsField />

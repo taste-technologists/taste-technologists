@@ -68,7 +68,7 @@ const IndividualInventoryView = () => {
   return (ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
-        <Col md={7}>
+        <Col xs={10} md={7}>
           <Col className="text-center">
             <h2>Vendor List <Link to={`/inventory-add/${id}`} id="inventory-add-page"><CartPlusFill className="mb-2" color="black" /></Link> </h2>
           </Col>

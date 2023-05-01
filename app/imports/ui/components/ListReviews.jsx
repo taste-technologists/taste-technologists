@@ -53,9 +53,7 @@ const ListReviews = () => {
             <tr>
               <th>Author</th>
               <th>Recipe</th>
-              <th>Rating</th>
               <th>Comment</th>
-              <th>Created</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -63,18 +61,19 @@ const ListReviews = () => {
             {currentReviews}
           </tbody>
         </Table>
-        <Pagination>
-          {Array.from({ length: Math.ceil(reviewsToDisplay.length / 5) }, (__, index) => (
-            <Pagination.Item
-              key={index}
-              active={index + 1 === currentPage}
-              onClick={() => setCurrentPage(index + 1)}
-            >
-              {index + 1}
-            </Pagination.Item>
-          ))}
-        </Pagination>
-
+        <div style={{ maxWidth: '100%', overflowX: 'auto' }}>
+          <Pagination className="flex-wrap">
+            {Array.from({ length: Math.ceil(reviewsToDisplay.length / 5) }, (__, index) => (
+              <Pagination.Item
+                key={index}
+                active={index + 1 === currentPage}
+                onClick={() => setCurrentPage(index + 1)}
+              >
+                {index + 1}
+              </Pagination.Item>
+            ))}
+          </Pagination>
+        </div>
       </Row>
     </Container>
   ) : <LoadingSpinner />);

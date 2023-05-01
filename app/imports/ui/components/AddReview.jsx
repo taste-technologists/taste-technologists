@@ -48,9 +48,9 @@ const AddReview = ({ name, recipeId, userID, user }) => {
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   let fRef = null;
   return (
-    <Container className="py-3">
+    <Container fluid className="py-3">
       <Row className="justify-content-center">
-        <Col>
+        <Col xs={12}>
           <Col className="text-center"><h2>Add Review for {name}</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>

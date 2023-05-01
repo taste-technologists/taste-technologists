@@ -69,7 +69,7 @@ const FavoritesPage = () => {
         <h2>You have no favorite recipes!</h2>
         <h3>Click the heart on any recipe to add to your favorites.</h3>
       </Row>
-      <Pagination className="my-3" hidden={!haveRecipes}>{paginationItems}</Pagination>
+      <Pagination className="my-3  flex-wrap" hidden={!haveRecipes}>{paginationItems}</Pagination>
     </Container>
   ) : <LoadingSpinner />);
 };

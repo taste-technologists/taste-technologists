@@ -42,10 +42,10 @@ const InventoryView = () => {
   ));
 
   return (ready ? (
-    <Container className="py-3" id="admin-inventory-page">
+    <Container fluid className="py-3" id="admin-inventory-page">
       <Row className="justify-content-center">
-        <Col className="text-center">
-          <h2>Vendor List</h2>
+        <Col xs={10} className="text-center">
+          <h2>Vendor Inventory</h2>
         </Col>
       </Row>
       <Row>
@@ -64,7 +64,7 @@ const InventoryView = () => {
             {currentItems.map((item, idx) => <IngredientAdmin idx={idx} key={item._id} ingredient={item} />)}
           </tbody>
         </Table>
-        <Pagination className="my-3">{paginationItems}</Pagination>
+        <Pagination size="sm" className="flex-wrap my-3">{paginationItems}</Pagination>
       </Row>
     </Container>
   ) : <LoadingSpinner />);

@@ -91,7 +91,7 @@ const ListProfilesAdmin = () => {
                 className="mb-2 px-3"
                 id="admin-inventory"
               >
-                <Card.Title>Ingredients</Card.Title>
+                <Card.Title>Inventory</Card.Title>
                 <Card.Text><BasketFill className="mx-1 mb-1" />{inventory}</Card.Text>
               </Button>
             </Col>

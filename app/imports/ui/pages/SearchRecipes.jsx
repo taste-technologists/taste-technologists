@@ -68,7 +68,7 @@ const SearchRecipesPage = () => {
       <Row xs={1} md={2} lg={4} className="g-2 pt-2">
         {currentItems.map((recipe, idx) => <RecipeCard key={recipe._id} idx={idx} recipe={recipe} />)}
       </Row>
-      <Pagination className="my-3">{paginationItems}</Pagination>
+      <Pagination className="my-3 flex-wrap">{paginationItems}</Pagination>
     </Container>
   ) : <LoadingSpinner />);
 };

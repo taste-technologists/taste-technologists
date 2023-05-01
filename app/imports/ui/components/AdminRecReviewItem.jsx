@@ -35,7 +35,6 @@ const AdminRecReviewItem = ({ name, recId, review, idx }) => {
     <tr>
       <td>{review.user}</td>
       <td>{name}</td>
-      <td>{review.rating}</td>
       <td>
         <Button
           variant="link"
@@ -46,14 +45,14 @@ const AdminRecReviewItem = ({ name, recId, review, idx }) => {
         >View Full Comment:
         </Button>
         <Collapse in={isOpen}>
-          <Card.Text id="review-comment">{review.comment}</Card.Text>
+          <Card.Text id="review-comment">
+            <b> Date:</b> {new Date(review.created).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'numeric',
+              day: 'numeric',
+            })} <br /><b>Rating:</b> {review.rating}<br /><b>Comment:</b> {review.comment}
+          </Card.Text>
         </Collapse>
-      </td>
-      <td>{new Date(review.created).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      })}
       </td>
       <td><Button type="button" id={`review-delete-${idx}`} variant="danger" onClick={() => removeReview(recId, review)}><TrashFill /></Button></td>
     </tr>

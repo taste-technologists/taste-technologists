@@ -37,7 +37,7 @@ const ListVendor = () => {
   return (ready ? (
     <Container className="py-3" id="list-vendor-page">
       <Row className="justify-content-center">
-        <Col md={7}>
+        <Col xs={12}>
           <Col className="text-center">
             <h2>Vendor List</h2>
             <h5><a href="/add-vendor" id="add-vendor" hidden={!isAuth}>Add Vendor</a></h5>

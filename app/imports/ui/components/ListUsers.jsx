@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Pagination, Table } from 'react-bootstrap';
+import { Col, Container, Pagination, Row, Table } from 'react-bootstrap';
 import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
 import LoadingSpinner from './LoadingSpinner';
@@ -41,22 +41,28 @@ const ListUsers = () => {
   ));
   return (ready ? (
     <Container className="py-3">
-      <h2 className="text-center pt-3">Users</h2>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Edit</th>
-            <th>Vendor Request</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {currentItems.map((prof, idx) => <ProfileItem key={prof._id} prof={prof} idx={idx} />)}
-        </tbody>
-      </Table>
-      <Pagination className="my-3">{paginationItems}</Pagination>
+      <Row className="justify-content-center">
+        <Col xs={10} className="text-center">
+          <h2>Users</h2>
+        </Col>
+      </Row>
+      <Row>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Edit</th>
+              <th>Vendor Request</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {currentItems.map((prof, idx) => <ProfileItem key={prof._id} prof={prof} idx={idx} />)}
+          </tbody>
+        </Table>
+      </Row>
+      <Pagination className="my-3 flex-wrap">{paginationItems}</Pagination>
     </Container>
   ) : <LoadingSpinner />);
 };

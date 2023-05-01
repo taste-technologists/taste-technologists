@@ -58,7 +58,7 @@ const AddInventory = () => {
   return ready ? (
     <Container className="py-3" id="add-inventory-page">
       <Row className="justify-content-center">
-        <Col xs={5}>
+        <Col xs={10}>
           <Col className="text-center"><h2>Add Inventory </h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>

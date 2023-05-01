@@ -36,7 +36,7 @@ const SingleRecipeCard = ({ recipe, avg }) => {
     // console.log(arr);
   });
   return (ready ? (
-    <Container>
+    <Container fluid>
       <Row className="flex-row justify-content-center">
         <h2 className="text-center">{recipe.name}</h2>
         <h6 className="text-center">Created by: {recipe.author}</h6>
@@ -52,7 +52,7 @@ const SingleRecipeCard = ({ recipe, avg }) => {
         Avg Rating: <ReviewRating avg={Number(avg)} />
       </Row>
       <Row>
-        <Col className="text-center"><Image src={recipe.picture} width={400} /></Col>
+        <Col className="text-center"><Image fluid src={recipe.picture} width={400} /></Col>
       </Row>
       <Row>
         <h2>Ingredients</h2>

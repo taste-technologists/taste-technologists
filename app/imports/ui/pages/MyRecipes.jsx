@@ -58,7 +58,7 @@ const MyRecipesPage = () => {
         <h2>You have no recipes!</h2>
         <h3><a href="../add">Click here to add a recipe.</a></h3>
       </Row>
-      <Pagination className="my-3" hidden={!haveRecipes}>{paginationItems}</Pagination>
+      <Pagination className="my-3 flex-wrap" hidden={!haveRecipes}>{paginationItems}</Pagination>
     </Container>
   ) : <LoadingSpinner />);
 };

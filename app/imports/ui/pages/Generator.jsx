@@ -66,7 +66,7 @@ const Generator = () => {
     <Container style={pageStyle} id="admin-gen" className="text-center">
       <h2 className="text-center pb-5">Review Generator</h2>
       <Row className="justify-content-center">
-        <Col md={5}>
+        <Col md={10}>
           <Row className="my-5">
             <Button type="button" id="rev-gen" variant="success" onClick={() => addRev()}><DatabaseFillAdd /> Add Random Review</Button>
           </Row>

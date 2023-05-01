@@ -40,28 +40,28 @@ const ListRecipes = () => {
     </Pagination.Item>
   ));
   return (ready ? (
-    <Container className="py-3" id="admin-recipe-page">
+    <Container fluid className="py-3" id="admin-recipe-page">
       <Row className="justify-content-center">
-        <Col>
-          <Col className="text-center">
-            <h2>Recipes</h2>
-          </Col>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Owner</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Edit</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {currentItems.map((recipe, idx) => <RecipeItem key={recipe._id} recipe={recipe} idx={idx} />)}
-            </tbody>
-          </Table>
-          <Pagination className="my-3">{paginationItems}</Pagination>
+        <Col xs={10} className="text-center">
+          <h2>Recipes</h2>
         </Col>
+      </Row>
+      <Row>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Owner</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {currentItems.map((recipe, idx) => <RecipeItem key={recipe._id} recipe={recipe} idx={idx} />)}
+          </tbody>
+        </Table>
+        <Pagination className="my-3 flex-wrap">{paginationItems}</Pagination>
       </Row>
     </Container>
   ) : <LoadingSpinner />);
