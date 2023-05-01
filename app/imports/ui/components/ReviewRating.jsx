@@ -1,7 +1,6 @@
 import React from 'react';
 import { Star, StarFill, StarHalf } from 'react-bootstrap-icons';
 import PropTypes from 'prop-types';
-import { Col } from 'react-bootstrap';
 
 /* Renders the RecipeRating component for recipes. */
 const ReviewRating = ({ avg }) => {
@@ -22,9 +21,7 @@ const ReviewRating = ({ avg }) => {
 
   const stars = avg === 0 ? 'No Ratings' : [...fullStars, halfStar, ...emptyStars];
   // Concatenate the three arrays and return
-  return (
-    <Col>{stars}</Col>
-  );
+  return <div className="d-inline py-2">{stars}</div>;
 };
 
 ReviewRating.propTypes = {

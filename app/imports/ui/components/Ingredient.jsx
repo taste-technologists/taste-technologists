@@ -30,7 +30,6 @@ const Ingredient = ({ ingredient, idx }) => {
   };
   return (
     <tr>
-      <td>{ingredient.name}</td>
       <td>{ingredient.item}</td>
       <td>{ingredient.price.toFixed(2)}</td>
       <td>{ingredient.size}</td>

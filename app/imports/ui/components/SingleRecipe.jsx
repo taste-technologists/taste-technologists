@@ -10,24 +10,32 @@ import AccordionBody from 'react-bootstrap/AccordionBody';
 import LoadingSpinner from './LoadingSpinner';
 import { Inventory } from '../../api/vendor/VendorInventory';
 import ReviewRating from './ReviewRating';
+import { Recipes } from '../../api/recipes/Recipes';
 
 const SingleRecipeCard = ({ recipe, avg }) => {
-  const { ready, inventory } = useTracker(() => {
+  const { ready, inventory, isOwner } = useTracker(() => {
 
     // Get access to Recipe documents.
     const subscription = Meteor.subscribe(Inventory.userPublicationName);
+    const subscription2 = Meteor.subscribe(Recipes.userPublicationName);
     // Determine if the subscription is ready
-    const rdy = subscription.ready();
+    const rdy = subscription.ready() && subscription2.ready();
 
     // Get the Profiles
-
     const inv = Inventory.collection.find().fetch();
+    const thisRecipe = Recipes.collection.find({ _id: recipe._id }).fetch();
+
+    let owner;
+    if (rdy) {
+      owner = thisRecipe[0].owner;
+    }
+    const isOwned = owner === Meteor.user()?.username;
     return {
       ready: rdy,
       inventory: inv,
+      isOwner: isOwned,
     };
   }, []);
-
   const foundArr = [];
   const missArr = [];
   let cost = 0;
@@ -36,13 +44,10 @@ const SingleRecipeCard = ({ recipe, avg }) => {
     const arr = _.filter(inventory, (item) => item.item.toLowerCase() === ing.name.toLowerCase());
     if (arr.length > 0) {
       foundArr.push(arr);
-
       cost += _.min(arr, (obj) => obj.price).price;
     } else {
       missArr.push(ing.name);
     }
-    // console.log(missArr);
-    // console.log(arr);
   });
   const thisArr = foundArr.flat();
   const renderedArray = thisArr.map((item) => (
@@ -61,21 +66,21 @@ const SingleRecipeCard = ({ recipe, avg }) => {
         <h6 className="text-center">Created by: {recipe.author}</h6>
         {recipe.description}
       </Row>
-      <Row className="my-2 pe-2 py-2">
+      <Row className="my-2 py-2">
         {/* Will need to implement a cost function related to vendors and inventory here */}
-        <Col>
-          Cook Time: {recipe.time}
+        <Col xs={6} md={3}>
+          Cook Time:<br /> {recipe.time}
         </Col>
-        <Col>Number of Servings: {recipe.servings} </Col>
-        <Col>Estimated Cost: ${cost.toFixed(2)}*</Col>
-        Avg Rating: <ReviewRating avg={Number(avg)} />
+        <Col xs={6} md={3}>Servings:<br /> {recipe.servings} </Col>
+        <Col xs={6} md={3}>Estimated Cost:<br /> ${cost.toFixed(2)}*</Col>
+        <Col xs={6} md={3}>Avg Rating:<br /> <ReviewRating avg={Number(avg)} /></Col>
       </Row>
       <Row>
         <Col className="text-center"><Image fluid src={recipe.picture} width={400} /></Col>
       </Row>
       <Row>
         <h2>Ingredients</h2>
-        <ul>
+        <ul className="px-5">
           {recipe.ingredients.map((ing) => <li key={`${recipe._id}${ing.name}`}>{ing.quantity} {ing.unit} {ing.name}</li>)}
         </ul>
         <Accordion>
@@ -89,14 +94,13 @@ const SingleRecipeCard = ({ recipe, avg }) => {
       </Row>
       <Row>
         <h2>Instructions:</h2>
-        <ol>
+        <ol className="px-5">
           {recipe.instructions.map((ins, idx) => <li key={`${recipe._id}${idx}`}>{ins.step}</li>)}
         </ol>
       </Row>
       <Row><p>* Please note that the actual cost of the ingredients may be different than the estimated cost.</p></Row>
-      <Row className="text-end"> {recipe.owner === Meteor.user()?.username ?
-        <Link to={`/edit/${recipe._id}`}>Edit Recipe</Link> :
-        ''}
+      <Row className="text-end">
+        <Link to={`/edit/${recipe._id}`} hidden={!isOwner}>Edit Recipe</Link>
       </Row>
     </Container>
   ) : <LoadingSpinner />);
