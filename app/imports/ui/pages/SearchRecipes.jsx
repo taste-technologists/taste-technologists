@@ -62,10 +62,10 @@ const SearchRecipesPage = () => {
       <Row>
         <span>
           <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-all" active onClick={() => setStuff(recipes)}> All </Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-breakfast" active onClick={() => setStuff(breakfastRecipes)}> All </Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-lunch" onClick={() => setStuff(lunchRecipes)}> Breakfast </Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-dinner" onClick={() => setStuff(dinnerRecipes)}>Lunch</Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-snack" onClick={() => setStuff(snackRecipes)}> Dinner</Button> </Col>
+          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-breakfast" onClick={() => setStuff(breakfastRecipes)}> Breakfast </Button> </Col>
+          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-lunch" onClick={() => setStuff(lunchRecipes)}> Lunch </Button> </Col>
+          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-dinner" onClick={() => setStuff(dinnerRecipes)}>Dinner</Button> </Col>
+          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-snack" onClick={() => setStuff(snackRecipes)}> Snack</Button> </Col>
         </span>
       </Row>
       <Row xs={1} md={2} lg={4} className="g-2 pt-2">
