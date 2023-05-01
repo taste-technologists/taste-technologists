@@ -18,6 +18,7 @@ class SearchPage {
     await testController.wait(1000).click('#btn-breakfast');
     await testController.wait(1000).click('#btn-lunch');
     await testController.wait(1000).click('#btn-dinner');
+    await testController.wait(1000).click('#btn-snack');
   }
 
   async gotoRecipePage(testController) {
