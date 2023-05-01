@@ -91,11 +91,18 @@ th {
 
 .offcanvas{
   width:45% !important;
-  min-width: 400px;
+  min-width: 350px;
 }
 
 @media screen and (max-width: 600px) {
   table {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-btn {
+    padding: 0.25rem 0.5rem; /* smaller padding for mobile */
+    font-size: 0.8rem; /* smaller font size for mobile */
   }
 }

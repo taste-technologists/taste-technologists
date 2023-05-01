@@ -68,32 +68,31 @@ const IndividualInventoryView = () => {
   return (ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
-        <Col xs={10} md={7}>
-          <Col className="text-center">
-            <h2>Vendor List <Link to={`/inventory-add/${id}`} id="inventory-add-page"><CartPlusFill className="mb-2" color="black" /></Link> </h2>
-          </Col>
-          <p className="text-end">Click the cart to add an item</p>
-          <p><b>{vendorInfo.name}</b>: {vendorInfo.hours}<br />
-            <a href={`https://www.google.com/maps/search/?api=1&query=${vendorInfo.location}`} onClick={handleLinkClick}>
-              {vendorInfo.location}
-            </a>
-          </p>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Vendor</th>
-                <th>Item</th>
-                <th>Price ($)</th>
-                <th>Size</th>
-                <th>Edit</th>
-                <th hidden={notAuth}>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ingredients.map((ingredient, idx) => <Ingredient key={ingredient._id} idx={idx} ingredient={ingredient} />)}
-            </tbody>
-          </Table>
+        <Col xs={10} className="text-center">
+          <h2>Vendor Inventory  <Link to={`/inventory-add/${id}`} id="inventory-add-page"><CartPlusFill className="mb-2" color="black" /></Link></h2>
         </Col>
+      </Row>
+      <Row className="mx-2">
+        <p>Click the cart to add an item</p>
+        <p><b>{vendorInfo.name}</b>: {vendorInfo.hours}<br />
+          <a href={`https://www.google.com/maps/search/?api=1&query=${vendorInfo.location}`} onClick={handleLinkClick}>
+            {vendorInfo.location}
+          </a>
+        </p>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Price ($)</th>
+              <th>Size</th>
+              <th>Edit</th>
+              <th hidden={notAuth}>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ingredients.map((ingredient, idx) => <Ingredient key={ingredient._id} idx={idx} ingredient={ingredient} />)}
+          </tbody>
+        </Table>
       </Row>
     </Container>
   ) : <LoadingSpinner />);
