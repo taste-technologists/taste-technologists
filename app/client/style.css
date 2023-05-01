@@ -88,7 +88,7 @@ th {
 }
 
 .navbar-g {
-  background: linear-gradient(to right, #FFE5B4,#FFF5E4);
+  background: linear-gradient(#f6d492,#FFE5B4,#f6d492);
   font-weight: bold;
 }
 /* Accordion settings for Review Component */
@@ -116,6 +116,12 @@ th {
   width: 100%;
 }
 
+.tags-select-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+
 @media screen and (max-width: 600px) {
   table {
     font-size: 10px;
@@ -124,5 +130,8 @@ th {
     font-size: 0.65rem !important;
     flex-grow: 1 !important;
     width: 100% !important;
+  }
+  #add-recipe-tags .form-check {
+    display: inline-block !important;
   }
 }

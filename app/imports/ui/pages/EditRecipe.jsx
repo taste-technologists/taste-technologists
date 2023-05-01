@@ -81,7 +81,7 @@ const EditRecipe = () => {
       swal('Error', error.message, 'error') :
       swal('Success', 'Recipe updated successfully', 'success')));
   };
-
+  const transform = (label) => ` ${label}`;
   return ready ? (
     <Container id="editrecipe-page" className="py-3">
       <Row className="justify-content-center" hidden={doc !== undefined}>
@@ -120,7 +120,16 @@ const EditRecipe = () => {
                     </NestField>
                   </ListItemField>
                 </ListField>
-                <SelectField className="edit-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']} checkboxes inline />
+                <p>Tags</p><p />
+                <SelectField
+                  className="edit-recipe-tags tags-select-container"
+                  name="tags"
+                  allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']}
+                  checkboxes
+                  inline
+                  label=""
+                  transform={transform}
+                />
                 <SubmitField id="editrecipe-submit" value="Submit" />
                 <ErrorsField />
                 <HiddenField name="owner" />

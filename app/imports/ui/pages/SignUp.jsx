@@ -63,7 +63,14 @@ const SignUp = ({ location }) => {
               <Card.Body>
                 <TextField id="signup-name" name="name" placeholder="Display Name" />
                 <div id="signup-vendor">
-                  <RadioField id="signup-vendor" name="vendor" label="I would like a vendor role" inline />
+                  <RadioField
+                    id="signup-vendor"
+                    name="vendor"
+                    label="I would like a vendor role:"
+                    inline
+                    labelClassName="pe-3"
+                    inputClassName="pe-3"
+                  />
                 </div>
                 <TextField id="signup-email" name="email" placeholder="E-mail address" />
                 <TextField id="signup-password" name="password" placeholder="Password" type="password" />

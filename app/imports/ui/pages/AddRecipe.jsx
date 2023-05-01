@@ -87,7 +87,7 @@ const AddRecipe = () => {
       },
     );
   };
-
+  const transform = (label) => ` ${label}`;
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   let fRef = null;
   return (
@@ -125,9 +125,17 @@ const AddRecipe = () => {
                     </NestField>
                   </ListItemField>
                 </ListField>
-
+                <p>Tags</p><p />
                 <div id="add-recipe-tags">
-                  <SelectField id="add-recipe-tags" name="tags" allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']} checkboxes inline />
+                  <SelectField
+                    id="add-recipe-tags"
+                    name="tags"
+                    label=""
+                    allowedValues={['Vegan', 'Vegetarian', 'Gluten-free', 'Dairy-free', 'Pescatarian', 'Breakfast', 'Lunch', 'Dinner', 'Snack', 'Dessert']}
+                    checkboxes
+                    className="tags-select-container"
+                    transform={transform}
+                  />
                 </div>
                 <SubmitField id="addrecipe-submit" value="Submit" />
                 <ErrorsField />
