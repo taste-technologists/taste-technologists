@@ -62,7 +62,7 @@ const SearchRecipesPage = () => {
       <Row className="justify-content-start">
         <span>
           <Col>
-            <Dropdown style={{ float: 'left' }} className="m-1">
+            <Dropdown id="#btn-filter" style={{ float: 'left' }} className="m-1">
               <Dropdown.Toggle variant="info">
                 {selectedTag || 'Select a tag'}
               </Dropdown.Toggle>

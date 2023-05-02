@@ -14,7 +14,7 @@ class SearchPage {
 
   async isFiltered(testController) {
     // This is first test to be run. Wait 10 seconds to avoid timeouts with GitHub Actions.
-    await testController.wait(1000).click('#react-aria613772352-3');
+    await testController.wait(1000).click('#btn-filter');
     await testController.wait(1000).click(Selector('.dropdown-item').nth(0));
     await testController.wait(1000).click('#btn-search');
 
