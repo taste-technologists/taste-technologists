@@ -88,7 +88,7 @@ const SearchRecipesPage = () => {
             </Dropdown>
           </Col>
           <Col>
-            <Button style={{ float: 'left' }} variant="warning" className="m-1" onClick={() => setStuff(filteredRecipes)}>Search</Button>
+            <Button style={{ float: 'left' }} id="btn-search" variant="warning" className="m-1" onClick={() => setStuff(filteredRecipes)}>Search</Button>
           </Col>
         </span>
       </Row>
