@@ -10,7 +10,21 @@ import { Vendor } from '../../api/vendor/Vendors';
 
 /** Renders a single row in the List Vendor table. See pages/ListVendors.jsx. */
 const VendorProf = ({ vendor, idx }) => {
-
+  const handleLinkClick = (event) => {
+    event.preventDefault();
+    swal({
+      title: 'This will open Google Maps in a new window',
+      icon: 'warning',
+      buttons: {
+        cancel: 'No',
+        confirm: 'Yes',
+      },
+    }).then((value) => {
+      if (value) {
+        window.open(`https://www.google.com/maps/search/?api=1&query=${vendor.location}`);
+      }
+    });
+  };
   const removeVendor = (vendorID) => {
     // console.log(`The item removed is ${userId}`);
     swal({
@@ -38,7 +52,11 @@ const VendorProf = ({ vendor, idx }) => {
   return (
     <tr>
       <td>{vendor.name}<br /> <Link to={`/edit-vendor/${vendor._id}`} id={`edit-vendor-${idx}`} hidden={!isAuth}>Edit</Link></td>
-      <td>{vendor.location}</td>
+      <td>
+        <a href={`https://www.google.com/maps/search/?api=1&query=${vendor.location}`} onClick={handleLinkClick}>
+          {vendor.location}
+        </a>
+      </td>
       <td>{vendor.hours}</td>
       <td>
         <Link to={`/inventory/${vendor._id}`} id={`vendor-inventory-${idx}`}>Inventory</Link>
