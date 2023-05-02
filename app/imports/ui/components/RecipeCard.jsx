@@ -35,6 +35,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
   }, []);
 
   const [isFavorite, setIsFavorite] = useState(faves.includes(Meteor.user().username));
+  const ratingCount = all.length;
   const sumRatings = _.reduce(_.pluck(all, 'rating'), (memo, num) => memo + num, 0);
   const average = sumRatings > 0 ? (Math.round((sumRatings / all.length) * 2) / 2).toFixed(1) : 0;
 
@@ -83,7 +84,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
           ) : (
             <Heart className="mt-auto" onClick={() => toggleFavorite()} />
           )}
-          <Row className=""><ReviewRating avg={Number(average)} /></Row>
+          <Row className=""><ReviewRating avg={Number(average)} count={ratingCount}/></Row>
         </Card.Header>
         <Card.Body className="rec-card-middle">
           <Card.Text className="mt-2">{recipe.description}</Card.Text>
@@ -103,7 +104,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
         </Card.Footer>
       </Card>
     </Col>
-  ) : <LoadingSpinner />);
+  ) : '');
 };
 
 RecipeCard.propTypes = {
