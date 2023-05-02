@@ -67,18 +67,19 @@ const SearchRecipesPage = () => {
                 {selectedTag || 'Select a tag'}
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item as="div" style={dropdownStyles} unselectable>
+                <Dropdown.Header as="div" style={dropdownStyles}>
                   Meal Types
-                </Dropdown.Item>
+                </Dropdown.Header>
                 <Dropdown.Item onClick={() => handleTagSelect('All')}>All</Dropdown.Item>
                 <Dropdown.Item onClick={() => handleTagSelect('Breakfast')}>Breakfast</Dropdown.Item>
                 <Dropdown.Item onClick={() => handleTagSelect('Lunch')}>Lunch</Dropdown.Item>
                 <Dropdown.Item onClick={() => handleTagSelect('Dinner')}>Dinner</Dropdown.Item>
                 <Dropdown.Item onClick={() => handleTagSelect('Snack')}>Snack</Dropdown.Item>
                 <Dropdown.Item onClick={() => handleTagSelect('Dessert')}>Dessert</Dropdown.Item>
-                <Dropdown.Item as="div" style={dropdownStyles} unselectable>
+                <Dropdown.Divider />
+                <Dropdown.Header as="div" style={dropdownStyles}>
                   Dietary Restrictions
-                </Dropdown.Item>
+                </Dropdown.Header>
                 <Dropdown.Item onClick={() => handleTagSelect('Vegan')}>Vegan</Dropdown.Item>
                 <Dropdown.Item onClick={() => handleTagSelect('Vegetarian')}>Vegetarian</Dropdown.Item>
                 <Dropdown.Item onClick={() => handleTagSelect('Gluten-free')}>Gluten-Free</Dropdown.Item>

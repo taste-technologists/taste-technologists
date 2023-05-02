@@ -27,11 +27,11 @@ const Footer = () => (
         <br />
         University of Hawaii
         <br />
-        <a href="https://forms.gle/g3BMLPyUibYVdFcs9">
+        <a href="https://forms.gle/g3BMLPyUibYVdFcs9" target="_blank" rel="noreferrer">
           Help us improve our application through your community feedback!
         </a>
         <br />
-        <a href="https://taste-technologists.github.io/">
+        <a href="https://taste-technologists.github.io/" target="_blank" rel="noreferrer">
           Project Documentation
           Page
         </a>

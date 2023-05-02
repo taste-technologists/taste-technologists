@@ -24,7 +24,7 @@ const bridge = new SimpleSchema2Bridge(userSchema);
 const EditProfiles = () => {
   // Get the documentID from the URL field. See imports/ui/layouts/App.jsx for the route containing :_id.
   const { _id } = useParams();
-  console.log('EditProfile', _id);
+  // console.log('EditProfile', _id);
   // Checks if current user is trying to change their own role.
   const isOwner = (_id === Meteor.userId());
   // For role of the logged in user.
