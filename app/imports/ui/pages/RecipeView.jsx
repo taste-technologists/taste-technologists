@@ -47,10 +47,11 @@ const RecipeView = () => {
   // On successful submit, insert the data.
   const sumRatings = _.reduce(_.pluck(all, 'rating'), (memo, num) => memo + num, 0);
   const average = Number(sumRatings > 0 ? (Math.round((sumRatings / all.length) * 2) / 2).toFixed(1) : 0);
-
+  const reviewCount = all.length === 0 ? 0 : all.length;
+  // console.log(reviewCount);
   return ready ? (
     <Container id="recipe-view-page" className="py-3 uniform">
-      <SingleRecipeCard key={doc._id} recipe={doc} avg={average} />
+      <SingleRecipeCard key={doc._id} recipe={doc} avg={average} count={reviewCount} />
       <ReviewMenu user={user} userID={Meteor.userId()} name={doc.name} recipeId={_id} all={all} />
     </Container>
   ) : <LoadingSpinner />;
