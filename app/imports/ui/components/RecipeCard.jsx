@@ -8,7 +8,6 @@ import { Meteor } from 'meteor/meteor';
 import { _ } from 'meteor/underscore';
 import { useTracker } from 'meteor/react-meteor-data';
 import swal from 'sweetalert';
-import LoadingSpinner from './LoadingSpinner';
 import { addFavMethod, delFavMethod, removeRecipeMethod } from '../../startup/both/Methods';
 import { RecReviews } from '../../api/recipes/RecipeReviews';
 import ReviewRating from './ReviewRating';
@@ -84,7 +83,7 @@ const RecipeCard = ({ recipe, showEdit, idx }) => {
           ) : (
             <Heart className="mt-auto" onClick={() => toggleFavorite()} />
           )}
-          <Row className=""><ReviewRating avg={Number(average)} count={ratingCount}/></Row>
+          <Row className=""><ReviewRating avg={Number(average)} count={ratingCount} /></Row>
         </Card.Header>
         <Card.Body className="rec-card-middle">
           <Card.Text className="mt-2">{recipe.description}</Card.Text>

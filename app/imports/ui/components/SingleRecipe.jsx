@@ -49,9 +49,7 @@ const SingleRecipeCard = ({ recipe, avg }) => {
     }
   });
   const thisArr = foundArr.flat();
-  console.log(thisArr);
- const sortedArr = _.values(_.indexBy(thisArr, 'name'));
-  const renderedArray = sortedArr.map((item) => (
+  const renderedArray = thisArr.map((item) => (
     <Row key={item._id} className="border border-1">
       <Col xs={3} className="pe-0">
         <b>{item.name}</b>
