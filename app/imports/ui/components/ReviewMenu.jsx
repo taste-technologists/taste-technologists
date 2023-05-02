@@ -18,6 +18,8 @@ const ReviewMenu = ({ name, recipeId, userID, all, user }) => {
 
   // Sort Reviews by newest.
   const sortedAll = all.sort((a, b) => b.created - a.created);
+
+  const reviewCount = sortedAll.length;
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -46,7 +48,7 @@ const ReviewMenu = ({ name, recipeId, userID, all, user }) => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <AddReview name={name} recipeId={recipeId} userID={userID} user={user} />
-          <h3>Reviews: </h3>
+          <h3>Reviews: {reviewCount}</h3>
           <Accordion>
             {currentItems.map((rev, idx) => (
               <RecReviewItem key={idx} idx={idx} review={rev} />
