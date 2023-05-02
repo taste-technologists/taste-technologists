@@ -113,7 +113,7 @@ const ListProfilesAdmin = () => {
           {view === 'reviews' && <ListReviews />}
         </Col>
       </Row>
-      <Row className="text-end"><Col xs={12}><Link to="/admin-gen" id="admin-gen"><KeyFill color="#F2F2F2" size={8} /></Link></Col></Row>
+      <Row className="text-end"><Col xs={12}><Link to="/admin-gen" id="admin-gen"><KeyFill color="#c2c2c2" size={8} /></Link></Col></Row>
     </Container>
   ) : <LoadingSpinner />);
 };

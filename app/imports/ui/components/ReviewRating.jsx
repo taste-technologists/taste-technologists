@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 /* Renders the RecipeRating component for recipes. */
 const ReviewRating = ({ avg, count }) => {
-
+  const reviewCount = count === 0 ? '' : `(${count})`;
   const numFullStars = Math.floor(avg);
   // Check if the rating has a half-star
   const hasHalfStar = avg % 1 !== 0;
@@ -21,7 +21,7 @@ const ReviewRating = ({ avg, count }) => {
 
   const stars = avg === 0 ? 'No Ratings' : [...fullStars, halfStar, ...emptyStars];
   // Concatenate the three arrays and return
-  return <div className="d-inline py-2" style={{ color: 'darkgray' }}>{stars} ({count})</div>;
+  return <div className="d-inline py-2" style={{ color: 'darkgray' }}>{stars} {reviewCount}</div>;
 };
 
 ReviewRating.propTypes = {

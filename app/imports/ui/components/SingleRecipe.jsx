@@ -11,7 +11,7 @@ import { Inventory } from '../../api/vendor/VendorInventory';
 import ReviewRating from './ReviewRating';
 import { Recipes } from '../../api/recipes/Recipes';
 
-const SingleRecipeCard = ({ recipe, avg }) => {
+const SingleRecipeCard = ({ recipe, avg, count }) => {
   const { ready, inventory, isOwner } = useTracker(() => {
 
     // Get access to Recipe documents.
@@ -93,7 +93,7 @@ const SingleRecipeCard = ({ recipe, avg }) => {
         </Col>
         <Col xs={6} md={3}>Servings:<br /> {recipe.servings} </Col>
         <Col xs={6} md={3}>Estimated Cost:<br /> ${cost.toFixed(2)}*</Col>
-        <Col xs={6} md={3}>Avg Rating:<br /> <ReviewRating avg={Number(avg)} /></Col>
+        <Col xs={6} md={3}>Avg Rating:<br /> <ReviewRating avg={Number(avg)} count={count} /></Col>
       </Row>
       <Row className="flex-row justify-content-center pb-2">{recipe.description}</Row>
       <Row>
@@ -147,6 +147,7 @@ SingleRecipeCard.propTypes = {
     _id: PropTypes.string,
   }).isRequired,
   avg: PropTypes.number.isRequired,
+  count: PropTypes.number.isRequired,
 };
 
 export default SingleRecipeCard;
