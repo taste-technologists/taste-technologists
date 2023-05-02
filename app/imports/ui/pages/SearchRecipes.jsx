@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Button, Container, Row, Col, Pagination } from 'react-bootstrap';
+import { Container, Row, Col, Pagination, Dropdown, Button } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import { _ } from 'meteor/underscore';
 import RecipeCard from '../components/RecipeCard';
@@ -29,19 +29,26 @@ const SearchRecipesPage = () => {
       ready: rdy,
     };
   }, []);
-  const breakfastRecipes = recipes.filter(recipe => recipe.tags.includes('Breakfast'));
-  const lunchRecipes = recipes.filter(recipe => recipe.tags.includes('Lunch'));
-  const dinnerRecipes = recipes.filter(recipe => recipe.tags.includes('Dinner'));
-  const snackRecipes = recipes.filter(recipe => recipe.tags.includes('Snack'));
-
-  // console.log(recipeList);
 
   const indexOfLastItem = activePage * 8;
   const indexOfFirstItem = indexOfLastItem - 8;
   const currentItems = recipeList.slice(indexOfFirstItem, indexOfLastItem);
+  const dropdownStyles = { fontWeight: 'bold', fontSize: '1em', fontFamily: 'Monaco', backgroundColor: '#6c757d', color: 'white' };
 
   const handlePageChange = (pageNumber) => {
     setActivePage(pageNumber);
+  };
+
+  const [selectedTag, setSelectedTag] = useState('All');
+  const handleTagSelect = (tag) => {
+    setSelectedTag(tag);
+  };
+
+  const filteredRecipes = recipes.filter(recipe => (selectedTag === 'All' ? true : recipe.tags.includes(selectedTag)));
+
+  const setStuff = (rec) => {
+    setRecipeList(rec);
+    setActivePage(1);
   };
 
   const paginationItems = _.range(1, Math.ceil(recipeList.length / 8) + 1).map((i) => (
@@ -49,22 +56,40 @@ const SearchRecipesPage = () => {
       {i}
     </Pagination.Item>
   ));
-
-  const setStuff = (rec) => {
-    setRecipeList(rec);
-    setActivePage(1);
-  };
-
   return (ready ? (
     <Container style={pageStyle} id="search-page">
       <Row className="text-center py-4"><Col><h2>Search Recipes</h2></Col></Row>
-      <Row>
+      <Row className="justify-content-start">
         <span>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-all" active onClick={() => setStuff(recipes)}> All </Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-breakfast" onClick={() => setStuff(breakfastRecipes)}> Breakfast </Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-lunch" onClick={() => setStuff(lunchRecipes)}> Lunch </Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-dinner" onClick={() => setStuff(dinnerRecipes)}>Dinner</Button> </Col>
-          <Col style={{ float: 'left' }} className="pe-1"> <Button id="btn-snack" onClick={() => setStuff(snackRecipes)}> Snack</Button> </Col>
+          <Col>
+            <Dropdown style={{ float: 'left' }} className="m-1">
+              <Dropdown.Toggle variant="info">
+                {selectedTag || 'Select a tag'}
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as="div" style={dropdownStyles} unselectable>
+                  Meal Types
+                </Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('All')}>All</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Breakfast')}>Breakfast</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Lunch')}>Lunch</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Dinner')}>Dinner</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Snack')}>Snack</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Dessert')}>Dessert</Dropdown.Item>
+                <Dropdown.Item as="div" style={dropdownStyles} unselectable>
+                  Dietary Restrictions
+                </Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Vegan')}>Vegan</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Vegetarian')}>Vegetarian</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Gluten-free')}>Gluten-Free</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Dairy-free')}>Dairy-Free</Dropdown.Item>
+                <Dropdown.Item onClick={() => handleTagSelect('Pescatarian')}>Pescatarian</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+          <Col>
+            <Button style={{ float: 'left' }} variant="warning" className="m-1" onClick={() => setStuff(filteredRecipes)}>Search</Button>
+          </Col>
         </span>
       </Row>
       <Row xs={1} md={2} lg={4} className="g-2 pt-2">
